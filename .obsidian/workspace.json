@@ -8,29 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "de24c3c08a27fac3",
+            "id": "94486ddbff5d5720",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "食品分析与检验宝宝教程/FAI SP4 食品分析与检验专题四：脂类分析.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "4d52f696b883e524",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "7c86a90809e36512",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
         ]
@@ -83,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 219.5
   },
   "right": {
     "id": "b373cc10e7579842",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "食品分析与检验宝宝教程/FAI SP4 食品分析与检验专题四：脂类分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "食品分析与检验宝宝教程/FAI SP4 食品分析与检验专题四：脂类分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "食品分析与检验宝宝教程/FAI SP4 食品分析与检验专题四：脂类分析.md"
               }
             }
           }
@@ -160,9 +146,22 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "de24c3c08a27fac3",
+  "active": "94486ddbff5d5720",
   "lastOpenFiles": [
-    "欢迎.md",
-    "README.md"
+    "食品分析与检验宝宝教程/FAI SP3 食品分析与检验专题三：蛋白质分析.md",
+    "食品分析与检验宝宝教程/FAI SP2 食品分析与检验专题二：糖类分析.md",
+    "食品分析与检验宝宝教程/FAI SP1 食品分析与检验专题一：水分分析.md",
+    "食品分析与检验宝宝教程/FAI 03 食品分析与检验第三讲：数据.md",
+    "食品分析与检验宝宝教程/FAI 02 食品分析与检验第二讲：样品.md",
+    "食品分析与检验宝宝教程/FAI 01 食品分析与检验第一讲：绪论.md",
+    "食品分析与检验宝宝教程/FAI SP4 食品分析与检验专题四：脂类分析.md",
+    "模板.md",
+    "README.md",
+    "食品分析与检验宝宝教程/食品分析与检验总目录.md",
+    "未命名",
+    "资料卡/ELISA.md",
+    "资料卡",
+    "食品分析与检验宝宝教程",
+    "欢迎.md"
   ]
 }
