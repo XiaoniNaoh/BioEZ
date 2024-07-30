@@ -1,9 +1,10 @@
 # 食品分析与检验 第二讲：样品
 #食品分析与检验 #食品 
 
-> [!Tip] 版权申明
-> - Created by. Min Ni
-> -  **NaOH Inc. ©2024**
+
+> [!Tip] **Created by. Min Ni**
+
+> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一讲链接🔗[[FAI 01 绪论]]
 > 下一讲链接🔗[[FAI 03 数据]]

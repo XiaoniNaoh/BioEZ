@@ -2,9 +2,9 @@
 #食品分析与检验 #食品
 
 
-> [!Tip] 版权申明
-> - Created by. Min Ni
-> -  **NaOH Inc. ©2024**
+> [!Tip] **Created by. Min Ni**
+
+> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一讲链接🔗[[FAI SP3 专题三：蛋白质分析]]
 > 这是这个系列的最后一讲啦~

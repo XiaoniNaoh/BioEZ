@@ -1,9 +1,10 @@
 # 分子生物学 第 2 章 第 2 节：DNA 的结构
 #分子生物学 #生物 
 
-> [!Tip] 版权申明
-> - Created by. Min Ni
-> -  **NaOH Inc. ©2024**
+
+> [!Tip] **Created by. Min Ni**
+
+> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MB 02-1 染色体]]
 > 下一节链接🔗 
