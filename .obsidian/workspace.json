@@ -6,6 +6,7 @@
       {
         "id": "86e97d64f9688693",
         "type": "tabs",
+        "dimension": 64.31261770244822,
         "children": [
           {
             "id": "c17dd32ebc6f8485",
@@ -25,14 +26,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "source",
+                "file": "03 分子生物学 重蓝点手册/MB 02 染色体与DNA/MB 02-3 DNA 的复制.md",
+                "mode": "preview",
                 "source": false
               }
-            }
+            },
+            "group": "e9ee6fb3c7d0ad80"
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "7c3201ff1f9fd2a7",
+        "type": "tabs",
+        "dimension": 35.68738229755179,
+        "children": [
+          {
+            "id": "2634ca34f190a86b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "03 分子生物学 重蓝点手册/MB 02 染色体与DNA/MB 02-3 DNA 的复制.md"
+              }
+            },
+            "group": "e9ee6fb3c7d0ad80"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "03 分子生物学 重蓝点手册/MB 02 染色体与DNA/MB 02-3 DNA 的复制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "03 分子生物学 重蓝点手册/MB 02 染色体与DNA/MB 02-3 DNA 的复制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "03 分子生物学 重蓝点手册/MB 02 染色体与DNA/MB 02-3 DNA 的复制.md"
               }
             }
           }
@@ -161,10 +181,13 @@
   },
   "active": "bd5a1d8b086fd4e6",
   "lastOpenFiles": [
-    "03 分子生物学 重蓝点手册/MB 02 染色体与DNA/MB 02-2 DNA 的结构.md",
-    "04 五年本科 三年细胞/05 五年本科 三年细胞 更新计划.md",
-    "03 分子生物学 重蓝点手册/MB 00 模板.md",
     "03 分子生物学 重蓝点手册/MB 02 染色体与DNA/MB 02-1 染色体.md",
+    "03 分子生物学 重蓝点手册/MB 02 染色体与DNA/MB 02-2 DNA 的结构.md",
+    "03 分子生物学 重蓝点手册/MB 02 染色体与DNA/MB 02-3 DNA 的复制.md",
+    "03 分子生物学 重蓝点手册/MB 00 模板.md",
+    "README.md",
+    "04 五年本科 三年细胞/05 五年本科 三年细胞 更新计划.md",
+    "06 生物统计学 步步糕大一轮复习讲义/07 生物统计学 步步糕大一轮复习讲义 更新计划.md",
     "02 微生物学 宝宝教程/MB 11 微生物与食品腐败变质.md",
     "02 微生物学 宝宝教程/MB 10 免疫学基础.md",
     "02 微生物学 宝宝教程/MB 09 微生物的分类与鉴定.md",
@@ -183,11 +206,8 @@
     "01 食品分析与检验 宝宝教程/FAI 01 绪论.md",
     "01 食品分析与检验 宝宝教程/FAI 02 样品.md",
     "01 食品分析与检验 宝宝教程/FAI 03 数据.md",
-    "README.md",
     "资料卡/科赫法则.md",
-    "03 习思想 宝宝教程/习思想期末备考宝宝教程 一本全.md",
-    "05 生理学 钱塘甬真粽糕/06 生理学 钱塘甬真粽糕 更新计划.md",
-    "06 基因学 步步糕大一轮复习讲义",
+    "06 生物统计学 步步糕大一轮复习讲义",
     "05 生理学 钱塘甬真粽糕",
     "04 五年本科 三年细胞",
     "基因学 步步糕大一轮复习讲义",
