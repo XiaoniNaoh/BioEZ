@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-3 原核生物与真核生物的转录及产物特征比较.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-3 原核生物与真核生物的转录及产物特征比较.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-3 原核生物与真核生物的转录及产物特征比较.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-3 原核生物与真核生物的转录及产物特征比较.md"
+                "file": "README.md"
               }
             }
           }
@@ -148,16 +148,17 @@
   },
   "active": "415a16f3ff30a06a",
   "lastOpenFiles": [
-    "资料卡/样品预处理方法.canvas",
-    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-1 RNA 概述.md",
-    "README.md",
+    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
     "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-3 原核生物与真核生物的转录及产物特征比较.md",
+    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-1 RNA 概述.md",
+    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-2 RNA 转录的基本过程.md",
+    "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-5 DNA 的突变与修复.md",
+    "README.md",
+    "资料卡/样品预处理方法.canvas",
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-1 染色体.md",
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-3 DNA 的复制.md",
-    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-2 RNA 转录的基本过程.md",
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-7 SNP 的理论与应用.md",
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-6 DNA 的转座.md",
-    "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-5 DNA 的突变与修复.md",
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-4 原核生物和真核生物 DNA 复制的特点.md",
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-2 DNA 的结构.md",
     "03 分子生物学 重蓝点手册/MMB 01 绪论/MMB 01 绪论.md",
