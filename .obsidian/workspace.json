@@ -6,14 +6,18 @@
       {
         "id": "1745240329b43c97",
         "type": "tabs",
-        "dimension": 75.76791808873719,
+        "dimension": 75.7679180887372,
         "children": [
           {
             "id": "415a16f3ff30a06a",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "02 微生物学 宝宝教程/MB 03 真核微生物.md",
+                "mode": "source",
+                "source": false
+              }
             },
             "group": "0e10bc3ca87a479b"
           }
@@ -22,7 +26,7 @@
       {
         "id": "250e31e90e8efe56",
         "type": "tabs",
-        "dimension": 24.2320819112628,
+        "dimension": 24.232081911262803,
         "children": [
           {
             "id": "b9be71003cf6f20a",
@@ -30,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "02 微生物学 宝宝教程/MB 03 真核微生物.md"
               }
             },
             "group": "0e10bc3ca87a479b"
@@ -101,6 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "02 微生物学 宝宝教程/MB 03 真核微生物.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,6 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "02 微生物学 宝宝教程/MB 03 真核微生物.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +144,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "02 微生物学 宝宝教程/MB 03 真核微生物.md"
+              }
             }
           }
         ]
@@ -160,8 +168,12 @@
   },
   "active": "415a16f3ff30a06a",
   "lastOpenFiles": [
-    "README.md",
+    "02 微生物学 宝宝教程/MB 07 微生物的遗传与育种.md",
+    "02 微生物学 宝宝教程/MB 06 微生物的代谢.md",
+    "02 微生物学 宝宝教程/MB 08 微生物的生态.md",
+    "02 微生物学 宝宝教程/MB 11 微生物与食品腐败变质.md",
     "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰.md",
+    "README.md",
     "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
     "03 分子生物学 重蓝点手册/MMB 01 绪论/MMB 01 绪论.md",
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-7 SNP 的理论与应用.md",
@@ -177,12 +189,8 @@
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-2 DNA 的结构.md",
     "03 分子生物学 重蓝点手册/MMB 00 模板.md",
     "03 分子生物学 重蓝点手册/MMB 03 转录",
-    "02 微生物学 宝宝教程/MB 11 微生物与食品腐败变质.md",
     "02 微生物学 宝宝教程/MB 10 免疫学基础.md",
     "02 微生物学 宝宝教程/MB 09 微生物的分类与鉴定.md",
-    "02 微生物学 宝宝教程/MB 08 微生物的生态.md",
-    "02 微生物学 宝宝教程/MB 07 微生物的遗传与育种.md",
-    "02 微生物学 宝宝教程/MB 06 微生物的代谢.md",
     "02 微生物学 宝宝教程/MB 05 微生物的营养与生长.md",
     "02 微生物学 宝宝教程/MB 04 病毒.md",
     "02 微生物学 宝宝教程/MB 03 真核微生物.md",
