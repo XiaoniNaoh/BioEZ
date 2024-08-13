@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -34,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md"
+                "file": "README.md"
               }
             },
             "group": "0e10bc3ca87a479b"
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md"
+                "file": "README.md"
               }
             }
           }
@@ -168,9 +168,13 @@
   },
   "active": "415a16f3ff30a06a",
   "lastOpenFiles": [
-    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-3 原核生物与真核生物的转录及产物特征比较.md",
-    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
+    "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-1 tRNA 与遗传密码.md",
     "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰.md",
+    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-1 RNA 概述.md",
+    "03 分子生物学 重蓝点手册/MMB 04 翻译",
+    "03 分子生物学 重蓝点手册/MMB 00 模板.md",
+    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
+    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-3 原核生物与真核生物的转录及产物特征比较.md",
     "02 微生物学 宝宝教程/MB 11 微生物与食品腐败变质.md",
     "02 微生物学 宝宝教程/MB 10 免疫学基础.md",
     "02 微生物学 宝宝教程/MB 09 微生物的分类与鉴定.md",
@@ -191,9 +195,6 @@
     "01 食品分析与检验 宝宝教程/FAI 02 样品.md",
     "README.md",
     "03 分子生物学 重蓝点手册/MMB 01 绪论/MMB 01 绪论.md",
-    "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-7 SNP 的理论与应用.md",
-    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-1 RNA 概述.md",
-    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-2 RNA 转录的基本过程.md",
     "资料卡/样品预处理方法.canvas",
     "03 分子生物学 重蓝点手册/MMB 03 转录",
     "03 分子生物学 重蓝点手册/MMB 01 绪论",
@@ -203,7 +204,6 @@
     "基因学 步步糕大一轮复习讲义",
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA",
     "03 分子生物学 重蓝点手册",
-    "03 习思想 宝宝教程",
-    "02 微生物学 宝宝教程"
+    "03 习思想 宝宝教程"
   ]
 }
