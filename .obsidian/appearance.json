@@ -1,4 +1,7 @@
 {
-  "textFontFamily": "未来荧黑 Normal",
-  "baseFontSize": 17
+  "textFontFamily": "HONOR Sans CN",
+  "baseFontSize": 16,
+  "interfaceFontFamily": "HONOR Sans CN",
+  "accentColor": "#81cfae",
+  "theme": "system"
 }
