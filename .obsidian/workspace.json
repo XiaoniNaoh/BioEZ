@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-5 基因克隆技术.md",
                 "mode": "source",
                 "source": false
               }
@@ -34,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-5 基因克隆技术.md"
               }
             },
             "group": "0e10bc3ca87a479b"
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-5 基因克隆技术.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-5 基因克隆技术.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-5 基因克隆技术.md"
               }
             }
           }
@@ -168,13 +168,14 @@
   },
   "active": "415a16f3ff30a06a",
   "lastOpenFiles": [
+    "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-6 基因表达技术.md",
+    "README.md",
+    "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-5 基因克隆技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-2 RNA 基本操作技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-3 蛋白质与蛋白质组学技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-4 蛋白质及 RNA 相互作用技术.md",
-    "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-5 基因克隆技术.md",
     "MMB 05-3 基因克隆技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-1 DNA 基本操作技术.md",
-    "README.md",
     "03 分子生物学 重蓝点手册/MMB 10 基因组与比较基因组学",
     "03 分子生物学 重蓝点手册/MMB 09 基因与发育",
     "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康",
@@ -200,7 +201,6 @@
     "02 微生物学 宝宝教程/MB 07 微生物的遗传与育种.md",
     "02 微生物学 宝宝教程/MB 06 微生物的代谢.md",
     "02 微生物学 宝宝教程/MB 05 微生物的营养与生长.md",
-    "02 微生物学 宝宝教程/MB 04 病毒.md",
     "资料卡/样品预处理方法.canvas",
     "03 分子生物学 重蓝点手册/MMB 03 转录",
     "03 分子生物学 重蓝点手册/MMB 01 绪论",
