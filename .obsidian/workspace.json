@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-1 原核基因表达调控概述.md",
-                "mode": "preview",
+                "file": "README.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-1 原核基因表达调控概述.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-1 原核基因表达调控概述.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-1 原核基因表达调控概述.md"
+                "file": "README.md"
               }
             }
           }
@@ -146,11 +146,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "415a16f3ff30a06a",
+  "active": "65e9230b69b70715",
   "lastOpenFiles": [
+    "03 SP 分子生物学重难点手册 附册",
+    "05 生理学 钱塘甬真粽糕/05 生理学 钱塘甬真粽糕 更新计划.md",
+    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
+    "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-1 原核基因表达调控概述.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-1 DNA 基本操作技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-2 RNA 基本操作技术.md",
-    "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-1 原核基因表达调控概述.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-7 基因敲除技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-3 蛋白质与蛋白质组学技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-6 基因表达技术.md",
@@ -175,10 +178,7 @@
     "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控",
     "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控",
     "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-1 tRNA 与遗传密码.md",
-    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
     "06 生物统计学 步步糕大一轮复习讲义/06 生物统计学 步步糕大一轮复习讲义 更新计划.md",
-    "05 生理学 钱塘甬真粽糕/05 生理学 钱塘甬真粽糕 更新计划.md",
-    "04 五年本科 三年细胞/04 五年本科 三年细胞 更新计划.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法",
     "03 分子生物学 重蓝点手册/MMB 04 翻译",
     "资料卡/样品预处理方法.canvas",
