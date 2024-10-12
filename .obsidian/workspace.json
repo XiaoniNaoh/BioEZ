@@ -6,6 +6,7 @@
       {
         "id": "1745240329b43c97",
         "type": "tabs",
+        "dimension": 73.43470483005366,
         "children": [
           {
             "id": "415a16f3ff30a06a",
@@ -13,11 +14,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-2 乳糖操纵子与负控诱导系统.md",
-                "mode": "preview",
+                "file": "README.md",
+                "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "a564cdfd9addb6d4"
+          }
+        ]
+      },
+      {
+        "id": "774be0051b03b081",
+        "type": "tabs",
+        "dimension": 26.565295169946335,
+        "children": [
+          {
+            "id": "f9ee3410ab1c0dc7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            },
+            "group": "a564cdfd9addb6d4"
           }
         ]
       }
@@ -85,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-2 乳糖操纵子与负控诱导系统.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-2 乳糖操纵子与负控诱导系统.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-2 乳糖操纵子与负控诱导系统.md"
+                "file": "README.md"
               }
             }
           }
@@ -148,8 +168,10 @@
   },
   "active": "415a16f3ff30a06a",
   "lastOpenFiles": [
-    "README.md",
     "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-2 乳糖操纵子与负控诱导系统.md",
+    "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-1 原核基因表达调控概述.md",
+    "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-1 DNA 基本操作技术.md",
+    "README.md",
     "03 分子生物学 重蓝点手册/MMB 01 绪论/MMB 01 绪论.md",
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-1 染色体.md",
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-2 DNA 的结构.md",
@@ -166,14 +188,12 @@
     "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-1 tRNA 与遗传密码.md",
     "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-2 蛋白质合成.md",
     "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-3 蛋白质的转运、修饰与降解.md",
-    "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-1 DNA 基本操作技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-2 RNA 基本操作技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-3 蛋白质与蛋白质组学技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-5 基因克隆技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-4 蛋白质及 RNA 相互作用技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-6 基因表达技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-7 基因敲除技术.md",
-    "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-8 其他分子生物学技术.md",
     "03 SP 分子生物学重难点手册 附册",
     "03 分子生物学 重蓝点手册/MMB 10 基因组与比较基因组学",
     "03 分子生物学 重蓝点手册/MMB 09 基因与发育",
