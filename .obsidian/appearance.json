@@ -2,6 +2,7 @@
   "textFontFamily": "HONOR Sans CN",
   "baseFontSize": 16,
   "interfaceFontFamily": "HONOR Sans CN",
-  "accentColor": "#0f4c81",
-  "theme": "moonstone"
+  "accentColor": "#0f4281",
+  "theme": "moonstone",
+  "cssTheme": "Minimal"
 }
