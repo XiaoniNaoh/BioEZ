@@ -1,0 +1,257 @@
+.inline-title {
+    font-weight: 800;
+    font-size: var(--inline-title-size);
+    line-height: var(--inline-title-line-height);
+    font-style: var(--inline-title-style);
+    font-variant: var(--inline-title-variant);
+    font-family: var(--inline-title-font);
+    margin-bottom: var(--inline-title-margin-bottom);
+    letter-spacing: -0.015em;
+    color: var(--inline-title-color);
+    white-space: pre-wrap;
+}
+
+body {
+    --blockquote-style: normal;
+    --blockquote-color: var(--text-muted);
+    --blockquote-border-thickness: 1px;
+    --blockquote-border-color: var(--quote-opening-modifier);
+    --embed-block-shadow-hover: none;
+    --font-ui-smaller: 11px;
+    --normal-weight: 450;
+    --inline-title-margin-bottom: 1rem;
+    --h1-size: 1.125em;
+    --h2-size: 1.05em;
+    --h3-size: 1em;
+    --h4-size: 0.90em;
+    --h5-size: 0.85em;
+    --h6-size: 0.85em;
+    --h1-weight: 800;
+    --h2-weight: 700;
+    --h3-weight: 600;
+    --h4-weight: 500;
+    --h5-weight: 500;
+    --h6-weight: 400;
+    --h1-variant: normal;
+    --h2-variant: normal;
+    --h3-variant: normal;
+    --h4-variant: normal;
+    --h5-variant: small-caps;
+    --h6-variant: small-caps;
+    --h1-style: normal;
+    --h2-style: normal;
+    --h3-style: normal;
+    --h4-style: normal;
+    --h5-style: normal;
+    --h6-style: normal;
+    --line-width: 40rem;
+    --line-height: 1.5;
+    --line-height-normal: var(--line-height);
+    --max-width: 88%;
+    --max-col-width: 18em;
+    --icon-muted: 0.5;
+    --nested-padding: 1.1em;
+    --folding-offset: 32px;
+    --list-edit-offset: 0.5em;
+    --list-indent: 2em;
+    --list-spacing: 0.075em;
+    --input-height: 32px;
+    --header-height: 40px;
+    --metadata-label-width: 9rem;
+    --metadata-label-font-size: var(--font-adaptive-small);
+    --metadata-input-font-size: var(--font-adaptive-small);
+    --mobile-left-sidebar-width: 280pt;
+    --mobile-right-sidebar-width: 240pt;
+    --top-left-padding-y: 0px;
+    --image-muted: 0.7;
+    --image-radius: 4px;
+    --heading-spacing: 2em;
+    --p-spacing: 1.75rem;
+    --border-width: 1px;
+    --table-border-width: var(--border-width);
+    --table-selection: var(--text-selection);
+    --table-selection-border-color: var(--text-accent);
+    --table-selection-border-width: 0px;
+    --table-selection-border-radius: 0px;
+    --table-drag-handle-background-active: var(--text-selection);
+    --table-drag-handle-color-active: var(--text-accent);
+    --table-add-button-border-width: 0px;
+    --file-margins: var(--size-4-2) var(--size-4-12);
+}
+
+body.css-settings-manager {
+    --cursor: default;
+    --h1-size: 1.8em;
+    --h2-size: 1.5em;
+    --h3-size: 1.6em;
+    --h1-font: "Franklin Gothic Medium", "未来荧黑", "江城律动黑";
+    --h2-font: "Franklin Gothic Medium", "江城律动黑";
+    --h3-font: "Franklin Gothic Medium", "江城律动黑";
+    --table-text-size: 1.1em;
+    --table-column-min-width: 8ch;
+}
+
+.horizontal-tab-nav-item, .vertical-tab-nav-item {
+    padding: var(--size-4-1) var(--size-4-2);
+    margin-bottom: 0;
+    user-select: none;
+    cursor: var(--cursor);
+    font-size: calc(var(--font-ui-small) + 1px);
+    border-radius: var(--radius-s);
+    font-weight: 650;
+}
+
+.setting-item-name {
+    color: var(--text-normal);
+    font-size: var(--font-ui-medium);
+    line-height: var(--line-height-tight);
+    font-weight: 650
+}
+
+.vertical-tab-header-group-title {
+    font-size: var(--font-ui-smaller);
+    color: var(--text-faint);
+    font-weight: var(--font-semibold);
+    padding: var(--size-4-2);
+    user-select: none;
+    font-family: "江城律动黑";
+}
+
+.setting-item-description {
+    color: var(--text-muted);
+    font-size: var(--font-ui-smaller);
+    padding-top: var(--size-4-1);
+    line-height: var(--line-height-tight);
+    font-weight: 500;
+}
+
+button:not(.clickable-icon) {
+    color: var(--text-color);
+    background-color: var(--interactive-normal);
+    box-shadow: var(--input-shadow);
+    font-weight: 700;
+}
+
+.metadata-container .internal-link, .markdown-rendered .internal-link {
+    cursor: var(--cursor-link);
+    text-decoration-line: var(--link-decoration);
+    color: var(--link-color);
+    transition: opacity 0.15s ease-in-out;
+    font-weight: 700;
+}
+
+.markdown-rendered blockquote > :last-child {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+a.tag {
+    background-color: var(--tag-background);
+    border: var(--tag-border-width) solid var(--tag-border-color);
+    border-radius: var(--tag-radius);
+    color: var(--tag-color);
+    font-size: var(--tag-size);
+    font-weight: 800;
+    text-decoration: var(--tag-decoration);
+    padding: var(--tag-padding-y) var(--tag-padding-x);
+    line-height: 1;
+}
+
+.cm-s-obsidian span.cm-quote {
+    color: var(--blockquote-color);
+    font-weight: 700;
+}
+
+.markdown-source-view.mod-cm6 .cm-underline {
+    text-decoration-line: var(--link-decoration);
+    text-decoration-thickness: var(--link-decoration-thickness);
+    font-weight: 700;
+}
+
+.cm-html-embed td, .markdown-rendered td {
+    font-size: 0.9em;
+    color: var(--table-text-color);
+}
+
+.cm-em {
+    font-style: italic;
+    color: var(--italic-color);
+    font-weight: var(--italic-weight);
+    font-size: 1em;
+    font-weight: 600;
+    font-family: "Franklin Gothic Medium", "未来荧黑";
+}
+
+i, em {
+    font-style: italic;
+    color: var(--italic-color);
+    font-size: 1em;
+    font-weight: 600;
+    font-family: "Franklin Gothic Medium", "未来荧黑";
+}
+
+.markdown-preview-view blockquote {
+    padding-inline-start: var(--nested-padding);
+    font-size: var(--blockquote-size);
+    color: #1C68C4;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+    font-style: var(--blockquote-style);
+    background-color: var(--blockquote-background-color);
+    color: #1C68C4;
+}
+
+.markdown-source-view.mod-cm6 .cm-line > * {
+    text-indent: 0;
+    font-family: "Franklin Gothic Medium", "未来荧黑";
+}
+
+.markdown-preview-view ol>li, .markdown-preview-view ul>li, .markdown-source-view ol>li, .markdown-source-view ul>li, .mod-cm6 .HyperMD-list-line.cm-line {
+    padding-top: var(--list-spacing);
+    padding-bottom: var(--list-spacing);
+    font-family: "Franklin Gothic Medium", "未来荧黑";
+}
+
+.cm-hashtag.cm-hashtag-end {
+    border-start-end-radius: var(--tag-radius);
+    border-end-end-radius: var(--tag-radius);
+    border-inline-start: none;
+    border-inline-end: var(--tag-border-width) solid var(--tag-border-color);
+    padding-inline-end: var(--tag-padding-x);
+    font-weight: 800;
+}
+
+.callout {
+    overflow: hidden;
+    border-style: solid;
+    border-color: rgba(var(--callout-color), var(--callout-border-opacity));
+    border-width: var(--callout-border-width);
+    border-radius: var(--callout-radius);
+    margin: 1em 0;
+    mix-blend-mode: var(--callout-blend-mode);
+    background-color: rgba(var(--callout-color), 0.1);
+    padding: var(--callout-padding);
+    font-weight: 600;
+}
+
+b, strong {
+    font-weight: 700;
+    color: var(--bold-color);
+}
+
+.cm-s-obsidian span.cm-quote {
+    color: #1C68C4;
+    font-weight: 700;
+}
+
+.callout-title-inner {
+    --font-weight: var(--callout-title-weight);
+    font-weight: 700;
+    color: var(--callout-title-color);
+}
+
+.cm-strong {
+    font-weight: 700;
+    color: var(--bold-color);
+}
