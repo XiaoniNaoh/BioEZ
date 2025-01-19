@@ -1,5 +1,5 @@
 # 分子生物学 第 5 章 第 2 节：RNA 基本操作技术
-#分子生物学
+#分子生物学 #实验技术 #RNA #mRNA #提取 #cDNA #基因组 #基因工程 #非编码RNA
 
 
 > [!Tip] **Created by. Min Ni**

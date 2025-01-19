@@ -1,8 +1,12 @@
 {
-  "textFontFamily": "HONOR Sans CN",
+  "textFontFamily": "未来荧黑,Aa觉醒黑",
   "baseFontSize": 16,
-  "interfaceFontFamily": "HONOR Sans CN",
-  "accentColor": "#0f4281",
-  "theme": "moonstone",
-  "cssTheme": "Minimal"
+  "interfaceFontFamily": "\"Franklin Gothic Medium\",未来荧黑",
+  "accentColor": "#1c68c4",
+  "theme": "system",
+  "cssTheme": "Minimal",
+  "translucency": true,
+  "enabledCssSnippets": [
+    "外观修改"
+  ]
 }
