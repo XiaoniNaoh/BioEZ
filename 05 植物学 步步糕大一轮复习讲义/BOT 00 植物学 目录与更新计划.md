@@ -29,5 +29,5 @@
 - [ ] BOT S-3 花程式
 
 ---
-> [!quote] © 2024 Min Ni. All rights reserved.
+> [!quote] © 2025 Min Ni. All rights reserved.
 
