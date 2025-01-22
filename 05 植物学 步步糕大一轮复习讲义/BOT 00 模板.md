@@ -10,6 +10,6 @@
 
 
 ---
-> [!quote] © 2024 Min Ni. All rights reserved.
+> [!quote] © 2025 Min Ni. All rights reserved.
 
 - ✨鸣谢：陕西师范大学食品工程与营养科学学院
