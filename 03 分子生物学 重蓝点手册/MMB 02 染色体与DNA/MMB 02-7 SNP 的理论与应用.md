@@ -28,6 +28,8 @@
 > 
 > - **难度**：🌿🌿
 > - **重要性**：🌟
+> 
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
 
 ---
 - SNP：*single nucleotide polymorphism*，单核苷酸多态性，指基因组 DNA 序列中由于单个核苷酸的突变（对换或颠换）而引起的多态性
