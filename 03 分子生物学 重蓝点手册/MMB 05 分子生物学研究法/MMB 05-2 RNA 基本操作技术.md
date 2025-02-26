@@ -33,7 +33,8 @@
 > - **难度**：🌿🌿🌿🌿
 >     
 > - **重要性**：🌟🌟🌟🌟🌟
->     
+> 
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
 
 ---
 
