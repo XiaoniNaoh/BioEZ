@@ -2,16 +2,16 @@
 #分子生物学 #复制 #DNA聚合酶 #调控
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MMB 02-3 DNA 的复制]]
 > 下一节链接🔗 [[MMB 02-5 DNA 的突变与修复]]
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -28,7 +28,7 @@
 > - **难度**：🌿🌿🌿🌿🌿
 > - **重要性**：🌟🌟🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 
@@ -65,7 +65,7 @@
 - 引发体向后随链分叉方向前进，沿途断断续续地引发生成后随链的引物
 - 引物产生后，**DNA 聚合酶 III** 在引物后合成 DNA，再由 **RNase H** 降解 RNA 引物并由 **DNA 聚合酶 I** 将缺口补齐，最后， **DNA 连接酶**将两个冈崎片段连在一起形成子代 DNA 链
 
-> [!bug] 注意
+> [!BUG] 注意
 > - DNA 聚合酶可以利用 dNTP 高能磷酸键的能量，**无需额外提供 ATP**
 > - DNA 连接酶**需要额外提供 ATP** 才能完成功能
 
@@ -85,7 +85,7 @@
 - 需要 Tus 蛋白
 - 重复性终止子序列（*Ter*）：22 b
 
-> [! success] 符号约定：有关核酸的内容中，“bp”代表碱基对，“b”代表碱基
+> [!SUCCESS] 符号约定：有关核酸的内容中，“bp”代表碱基对，“b”代表碱基
 
 ### 2.4.2 原核生物的 DNA 聚合酶
 
@@ -133,4 +133,4 @@
 - 真核细胞复制子水平调控决定复制的起始与否，**高度保守**
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

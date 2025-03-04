@@ -2,9 +2,9 @@
 #分子生物学 #RNA #结构 #核糖体
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 这是本章的第一节~
 > 前往上一章🚀 [[MMB 02-7 SNP 的理论与应用]]
@@ -12,7 +12,7 @@
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > #### 主要内容
 > 本文为分子生物学第三章第一节“RNA概述”，系统阐述了RNA的结构特点（单链、茎环结构、环状RNA）、种类（mRNA/tRNA/rRNA）、核心功能（蛋白质合成、基因调控、核酶催化），以及原核与真核核糖体沉降系数的差异。
 > #### 知识点
@@ -24,11 +24,11 @@
 > - **难度**：🌿🌿
 > - **重要性**：🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 
-> [!note] note
+> [!NOTE]
 >- 转录和翻译的速度基本相等
 >- 除少数 RNA 病毒外，所有 RNA 分子都来自于 DNA 
 >- mRNA 在细菌细胞内的半衰期很短
@@ -92,4 +92,4 @@
 | 大亚基 rRNA | 23 S rRNA + 5 S rRNA | 28 S rRNA + 5.8 S rRNA + 5 S rRNA |
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

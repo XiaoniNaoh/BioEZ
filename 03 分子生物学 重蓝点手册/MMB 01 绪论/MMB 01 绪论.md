@@ -1,16 +1,16 @@
 # 分子生物学 第 1 章：绪论
 #分子生物学 #绪论 #实验技术
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 本章就这一节~
 > 前往下一章🚀 [[MMB 02-1 染色体]]
 
 ---
 
-> [!summary] 摘要 
+> [!SUMMARY] 摘要 
 > #### 主要内容  
 > 本文为分子生物学绪论章节，聚焦于 DNA 的发现历程（如格里菲斯肺炎链球菌实验、赫尔希-蔡斯噬菌体实验）和分子生物学核心研究方向。阐述了分子生物学三大基本原理，并系统介绍了重组 DNA 技术的应用、基因表达的调控机制（信号转导、转录因子、RNA 剪辑）以及结构分子生物学的研究手段。 
 > 
@@ -23,7 +23,7 @@
 > - **难度**：🌿
 > - **重要性**：🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 
 ---
@@ -76,4 +76,4 @@
 
 # 第一章 完
 
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

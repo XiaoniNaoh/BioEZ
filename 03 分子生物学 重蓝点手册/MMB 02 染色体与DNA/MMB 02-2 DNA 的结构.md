@@ -2,16 +2,16 @@
 #分子生物学 #结构 
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MMB 02-1 染色体]]
 > 下一节链接🔗 [[MMB 02-3 DNA 的复制]]
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -28,7 +28,7 @@
 > - **难度**：🌿🌿
 > - **重要性**：🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 
@@ -102,7 +102,7 @@
 - 溶液中的离子强度
 - DNA 的均一性
 
-> [!note] ps.
+> [!NOTE] ps.
 > - 在高离子强度下，负电荷可以被阳离子中和，双螺旋结构被稳定保持。故 DNA 样品一般在**含盐缓冲溶液**中比较稳定，而较难保存在稀电解质溶液中
 > - $T_m$ 值可以作为衡量样品均一性的标准
 
@@ -111,4 +111,4 @@
 - 天然状态下，DNA 以负超螺旋为主
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

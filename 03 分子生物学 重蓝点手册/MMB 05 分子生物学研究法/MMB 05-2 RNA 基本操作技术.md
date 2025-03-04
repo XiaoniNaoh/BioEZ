@@ -2,16 +2,16 @@
 #分子生物学 #实验技术 #RNA #mRNA #提取 #cDNA #基因组 #基因工程 #非编码RNA
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MMB 05-1 DNA 基本操作技术]]
 > 下一节链接🔗 [[MMB 05-3 蛋白质与蛋白质组学技术]]
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -34,7 +34,7 @@
 >     
 > - **重要性**：🌟🌟🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 
@@ -60,14 +60,14 @@ B(液氮研磨，破碎细胞并溶解细胞成分) --> |氯仿抽提，离心| 
 C(取水相) --> |加入异丙醇沉淀| D(获得较纯的总 RNA) 
 ```
 
->[!tip] 要根据不同植物组织的特点，预先去除酚类、多糖或其他次生代谢产物对 RNA 的干扰
+>[!TIP] 要根据不同植物组织的特点，预先去除酚类、多糖或其他次生代谢产物对 RNA 的干扰
 
 > **RNA 浓度和纯度的判断**
 > - 通过 $OD_{260}$ 和 $OD_{280}$ 来判断
 > -  $OD_{260}$ = 1 时相当于浓度为 50 μg/mL
 > -  $OD_{260}$ / $OD_{280}$ 的比值在 1.8-2.0 之间，代表所提取的 DNA 纯度较好 
 
->[!note] 笔者按：其实此处 RNA 浓度和纯度的判断与上文 DNA 浓度的判断大致相同，区别在于 OD 260/280 比值较大 
+>[!NOTE] 笔者按：其实此处 RNA 浓度和纯度的判断与上文 DNA 浓度的判断大致相同，区别在于 OD 260/280 比值较大 
 
 ### 5.2.2 mRNA 的纯化
 - 真核细胞 mRNA 的 poly（A）尾真核生物 mRNA 的提取提供了极为方便的选择性标志
@@ -82,7 +82,7 @@ C(取水相) --> |加入异丙醇沉淀| D(获得较纯的总 RNA)
 	- 第二链 cDNA 的合成是以第一链为模板，由 DNA 聚合酶催化
 - 在 cDNA 合成过程中应选用活性较高的反转录酶及**甲基化 dCTP**，cDNA 两端应加上不同内切酶所识别的接头序列，保证所获得双链 cDNA 的方向性
 
->[!question] 为什么要加入甲基化的 dCTP？
+>[!QUESTION] 为什么要加入甲基化的 dCTP？
 >- 保证新合成的 cDNA 链被甲基化修饰，以防止构建克隆时被限制性内切酶切割
 
 - 绝大多数大肠杆菌都会切除带有 5'-甲基胞嘧啶的外源 DNA，所以实验中常选用 $mcrA^-$ 和 $mcrB^-$ 菌株以防止 cDNA 被降解
@@ -111,7 +111,7 @@ C(取水相) --> |加入异丙醇沉淀| D(获得较纯的总 RNA)
 | 调控型 ncRNA | miRNA、siRNA、piRNA、snRNA、snoRNA、lcnRNA、circRNA |
 
 
-> [!tip] 调控型 ncRNA 概述
+> [!TIP] 调控型 ncRNA 概述
 > - **miRNA** *（microRNA）*：是一类内生的、长度约为20-24个核苷酸的小 RNA，其在细胞内具有多种重要的调节作用
 > - **siRNA** *（small interfering RNA）*：siRNA 是 siRISC 的主要成员，激发与之互补的目标mRNA的沉默。**详见：RNAi 技术**
 > - **piRNA** *（piwi-interacting RNA）*：piRNA是指 piwi 相互作用 RNA，是一类内源性小干扰 RNA，能特异性地与动物细胞中 Argonaute 蛋白的类似物 PIWI 结合
@@ -123,10 +123,10 @@ C(取水相) --> |加入异丙醇沉淀| D(获得较纯的总 RNA)
 - 目前只能依据 ncRNA 的大小和形态进行分离
 - 小于 50 nt 的 ncRNA 的分离：提取总 RNA 后，用聚丙烯酰胺凝胶电泳分离后，再用乙醇沉淀出来
 
-> [! success] 符号约定：有关核酸的内容中，“nt”代表核苷酸（nucleotide）
+> [!SUCCESS] 符号约定：有关核酸的内容中，“nt”代表核苷酸（nucleotide）
 
 - 也可以从总 RNA 样品中去除 rRNA 和 tRNA，再分离其他 ncRNA
 - circRNA 的分离可利用其特殊的环状结构
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

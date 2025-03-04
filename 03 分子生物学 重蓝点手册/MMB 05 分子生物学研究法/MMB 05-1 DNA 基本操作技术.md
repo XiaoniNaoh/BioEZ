@@ -2,9 +2,9 @@
 #分子生物学 #DNA #实验技术 #科学史 #蓝白斑试验 #基因工程 #PCR #cDNA #质粒 #提取 #电泳
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 这是本章的第一节~
 > 前往上一章🚀 [[MMB 04-3 蛋白质的转运、修饰与降解]]
@@ -12,7 +12,7 @@
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -35,11 +35,11 @@
 >     
 > - **重要性**：🌟🌟🌟🌟🌟
 >
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 
-> [!note] 笔者按：第五章卷帙浩繁，全盘记忆所耗不赀。不妨提纲挈领地学，正所谓纲举而目张。笔者谨列出本章的几处肯綮供读者引以为本章学习的主线与关节，方便读者们在此基础上归纳理解
+> [!NOTE] 笔者按：第五章卷帙浩繁，全盘记忆所耗不赀。不妨提纲挈领地学，正所谓纲举而目张。笔者谨列出本章的几处肯綮供读者引以为本章学习的主线与关节，方便读者们在此基础上归纳理解
 > - 技术的原理
 > - 技术所需的条件：如酶、反应条件
 > - 技术所需的原料
@@ -196,4 +196,4 @@ H(裂解法提取质粒 DNA) --> I(纯化)
 	- 应用：基因组作图、测序和克隆序列的比对
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

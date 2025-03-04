@@ -2,16 +2,16 @@
 #分子生物学 #复制 #转录 #mRNA
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MMB 03-1 RNA 概述]]
 > 下一节链接🔗 [[MMB 03-3 原核生物与真核生物的转录及产物特征比较]]
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > #### 主要内容
 > 本文为第三章第二节“RNA转录的基本过程”，重点解析RNA转录与DNA复制的核心差异（引物需求、模板选择、精确度等），启动子的功能与结构（Pribnow区、转录起点），以及转录四阶段（模板识别、起始、延伸、终止）的分子机制。
 > #### 知识点
@@ -22,7 +22,7 @@
 > - **难度**：🌿🌿🌿🌿🌿
 > - **重要性**：🌟🌟🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 ### 3.2.1 RNA 转录与 DNA 复制的比较
@@ -83,4 +83,4 @@
 	- RNA 聚合酶和 RNA 链都被从模板上释放下来
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

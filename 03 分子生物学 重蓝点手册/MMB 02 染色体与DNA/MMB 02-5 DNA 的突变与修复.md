@@ -2,16 +2,16 @@
 #分子生物学 #基因突变 
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MMB 02-4 原核生物和真核生物 DNA 复制的特点]]
 > 下一节链接🔗 [[MMB 02-6 DNA 的转座]]
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -28,7 +28,7 @@
 > - **难度**：🌿🌿🌿🌿
 > - **重要性**：🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 ### 2.5.1 错配修复*mismatch repair*
@@ -51,7 +51,7 @@
 - 非同源末端连接*NHEJ*
 	- 一种易错修复方式
 
-> [!note] 笔者按：个人的理解，NHEJ 是直接把断裂 DNA 双链中错误的、无法配对的核苷酸切除到只剩平末端，再连接在一起。只能算是勉强把 DNA 的断裂连上了，而没有修复错误的核苷酸信息，不能算真正的修复
+> [!NOTE] 笔者按：个人的理解，NHEJ 是直接把断裂 DNA 双链中错误的、无法配对的核苷酸切除到只剩平末端，再连接在一起。只能算是勉强把 DNA 的断裂连上了，而没有修复错误的核苷酸信息，不能算真正的修复
 
 ### 2.5.4 DNA 的直接修复
 - 直接修复是把损伤的碱基回复到原来状态的一种修复
@@ -63,7 +63,7 @@
 - 在 DNA 链复制过程中，当 DNA 聚合酶遇到未被修复的损伤而停顿时，复制机器必须越过损伤防止复制叉崩塌，机体必须启动 TLS 系统并忽略已存在的损伤
 - TLS 在掺入核苷酸时不依赖于碱基配对
 
-> [!note] 笔者按：TLS 即在遇到损伤时随便加一个核苷酸上去草草了事，不保证准确性，只保证复制能进行下去。课本评：“好死不如赖活着”
+> [!NOTE] 笔者按：TLS 即在遇到损伤时随便加一个核苷酸上去草草了事，不保证准确性，只保证复制能进行下去。课本评：“好死不如赖活着”
 
 ### 2.5.6 SOS 修复系统
 - 是一种易错修复
@@ -73,4 +73,4 @@
 	- 产生变异
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
