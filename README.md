@@ -65,3 +65,22 @@
 - 陕西师范大学食品工程与营养科学学院
 
 
+>[!QUOTE]
+>quote
+
+>[!SUMMARY]
+>SUMMARY
+
+> [!QUESTION]
+> QUSETION
+
+> [!EXAMPLE]
+> EXAMPLE
+
+
+> [!INFO]
+> INFO
+
+> [!BUG]
+> BUG
+
