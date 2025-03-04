@@ -2,16 +2,16 @@
 #分子生物学 #转座 #遗传 
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MMB 02-5 DNA 的突变与修复]]
 > 下一节链接🔗 [[MMB 02-7 SNP 的理论与应用]]
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -28,7 +28,7 @@
 > - **难度**：🌿🌿🌿
 > - **重要性**：🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 - DNA 转座*transposition*：又称“移位”，是由可移位因子*transposable element*介导的遗传物质重排现象
@@ -63,4 +63,4 @@
 4. 转座引起生物进化
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

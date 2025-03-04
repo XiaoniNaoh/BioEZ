@@ -2,9 +2,9 @@
 #分子生物学 #RNA #tRNA #遗传 #蛋白质 #密码子
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 这是本章的第一节~
 > 前往上一章🚀 [[MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰]]
@@ -12,7 +12,7 @@
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -35,7 +35,7 @@
 >     
 > - **重要性**：🌟🌟🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 - 蛋白质生物合成的过程
@@ -70,7 +70,7 @@
 	- 简并*degeneracy*：由一种以上密码子编码同一氨基酸的现象
 	- 同义密码子*synonymous codon*：对应于同一氨基酸的密码子
 
-> [!quote] REVIEW：同义突变与无义突变
+> [!QUOTE] REVIEW：同义突变与无义突变
 > - **同义突变：** 由于遗传密码的简并性，DNA 片段中某个碱基对的突变有时并不改变所编码的氨基酸
 > - **无义突变：** DNA 片段中某个碱基对的突变使该密码子转变为终止密码子，导致翻译提前终止
 
@@ -83,7 +83,7 @@
 ### 4.1.3 密码子与反密码子的相互作用
 - 在蛋白质生物合成过程中，tRNA 的反密码子在核糖体内是通过碱基**反向配对**与 mRNA 上的反密码子相互作用的
 
-> [!note] 笔者按：反向互补，简单理解就是密码子的首位（第 1 位）与反密码子的最后一位（第 3 位）配对；密码子的最后一位（第 3 位）与反密码子的首位（第 1 位）配对
+> [!NOTE] 笔者按：反向互补，简单理解就是密码子的首位（第 1 位）与反密码子的最后一位（第 3 位）配对；密码子的最后一位（第 3 位）与反密码子的首位（第 1 位）配对
 
 
 - 摆动假说*wobble hypothesis*：解释了反密码子中某些稀有成分的配对，以及许多氨基酸有两个以上密码子的问题
@@ -142,4 +142,4 @@
 - 翻译的**保真性**：AA-tRNA 合成酶既要**识别 tRNA**，又能**识别氨基酸**，它对两者都具有高度的专一性
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

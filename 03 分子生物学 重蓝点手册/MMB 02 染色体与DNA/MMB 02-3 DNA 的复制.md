@@ -2,16 +2,16 @@
 #分子生物学 #复制 #DNA聚合酶
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MMB 02-2 DNA 的结构]]
 > 下一节链接🔗 [[MMB 02-4 原核生物和真核生物 DNA 复制的特点]]
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -28,7 +28,7 @@
 > - **难度**：🌿🌿🌿🌿🌿
 > - **重要性**：🌟🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 - dNTP：脱氧核苷三磷酸
@@ -100,4 +100,4 @@
 - 滑动 DNA 夹是生物 DNA 复制体系中必不可少的**保守**部件
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

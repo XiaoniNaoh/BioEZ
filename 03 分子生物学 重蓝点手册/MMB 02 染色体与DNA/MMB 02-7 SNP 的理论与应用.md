@@ -2,9 +2,9 @@
 #分子生物学 #SNP #实验技术 
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MMB 02-6 DNA 的转座]]
 > 这是本章的最后一节~
@@ -12,7 +12,7 @@
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -29,7 +29,7 @@
 > - **难度**：🌿🌿
 > - **重要性**：🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 - SNP：*single nucleotide polymorphism*，单核苷酸多态性，指基因组 DNA 序列中由于单个核苷酸的突变（对换或颠换）而引起的多态性
@@ -51,4 +51,4 @@
 
 # 第二章 完
 
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

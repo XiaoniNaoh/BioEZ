@@ -2,9 +2,9 @@
 #分子生物学 #RNA #mRNA #转录 #剪接 #修饰
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂]]
 > 这是本章的最后一节~
@@ -12,7 +12,7 @@
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -33,7 +33,7 @@
 >     
 > - **重要性**：🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 - 真核生物基因表达往往伴随着 RNA 剪接*splicing*过程
@@ -51,7 +51,7 @@
 - tRNA-CCA-OH + 氨基酸 $\Rightarrow$ 氨酰 tRNA
 - rRNA 前体在核仁中被剪接成成熟的 rRNA 分子。核仁小 RNA *（snoRNA）* 参与核糖核酸酶对特定立体结构的识别，从而确定切割位点
 
->[!note] 笔者按：此处可举例上文所提及的 RNA 聚合酶Ⅰ转录产物 45 S rRNA 前体。在核仁中，这一前体被剪接成成熟的 18 S rRNA、28 S rRNA 和 5.8 S rRNA
+>[!NOTE] 笔者按：此处可举例上文所提及的 RNA 聚合酶Ⅰ转录产物 45 S rRNA 前体。在核仁中，这一前体被剪接成成熟的 18 S rRNA、28 S rRNA 和 5.8 S rRNA
 
 ### 3.5.2 真核生物 mRNA 的剪接
 - mRNA 剪接分类：
@@ -80,7 +80,7 @@
 		- Ⅰ类：第一个转酯反应由一个游离的**鸟苷或鸟苷酸**（GMP、GDP 或 GTP）介导
 		- Ⅱ类：主要存在于真核细胞的**线粒体和叶绿体 rRNA 基因**中。转酯反应无需游离的鸟苷或鸟苷酸，而是内含子本身介导
 
-> [!note] 笔者按：从课本的文字表述中，可以推测自剪接内含子也是一种**核酶**
+> [!NOTE] 笔者按：从课本的文字表述中，可以推测自剪接内含子也是一种**核酶**
 
 
 ### 3.5.3 RNA 的编辑 *RNA editing*
@@ -113,4 +113,4 @@
 
 # 第三章 完
 
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~

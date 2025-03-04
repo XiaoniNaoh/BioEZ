@@ -2,16 +2,16 @@
 #分子生物学  #实验技术 #蛋白质 #RNA #互作 #杂交 #染色质 #RNAi
 
 
-> [!Tip] **Created by. Min Ni**
+> [!TIP] **Created by. Min Ni**
 
-> [!summary] **Backer. 陕西师范大学食品工程与营养科学学院**
+> [!SUMMARY] **Backer. 陕西师范大学食品工程与营养科学学院**
 
 > 上一节链接🔗 [[MMB 05-3 蛋白质与蛋白质组学技术]]
 > 下一节链接🔗 [[MMB 05-5 基因克隆技术]]
 
 ---
 
-> [!summary] 摘要（AI）
+> [!SUMMARY] 摘要（AI）
 > 
 > #### 主要内容
 > 
@@ -34,7 +34,7 @@
 > 
 > - **重要性**：🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the summary service.
+>><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
 
 ---
 ### 5.4.1 酵母单杂交系统
@@ -83,4 +83,4 @@
 - 利用 siRNA 高效、特异性地降解细胞内同源 mRNA，从而阻断靶基因表达，使细胞出现靶基因缺失的表型
 
 ---
-> [!tip] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
+> [!TIP] ٩(๑˃̵ᴗ˂̵๑)۶ 学累了记得好好歇歇捏~
