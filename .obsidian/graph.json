@@ -4,48 +4,69 @@
   "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
-  "showOrphans": false,
+  "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:\"01 食品分析与检验 宝宝教程\"  ",
       "color": {
         "a": 1,
-        "rgb": 14048348
+        "rgb": 16201270
       }
     },
     {
       "query": "path:\"02 微生物学 宝宝教程\"  ",
       "color": {
         "a": 1,
-        "rgb": 14069084
+        "rgb": 16759603
       }
     },
     {
       "query": "path:\"03 分子生物学 重蓝点手册\"  ",
       "color": {
         "a": 1,
-        "rgb": 11392604
+        "rgb": 2649851
       }
     },
     {
       "query": "path:资料卡  ",
       "color": {
         "a": 1,
-        "rgb": 6084188
+        "rgb": 8409855
+      }
+    },
+    {
+      "query": "path:\"05 植物学 步步糕大一轮复习讲义\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 4718530
+      }
+    },
+    {
+      "query": "path:\"06 人体生理学 钱塘甬真粽糕\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 15662848
+      }
+    },
+    {
+      "query": "path:\"08 极简免疫学【beta】\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 1793201
       }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -0.4,
-  "nodeSizeMultiplier": 1.68211505190311,
-  "lineSizeMultiplier": 0.749589100346021,
+  "textFadeMultiplier": -1,
+  "nodeSizeMultiplier": 2.059521484375,
+  "lineSizeMultiplier": 0.941190592447917,
   "collapse-forces": false,
-  "centerStrength": 0.420415224913495,
-  "repelStrength": 15.0389273356401,
+  "centerStrength": 0.597900390625,
+  "repelStrength": 20,
   "linkStrength": 1,
-  "linkDistance": 374,
-  "scale": 0.6748721060805553,
+  "linkDistance": 283,
+  "scale": 0.2375283057254997,
   "close": true
 }
