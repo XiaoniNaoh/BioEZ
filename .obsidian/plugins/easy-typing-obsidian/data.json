@@ -10,7 +10,7 @@
   "ChineseEnglishSpace": true,
   "ChineseNumberSpace": true,
   "EnglishNumberSpace": false,
-  "ChineseNoSpace": true,
+  "ChineseNoSpace": false,
   "PunctuationSpace": true,
   "AutoCapital": false,
   "AutoCapitalMode": "typing",
