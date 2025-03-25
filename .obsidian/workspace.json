@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-5 真核基因其他水平上的表达调控.md",
-                "mode": "source",
+                "file": "README.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MMB 07-5 真核基因其他水平上的表达调控"
+              "title": "README"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-5 真核基因其他水平上的表达调控.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "MMB 07-5 真核基因其他水平上的表达调控 的大纲"
+              "title": "README 的大纲"
             }
           }
         ],
@@ -154,8 +154,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,10 +168,10 @@
   },
   "active": "7f391508aad93bd0",
   "lastOpenFiles": [
-    "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-3 真核基因表达的染色质修饰和表观遗传调控.md",
     "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-5 真核基因其他水平上的表达调控.md",
-    "03 分子生物学 重蓝点手册/MMB SP 分子生物学附册/MMB SP-1 原核细胞与真核细胞对比.md",
     "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康/MMB 08-1 肿瘤与癌症.md",
+    "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-3 真核基因表达的染色质修饰和表观遗传调控.md",
+    "03 分子生物学 重蓝点手册/MMB SP 分子生物学附册/MMB SP-1 原核细胞与真核细胞对比.md",
     "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康/MMB 08-3 基因治疗.md",
     "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康/MMB 08-2 逆转录病毒.md",
     "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-4 非编码 RNA 对真核基因表达的调控.md",
