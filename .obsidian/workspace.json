@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "preview",
+                "file": "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-5 真核基因其他水平上的表达调控.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "MMB 07-5 真核基因其他水平上的表达调控"
+            }
+          },
+          {
+            "id": "8865346ff3c03152",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-4 非编码 RNA 对真核基因表达的调控.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "MMB 07-4 非编码 RNA 对真核基因表达的调控"
             }
           }
         ]
@@ -53,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "lncRNA",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -140,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-5 真核基因其他水平上的表达调控.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "MMB 07-5 真核基因其他水平上的表达调控 的大纲"
             }
           }
         ],
@@ -154,7 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 329.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,16 +182,20 @@
   },
   "active": "7f391508aad93bd0",
   "lastOpenFiles": [
-    "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-5 真核基因其他水平上的表达调控.md",
-    "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康/MMB 08-1 肿瘤与癌症.md",
-    "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-3 真核基因表达的染色质修饰和表观遗传调控.md",
-    "03 分子生物学 重蓝点手册/MMB SP 分子生物学附册/MMB SP-1 原核细胞与真核细胞对比.md",
+    "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-4 非编码 RNA 对真核基因表达的调控.md",
     "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康/MMB 08-3 基因治疗.md",
     "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康/MMB 08-2 逆转录病毒.md",
-    "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-4 非编码 RNA 对真核基因表达的调控.md",
+    "03 分子生物学 重蓝点手册/MMB 00 模板.md",
+    "03 分子生物学 重蓝点手册/MMB SP 分子生物学附册/MMB SP-1 原核细胞与真核细胞对比.md",
+    "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康/MMB 08-1 肿瘤与癌症.md",
     "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-2 真核基因表达的转录调控.md",
     "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-1 真核基因表达调控提纲.md",
+    "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-5 真核基因其他水平上的表达调控.md",
+    "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-3 真核基因表达的染色质修饰和表观遗传调控.md",
     "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-4 转录后调控.md",
+    "未命名.md",
+    "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-4 原核生物和真核生物 DNA 复制的特点.md",
+    "README.md",
     "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-3 色氨酸操纵子与负控阻遏系统.md",
     "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-2 乳糖操纵子与负控诱导系统.md",
     "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-1 原核基因表达调控概述.md",
@@ -190,10 +208,6 @@
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-2 RNA 基本操作技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-1 DNA 基本操作技术.md",
     "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-3 蛋白质的转运、修饰与降解.md",
-    "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-2 蛋白质合成.md",
-    "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-1 tRNA 与遗传密码.md",
-    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰.md",
-    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
     "08 极简免疫学【beta】",
     "资料卡/样品预处理方法.canvas",
     "05 植物学 步步糕大一轮复习讲义/S篇",
