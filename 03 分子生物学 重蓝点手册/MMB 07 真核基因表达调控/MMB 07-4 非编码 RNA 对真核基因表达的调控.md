@@ -100,7 +100,6 @@
 
 > **lncRNA**：长度大于 200 bp 的非编码 RNA
 
-#### a）lncRNA 的作用机制
 
 > [!ATTENTION]
 > **lncRNA 调控基因表达的形式**
