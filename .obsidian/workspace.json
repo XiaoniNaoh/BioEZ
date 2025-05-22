@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07 LLM 时代的生信入门/BIF A-1 单细胞分析｜样品准备与文库构建.md",
+                "file": "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-1 植物的细胞.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BIF A-1 单细胞分析｜样品准备与文库构建"
+              "title": "BOT A-1 植物的细胞"
             }
           },
           {
@@ -27,15 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07 LLM 时代的生信入门/BIF A-1 单细胞分析｜样品准备与文库构建.md",
+                "file": "07 LLM 时代的生信入门/BIF A-2 单细胞分析｜数据导入和前期整理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BIF A-1 单细胞分析｜样品准备与文库构建"
+              "title": "BIF A-2 单细胞分析｜数据导入和前期整理"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -92,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "b373cc10e7579842",
@@ -154,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07 LLM 时代的生信入门/BIF A-1 单细胞分析｜样品准备与文库构建.md",
+                "file": "07 LLM 时代的生信入门/BIF A-2 单细胞分析｜数据导入和前期整理.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "BIF A-1 单细胞分析｜样品准备与文库构建 的大纲"
+              "title": "BIF A-2 单细胞分析｜数据导入和前期整理 的大纲"
             }
           }
         ],
@@ -168,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5
+    "width": 329.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,11 +183,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "25ed0d911006aff6",
+  "active": "a1515315bd2c4366",
   "lastOpenFiles": [
-    "README.md",
     "07 LLM 时代的生信入门/BIF A-1 单细胞分析｜样品准备与文库构建.md",
     "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-1 植物的细胞.md",
+    "02 微生物学 宝宝教程/MB 09 微生物的分类与鉴定.md",
+    "07 LLM 时代的生信入门/BIF A-2 单细胞分析｜数据导入和前期整理.md",
+    "README.md",
     "07 LLM 时代的生信入门/BIF 01 单细胞分析（总体框架）.md",
     "02 微生物学 宝宝教程/MB 01 绪论.md",
     "07 LLM 时代的生信入门",
@@ -207,8 +212,6 @@
     "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰.md",
     "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-3 蛋白质的转运、修饰与降解.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-8 其他分子生物学技术.md",
-    "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
-    "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-7 SNP 的理论与应用.md",
     "08 极简免疫学【beta】",
     "资料卡/样品预处理方法.canvas",
     "05 植物学 步步糕大一轮复习讲义/S篇",
