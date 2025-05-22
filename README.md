@@ -38,6 +38,8 @@
 - 每篇文章开头引入 AI 生成摘要
 - 修复了 callouts 预览问题
 - 修改了开源许可证信息
+- 《LLM 时代的生信入门》开始更新
+- 《WB 简史》开始更新
 
 ### 版本 3（UP3）
 *Nov 7, 2024*
@@ -85,7 +87,7 @@
 
 
 ---
-## ✨ 特别鸣谢
+## ✨ 致谢
 - 陕西师范大学食品工程与营养科学学院
 - 河北医科大学
 - 复旦大学
@@ -93,7 +95,6 @@
 
 ## ⚖️ 许可证
 BioEZ © 2025 by Xulei Ni & Hongyu Ying is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
-
 
 ## 📮 联系笔者
 - 小倪： nixulei@snnu.edu.cn
