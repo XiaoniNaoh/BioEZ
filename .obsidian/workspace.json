@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "CODE_OF_CONDUCT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "CODE_OF_CONDUCT"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291.5,
-    "collapsed": true
+    "width": 291.5
   },
   "right": {
     "id": "b373cc10e7579842",
@@ -141,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "CODE_OF_CONDUCT.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "CODE_OF_CONDUCT 的大纲"
             }
           }
         ],
@@ -169,8 +168,10 @@
   },
   "active": "a1515315bd2c4366",
   "lastOpenFiles": [
-    "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-3 植物组织的类型.md",
     "README.md",
+    "CODE_OF_CONDUCT.md",
+    "贡献者公约行为准则",
+    "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-3 植物组织的类型.md",
     "学术导师申请自动化工具技术文档与调试手册.md",
     "学术导师申请自动化工具：新手入门使用指南.md",
     "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-5 真核基因其他水平上的表达调控.md",
@@ -196,15 +197,12 @@
     "01 食品分析与检验 宝宝教程/FAI SP1 专题一：水分分析.md",
     "01 食品分析与检验 宝宝教程/FAI 02 样品.md",
     "01 食品分析与检验 宝宝教程/FAI 01 绪论.md",
-    "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-2 RNA 基本操作技术.md",
-    "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-1 DNA 基本操作技术.md",
     "00 参考资料/48全科医学概论（第6版）.pdf",
     "00 参考资料/医学影像学（第9版）.pdf",
     "00 参考资料/医学细胞生物学 第7版.pdf",
     "00 参考资料/医学物理学 第10版.pdf",
     "00 参考资料/系统解剖学 十四五 第10版0.pdf",
     "00 参考资料/体育 第7版.pdf",
-    "00 参考资料/十四五《外科学》第十版.pdf",
     "资料卡/样品预处理方法.canvas",
     "截屏2025-01-04 21.59.22.png",
     "截屏2025-01-07 14.20.20.png",
