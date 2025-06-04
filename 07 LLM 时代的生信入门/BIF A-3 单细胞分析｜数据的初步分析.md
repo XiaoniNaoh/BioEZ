@@ -12,7 +12,8 @@
 
 - 用箱型图表示一下基因的分布情况，看看有没有异常值和分布特征（比如长尾分布这种）（Boxplot）（33）  
 
-*箱型图这样读*![](https://api2.mubu.com/v3/document_image/26905802_890d76fc-fb65-4ac3-c90f-0239fe104035.png) ![](https://api2.mubu.com/v3/document_image/26905802_a30acfff-b968-40e4-948f-3b0a8b5827bd.png)  
+*箱型图这样读*![](https://api2.mubu.com/v3/document_image/26905802_890d76fc-fb65-4ac3-c90f-0239fe104035.png) 
+![](https://api2.mubu.com/v3/document_image/26905802_a30acfff-b968-40e4-948f-3b0a8b5827bd.png)  
 ### 2. 直方图
 
 - 用直方图表示基因表达值的频率分布，看看总体趋势和分布形态  
