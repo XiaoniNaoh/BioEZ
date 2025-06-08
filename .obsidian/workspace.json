@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CODE_OF_CONDUCT.md",
+                "file": "06 生物化学 考研帮帮忙/BC 02 核酸.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CODE_OF_CONDUCT"
+              "title": "BC 02 核酸"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CODE_OF_CONDUCT.md",
+                "file": "06 生物化学 考研帮帮忙/BC 02 核酸.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CODE_OF_CONDUCT 的大纲"
+              "title": "BC 02 核酸 的大纲"
             }
           }
         ],
@@ -166,11 +166,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "65e9230b69b70715",
+  "active": "a1515315bd2c4366",
   "lastOpenFiles": [
-    "资料卡与图库/氨基酸化学通式.png",
-    "CODE_OF_CONDUCT.md",
     "06 生物化学 考研帮帮忙/BC 01 蛋白质.md",
+    "06 生物化学 考研帮帮忙/BC 02 核酸.md",
+    "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-2 植物细胞的生长、繁殖与分化.md",
+    "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-1 植物的细胞.md",
+    "CODE_OF_CONDUCT.md",
+    "资料卡与图库/氨基酸化学通式.png",
     "06 生物化学 考研帮帮忙/BC 02 蛋白质 1.md",
     "07 LLM 时代的生信入门/BIF A-1 单细胞分析｜样品准备与文库构建.md",
     "07 LLM 时代的生信入门/BIF A-5 单细胞分析｜绘图描述.md",
@@ -180,12 +183,10 @@
     "箱形图示意1.png",
     "07 LLM 时代的生信入门/BIF A-3 单细胞分析｜数据的初步分析.md",
     "07 LLM 时代的生信入门/BIF A-4 单细胞分析｜数据的深入分析.md",
-    "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-1 植物的细胞.md",
     "04 五年本科 三年细胞 （科普）/CB 01 细胞质膜与跨膜运输.md",
     "04 五年本科 三年细胞 （科普）/CB 00 细胞生物学 目录与更新计划.md",
     "04 五年本科 三年细胞 （科普）/CB 00 模板.md",
     "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-3 植物组织的类型.md",
-    "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-2 植物细胞的生长、繁殖与分化.md",
     "01 食品分析与检验 宝宝教程/FAI 01 绪论.md",
     "01 食品分析与检验 宝宝教程/FAI SP1 专题一：水分分析.md",
     "01 食品分析与检验 宝宝教程/FAI 02 样品.md",
