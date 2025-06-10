@@ -29,7 +29,7 @@
       }
     },
     {
-      "query": "path:资料卡  ",
+      "query": "path:\"04 五年本科 三年细胞 （科普）\"  ",
       "color": {
         "a": 1,
         "rgb": 8409855
@@ -43,17 +43,17 @@
       }
     },
     {
-      "query": "path:\"06 人体生理学 钱塘甬真粽糕\"  ",
+      "query": "path:\"06 生物化学 考研帮帮忙\"  ",
       "color": {
         "a": 1,
         "rgb": 15662848
       }
     },
     {
-      "query": "path:\"08 极简免疫学【beta】\"  ",
+      "query": "path:\"07 LLM 时代的生信入门\"  ",
       "color": {
         "a": 1,
-        "rgb": 1793201
+        "rgb": 1796529
       }
     }
   ],
@@ -67,6 +67,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 283,
-  "scale": 0.3670522736314642,
+  "scale": 0.21791399892323757,
   "close": true
 }
