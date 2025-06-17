@@ -11,14 +11,12 @@
             "id": "a1515315bd2c4366",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "06 生物化学 考研帮帮忙/BC 04 糖代谢.md",
-                "mode": "source",
-                "source": false
+                "file": "07 LLM 时代的生信入门/BIF B-1 scRNAseq 入门.pdf"
               },
-              "icon": "lucide-file",
-              "title": "BC 04 糖代谢"
+              "icon": "lucide-file-text",
+              "title": "BIF B-1 scRNAseq 入门"
             }
           }
         ]
@@ -140,13 +138,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "06 生物化学 考研帮帮忙/BC 04 糖代谢.md",
+                "file": "07 LLM 时代的生信入门/BIF B-1 scRNAseq 入门.pdf",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "BC 04 糖代谢 的大纲"
+              "title": "BIF B-1 scRNAseq 入门 的大纲"
             }
           }
         ],
@@ -166,22 +164,21 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "65e9230b69b70715",
+  "active": "a1515315bd2c4366",
   "lastOpenFiles": [
-    "07 LLM 时代的生信入门/会用到的妙妙数据/matrix.mtx",
-    "07 LLM 时代的生信入门/会用到的妙妙数据/genes.tsv",
-    "07 LLM 时代的生信入门/会用到的妙妙数据/barcodes.tsv",
-    "07 LLM 时代的生信入门/会用到的妙妙数据/hg19/matrix.mtx",
-    "07 LLM 时代的生信入门/会用到的妙妙数据/hg19/genes.tsv",
-    "07 LLM 时代的生信入门/会用到的妙妙数据/hg19/barcodes.tsv",
-    "07 LLM 时代的生信入门/会用到的妙妙数据/hg19",
-    "07 LLM 时代的生信入门/会用到的妙妙数据",
-    "07 LLM 时代的生信入门/filtered_gene_bc_matrices/hg19/matrix.mtx",
-    "07 LLM 时代的生信入门/filtered_gene_bc_matrices/hg19/genes.tsv",
-    "07 LLM 时代的生信入门/filtered_gene_bc_matrices/hg19/barcodes.tsv",
+    "06 生物化学 考研帮帮忙/BC 04 糖代谢.md",
+    "07 LLM 时代的生信入门/BIF B-1 scRNAseq 入门.pdf",
+    "07 LLM 时代的生信入门/BIF B-1 scRNAseq入门.pdf",
+    "07 LLM 时代的生信入门/scRNAseq 入门-数据/matrix.mtx",
+    "07 LLM 时代的生信入门/scRNAseq 入门-数据/genes.tsv",
+    "07 LLM 时代的生信入门/scRNAseq 入门-数据/barcodes.tsv",
+    "07 LLM 时代的生信入门/scRNAseq 入门-数据",
+    "07 LLM 时代的生信入门/scRNAseq入门.pdf",
+    "00 参考资料/十四五《外科学》第十版.pdf",
+    "00 参考资料/人体寄生虫学人卫十版.pdf",
+    "00 参考资料/内科学 第10版.pdf",
     "06 生物化学 考研帮帮忙/BC 01 蛋白质.md",
     "06 生物化学 考研帮帮忙/BC 03 酶.md",
-    "06 生物化学 考研帮帮忙/BC 04 糖代谢.md",
     "食品新资源-疑似重点.md",
     "README.md",
     "06 生物化学 考研帮帮忙/BC 02 核酸.md",
