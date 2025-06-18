@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "07 LLM 时代的生信入门/BIF B-1 scRNAseq 入门.pdf"
+                "file": "99 期末抱佛脚专刊（临时）/TEM 01 食品工艺学 一口气看爽.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "BIF B-1 scRNAseq 入门"
+              "title": "TEM 01 食品工艺学 一口气看爽"
             }
           }
         ]
@@ -138,13 +138,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07 LLM 时代的生信入门/BIF B-1 scRNAseq 入门.pdf",
+                "file": "99 期末抱佛脚专刊（临时）/TEM 01 食品工艺学 一口气看爽.pdf",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "BIF B-1 scRNAseq 入门 的大纲"
+              "title": "TEM 01 食品工艺学 一口气看爽 的大纲"
             }
           }
         ],
@@ -166,6 +166,11 @@
   },
   "active": "65e9230b69b70715",
   "lastOpenFiles": [
+    "99 期末抱佛脚专刊（临时）/TEM 01食品工艺学 一口气看爽.md",
+    "99 期末抱佛脚专刊（临时）/TEM 01 食品工艺学 一口气看爽.pdf",
+    "07 LLM 时代的生信入门/BIF B-1 scRNAseq 入门.pdf",
+    "99 期末抱佛脚专刊/食品工艺学 一口气看爽.md",
+    "99 期末抱佛脚专刊（临时）",
     "07 LLM 时代的生信入门/scRNAseq 入门-图片/高变基因计算过程.png",
     "07 LLM 时代的生信入门/scRNAseq 入门-图片/高变基因散点图（带标签）.png",
     "07 LLM 时代的生信入门/scRNAseq 入门-图片/细胞聚类（Louvain算法）过程.png",
@@ -176,18 +181,14 @@
     "07 LLM 时代的生信入门/scRNAseq 入门-图片/全群Marker基因计算过程.png",
     "07 LLM 时代的生信入门/scRNAseq 入门-图片/UMAP降维过程日志.png",
     "07 LLM 时代的生信入门/scRNAseq 入门-图片/UMAP细胞类型注释结果.png",
-    "07 LLM 时代的生信入门/scRNAseq 入门-图片/UMAP初始聚类散点图.png",
     "07 LLM 时代的生信入门/scRNAseq 入门-图片",
     "07 LLM 时代的生信入门/transit",
     "06 生物化学 考研帮帮忙/BC 04 糖代谢.md",
-    "07 LLM 时代的生信入门/BIF B-1 scRNAseq 入门.pdf",
     "07 LLM 时代的生信入门/BIF B-1 scRNAseq入门.pdf",
     "07 LLM 时代的生信入门/scRNAseq 入门-数据/matrix.mtx",
     "07 LLM 时代的生信入门/scRNAseq 入门-数据/genes.tsv",
     "07 LLM 时代的生信入门/scRNAseq 入门-数据/barcodes.tsv",
     "07 LLM 时代的生信入门/scRNAseq 入门-数据",
-    "07 LLM 时代的生信入门/scRNAseq入门.pdf",
-    "00 参考资料/十四五《外科学》第十版.pdf",
     "06 生物化学 考研帮帮忙/BC 01 蛋白质.md",
     "06 生物化学 考研帮帮忙/BC 03 酶.md",
     "食品新资源-疑似重点.md",
@@ -210,8 +211,6 @@
     "01 食品分析与检验 宝宝教程/FAI 01 绪论.md",
     "01 食品分析与检验 宝宝教程/FAI SP1 专题一：水分分析.md",
     "01 食品分析与检验 宝宝教程/FAI 02 样品.md",
-    "02 微生物学 宝宝教程/MB 02 原核微生物.md",
-    "05 植物学 步步糕大一轮复习讲义/BOT 00 植物学 目录与更新计划.md",
     "资料卡与图库/样品预处理方法.canvas"
   ]
 }
