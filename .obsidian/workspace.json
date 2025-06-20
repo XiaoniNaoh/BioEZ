@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "99 期末抱佛脚专刊（临时）/TEM 01 食品工艺学 一口气看爽.pdf"
+                "file": "07 LLM 时代的生信入门/BIF B-2 scRNAseq入门到UMAP注释.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "TEM 01 食品工艺学 一口气看爽"
+              "title": "BIF B-2 scRNAseq入门到UMAP注释"
             }
           }
         ]
@@ -138,13 +138,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99 期末抱佛脚专刊（临时）/TEM 01 食品工艺学 一口气看爽.pdf",
+                "file": "07 LLM 时代的生信入门/BIF B-2 scRNAseq入门到UMAP注释.pdf",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "TEM 01 食品工艺学 一口气看爽 的大纲"
+              "title": "BIF B-2 scRNAseq入门到UMAP注释 的大纲"
             }
           }
         ],
@@ -164,11 +164,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "65e9230b69b70715",
+  "active": "a1515315bd2c4366",
   "lastOpenFiles": [
-    "99 期末抱佛脚专刊（临时）/TEM 01食品工艺学 一口气看爽.md",
-    "99 期末抱佛脚专刊（临时）/TEM 01 食品工艺学 一口气看爽.pdf",
     "07 LLM 时代的生信入门/BIF B-1 scRNAseq 入门.pdf",
+    "07 LLM 时代的生信入门/BIF B-2 scRNAseq入门到UMAP注释.pdf",
+    "资料卡与图库/科赫法则.md",
+    "CODE_OF_CONDUCT.md",
+    "07 LLM 时代的生信入门/BIF A-5 单细胞分析｜绘图描述.md",
+    "99 期末抱佛脚专刊（临时）/TEM 01 食品工艺学 一口气看爽.pdf",
+    "99 期末抱佛脚专刊（临时）/TEM 01食品工艺学 一口气看爽.md",
     "99 期末抱佛脚专刊/食品工艺学 一口气看爽.md",
     "99 期末抱佛脚专刊（临时）",
     "07 LLM 时代的生信入门/scRNAseq 入门-图片/高变基因计算过程.png",
@@ -188,7 +192,6 @@
     "07 LLM 时代的生信入门/scRNAseq 入门-数据/matrix.mtx",
     "07 LLM 时代的生信入门/scRNAseq 入门-数据/genes.tsv",
     "07 LLM 时代的生信入门/scRNAseq 入门-数据/barcodes.tsv",
-    "07 LLM 时代的生信入门/scRNAseq 入门-数据",
     "06 生物化学 考研帮帮忙/BC 01 蛋白质.md",
     "06 生物化学 考研帮帮忙/BC 03 酶.md",
     "食品新资源-疑似重点.md",
@@ -196,10 +199,8 @@
     "06 生物化学 考研帮帮忙/BC 02 核酸.md",
     "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-2 植物细胞的生长、繁殖与分化.md",
     "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-1 植物的细胞.md",
-    "CODE_OF_CONDUCT.md",
     "06 生物化学 考研帮帮忙/BC 02 蛋白质 1.md",
     "07 LLM 时代的生信入门/BIF A-1 单细胞分析｜样品准备与文库构建.md",
-    "07 LLM 时代的生信入门/BIF A-5 单细胞分析｜绘图描述.md",
     "07 LLM 时代的生信入门/BIF A-6 单细胞分析｜参考名词索引.md",
     "07 LLM 时代的生信入门/BIF A-2 单细胞分析｜数据导入和前期整理.md",
     "07 LLM 时代的生信入门/BIF A-3 单细胞分析｜数据的初步分析.md",
@@ -210,7 +211,6 @@
     "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-3 植物组织的类型.md",
     "01 食品分析与检验 宝宝教程/FAI 01 绪论.md",
     "01 食品分析与检验 宝宝教程/FAI SP1 专题一：水分分析.md",
-    "01 食品分析与检验 宝宝教程/FAI 02 样品.md",
     "资料卡与图库/样品预处理方法.canvas"
   ]
 }
