@@ -190,18 +190,6 @@ i, em {
     font-family: "Franklin Gothic Medium", "未来荧黑";
 }
 
-.markdown-preview-view blockquote {
-    padding-inline-start: var(--nested-padding);
-    font-size: var(--blockquote-size);
-    color: #1C68C4;
-}
-
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-    font-style: var(--blockquote-style);
-    background-color: var(--blockquote-background-color);
-    color: #1C68C4;
-}
-
 .markdown-source-view.mod-cm6 .cm-line > * {
     text-indent: 0;
     font-family: "Franklin Gothic Medium", "未来荧黑";
@@ -238,11 +226,6 @@ i, em {
 b, strong {
     font-weight: 700;
     color: var(--bold-color);
-}
-
-.cm-s-obsidian span.cm-quote {
-    color: #1C68C4;
-    font-weight: 700;
 }
 
 .callout-title-inner {
