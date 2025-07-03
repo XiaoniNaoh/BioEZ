@@ -15,8 +15,8 @@
   "minimal-style@@h1-color@@light": "#0669DA",
   "minimal-style@@h1-color@@dark": "#AED4FF",
   "minimal-style@@italic-color@@light": "#6F24AC",
-  "minimal-style@@italic-color@@dark": "#C0A9E5",
-  "minimal-style@@base@@dark": "#2C424E",
+  "minimal-style@@italic-color@@dark": "#D7BEFF",
+  "minimal-style@@base@@dark": "#4A5D77",
   "minimal-style@@table-text-size": "1.1em",
   "minimal-style@@table-column-min-width": "8ch",
   "minimal-style@@col-lines": false,
@@ -27,5 +27,8 @@
   "minimal-style@@table-center": true,
   "minimal-style@@table-nowrap": false,
   "minimal-style@@row-lines": false,
-  "minimal-style@@h4-size": "1.3em"
+  "minimal-style@@h4-size": "1.3em",
+  "minimal-style@@bg3@@dark": "#7FA692",
+  "minimal-style@@blockquote-color@@dark": "#80B8FC",
+  "minimal-style@@blockquote-color@@light": "#1C68C4"
 }
