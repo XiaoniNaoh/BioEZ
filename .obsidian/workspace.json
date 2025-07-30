@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06 生物化学 考研帮帮忙/BC 06 糖类.md",
+                "file": "06 生物化学 考研帮帮忙/BC 01 氨基酸与蛋白质.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BC 06 糖类"
+              "title": "BC 01 氨基酸与蛋白质"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "06 生物化学 考研帮帮忙/BC 06 糖类.md",
+                "file": "06 生物化学 考研帮帮忙/BC 01 氨基酸与蛋白质.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "BC 06 糖类 的大纲"
+              "title": "BC 01 氨基酸与蛋白质 的大纲"
             }
           }
         ],
@@ -168,8 +168,8 @@
   },
   "active": "9b1036e52103ba37",
   "lastOpenFiles": [
-    "06 生物化学 考研帮帮忙/BC 05 水.md",
     "06 生物化学 考研帮帮忙/BC 06 糖类.md",
+    "06 生物化学 考研帮帮忙/BC 05 水.md",
     "01 食品分析与检验 宝宝教程/FAI SP2 专题二：糖类分析.md",
     "06 生物化学 考研帮帮忙/BC 04 糖代谢.md",
     "07 LLM 时代的生信入门/BIF B-2 scRNAseq入门到UMAP注释.pdf",
@@ -182,7 +182,7 @@
     "07 LLM 时代的生信入门/BIF A-1 单细胞分析｜样品准备与文库构建.md",
     "06 生物化学 考研帮帮忙/BC 03 酶.md",
     "06 生物化学 考研帮帮忙/BC 02 核酸.md",
-    "06 生物化学 考研帮帮忙/BC 01 蛋白质.md",
+    "06 生物化学 考研帮帮忙/BC 01 氨基酸与蛋白质.md",
     "README.md",
     "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰.md",
     "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
