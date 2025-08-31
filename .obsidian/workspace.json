@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-2 RNA 基本操作技术.md",
+                "file": "06 生物化学 考研帮帮忙/BC 06 糖类.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MMB 05-2 RNA 基本操作技术"
+              "title": "BC 06 糖类"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-2 RNA 基本操作技术.md",
+                "file": "06 生物化学 考研帮帮忙/BC 06 糖类.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "MMB 05-2 RNA 基本操作技术 的大纲"
+              "title": "BC 06 糖类 的大纲"
             }
           }
         ],
@@ -169,6 +169,11 @@
   },
   "active": "9b1036e52103ba37",
   "lastOpenFiles": [
+    "06 生物化学 考研帮帮忙/BC 05 水.md",
+    "06 生物化学 考研帮帮忙/BC 06 糖类.md",
+    "06 生物化学 考研帮帮忙/BC 04 糖代谢.md",
+    "06 生物化学 考研帮帮忙/BC 03 酶.md",
+    "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-2 RNA 基本操作技术.md",
     "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-1 DNA 基本操作技术.md",
     "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
     "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰.md",
@@ -190,11 +195,6 @@
     "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-1 染色体.md",
     "03 分子生物学 重蓝点手册/MMB 01 绪论/MMB 01 绪论.md",
     "CONTRIBUTING.md",
-    "CODE_OF_CONDUCT.md",
-    "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-2 植物细胞的生长、繁殖与分化.md",
-    "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-1 植物的细胞.md",
-    "README.md",
-    "02 微生物学 宝宝教程/MB 02 原核微生物.md",
     "99 期末抱佛脚专刊（临时）/TEM 01 食品工艺学 一口气看爽.pdf",
     "07 LLM 时代的生信入门/BIF B-1 scRNAseq 入门.pdf",
     "07 LLM 时代的生信入门/BIF B-2 scRNAseq入门到UMAP注释.pdf",
