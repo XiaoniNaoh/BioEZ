@@ -197,7 +197,7 @@ BioEZ 是我们让生物学变得好玩的小小心愿！大学课本厚得像�
 
 ## ⚖️ 许可证
 
-本采用 CC BY-SA 4.0 许可证。欢迎分享和改编，只要记得标明出处就行！
+本项目采用 CC BY-SA 4.0 许可证。欢迎分享和改编，只要记得标明出处就行！
 
 BioEZ © 2025 by Xulei Ni & Hongyu Ying is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
 
