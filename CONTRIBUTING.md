@@ -1,8 +1,6 @@
 # 贡献指南
 
-## 简介
-
-BioEZ 是一个开源项目，旨在为各个年龄段的用户提供生物学教程，涵盖食品检测、微生物学、DNA 等多个主题。我们欢迎社区的贡献，帮助改进和扩展这些教程。
+BioEZ 欢迎错误修正、新教程、图表和工程改进。教程是可公开传播的科学内容，因此可追溯性、版权和审校记录与文字风格同样重要。
 
 ## 如何贡献
 
@@ -25,15 +23,37 @@ BioEZ 是一个开源项目，旨在为各个年龄段的用户提供生物学�
    请将 YOUR_USERNAME 替换为您的 GitHub 用户名。
 3. 打开克隆的仓库文件夹，使用 Markdown 编辑器编辑文件。
 
-## 编写标准
+## 编写与元数据
 
-编写教程时，请遵循以下准则：
+- 使用清晰、简洁的语言，首次出现的专业词给出定义。
+- 新建教程使用 [教程模板](docs/tutorial-template.md)，并遵循 [Frontmatter 规范](docs/content-frontmatter.md)。
+- 使用 Obsidian Wikilink 时确保目标文件存在；不要手工复制难度、重要性等可从元数据生成的信息。
+- 事实性主张应引用教科书、同行评议论文、标准或权威数据库。
 
-- 使用清晰、简洁的语言。
-- 必要时包含图片、图表或视频。
-- 保持教程结构一致，例如：介绍、材料、方法、结果、讨论等。
-- 使用正确的 Markdown 语法。
-- 尊重版权，确保所有引用的材料都有适当的许可。
+## 科学审校
+
+内容状态依次为 `draft` → `editorial-review` → `scientific-review` → `published`。发布页面必须记录审校者和日期。修改核心结论后，页面应退回 `scientific-review`，直到再次审校。
+
+## 图片、引用与版权
+
+- 仅提交自制资料、公共领域资料，或明确允许在 CC BY-SA 4.0 项目中再分发的素材。
+- 不上传未经授权的教材全文、扫描书、课件或付费数据库内容；改用 DOI、ISBN、出版社或图书馆页面。
+- 图片必须包含有意义的 `alt` 文本，图注注明作者、来源链接和许可证。避免依赖可失效的第三方热链。
+- 优先提交压缩后的 WebP/AVIF/SVG；单张图片建议小于 2 MB。
+
+## AI 辅助内容
+
+AI 可用于头脑风暴、结构编辑和草稿，但不能代替科学审校。贡献者必须核对事实、引用和版权，并在 PR 中说明使用的模型、用途和人工复核范围。AI 名称或图标不应被当作审校记录。
+
+## 本地检查
+
+```bash
+python3 -m unittest discover -s tests -v
+# 未提交时，显式列出本次修改的教程
+python3 scripts/validate_content.py --paths "path/to/tutorial.md"
+# 提交后，模拟 PR 的增量检查
+python3 scripts/validate_content.py --base origin/main --head HEAD
+```
 
 ## 提交 Pull Request
 
@@ -44,7 +64,7 @@ BioEZ 是一个开源项目，旨在为各个年龄段的用户提供生物学�
    git checkout -b feature/add-new-tutorial
    ```
 2. 在该分支上进行您的更改。
-3. 提交您的更改，并编写清晰的提交消息：
+3. 运行内容检查，然后提交更改并编写清晰的提交消息：
    ```bash
    git commit -m 'Add new tutorial: Genetics'
    ```
