@@ -18,7 +18,15 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE_SUFFIXES = {".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"}
-IGNORED_DIRECTORIES = {".cache", ".git", ".obsidian", "node_modules", "public", "__pycache__"}
+IGNORED_DIRECTORIES = {
+    ".cache",
+    ".git",
+    ".obsidian",
+    ".playwright-cli",
+    "node_modules",
+    "public",
+    "__pycache__",
+}
 COURSE_DIRECTORY = re.compile(r"^0[1-7] ")
 WIKILINK_RE = re.compile(r"(?P<embed>!)?\[\[(?P<target>[^\]\n]+)\]\]")
 MARKDOWN_LINK_RE = re.compile(

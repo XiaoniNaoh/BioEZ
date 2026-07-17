@@ -73,6 +73,12 @@ class ContentResourceTests(unittest.TestCase):
         self.assertEqual(report.summary["remote_images"], 0)
         self.assertEqual(report.summary["broken_links"], 0)
 
+    def test_ignores_playwright_acceptance_artifacts(self):
+        self.write(".playwright-cli/screenshot.png", b"local acceptance artifact")
+        report = scan_repository(self.root)
+        self.assertEqual(report.summary["image_assets"], 0)
+        self.assertEqual(report.summary["unreferenced_assets"], 0)
+
     def test_reports_ambiguous_wikilink_and_missing_heading(self):
         self.write("01 Course/One/Topic.md", "# First\n")
         self.write("01 Course/Two/Topic.md", "# Second\n")
