@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">两组数据的直方图</title>
+  <desc id="description">BioEZ 可复现教学图，由 scripts/generate_teaching_figures.py 生成。</desc>
+  <metadata>Copyright BioEZ contributors; licensed under CC BY-SA 4.0; generator seed 20260717.</metadata>
+  <rect width="100%" height="100%" fill="#fbfcff"/>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<text x="480.0" y="42.0" font-size="28" text-anchor="middle" font-weight="650" fill="#172033">用直方图比较两组分布</text>
+<line x1="100.0" y1="480.0" x2="860.0" y2="480.0" stroke="#26354d" stroke-width="1.6"/><line x1="100.0" y1="90.0" x2="100.0" y2="480.0" stroke="#26354d" stroke-width="1.6"/><text x="480.0" y="522.0" font-size="16" text-anchor="middle" font-weight="400" fill="#172033">表达量</text><text x="50.0" y="285.0" font-size="16" text-anchor="middle" fill="#172033" transform="rotate(-90 50.0 285.0)">频数</text>
+<rect x="105.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="123.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="156.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="174.0" y="474.9" width="24.0" height="5.1" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="207.0" y="429.2" width="24.0" height="50.8" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="225.0" y="474.9" width="24.0" height="5.1" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="258.0" y="307.4" width="24.0" height="172.6" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="276.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="309.0" y="200.8" width="24.0" height="279.2" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="327.0" y="444.5" width="24.0" height="35.5" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="360.0" y="150.0" width="24.0" height="330.0" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="378.0" y="393.7" width="24.0" height="86.3" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="411.0" y="221.1" width="24.0" height="258.9" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="429.0" y="271.8" width="24.0" height="208.2" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="462.0" y="388.6" width="24.0" height="91.4" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="480.0" y="241.4" width="24.0" height="238.6" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="513.0" y="449.5" width="24.0" height="30.5" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="531.0" y="216.0" width="24.0" height="264.0" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="564.0" y="474.9" width="24.0" height="5.1" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="582.0" y="287.1" width="24.0" height="192.9" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="615.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="633.0" y="348.0" width="24.0" height="132.0" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="666.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="684.0" y="439.4" width="24.0" height="40.6" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="717.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="735.0" y="469.8" width="24.0" height="10.2" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="768.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="786.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="819.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="837.0" y="480.0" width="24.0" height="0.0" rx="1.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<rect x="620.0" y="105.0" width="18.0" height="18.0" rx="0.0" fill="#3478c7" stroke="none" stroke-width="1"/>
+<text x="648.0" y="120.0" font-size="15" text-anchor="start" font-weight="400" fill="#172033">对照组</text>
+<rect x="730.0" y="105.0" width="18.0" height="18.0" rx="0.0" fill="#e05b4e" stroke="none" stroke-width="1"/>
+<text x="758.0" y="120.0" font-size="15" text-anchor="start" font-weight="400" fill="#172033">处理组</text>
+  </g>
+</svg>

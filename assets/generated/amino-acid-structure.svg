@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">α-氨基酸通式</title>
+  <desc id="description">BioEZ 可复现教学图，由 scripts/generate_teaching_figures.py 生成。</desc>
+  <metadata>Copyright BioEZ contributors; licensed under CC BY-SA 4.0; generator seed 20260717.</metadata>
+  <rect width="100%" height="100%" fill="#fbfcff"/>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<text x="480.0" y="48.0" font-size="28" text-anchor="middle" font-weight="650" fill="#172033">α-氨基酸的通式</text>
+<circle cx="480.0" cy="300.0" r="42.0" fill="#eaf2ff" stroke="#28568c" stroke-width="3"/>
+<text x="480.0" y="310.0" font-size="25" text-anchor="middle" font-weight="700" fill="#172033">Cα</text>
+<line x1="480.0" y1="300.0" x2="480.0" y2="177.6" stroke="#34435e" stroke-width="4"/>
+<rect x="408.0" y="95.0" width="144.0" height="70.0" rx="12.0" fill="#ffffff" stroke="#7891b5" stroke-width="2"/>
+<text x="480.0" y="135.0" font-size="25" text-anchor="middle" font-weight="650" fill="#172033">H</text>
+<text x="480.0" y="192.0" font-size="17" text-anchor="middle" font-weight="400" fill="#52647f">氢</text>
+<line x1="480.0" y1="300.0" x2="480.0" y2="422.4" stroke="#34435e" stroke-width="4"/>
+<rect x="408.0" y="435.0" width="144.0" height="70.0" rx="12.0" fill="#ffffff" stroke="#7891b5" stroke-width="2"/>
+<text x="480.0" y="475.0" font-size="25" text-anchor="middle" font-weight="650" fill="#172033">R</text>
+<text x="480.0" y="532.0" font-size="17" text-anchor="middle" font-weight="400" fill="#52647f">侧链</text>
+<line x1="480.0" y1="300.0" x2="314.4" y2="300.0" stroke="#34435e" stroke-width="4"/>
+<rect x="178.0" y="265.0" width="144.0" height="70.0" rx="12.0" fill="#ffffff" stroke="#7891b5" stroke-width="2"/>
+<text x="250.0" y="305.0" font-size="25" text-anchor="middle" font-weight="650" fill="#172033">H₃N⁺</text>
+<text x="250.0" y="362.0" font-size="17" text-anchor="middle" font-weight="400" fill="#52647f">氨基</text>
+<line x1="480.0" y1="300.0" x2="645.6" y2="300.0" stroke="#34435e" stroke-width="4"/>
+<rect x="638.0" y="265.0" width="144.0" height="70.0" rx="12.0" fill="#ffffff" stroke="#7891b5" stroke-width="2"/>
+<text x="710.0" y="305.0" font-size="25" text-anchor="middle" font-weight="650" fill="#172033">COO⁻</text>
+<text x="710.0" y="362.0" font-size="17" text-anchor="middle" font-weight="400" fill="#52647f">羧基</text>
+<text x="480.0" y="562.0" font-size="19" text-anchor="middle" font-weight="550" fill="#172033">R 基决定氨基酸的极性、电荷和反应特性</text>
+  </g>
+</svg>
