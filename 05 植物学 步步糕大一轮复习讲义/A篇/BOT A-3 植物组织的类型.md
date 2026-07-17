@@ -1,3 +1,35 @@
+---
+id: "bot-a-03"
+title: "植物组织的类型"
+course: "botany"
+chapter: "A 篇"
+order: "a-03"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 15
+prerequisites: []
+next: []
+tags:
+  - "植物"
+  - "分生组织"
+  - "成熟组织"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《植物学 步步糕大一轮复习讲义》中的“植物组织的类型”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：植物细胞的生长、繁殖与分化](<BOT A-2 植物细胞的生长、繁殖与分化.md>) · [课程目录](<../COURSE_INDEX.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 植物学话题 03 ：植物组织的类型
 #植物 #分生组织 #成熟组织
 
@@ -300,6 +332,3 @@
 ---
 
 [^1]: 生活细胞：与非生活细胞相对，可简单理解为就是活细胞
-
-> 上一节链接🔗 [[BOT A-2 植物细胞的生长、繁殖与分化]]
-> 下一节链接🔗 

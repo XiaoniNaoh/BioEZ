@@ -1,3 +1,37 @@
+---
+id: "bot-a-02"
+title: "植物细胞的生长、繁殖与分化"
+course: "botany"
+chapter: "A 篇"
+order: "a-02"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 8
+prerequisites: []
+next:
+  - "bot-a-03"
+tags:
+  - "植物"
+  - "细胞生物学"
+  - "细胞"
+  - "细胞分裂"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《植物学 步步糕大一轮复习讲义》中的“植物细胞的生长、繁殖与分化”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：植物的细胞](<BOT A-1 植物的细胞.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：植物组织的类型 →](<BOT A-3 植物组织的类型.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 植物学 话题 02 ：植物细胞的生长、繁殖与分化
 #植物 #细胞生物学 #细胞 #细胞分裂 
 
@@ -126,6 +160,3 @@
 - 被子植物是最高等的植物，分工最细，细胞形态特化非常明显，细胞类型繁多，结构最复杂，功能最完善
 
 ---
-
-> 上一节链接🔗 [[BOT A-1 植物的细胞]]
-> 下一节链接🔗 [[BOT A-3 植物组织的类型]]

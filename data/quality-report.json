@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "markdown_files": 115,
+    "wikilinks": 10,
+    "markdown_links": 377,
+    "image_references": 31,
+    "image_assets": 31,
+    "manifest_assets": 31,
+    "remote_images": 0,
+    "missing_alt": 0,
+    "broken_links": 0,
+    "ambiguous_wikilinks": 0,
+    "unreferenced_assets": 0,
+    "orphan_pages": 0,
+    "license_review_required": 20,
+    "errors": 0,
+    "warnings": 20
+  },
+  "findings": [
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/PCA前5主成分摘要.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/PCA肘部图（确定聚类PC数）.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/PCA降维散点图.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/QC指标小提琴图与散点图.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/RStudio官网.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/RStudio首次启动界面.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/R下载页面.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/R官网首页.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/Seurat对象初始化摘要.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/UMAP初始聚类散点图.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/UMAP细胞类型注释结果.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/UMAP降维过程日志.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/全群Marker基因计算过程.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/前15主成分热图.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/各聚类top15 Marker基因片段.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/数据标准化执行.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/标准化后表达矩阵片段.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/细胞聚类（Louvain算法）过程.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/高变基因散点图（带标签）.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    },
+    {
+      "code": "origin-metadata-missing",
+      "severity": "warning",
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/高变基因计算过程.png",
+      "line": 1,
+      "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
+    }
+  ],
+  "orphans": [],
+  "unreferenced_assets": []
+}

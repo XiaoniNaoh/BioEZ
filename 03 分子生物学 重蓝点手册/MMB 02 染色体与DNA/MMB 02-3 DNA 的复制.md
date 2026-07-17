@@ -1,8 +1,39 @@
+---
+id: "mmb-02-03"
+title: "DNA 的复制"
+course: "molecular-biology"
+chapter: "染色体与 DNA"
+order: "02-03"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 5
+importance: 4
+estimated_minutes: 7
+prerequisites: []
+next:
+  - "mmb-02-04"
+tags:
+  - "分子生物学"
+  - "复制"
+  - "DNA聚合酶"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“DNA 的复制”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：DNA 的结构](<MMB 02-2 DNA 的结构.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：原核生物和真核生物 DNA 复制的特点 →](<MMB 02-4 原核生物和真核生物 DNA 复制的特点.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 2 章 第 3 节：DNA 的复制
 #分子生物学 #复制 #DNA聚合酶
 
-> 上一节链接🔗 [[MMB 02-2 DNA 的结构]]
-> 下一节链接🔗 [[MMB 02-4 原核生物和真核生物 DNA 复制的特点]]
 
 ---
 
@@ -23,7 +54,7 @@
 > - **难度**：🌿🌿🌿🌿🌿
 > - **重要性**：🌟🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
+> > **AI 辅助说明：** 本页摘要由 DeepSeek 辅助生成，需由作者核对；此说明不等同于科学审校记录。
 
 ---
 - dNTP：脱氧核苷三磷酸

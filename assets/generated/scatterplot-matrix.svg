@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">散点图矩阵</title>
+  <desc id="description">BioEZ 可复现教学图，由 scripts/generate_teaching_figures.py 生成。</desc>
+  <metadata>Copyright BioEZ contributors; licensed under CC BY-SA 4.0; generator seed 20260717.</metadata>
+  <rect width="100%" height="100%" fill="#fbfcff"/>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<text x="480.0" y="36.0" font-size="26" text-anchor="middle" font-weight="650" fill="#172033">散点图矩阵：两两关系</text>
+<rect x="210.0" y="75.0" width="155.0" height="155.0" rx="0.0" fill="#ffffff" stroke="#c6cfdd" stroke-width="1"/>
+<text x="287.5" y="143.0" font-size="17" text-anchor="middle" font-weight="650" fill="#172033">Gene A</text>
+<text x="287.5" y="175.0" font-size="14" text-anchor="middle" font-weight="400" fill="#61708a">分布</text>
+<rect x="365.0" y="75.0" width="155.0" height="155.0" rx="0.0" fill="#ffffff" stroke="#c6cfdd" stroke-width="1"/>
+<text x="442.5" y="161.0" font-size="18" text-anchor="middle" font-weight="650" fill="#385a8c">r = 0.73</text>
+<rect x="520.0" y="75.0" width="155.0" height="155.0" rx="0.0" fill="#ffffff" stroke="#c6cfdd" stroke-width="1"/>
+<text x="597.5" y="161.0" font-size="18" text-anchor="middle" font-weight="650" fill="#385a8c">r = -0.31</text>
+<rect x="210.0" y="230.0" width="155.0" height="155.0" rx="0.0" fill="#ffffff" stroke="#c6cfdd" stroke-width="1"/>
+<circle cx="267.0" cy="313.2" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="267.8" cy="334.5" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="264.4" cy="304.8" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="258.4" cy="296.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="295.9" cy="310.0" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="289.6" cy="317.8" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="262.1" cy="323.0" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="309.4" cy="261.0" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="358.4" cy="268.9" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="293.0" cy="305.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="271.4" cy="298.8" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="236.3" cy="331.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="278.8" cy="317.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="325.8" cy="257.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="241.7" cy="322.8" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="342.0" cy="275.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="295.9" cy="317.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="304.8" cy="268.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="287.6" cy="316.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="322.0" cy="274.8" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="319.9" cy="242.4" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="283.6" cy="317.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="279.0" cy="304.4" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="294.9" cy="296.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="275.0" cy="294.0" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="308.6" cy="272.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="283.5" cy="314.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="293.2" cy="297.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="299.6" cy="292.8" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="304.0" cy="281.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="250.4" cy="345.0" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="276.7" cy="308.4" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="272.1" cy="330.2" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="317.9" cy="276.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="272.8" cy="294.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="365.0" y="230.0" width="155.0" height="155.0" rx="0.0" fill="#ffffff" stroke="#c6cfdd" stroke-width="1"/>
+<text x="442.5" y="298.0" font-size="17" text-anchor="middle" font-weight="650" fill="#172033">Gene B</text>
+<text x="442.5" y="330.0" font-size="14" text-anchor="middle" font-weight="400" fill="#61708a">分布</text>
+<rect x="520.0" y="230.0" width="155.0" height="155.0" rx="0.0" fill="#ffffff" stroke="#c6cfdd" stroke-width="1"/>
+<text x="597.5" y="316.0" font-size="18" text-anchor="middle" font-weight="650" fill="#385a8c">r = -0.18</text>
+<rect x="210.0" y="385.0" width="155.0" height="155.0" rx="0.0" fill="#ffffff" stroke="#c6cfdd" stroke-width="1"/>
+<circle cx="267.0" cy="450.5" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="267.8" cy="452.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="264.4" cy="446.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="258.4" cy="414.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="295.9" cy="438.9" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="289.6" cy="446.8" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="262.1" cy="486.2" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="309.4" cy="475.8" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="358.4" cy="419.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="293.0" cy="475.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="271.4" cy="434.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="236.3" cy="465.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="278.8" cy="423.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="325.8" cy="485.9" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="241.7" cy="440.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="342.0" cy="477.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="295.9" cy="487.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="304.8" cy="460.4" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="287.6" cy="444.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="322.0" cy="507.5" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="319.9" cy="474.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="283.6" cy="439.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="279.0" cy="459.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="294.9" cy="442.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="275.0" cy="441.5" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="308.6" cy="456.0" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="283.5" cy="424.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="293.2" cy="453.2" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="299.6" cy="491.5" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="304.0" cy="465.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="352.2" cy="508.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="276.7" cy="458.2" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="272.1" cy="461.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="317.9" cy="498.0" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="272.8" cy="414.4" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="365.0" y="385.0" width="155.0" height="155.0" rx="0.0" fill="#ffffff" stroke="#c6cfdd" stroke-width="1"/>
+<circle cx="433.8" cy="450.5" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="412.5" cy="452.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="442.2" cy="446.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="450.9" cy="414.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="437.0" cy="438.9" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="429.2" cy="446.8" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="424.0" cy="486.2" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="486.0" cy="475.8" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="478.1" cy="419.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="441.4" cy="475.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="448.2" cy="434.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="415.4" cy="465.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="429.9" cy="423.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="489.3" cy="485.9" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="424.2" cy="440.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="471.9" cy="477.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="429.9" cy="487.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="478.3" cy="460.4" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="430.7" cy="444.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="472.2" cy="507.5" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="504.6" cy="474.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="429.4" cy="439.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="442.6" cy="459.1" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="450.4" cy="442.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="453.0" cy="441.5" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="474.3" cy="456.0" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="432.7" cy="424.3" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="449.7" cy="453.2" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="454.2" cy="491.5" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="465.7" cy="465.6" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="438.6" cy="458.2" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="416.8" cy="461.7" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="470.4" cy="498.0" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<circle cx="452.9" cy="414.4" r="2.7" fill="#3478c7" stroke="none" stroke-width="1"/>
+<rect x="520.0" y="385.0" width="155.0" height="155.0" rx="0.0" fill="#ffffff" stroke="#c6cfdd" stroke-width="1"/>
+<text x="597.5" y="453.0" font-size="17" text-anchor="middle" font-weight="650" fill="#172033">Clinical</text>
+<text x="597.5" y="485.0" font-size="14" text-anchor="middle" font-weight="400" fill="#61708a">分布</text>
+<text x="480.0" y="575.0" font-size="17" text-anchor="middle" font-weight="400" fill="#172033">对角线是单变量分布，下三角是散点，上三角是相关系数</text>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">散点图与线性趋势</title>
+  <desc id="description">BioEZ 可复现教学图，由 scripts/generate_teaching_figures.py 生成。</desc>
+  <metadata>Copyright BioEZ contributors; licensed under CC BY-SA 4.0; generator seed 20260717.</metadata>
+  <rect width="100%" height="100%" fill="#fbfcff"/>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<text x="480.0" y="42.0" font-size="28" text-anchor="middle" font-weight="650" fill="#172033">散点图：变量关系与波动</text>
+<line x1="110.0" y1="490.0" x2="840.0" y2="490.0" stroke="#26354d" stroke-width="1.6"/><line x1="110.0" y1="80.0" x2="110.0" y2="490.0" stroke="#26354d" stroke-width="1.6"/><text x="475.0" y="532.0" font-size="16" text-anchor="middle" font-weight="400" fill="#172033">变量 X</text><text x="60.0" y="285.0" font-size="16" text-anchor="middle" fill="#172033" transform="rotate(-90 60.0 285.0)">变量 Y</text>
+<circle cx="150.4" cy="416.2" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="162.6" cy="389.8" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="174.7" cy="383.9" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="186.9" cy="364.3" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="199.0" cy="352.5" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="211.2" cy="361.5" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="223.4" cy="334.8" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="235.5" cy="387.7" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="247.7" cy="401.1" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="259.8" cy="306.8" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="272.0" cy="311.2" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="284.2" cy="302.9" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="296.3" cy="386.4" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="308.5" cy="260.4" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="320.6" cy="298.4" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="332.8" cy="319.9" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="345.0" cy="281.7" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="357.1" cy="306.0" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="369.3" cy="278.4" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="381.4" cy="267.8" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="393.6" cy="256.2" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="405.8" cy="325.4" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="417.9" cy="324.0" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="430.1" cy="259.0" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="442.2" cy="298.1" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="454.4" cy="243.7" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="466.6" cy="312.1" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="478.7" cy="218.4" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="490.9" cy="249.0" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="503.0" cy="260.1" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="515.2" cy="321.3" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="527.4" cy="257.1" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="539.5" cy="200.8" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="551.7" cy="230.0" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="563.8" cy="172.5" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="576.0" cy="287.9" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="588.2" cy="207.0" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="600.3" cy="135.5" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="612.5" cy="198.1" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="624.6" cy="221.6" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="636.8" cy="224.1" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="649.0" cy="262.7" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="661.1" cy="186.3" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="673.3" cy="111.1" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="685.4" cy="184.3" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="697.6" cy="137.4" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="709.8" cy="156.1" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="721.9" cy="93.8" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="734.1" cy="103.2" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="746.2" cy="139.9" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="758.4" cy="160.7" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="770.6" cy="158.9" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="782.7" cy="169.6" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="794.9" cy="205.5" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<circle cx="807.0" cy="152.6" r="4.5" fill="#3478c7" stroke="#ffffff" stroke-width="0.8"/>
+<line x1="150.0" y1="408.0" x2="820.0" y2="140.0" stroke="#d64848" stroke-width="3"/>
+<text x="610.0" y="105.0" font-size="17" text-anchor="middle" font-weight="550" fill="#8b2f2f">趋势线只描述线性关系，不证明因果</text>
+  </g>
+</svg>

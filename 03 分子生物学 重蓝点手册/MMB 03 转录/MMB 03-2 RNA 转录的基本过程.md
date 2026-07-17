@@ -1,8 +1,40 @@
+---
+id: "mmb-03-02"
+title: "RNA 转录的基本过程"
+course: "molecular-biology"
+chapter: "转录"
+order: "03-02"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 5
+importance: 5
+estimated_minutes: 6
+prerequisites: []
+next:
+  - "mmb-03-03"
+tags:
+  - "分子生物学"
+  - "复制"
+  - "转录"
+  - "mRNA"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“RNA 转录的基本过程”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：RNA 概述](<MMB 03-1 RNA 概述.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：原核生物与真核生物的转录及产物特征比较 →](<MMB 03-3 原核生物与真核生物的转录及产物特征比较.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 3 章 第 2 节：RNA 转录的基本过程
 #分子生物学 #复制 #转录 #mRNA
 
-> 上一节链接🔗 [[MMB 03-1 RNA 概述]]
-> 下一节链接🔗 [[MMB 03-3 原核生物与真核生物的转录及产物特征比较]]
 
 ---
 
@@ -17,7 +49,7 @@
 > - **难度**：🌿🌿🌿🌿🌿
 > - **重要性**：🌟🌟🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
+> > **AI 辅助说明：** 本页摘要由 DeepSeek 辅助生成，需由作者核对；此说明不等同于科学审校记录。
 
 ---
 ### 3.2.1 RNA 转录与 DNA 复制的比较

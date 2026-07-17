@@ -1,3 +1,42 @@
+---
+id: "bif-a-05"
+title: "单细胞分析｜绘图描述"
+course: "bioinformatics"
+chapter: "单细胞分析"
+order: "a-05"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "bif-a-06"
+tags:
+  - "生信"
+  - "细胞"
+  - "单细胞分析"
+  - "预处理"
+  - "文库"
+  - "测序"
+  - "数据库"
+  - "数据分析"
+  - "作图"
+authors:
+  - "脆弱的百里橘"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《LLM 时代的生信入门》中的“单细胞分析｜绘图描述”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：单细胞分析｜数据的深入分析](<BIF A-4 单细胞分析｜数据的深入分析.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：单细胞分析｜参考名词索引 →](<BIF A-6 单细胞分析｜参考名词索引.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 生信入门-单细胞分析 A-5：绘图描述
 #生信 #细胞 #单细胞分析 #预处理 #文库 #测序 #数据库 #数据分析 #作图
 
@@ -18,16 +57,26 @@
 生信分析中热图也有很多种，功能也随之不同，包括但不限于观察显示健康组织和癌症组织的差异，以及不同聚类间基因表达的差异，比较典型的是下面两种  
 
 
-1. 行代表不同的细胞聚类，列代表不同的基因，这种热图可以看出这种聚类算法下不同聚类之间差异出现的区域![](https://api2.mubu.com/v3/document_image/26905802_1be653cb-66e6-49ff-d4a8-30a1db2f2365.png) ![](https://api2.mubu.com/v3/document_image/26905802_91651ae0-11df-4a2d-dc50-7187bb3adf9c.png)
+1. 行代表不同的细胞聚类，列代表不同的基因，这种热图可以显示不同聚类间的差异表达区域。
 
-2. 这张则是复合热图，用于展示患者的临床特征和基因表达情况。每个代表一个病例 ![](https://api2.mubu.com/v3/document_image/26905802_794678ec-33e9-4c02-f818-2525eb412d0b.png)
+   ![基于图聚类的各细胞簇上调 Marker 基因热图](../assets/generated/cluster-marker-heatmap.svg)
+
+   ![基于 K-means 聚类的多组基因表达热图](../assets/generated/multi-group-heatmap.svg)
+
+2. 复合热图可以同时展示患者临床特征和基因表达情况；每一列代表一个病例。
+
+   ![临床特征注释条与基因表达结果组成的复合热图](../assets/generated/clinical-expression-heatmap.svg)
 
 
 ## 二、火山图绘制 （volcano）（67）  
 
 横坐标 LFC (log2foldchang)，纵坐标取 p 值（-log10p-value，越大越显著），阈值也可以自己控制  
 
-横线即为显著性水平线，越向上越有统计学意义，两根竖线是差异倍数线，其中左侧竖线代表下调，右侧竖线代表上调；因此一般左上角区域是表达显著下调且差异大，右上角区域是表达显著上调且差异大![](https://api2.mubu.com/v3/document_image/26905802_03fb684e-573b-42a4-c873-036ff7039008.png)
+横线即为显著性水平线，越向上统计学显著性越高；两根竖线是差异倍数阈值，左侧代表下调，右侧代表上调。因此左上区域通常是显著下调且差异较大的基因，右上区域是显著上调且差异较大的基因。
+
+![火山图示例：横轴为 log2 差异倍数，纵轴为显著性](../assets/generated/volcano-plot-anatomy.svg)
+
+> 本页图像的原始 URL、SHA-256 和许可状态见[图像来源与许可记录](../docs/image-sources.md)。
 
 ## 三、生存分析曲线 （survival）（Kaplan-Meier 曲线）（11,39）  
 

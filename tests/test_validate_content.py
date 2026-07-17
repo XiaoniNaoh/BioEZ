@@ -29,6 +29,7 @@ reviewers: []
 last_scientific_review: null
 summary: DNA 结构入门。
 references: []
+content_type: lesson
 ---
 # DNA 的结构
 """
@@ -65,6 +66,10 @@ class FrontmatterTests(unittest.TestCase):
     def test_published_content_requires_review_record(self):
         _, findings = validate_file(self.write(VALID.replace("status: scientific-review", "status: published")))
         self.assertTrue(any("published" in finding.message for finding in findings))
+
+    def test_rejects_invalid_content_type(self):
+        _, findings = validate_file(self.write(VALID.replace("content_type: lesson", "content_type: handout")))
+        self.assertTrue(any("content_type" in finding.message for finding in findings))
 
 
 if __name__ == "__main__":

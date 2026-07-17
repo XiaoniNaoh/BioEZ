@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">糖代谢途径概览</title>
+  <desc id="description">BioEZ 可复现教学图，由 scripts/generate_teaching_figures.py 生成。</desc>
+  <metadata>Copyright BioEZ contributors; licensed under CC BY-SA 4.0; generator seed 20260717.</metadata>
+  <rect width="100%" height="100%" fill="#fbfcff"/>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<text x="480.0" y="42.0" font-size="28" text-anchor="middle" font-weight="650" fill="#172033">糖代谢的主要分流与汇合</text>
+<rect x="50.0" y="220.0" width="120.0" height="60.0" rx="14.0" fill="#e8f2ff" stroke="#5f7391" stroke-width="1.8"/>
+<text x="110.0" y="256.0" font-size="18" text-anchor="middle" font-weight="600" fill="#172033">葡萄糖</text>
+<rect x="240.0" y="220.0" width="120.0" height="60.0" rx="14.0" fill="#e8f2ff" stroke="#5f7391" stroke-width="1.8"/>
+<text x="300.0" y="256.0" font-size="18" text-anchor="middle" font-weight="600" fill="#172033">G6P</text>
+<rect x="440.0" y="220.0" width="120.0" height="60.0" rx="14.0" fill="#fff0d9" stroke="#5f7391" stroke-width="1.8"/>
+<text x="500.0" y="256.0" font-size="18" text-anchor="middle" font-weight="600" fill="#172033">丙酮酸</text>
+<rect x="611.0" y="220.0" width="158.0" height="60.0" rx="14.0" fill="#fff0d9" stroke="#5f7391" stroke-width="1.8"/>
+<text x="690.0" y="256.0" font-size="18" text-anchor="middle" font-weight="600" fill="#172033">乙酰 CoA</text>
+<rect x="771.0" y="220.0" width="158.0" height="60.0" rx="14.0" fill="#ffe3e3" stroke="#5f7391" stroke-width="1.8"/>
+<text x="850.0" y="256.0" font-size="18" text-anchor="middle" font-weight="600" fill="#172033">TCA 循环</text>
+<rect x="240.0" y="60.0" width="120.0" height="60.0" rx="14.0" fill="#e6f7ec" stroke="#5f7391" stroke-width="1.8"/>
+<text x="300.0" y="96.0" font-size="18" text-anchor="middle" font-weight="600" fill="#172033">糖原</text>
+<rect x="221.0" y="410.0" width="158.0" height="60.0" rx="14.0" fill="#efe8ff" stroke="#5f7391" stroke-width="1.8"/>
+<text x="300.0" y="446.0" font-size="18" text-anchor="middle" font-weight="600" fill="#172033">磷酸戊糖途径</text>
+<rect x="440.0" y="410.0" width="120.0" height="60.0" rx="14.0" fill="#e6f7ec" stroke="#5f7391" stroke-width="1.8"/>
+<text x="500.0" y="446.0" font-size="18" text-anchor="middle" font-weight="600" fill="#172033">乳酸</text>
+<rect x="771.0" y="410.0" width="158.0" height="60.0" rx="14.0" fill="#fff7cc" stroke="#5f7391" stroke-width="1.8"/>
+<text x="850.0" y="446.0" font-size="18" text-anchor="middle" font-weight="600" fill="#172033">ATP / NADH</text>
+<line x1="170.0" y1="250.0" x2="240.0" y2="250.0" stroke="#385a8c" stroke-width="2.4"/><polyline points="231.5,255.2 240.0,250.0 231.5,244.8" fill="none" stroke="#385a8c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="360.0" y1="250.0" x2="438.0" y2="250.0" stroke="#385a8c" stroke-width="2.4"/><polyline points="429.5,255.2 438.0,250.0 429.5,244.8" fill="none" stroke="#385a8c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="560.0" y1="250.0" x2="620.0" y2="250.0" stroke="#385a8c" stroke-width="2.4"/><polyline points="611.5,255.2 620.0,250.0 611.5,244.8" fill="none" stroke="#385a8c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="760.0" y1="250.0" x2="782.0" y2="250.0" stroke="#385a8c" stroke-width="2.4"/><polyline points="773.5,255.2 782.0,250.0 773.5,244.8" fill="none" stroke="#385a8c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="300.0" y1="220.0" x2="300.0" y2="123.0" stroke="#385a8c" stroke-width="2.4"/><polyline points="305.2,131.5 300.0,123.0 294.8,131.5" fill="none" stroke="#385a8c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="300.0" y1="280.0" x2="300.0" y2="407.0" stroke="#385a8c" stroke-width="2.4"/><polyline points="294.8,398.5 300.0,407.0 305.2,398.5" fill="none" stroke="#385a8c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="500.0" y1="280.0" x2="500.0" y2="407.0" stroke="#385a8c" stroke-width="2.4"/><polyline points="494.8,398.5 500.0,407.0 505.2,398.5" fill="none" stroke="#385a8c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="850.0" y1="283.0" x2="850.0" y2="407.0" stroke="#385a8c" stroke-width="2.4"/><polyline points="844.8,398.5 850.0,407.0 855.2,398.5" fill="none" stroke="#385a8c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="402.0" y="222.0" font-size="15" text-anchor="middle" font-weight="400" fill="#52647f">糖酵解</text>
+<text x="618.0" y="222.0" font-size="15" text-anchor="middle" font-weight="400" fill="#52647f">氧化脱羧</text>
+<text x="480.0" y="558.0" font-size="18" text-anchor="middle" font-weight="550" fill="#172033">关键思路：碳骨架在不同途径间分流，最终与能量代谢耦联</text>
+  </g>
+</svg>

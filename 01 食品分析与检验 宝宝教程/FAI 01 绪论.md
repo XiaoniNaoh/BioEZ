@@ -1,9 +1,41 @@
+---
+id: "fai-01"
+title: "绪论"
+course: "food-analysis"
+chapter: "分析基础"
+order: "01"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "fai-02"
+tags:
+  - "食品分析与检验"
+  - "食品"
+  - "化学试剂"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《食品分析与检验 宝宝教程》中的“绪论”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [课程目录](<COURSE_INDEX.md>) · [下一篇：样品 →](<FAI 02 样品.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 食品分析与检验 第一讲：绪论
 #食品分析与检验 #食品 #化学试剂
 
 
 > 这是这个系列的第一讲~
-> 下一讲链接🔗[[FAI 02 样品]]
 
 ---
 ## 1.1 食品 

@@ -1,8 +1,39 @@
+---
+id: "mmb-02-06"
+title: "DNA 的转座"
+course: "molecular-biology"
+chapter: "染色体与 DNA"
+order: "02-06"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "mmb-02-07"
+tags:
+  - "分子生物学"
+  - "转座"
+  - "遗传"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“DNA 的转座”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：DNA 的突变与修复](<MMB 02-5 DNA 的突变与修复.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：SNP 的理论与应用 →](<MMB 02-7 SNP 的理论与应用.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 2 章 第 6 节：DNA 的转座
 #分子生物学 #转座 #遗传 
 
-> 上一节链接🔗 [[MMB 02-5 DNA 的突变与修复]]
-> 下一节链接🔗 [[MMB 02-7 SNP 的理论与应用]]
 
 ---
 
@@ -23,7 +54,7 @@
 > - **难度**：🌿🌿🌿
 > - **重要性**：🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
+> > **AI 辅助说明：** 本页摘要由 DeepSeek 辅助生成，需由作者核对；此说明不等同于科学审校记录。
 
 ---
 - DNA 转座*transposition*：又称“移位”，是由可移位因子*transposable element*介导的遗传物质重排现象

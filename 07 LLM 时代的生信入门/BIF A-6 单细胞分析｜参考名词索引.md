@@ -1,3 +1,43 @@
+---
+id: "bif-a-06"
+title: "单细胞分析｜参考名词索引"
+course: "bioinformatics"
+chapter: "单细胞分析"
+order: "a-06"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 6
+prerequisites: []
+next:
+  - "bif-b-02"
+tags:
+  - "生信"
+  - "细胞"
+  - "单细胞分析"
+  - "预处理"
+  - "文库"
+  - "测序"
+  - "数据库"
+  - "数据分析"
+  - "索引"
+  - "参考"
+authors:
+  - "脆弱的百里橘"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《LLM 时代的生信入门》中的“单细胞分析｜参考名词索引”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：单细胞分析｜绘图描述](<BIF A-5 单细胞分析｜绘图描述.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：scRNAseq 入门到 UMAP 注释 →](<BIF B-2 scRNAseq 入门到 UMAP 注释.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 生信入门-单细胞分析 A-6：参考名词索引
 #生信 #细胞 #单细胞分析 #预处理 #文库 #测序 #数据库 #数据分析 #索引 #参考
 

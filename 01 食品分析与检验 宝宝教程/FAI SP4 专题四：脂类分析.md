@@ -1,7 +1,39 @@
+---
+id: "fai-sp-04"
+title: "专题四：脂类分析"
+course: "food-analysis"
+chapter: "分析专题"
+order: "sp-04"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 5
+prerequisites: []
+next: []
+tags:
+  - "食品分析与检验"
+  - "食品"
+  - "脂质"
+  - "实验技术"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《食品分析与检验 宝宝教程》中的“专题四：脂类分析”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：专题三：蛋白质分析](<FAI SP3 专题三：蛋白质分析.md>) · [课程目录](<COURSE_INDEX.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 食品分析与检验 专题四：脂类分析
 #食品分析与检验 #食品 #脂质 #实验技术
 
-> 上一讲链接🔗[[FAI SP3 专题三：蛋白质分析]]
 > 这是这个系列的最后一讲啦~
 
 ---

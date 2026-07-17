@@ -13,3 +13,16 @@
 # Python 本地缓存
 __pycache__/
 *.py[cod]
+
+# 可由官方源复现的 PBMC3k 教学数据
+/07 LLM 时代的生信入门/scRNAseq 入门-数据/matrix.mtx
+/07 LLM 时代的生信入门/scRNAseq 入门-数据/genes.tsv
+/07 LLM 时代的生信入门/scRNAseq 入门-数据/barcodes.tsv
+/07 LLM 时代的生信入门/scRNAseq 入门-数据/*.tar.gz
+
+# Quartz 在构建时按固定版本下载；不要提交上游源码、依赖或构建产物
+/.cache/
+/public/
+
+# Playwright 本地验收快照
+/.playwright-cli/

@@ -1,9 +1,43 @@
+---
+id: "mmb-04-01"
+title: "tRNA 与遗传密码"
+course: "molecular-biology"
+chapter: "翻译"
+order: "04-01"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 5
+importance: 5
+estimated_minutes: 9
+prerequisites: []
+next:
+  - "mmb-04-02"
+tags:
+  - "分子生物学"
+  - "RNA"
+  - "tRNA"
+  - "遗传"
+  - "蛋白质"
+  - "密码子"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“tRNA 与遗传密码”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：RNA 转录后加工、编辑、再编码与化学修饰](<../MMB 03 转录/MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：蛋白质合成 →](<MMB 04-2 蛋白质合成.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 4 章 第 1 节：tRNA 与遗传密码
 #分子生物学 #RNA #tRNA #遗传 #蛋白质 #密码子
 
 > 这是本章的第一节~
-> 前往上一章🚀 [[MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰]]
-> 下一节链接🔗 [[MMB 04-2 蛋白质合成]]
 
 ---
 
@@ -30,7 +64,7 @@
 >     
 > - **重要性**：🌟🌟🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
+> > **AI 辅助说明：** 本页摘要由 DeepSeek 辅助生成，需由作者核对；此说明不等同于科学审校记录。
 
 ---
 - 蛋白质生物合成的过程

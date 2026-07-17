@@ -34,7 +34,7 @@ BioEZ 的 Git 仓库是教程源文件库，不是教材、课件或通用网盘
 | 图片 | 单文件最大 2 MiB |
 | 其他文件 | 单文件最大 5 MiB |
 
-门禁是增量的，不会因未触碰的历史资产阻断 PR。当前仍有三份项目 PDF 导出物和一套约 28 MiB 的 PBMC3k 示例数据；它们需要在单独任务中核对来源与授权，然后迁移到 Release、数据仓库或下载脚本。
+门禁是增量的，不会因未触碰的历史资产阻断 PR。原有三份项目 PDF 导出物已迁移到 [`content-assets-v1`](https://github.com/XiaoniNaoh/BioEZ/releases/tag/content-assets-v1) Release；PBMC3k 数据改为从 10x Genomics 官方源下载并执行 SHA-256 校验，详见 [PBMC3k 数据说明](datasets/pbmc3k.md)。
 
 ## Git 历史
 

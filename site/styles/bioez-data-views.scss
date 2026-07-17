@@ -1,0 +1,248 @@
+.bioez-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1rem;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.bioez-eyebrow {
+  margin: 0 0 0.2rem;
+  color: var(--secondary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bioez-course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.bioez-course-card {
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--light) 94%, var(--secondary));
+  overflow: clip;
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    padding: 1rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary strong {
+    display: block;
+    color: var(--dark);
+  }
+  summary small {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--darkgray);
+  }
+}
+
+.bioez-course-card[open] {
+  grid-column: 1 / -1;
+}
+
+.bioez-progress {
+  flex: none;
+  align-self: start;
+  border: 1px solid var(--gray);
+  border-radius: 999px;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.72rem;
+}
+
+.bioez-progress-completed {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+.bioez-progress-serializing {
+  color: var(--tertiary);
+  border-color: var(--tertiary);
+}
+
+.bioez-course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
+  border-top: 1px solid var(--lightgray);
+  border-bottom: 1px solid var(--lightgray);
+  font-size: 0.84rem;
+}
+
+.bioez-chapter {
+  padding: 0.4rem 1rem;
+
+  h3 {
+    margin: 0.6rem 0 0.25rem;
+    font-size: 0.95rem;
+  }
+  ol {
+    margin: 0;
+    padding-left: 1.35rem;
+  }
+  li {
+    padding: 0.18rem 0;
+  }
+}
+
+.bioez-lesson-meta {
+  color: var(--gray);
+  font-size: 0.72rem;
+}
+
+.bioez-data-warning,
+.bioez-data-empty {
+  border: 1px dashed var(--gray);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  background: var(--highlight);
+}
+
+.bioez-data-warning {
+  margin-bottom: 1rem;
+}
+.bioez-data-warning ul {
+  margin-bottom: 0;
+}
+
+.bioez-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.bioez-metric {
+  border: 1px solid var(--lightgray);
+  border-radius: 10px;
+  padding: 0.75rem;
+
+  strong {
+    display: block;
+    font-size: 1.55rem;
+    color: var(--secondary);
+  }
+  span {
+    font-size: 0.78rem;
+    color: var(--darkgray);
+  }
+}
+
+.bioez-metric.has-findings strong {
+  color: var(--tertiary);
+}
+
+.bioez-heatmap-wrap {
+  overflow-x: auto;
+}
+.bioez-heatmap {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0.2rem;
+  font-size: 0.78rem;
+
+  th,
+  td {
+    padding: 0.45rem;
+    text-align: center;
+    border: 0;
+  }
+  th:first-child {
+    text-align: left;
+    min-width: 10rem;
+  }
+  td {
+    border-radius: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .level-0 {
+    background: var(--lightgray);
+    color: var(--darkgray);
+  }
+  .level-1 {
+    background: color-mix(in srgb, var(--secondary) 20%, var(--light));
+  }
+  .level-2 {
+    background: color-mix(in srgb, var(--secondary) 42%, var(--light));
+  }
+  .level-3 {
+    background: color-mix(in srgb, var(--secondary) 68%, var(--light));
+    color: var(--light);
+  }
+  .level-4 {
+    background: var(--secondary);
+    color: var(--light);
+  }
+}
+
+.bioez-findings {
+  padding: 0;
+  list-style: none;
+}
+.bioez-findings li {
+  display: flex;
+  gap: 0.65rem;
+  border-bottom: 1px solid var(--lightgray);
+  padding: 0.55rem 0;
+
+  > span {
+    align-self: start;
+    border-radius: 4px;
+    padding: 0.12rem 0.35rem;
+    background: var(--lightgray);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+  }
+
+  strong,
+  small {
+    display: block;
+  }
+  small {
+    margin-top: 0.15rem;
+    color: var(--gray);
+    overflow-wrap: anywhere;
+  }
+}
+
+.bioez-findings .severity-error > span {
+  background: #c6424230;
+  color: #a72828;
+}
+.bioez-findings .severity-warning > span {
+  background: #d68a2430;
+  color: var(--tertiary);
+}
+
+@media (max-width: 800px) {
+  .bioez-course-grid {
+    grid-template-columns: 1fr;
+  }
+  .bioez-course-card[open] {
+    grid-column: auto;
+  }
+  .bioez-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .bioez-section-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+}

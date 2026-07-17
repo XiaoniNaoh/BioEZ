@@ -1,3 +1,41 @@
+---
+id: "bot-a-01"
+title: "植物的细胞"
+course: "botany"
+chapter: "A 篇"
+order: "a-01"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 15
+prerequisites: []
+next:
+  - "bot-a-02"
+tags:
+  - "植物"
+  - "细胞器"
+  - "结构"
+  - "细胞生物学"
+  - "细胞壁"
+  - "胞间连丝"
+  - "后含物"
+  - "原生质体"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《植物学 步步糕大一轮复习讲义》中的“植物的细胞”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [课程目录](<../COURSE_INDEX.md>) · [下一篇：植物细胞的生长、繁殖与分化 →](<BOT A-2 植物细胞的生长、繁殖与分化.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 植物学 话题 01 ：植物的细胞
 #植物 #细胞器 #结构 #细胞生物学 #细胞壁 #胞间连丝 #后含物 #原生质体
 
@@ -317,4 +355,3 @@
 [^1]: 生活细胞：与非生活细胞相对，可简单理解为就是活细胞
 
 > 本节为第一节 🌱
-> 下一节链接🔗 [[BOT A-2 植物细胞的生长、繁殖与分化]]

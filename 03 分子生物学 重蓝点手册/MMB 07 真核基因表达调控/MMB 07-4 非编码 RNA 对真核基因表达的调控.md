@@ -1,8 +1,45 @@
+---
+id: "mmb-07-04"
+title: "非编码 RNA 对真核基因表达的调控"
+course: "molecular-biology"
+chapter: "真核基因表达调控"
+order: "07-04"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 7
+prerequisites: []
+next:
+  - "mmb-07-05"
+tags:
+  - "分子生物学"
+  - "RNA"
+  - "RNA聚合酶"
+  - "非编码RNA"
+  - "RNAi"
+  - "基因"
+  - "沉默"
+  - "调控"
+  - "真核生物"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“非编码 RNA 对真核基因表达的调控”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：真核基因表达的染色质修饰和表观遗传调控](<MMB 07-3 真核基因表达的染色质修饰和表观遗传调控.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：真核基因其他水平上的表达调控 →](<MMB 07-5 真核基因其他水平上的表达调控.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 7 章 第 4 节：非编码 RNA 对真核基因表达的调控
 #分子生物学 #RNA #RNA聚合酶 #非编码RNA #RNAi #基因 #沉默 #调控 #真核生物 
 
-> 上一节链接🔗 [[MMB 07-3 真核基因表达的染色质修饰和表观遗传调控]]
-> 下一节链接🔗 [[MMB 07-5 真核基因其他水平上的表达调控]]
 
 ---
 

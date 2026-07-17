@@ -1,9 +1,48 @@
+---
+id: "mmb-05-01"
+title: "DNA 基本操作技术"
+course: "molecular-biology"
+chapter: "分子生物学研究法"
+order: "05-01"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 5
+importance: 5
+estimated_minutes: 10
+prerequisites: []
+next:
+  - "mmb-05-02"
+tags:
+  - "分子生物学"
+  - "DNA"
+  - "实验技术"
+  - "科学史"
+  - "蓝白斑试验"
+  - "基因工程"
+  - "PCR"
+  - "cDNA"
+  - "质粒"
+  - "提取"
+  - "电泳"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“DNA 基本操作技术”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：蛋白质的转运、修饰与降解](<../MMB 04 翻译/MMB 04-3 蛋白质的转运、修饰与降解.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：RNA 基本操作技术 →](<MMB 05-2 RNA 基本操作技术.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 5 章 第 1 节：DNA 基本操作技术
 #分子生物学 #DNA #实验技术 #科学史 #蓝白斑试验 #基因工程 #PCR #cDNA #质粒 #提取 #电泳
 
 > 这是本章的第一节~
-> 前往上一章🚀 [[MMB 04-3 蛋白质的转运、修饰与降解]]
-> 下一节链接🔗[[MMB 05-2 RNA 基本操作技术]]
 
 ---
 
@@ -30,7 +69,7 @@
 >     
 > - **重要性**：🌟🌟🌟🌟🌟
 >
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
+> > **AI 辅助说明：** 本页摘要由 DeepSeek 辅助生成，需由作者核对；此说明不等同于科学审校记录。
 
 ---
 

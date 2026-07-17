@@ -1,3 +1,41 @@
+---
+id: "bc-05"
+title: "酶"
+course: "biochemistry-food-chemistry"
+chapter: "酶"
+order: "05"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+  - "postgraduate-entrance-exam"
+difficulty: 3
+importance: 3
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "bc-05-01"
+tags:
+  - "生物化学"
+  - "酶"
+  - "催化"
+  - "酶促反应动力学"
+  - "抑制剂"
+  - "调节"
+  - "核酶"
+authors:
+  - "脆弱的百里橘"
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《生物化学与食品化学 考研帮帮忙》中的“酶”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：脂质的化学性质与加工特性](<BC 4-2 脂质的化学性质与加工特性.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：酶概述 →](<BC 5-1 酶概述.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
 
 #生物化学 #酶 #催化 #酶促反应动力学 #抑制剂 #调节 #核酶 
 

@@ -1,0 +1,284 @@
+{
+  "schema_version": 2,
+  "assets": [
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/PCA前5主成分摘要.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "f761894536af3245b0d599ae7dc23260397a518e528f690f721f96eaad20b0d8",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/PCA肘部图（确定聚类PC数）.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "dcfda721948df8228f4a3f21bf65c1c26429c3cdf14a7131cc5e5d1c2f5745c2",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/PCA降维散点图.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "2ffe360ae3db48814b8864c465f17dfd2854dab63c5173615d09f4105733bc97",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/QC指标小提琴图与散点图.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "1040b1d6a0f8b1616477340e236532f0935ca8362c8eaeaca82317dc151a5aa5",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/RStudio官网.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "ad64f3d40c404954b05e2c4fa98bc04497310b5d8d5f6a3f62aaac68c7e636ff",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/RStudio首次启动界面.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "995f3e839dc9eef2dd9cfd36a417c1d8c422c5ee6143431c45c4e55cc724944c",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/R下载页面.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "1bb93eaa57cbb132ca011fb921f8afdde05682648b865566fca46403b11c17f8",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/R官网首页.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "2a4203416655386acb5e9f94fb8591e184f556c2c311f0935d28c6c2cd41e412",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/Seurat对象初始化摘要.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "442ccb423fe8a403817dd95e6ff9bfb1e11cc610dcf5e8dc85f0896cbe531776",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/UMAP初始聚类散点图.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "58e93017b83dfcdffe877862f9c25067106e947da968324769f2e88085852eef",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/UMAP细胞类型注释结果.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "6d431d9590f16305c2d1c4296c5ddcc4544508590f1d17b6928504469f757f32",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/UMAP降维过程日志.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "0ea18d43575bb5a2477c763b58422b425a57f7c28acf6e17636fd62ecc3e82d4",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/全群Marker基因计算过程.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "835d3e6c9714a93c1ea3ce96fd42befbf5ba05057d7e7983e2799cfe9072e52a",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/前15主成分热图.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "d4f17dcbacb1b44b93ea2c12b33b6cd9e0a2d2edee4abacc6ee6a357e39a03ca",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/各聚类top15 Marker基因片段.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "59c63259543c81060e0ec45951b349b3dc5a9654d0212993b67412bf887e2d70",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/数据标准化执行.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "5a944e0ee6c7877d0a4dd63eaabc92342e029fa6532c2940f44d6938d3cdde17",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/标准化后表达矩阵片段.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "8904b083b9105fef789eec6296cfce9df5e63dd37ce9af6ba28141a8a92cd867",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/细胞聚类（Louvain算法）过程.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "79fbf1cc0007eaf97b20555c99a034463e030b5313e9e62a3594cf2bf0ce0b26",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/高变基因散点图（带标签）.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "9143b5c001050ce76ab3f55e88cc7d95c1b4f245bad19dfd054de21c349ccfa7",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "07 LLM 时代的生信入门/scRNAseq 入门-图片/高变基因计算过程.png",
+      "source_type": "existing-project-asset",
+      "custody_status": "existing-in-project-repository",
+      "origin_status": "unknown",
+      "sha256": "845332fbd7060d9d5165602ee1a5bbe4422c494b964d38f3cbcfb81157e1414d",
+      "license": "not-asserted",
+      "note": "原始作者、捕获日期和生成脚本未在原仓库记录；本次只建立引用与完整性记录。"
+    },
+    {
+      "path": "assets/generated/amino-acid-structure.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/095e1d00-9e3b-479a-89fc-29c64ae1a383.png",
+      "sha256": "869a0449dca979f90b65a37a7239c0dfd177bcfa347893f114631c582a5ea44f",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "assets/generated/boxplot-anatomy.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/26905802_890d76fc-fb65-4ac3-c90f-0239fe104035.png",
+      "sha256": "8e775e4ec40c962c91b4b9a3773bd2a8cbe4aac6fc5db07b1f8a1c1c920abd2e",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "assets/generated/boxplot-examples.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/26905802_a30acfff-b968-40e4-948f-3b0a8b5827bd.png",
+      "sha256": "466acdc9ce7d355fd22fdbfba13e3ab7f183e6c8d99621b44828431e17f82841",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "assets/generated/carbohydrate-catabolism.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/9eeaf8e8-0b9b-4144-b404-6be28b611a7a.jpg",
+      "sha256": "9d4ccb9f611538d11b8ce0ece7f8ed59fd68ef414db20eb7b5d57700e3b3bedf",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "assets/generated/clinical-expression-heatmap.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/26905802_794678ec-33e9-4c02-f818-2525eb412d0b.png",
+      "sha256": "552627dd559415a6f95afe16f01fb8379d3b338044eab9e4d8bf05a529fb3e04",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "assets/generated/cluster-marker-heatmap.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/26905802_1be653cb-66e6-49ff-d4a8-30a1db2f2365.png",
+      "sha256": "67835141a4042dad822f8d9fddef414c2b9478ddcf34a0300a7c63e9ae337da1",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "assets/generated/histogram-example.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/26905802_f87869fd-4a54-43a6-a0ad-f66f65773f98.png",
+      "sha256": "5a75731eb475848da61e15ae0a10edf11f20d9ebf4b3e732a5ddfb21352e9da2",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "assets/generated/multi-group-heatmap.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/26905802_91651ae0-11df-4a2d-dc50-7187bb3adf9c.png",
+      "sha256": "2ab14ca8ef198e6c8c1dd5de1be9506cb77790e33c33b68e66ee218e8342c92a",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "assets/generated/scatterplot-example.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/26905802_f2bea56f-a090-405f-cbb6-51d0520534cd.png",
+      "sha256": "bcca5b35f29675f8644b843ffe5a701f180fa6a922c547cdf25058d08c863373",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "assets/generated/scatterplot-matrix.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/26905802_3f3b6f5e-da90-4a5b-fab7-b1b409605a74.png",
+      "sha256": "b9d95c2336fa8faf16bd3d67f296729656d7ccd5230219bc7d5b4033d33f7a5e",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "assets/generated/volcano-plot-anatomy.svg",
+      "source_type": "project-generated",
+      "generated_by": "scripts/generate_teaching_figures.py",
+      "generator_seed": 20260717,
+      "replaces_legacy_url": "https://api2.mubu.com/v3/document_image/26905802_03fb684e-573b-42a4-c873-036ff7039008.png",
+      "sha256": "63cac09f3db267cc856ec4d0939eea065b5e8c85654d959756eb96e2c291dc55",
+      "license": "CC-BY-SA-4.0"
+    }
+  ]
+}

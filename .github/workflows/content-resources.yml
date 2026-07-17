@@ -1,0 +1,38 @@
+name: Content resources
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "**/*.png"
+      - "**/*.jpg"
+      - "**/*.jpeg"
+      - "**/*.svg"
+      - "assets/image-sources.json"
+      - "scripts/build_image_manifest.py"
+      - "scripts/check_content_resources.py"
+      - "scripts/generate_teaching_figures.py"
+      - "tests/test_content_resources.py"
+      - ".github/workflows/content-resources.yml"
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run resource checker tests
+        run: python -m unittest discover -s tests -p 'test_content_resources.py' -v
+      - name: Check generated teaching figures
+        run: python scripts/generate_teaching_figures.py --check
+      - name: Check image manifest drift
+        run: python scripts/build_image_manifest.py --check
+      - name: Check links and image assets
+        run: python scripts/check_content_resources.py --check-report data/quality-report.json

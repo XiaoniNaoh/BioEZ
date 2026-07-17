@@ -1,8 +1,39 @@
+---
+id: "fai-03"
+title: "数据"
+course: "food-analysis"
+chapter: "分析基础"
+order: "03"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "fai-sp-01"
+tags:
+  - "食品分析与检验"
+  - "食品"
+  - "误差分析"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《食品分析与检验 宝宝教程》中的“数据”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：样品](<FAI 02 样品.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：专题一：水分分析 →](<FAI SP1 专题一：水分分析.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 食品分析与检验 第三讲：数据
 #食品分析与检验 #食品 #误差分析
 
-> 上一讲链接🔗[[FAI 02 样品]]
-> 下一讲链接🔗[[FAI SP1 专题一：水分分析]]
 
 ---
 ## 3.1 平均数
@@ -65,4 +96,4 @@
 
 ---
 > [!TIP]
-> ( ’ω’ ) 预祝复习顺利！！！       
+> ( ’ω’ ) 预祝复习顺利！！！

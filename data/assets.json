@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "release": {
+    "tag": "content-assets-v1",
+    "url": "https://github.com/XiaoniNaoh/BioEZ/releases/tag/content-assets-v1"
+  },
+  "assets": [
+    {
+      "id": "scrnaseq-seurat-v5-report-v1",
+      "kind": "pdf-export",
+      "title": "单细胞 RNA 测序数据分析标准操作报告",
+      "source_path": "07 LLM 时代的生信入门/BIF B-1 scRNAseq 入门.pdf",
+      "download_url": "https://github.com/XiaoniNaoh/BioEZ/releases/download/content-assets-v1/bioez-scrnaseq-seurat-v5-report-v1.pdf",
+      "size_bytes": 525557,
+      "sha256": "1e65c6785aa19edd660e3fab9cd967d566e65a418317d17252a29e93bf97dd0b",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "scrnaseq-seurat-v5-report-v2",
+      "kind": "pdf-export",
+      "title": "单细胞 RNA 测序数据分析标准操作报告（最终专业版）",
+      "source_path": "07 LLM 时代的生信入门/BIF B-2 scRNAseq入门到UMAP注释.pdf",
+      "download_url": "https://github.com/XiaoniNaoh/BioEZ/releases/download/content-assets-v1/bioez-scrnaseq-seurat-v5-report-v2.pdf",
+      "size_bytes": 581276,
+      "sha256": "fe41102bdc2e8a453e5f85715745ffca4981a561f340922ac89e514f0f7ad768",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "food-processing-review-v1",
+      "kind": "pdf-export",
+      "title": "食品工艺学 一口气看爽",
+      "source_path": "99 期末抱佛脚专刊（临时）/TEM 01 食品工艺学 一口气看爽.pdf",
+      "download_url": "https://github.com/XiaoniNaoh/BioEZ/releases/download/content-assets-v1/bioez-food-processing-review-v1.pdf",
+      "size_bytes": 3434133,
+      "sha256": "33b01cde3ff0c8355a883590b8119705dff5e261c54da2c2dd6d3f348145abb8",
+      "license": "CC-BY-SA-4.0"
+    }
+  ],
+  "datasets": [
+    {
+      "id": "10x-pbmc3k-v1.1.0",
+      "title": "3k PBMCs from a Healthy Donor",
+      "publisher": "10x Genomics",
+      "source_page": "https://www.10xgenomics.com/datasets/3-k-pbm-cs-from-a-healthy-donor-1-standard-1-1-0",
+      "download_url": "https://cf.10xgenomics.com/samples/cell-exp/1.1.0/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz",
+      "license": "CC-BY-4.0",
+      "archive_sha256": "847d6ebd9a1ec9a768f2be7e40ca42cbfe75ebeb6d76a4c24167041699dc28b5",
+      "files": {
+        "matrix.mtx": "7d92358b9d29128a225c50f2a662d6ccca9c71bc665e0af82692ed1361eb94e4",
+        "genes.tsv": "8778dd78085086be6dcafa8334f95f7cf76b25526e8ef2b63186db5127a1492c",
+        "barcodes.tsv": "58c2a224a2b4258f7e8799a18890bda6d23824b247b80db2b08a0dcc36a4c660"
+      }
+    }
+  ]
+}

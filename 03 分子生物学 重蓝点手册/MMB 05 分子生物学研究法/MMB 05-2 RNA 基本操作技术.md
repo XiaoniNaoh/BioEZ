@@ -1,8 +1,45 @@
+---
+id: "mmb-05-02"
+title: "RNA 基本操作技术"
+course: "molecular-biology"
+chapter: "分子生物学研究法"
+order: "05-02"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 4
+importance: 5
+estimated_minutes: 8
+prerequisites: []
+next:
+  - "mmb-05-03"
+tags:
+  - "分子生物学"
+  - "实验技术"
+  - "RNA"
+  - "mRNA"
+  - "提取"
+  - "cDNA"
+  - "基因组"
+  - "基因工程"
+  - "非编码RNA"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“RNA 基本操作技术”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：DNA 基本操作技术](<MMB 05-1 DNA 基本操作技术.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：蛋白质与蛋白质组学技术 →](<MMB 05-3 蛋白质与蛋白质组学技术.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 5 章 第 2 节：RNA 基本操作技术
 #分子生物学 #实验技术 #RNA #mRNA #提取 #cDNA #基因组 #基因工程 #非编码RNA
 
-> 上一节链接🔗 [[MMB 05-1 DNA 基本操作技术]]
-> 下一节链接🔗 [[MMB 05-3 蛋白质与蛋白质组学技术]]
 
 ---
 
@@ -29,7 +66,7 @@
 >     
 > - **重要性**：🌟🌟🌟🌟🌟
 > 
->><img src="https://img.icons8.com/?size=100&id=YWOidjGxCpFW&format=png&color=000000" alt="ChatGPT Icon" width="30" height="30" style="margin-bottom: -7px;"> **DeepSeek** · provides the SUMMARY service.
+> > **AI 辅助说明：** 本页摘要由 DeepSeek 辅助生成，需由作者核对；此说明不等同于科学审校记录。
 
 ---
 

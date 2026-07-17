@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">箱形图结构</title>
+  <desc id="description">BioEZ 可复现教学图，由 scripts/generate_teaching_figures.py 生成。</desc>
+  <metadata>Copyright BioEZ contributors; licensed under CC BY-SA 4.0; generator seed 20260717.</metadata>
+  <rect width="100%" height="100%" fill="#fbfcff"/>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<text x="480.0" y="48.0" font-size="28" text-anchor="middle" font-weight="650" fill="#172033">箱形图的结构</text>
+<line x1="120.0" y1="285.0" x2="840.0" y2="285.0" stroke="#8290a6" stroke-width="2"/>
+<line x1="210.0" y1="245.0" x2="210.0" y2="325.0" stroke="#40506b" stroke-width="3"/>
+<line x1="750.0" y1="245.0" x2="750.0" y2="325.0" stroke="#40506b" stroke-width="3"/>
+<line x1="210.0" y1="285.0" x2="330.0" y2="285.0" stroke="#40506b" stroke-width="3"/>
+<line x1="650.0" y1="285.0" x2="750.0" y2="285.0" stroke="#40506b" stroke-width="3"/>
+<rect x="330.0" y="193.0" width="320.0" height="184.0" rx="4.0" fill="#dfeeff" stroke="#28568c" stroke-width="3"/>
+<line x1="480.0" y1="193.0" x2="480.0" y2="377.0" stroke="#d64848" stroke-width="4"/>
+<circle cx="100.0" cy="285.0" r="7.0" fill="#d64848" stroke="none" stroke-width="1"/>
+<circle cx="865.0" cy="285.0" r="7.0" fill="#d64848" stroke="none" stroke-width="1"/>
+<line x1="210.0" y1="230.0" x2="210.0" y2="185.0" stroke="#8a96aa" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="210.0" y="165.0" font-size="18" text-anchor="middle" font-weight="550" fill="#172033">下须</text>
+<line x1="330.0" y1="340.0" x2="330.0" y2="400.0" stroke="#8a96aa" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="330.0" y="420.0" font-size="18" text-anchor="middle" font-weight="550" fill="#172033">Q1</text>
+<line x1="480.0" y1="230.0" x2="480.0" y2="185.0" stroke="#8a96aa" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="480.0" y="165.0" font-size="18" text-anchor="middle" font-weight="550" fill="#172033">中位数</text>
+<line x1="650.0" y1="340.0" x2="650.0" y2="400.0" stroke="#8a96aa" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="650.0" y="420.0" font-size="18" text-anchor="middle" font-weight="550" fill="#172033">Q3</text>
+<line x1="750.0" y1="230.0" x2="750.0" y2="185.0" stroke="#8a96aa" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="750.0" y="165.0" font-size="18" text-anchor="middle" font-weight="550" fill="#172033">上须</text>
+<line x1="100.0" y1="340.0" x2="100.0" y2="400.0" stroke="#8a96aa" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="100.0" y="420.0" font-size="18" text-anchor="middle" font-weight="550" fill="#172033">离群点</text>
+<text x="490.0" y="520.0" font-size="18" text-anchor="middle" font-weight="400" fill="#172033">IQR = Q3 − Q1；须通常延伸到 1.5 × IQR 范围内的最远观测值</text>
+  </g>
+</svg>

@@ -22,8 +22,10 @@ REQUIRED_FIELDS = (
     "id", "title", "course", "chapter", "order", "status", "audience",
     "difficulty", "importance", "estimated_minutes", "prerequisites", "next",
     "tags", "authors", "reviewers", "last_scientific_review", "summary", "references",
+    "content_type",
 )
 LIST_FIELDS = {"audience", "prerequisites", "next", "tags", "authors", "reviewers", "references"}
+ALLOWED_CONTENT_TYPE = {"lesson", "course-index"}
 
 
 @dataclass(frozen=True)
@@ -97,7 +99,14 @@ def is_content_path(path: Path) -> bool:
         relative = path.resolve().relative_to(ROOT)
     except ValueError:
         return False
-    return path.suffix.lower() == ".md" and bool(relative.parts) and bool(COURSE_DIRECTORY.match(relative.parts[0])) and "模板" not in path.name
+    return (
+        path.suffix.lower() == ".md"
+        and bool(relative.parts)
+        and bool(COURSE_DIRECTORY.match(relative.parts[0]))
+        and "模板" not in path.name
+        and "一本全" not in path.name
+        and path.name != "COURSE_INDEX.md"
+    )
 
 
 def validate_file(path: Path) -> tuple[dict[str, Any] | None, list[Finding]]:
@@ -124,11 +133,23 @@ def validate_file(path: Path) -> tuple[dict[str, Any] | None, list[Finding]]:
     for field in ("title", "course", "chapter", "summary"):
         if not isinstance(data[field], str) or not data[field].strip():
             findings.append(Finding(path, f"{field} 必须是非空字符串"))
+    if not isinstance(data["course"], str) or not ID_PATTERN.fullmatch(data["course"]):
+        findings.append(Finding(path, "course 必须是小写字母、数字和连字号组成的 slug"))
+    order = data["order"]
+    if isinstance(order, bool) or not isinstance(order, (str, int, float)) or (isinstance(order, str) and not order.strip()):
+        findings.append(Finding(path, "order 必须是非空字符串或数字"))
     if data["status"] not in ALLOWED_STATUS:
         findings.append(Finding(path, f"status 必须是 {', '.join(sorted(ALLOWED_STATUS))} 之一"))
+    if data["content_type"] not in ALLOWED_CONTENT_TYPE:
+        findings.append(Finding(path, f"content_type 必须是 {', '.join(sorted(ALLOWED_CONTENT_TYPE))} 之一"))
     for field in LIST_FIELDS:
         if not isinstance(data[field], list):
             findings.append(Finding(path, f"{field} 必须是列表"))
+    for field in ("prerequisites", "next"):
+        if isinstance(data[field], list):
+            for identifier in data[field]:
+                if not isinstance(identifier, str) or not ID_PATTERN.fullmatch(identifier):
+                    findings.append(Finding(path, f"{field} 中的页面 ID 格式无效：{identifier!r}"))
     for field in ("difficulty", "importance"):
         if not isinstance(data[field], int) or isinstance(data[field], bool) or not 1 <= data[field] <= 5:
             findings.append(Finding(path, f"{field} 必须是 1–5 的整数"))
@@ -160,7 +181,7 @@ def changed_paths(base: str, head: str) -> list[Path]:
 
 def find_duplicate_metadata() -> list[Finding]:
     seen_ids: dict[str, Path] = {}
-    seen_titles: dict[str, Path] = {}
+    seen_titles: dict[tuple[str, str], Path] = {}
     findings: list[Finding] = []
     for path in ROOT.rglob("*.md"):
         if not is_content_path(path):
@@ -176,11 +197,36 @@ def find_duplicate_metadata() -> list[Finding]:
         title = data.get("title")
         if not isinstance(title, str):
             continue
-        normalized_title = " ".join(title.split()).casefold()
+        course = data.get("course")
+        normalized_title = (str(course), " ".join(title.split()).casefold())
         if normalized_title in seen_titles:
-            findings.append(Finding(path, f"title {title} 与 {seen_titles[normalized_title].relative_to(ROOT)} 重复"))
+            findings.append(Finding(path, f"同一课程中的 title {title} 与 {seen_titles[normalized_title].relative_to(ROOT)} 重复"))
         else:
             seen_titles[normalized_title] = path
+    return findings
+
+
+def find_relationship_errors() -> list[Finding]:
+    metadata_by_id: dict[str, tuple[Path, dict[str, Any]]] = {}
+    findings: list[Finding] = []
+    for path in ROOT.rglob("*.md"):
+        if not is_content_path(path):
+            continue
+        data, error = parse_frontmatter(path.read_text(encoding="utf-8"))
+        if error or not data or not isinstance(data.get("id"), str):
+            continue
+        metadata_by_id.setdefault(data["id"], (path, data))
+    known_ids = set(metadata_by_id)
+    for identifier, (path, data) in metadata_by_id.items():
+        for field in ("prerequisites", "next"):
+            references = data.get(field)
+            if not isinstance(references, list):
+                continue
+            for target in references:
+                if target == identifier:
+                    findings.append(Finding(path, f"{field} 不能引用页面自身 {identifier}"))
+                elif isinstance(target, str) and target not in known_ids:
+                    findings.append(Finding(path, f"{field} 引用了不存在的页面 ID {target}"))
     return findings
 
 
@@ -192,6 +238,7 @@ def validate_paths(paths: Iterable[Path]) -> list[Finding]:
             _, file_findings = validate_file(path)
             findings.extend(file_findings)
     findings.extend(find_duplicate_metadata())
+    findings.extend(find_relationship_errors())
     return findings
 
 
@@ -200,10 +247,14 @@ def main(argv: list[str] | None = None) -> int:
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--paths", nargs="+", type=Path, help="要检查的 Markdown 路径")
     source.add_argument("--base", help="Git 对比的基础提交")
+    source.add_argument("--all", action="store_true", help="检查 01–07 课程目录中的全部内容页面")
     parser.add_argument("--head", default="HEAD", help="Git 对比的目标提交（默认 HEAD）")
     args = parser.parse_args(argv)
 
-    paths = args.paths if args.paths else changed_paths(args.base, args.head)
+    if args.all:
+        paths = [path for path in ROOT.rglob("*.md") if is_content_path(path)]
+    else:
+        paths = args.paths if args.paths else changed_paths(args.base, args.head)
     content_paths = [path for path in paths if is_content_path(path if path.is_absolute() else ROOT / path)]
     if not content_paths:
         print("没有需要检查的教程 Markdown 文件。")
