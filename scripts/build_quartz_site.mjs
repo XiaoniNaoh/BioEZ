@@ -60,7 +60,7 @@ function applyOverlay() {
   )
 }
 
-const allowedExtensions = new Set([".md", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".avif"])
+const allowedExtensions = new Set([".md", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".avif", ".json"])
 
 function copyPublishedTree(source, target) {
   for (const entry of readdirSync(source, { withFileTypes: true })) {
@@ -110,6 +110,14 @@ function prepareContent() {
   }
   if (existsSync(join(ROOT, "资料卡与图库"))) {
     copyPublishedTree(join(ROOT, "资料卡与图库"), join(CONTENT, "资料卡与图库"))
+  }
+  if (existsSync(join(ROOT, "assets"))) {
+    copyPublishedTree(join(ROOT, "assets"), join(CONTENT, "assets"))
+  }
+  const imageSources = join(ROOT, "docs", "image-sources.md")
+  if (existsSync(imageSources)) {
+    mkdirSync(join(CONTENT, "docs"), { recursive: true })
+    copyFileSync(imageSources, join(CONTENT, "docs", "image-sources.md"))
   }
 
   cpSync(join(ROOT, "site", "pages"), CONTENT, { recursive: true })

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "summary": {
-    "markdown_files": 105,
-    "wikilinks": 120,
-    "markdown_links": 20,
+    "markdown_files": 115,
+    "wikilinks": 10,
+    "markdown_links": 377,
     "image_references": 31,
     "image_assets": 31,
     "manifest_assets": 31,
@@ -12,215 +12,12 @@
     "broken_links": 0,
     "ambiguous_wikilinks": 0,
     "unreferenced_assets": 0,
-    "orphan_pages": 29,
+    "orphan_pages": 0,
     "license_review_required": 20,
     "errors": 0,
-    "warnings": 49
+    "warnings": 20
   },
   "findings": [
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "03 分子生物学 重蓝点手册/MMB 99 分子生物学｜一本全.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "03 分子生物学 重蓝点手册/MMB SP 分子生物学附册/MMB SP-1 原核细胞与真核细胞对比.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "04 五年本科 三年细胞 （科普）/CB 01 细胞质膜与跨膜运输.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-1 氨基酸与多肽.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-2 蛋白质的结构.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-3 氨基酸与蛋白质的理化性质.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-4 蛋白质的功能性质.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-5 影响蛋白质的因素.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 2-1 水的结构、性质与功能.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 2-2 水和溶质的相互作用.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 2-3 水分活度.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 2-4 冷冻对食品稳定性的影响.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 3-1 单糖.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 3-2 美拉德反应.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 3-3 寡糖与多糖.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 3-4 淀粉.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 3-5 果胶.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 4-1 脂质的物理性质.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 4-2 脂质的化学性质与加工特性.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 5 酶.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 6 核酸.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC 7 糖代谢.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "06 生物化学与食品化学 考研帮帮忙/BC SP 大巧不工的幼教级米氏方程推导.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "07 LLM 时代的生信入门/BIF A-1 单细胞分析｜样品准备与文库构建.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "07 LLM 时代的生信入门/BIF A-2 单细胞分析｜数据导入和前期整理.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "07 LLM 时代的生信入门/BIF A-3 单细胞分析｜数据的初步分析.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "07 LLM 时代的生信入门/BIF A-4 单细胞分析｜数据的深入分析.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "07 LLM 时代的生信入门/BIF A-5 单细胞分析｜绘图描述.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
-    {
-      "code": "orphan-page",
-      "severity": "warning",
-      "path": "07 LLM 时代的生信入门/BIF A-6 单细胞分析｜参考名词索引.md",
-      "line": 1,
-      "message": "教程页没有入站链接，应接入课程目录或学习路径"
-    },
     {
       "code": "origin-metadata-missing",
       "severity": "warning",
@@ -362,36 +159,6 @@
       "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
     }
   ],
-  "orphans": [
-    "03 分子生物学 重蓝点手册/MMB 99 分子生物学｜一本全.md",
-    "03 分子生物学 重蓝点手册/MMB SP 分子生物学附册/MMB SP-1 原核细胞与真核细胞对比.md",
-    "04 五年本科 三年细胞 （科普）/CB 01 细胞质膜与跨膜运输.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 1-1 氨基酸与多肽.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 1-2 蛋白质的结构.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 1-3 氨基酸与蛋白质的理化性质.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 1-4 蛋白质的功能性质.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 1-5 影响蛋白质的因素.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 2-1 水的结构、性质与功能.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 2-2 水和溶质的相互作用.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 2-3 水分活度.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 2-4 冷冻对食品稳定性的影响.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 3-1 单糖.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 3-2 美拉德反应.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 3-3 寡糖与多糖.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 3-4 淀粉.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 3-5 果胶.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 4-1 脂质的物理性质.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 4-2 脂质的化学性质与加工特性.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 5 酶.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 6 核酸.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC 7 糖代谢.md",
-    "06 生物化学与食品化学 考研帮帮忙/BC SP 大巧不工的幼教级米氏方程推导.md",
-    "07 LLM 时代的生信入门/BIF A-1 单细胞分析｜样品准备与文库构建.md",
-    "07 LLM 时代的生信入门/BIF A-2 单细胞分析｜数据导入和前期整理.md",
-    "07 LLM 时代的生信入门/BIF A-3 单细胞分析｜数据的初步分析.md",
-    "07 LLM 时代的生信入门/BIF A-4 单细胞分析｜数据的深入分析.md",
-    "07 LLM 时代的生信入门/BIF A-5 单细胞分析｜绘图描述.md",
-    "07 LLM 时代的生信入门/BIF A-6 单细胞分析｜参考名词索引.md"
-  ],
+  "orphans": [],
   "unreferenced_assets": []
 }

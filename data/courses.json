@@ -2568,9 +2568,9 @@
         "undergraduate"
       ],
       "index_path": "07 LLM 时代的生信入门/COURSE_INDEX.md",
-      "page_count": 6,
-      "lesson_count": 6,
-      "estimated_minutes": 40,
+      "page_count": 7,
+      "lesson_count": 7,
+      "estimated_minutes": 47,
       "lessons": [
         {
           "id": "bif-a-01",
@@ -2744,7 +2744,9 @@
           "importance": 3,
           "estimated_minutes": 6,
           "prerequisites": [],
-          "next": [],
+          "next": [
+            "bif-b-02"
+          ],
           "tags": [
             "生信",
             "细胞",
@@ -2763,6 +2765,33 @@
           "reviewers": [],
           "last_scientific_review": null,
           "summary": "介绍《LLM 时代的生信入门》中的“单细胞分析｜参考名词索引”主题。"
+        },
+        {
+          "id": "bif-b-02",
+          "title": "scRNAseq 入门到 UMAP 注释",
+          "path": "07 LLM 时代的生信入门/BIF B-2 scRNAseq 入门到 UMAP 注释.md",
+          "content_type": "lesson",
+          "chapter": "scRNAseq 实操",
+          "order": "b-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 7,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "生信",
+            "单细胞分析",
+            "Seurat",
+            "PBMC3k",
+            "可视化"
+          ],
+          "authors": [
+            "脆弱的百里橘"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《LLM 时代的生信入门》中的“scRNAseq 入门到 UMAP 注释”主题。"
         }
       ]
     }

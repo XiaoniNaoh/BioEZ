@@ -1,3 +1,37 @@
+---
+id: "bif-b-02"
+title: "scRNAseq 入门到 UMAP 注释"
+course: "bioinformatics"
+chapter: "scRNAseq 实操"
+order: "b-02"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 7
+prerequisites: []
+next: []
+tags:
+  - "生信"
+  - "单细胞分析"
+  - "Seurat"
+  - "PBMC3k"
+  - "可视化"
+authors:
+  - "脆弱的百里橘"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《LLM 时代的生信入门》中的“scRNAseq 入门到 UMAP 注释”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：单细胞分析｜参考名词索引](<BIF A-6 单细胞分析｜参考名词索引.md>) · [课程目录](<COURSE_INDEX.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 生信入门 B-2：scRNAseq 入门到 UMAP 注释
 
 #生信 #单细胞分析 #Seurat #PBMC3k #可视化
