@@ -1,3 +1,30 @@
+---
+id: mmb-02-02
+title: DNA 的结构
+course: molecular-biology
+chapter: 染色体与 DNA
+order: 2.2
+status: scientific-review
+audience:
+  - undergraduate
+difficulty: 2
+importance: 3
+estimated_minutes: 15
+prerequisites:
+  - mmb-02-01
+next:
+  - mmb-02-03
+tags:
+  - DNA
+  - 分子生物学
+authors:
+  - 小倪
+reviewers: []
+last_scientific_review: null
+summary: 介绍 DNA 的一级、二级和高级结构，以及变性、复性与熔解温度。
+references: []
+---
+
 # 分子生物学 第 2 章 第 2 节：DNA 的结构
 #分子生物学 #结构 
 
@@ -36,16 +63,15 @@
 | 胸腺嘧啶  |  T  |     ✅     |     ❌     |
 |  胞嘧啶  |  C  |     ✅     |     ✅     |
 |  鸟嘌呤  |  G  |     ✅     |     ✅     |
-|  胞嘧啶  |  U  |     ❌     |     ✅     |
+|  尿嘧啶  |  U  |     ❌     |     ✅     |
 ### 2.2.2 DNA 的二级结构
 - 是指两条多核苷酸链**反向平行**盘绕所生成的双螺旋结构
 - 特点
-	1. DNA 分子是由两条相互平行的脱氧核苷酸长链盘绕而成
+	1. DNA 分子是由两条反向平行的脱氧核苷酸长链盘绕而成
 	2. DNA 分子中的脱氧核糖和磷酸交替连接，排在外侧，**构成基本骨架**，碱基排列在内侧
-- 碱基互补配对原则：碱基之间的一一对应关系
-	- A - T
-	- A - U
-	- C - G
+- 碱基互补配对原则：在标准 DNA 双链中 A 与 T 配对，C 与 G 配对。DNA–RNA 杂化双链中，DNA 链的 A 可与 RNA 链的 U 配对。
+	- DNA–DNA：A–T、C–G
+	- DNA–RNA：A–U、T–A、C–G、G–C
 - DNA 二级结构的分类
 
 | DNA 二级结构的类型 | 螺旋方向 |
