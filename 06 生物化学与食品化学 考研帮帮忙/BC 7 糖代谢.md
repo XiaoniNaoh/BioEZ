@@ -1,3 +1,41 @@
+---
+id: "bc-07"
+title: "糖代谢"
+course: "biochemistry-food-chemistry"
+chapter: "糖代谢"
+order: "07"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+  - "postgraduate-entrance-exam"
+difficulty: 3
+importance: 3
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "bc-sp"
+tags:
+  - "生物化学"
+  - "糖类"
+  - "代谢"
+  - "糖酵解"
+  - "糖异生"
+  - "磷酸戊糖途径"
+authors:
+  - "脆弱的百里橘"
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《生物化学与食品化学 考研帮帮忙》中的“糖代谢”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：核酸](<BC 6 核酸.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：大巧不工的幼教级米氏方程推导 →](<BC SP 大巧不工的幼教级米氏方程推导.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 #  生物化学 话题 4：糖代谢
 #生物化学 #糖类 #代谢 #糖酵解 #糖异生 #磷酸戊糖途径
 

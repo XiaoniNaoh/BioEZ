@@ -1,9 +1,43 @@
+---
+id: "mmb-03-05"
+title: "RNA 转录后加工、编辑、再编码与化学修饰"
+course: "molecular-biology"
+chapter: "转录"
+order: "03-05"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 8
+prerequisites: []
+next:
+  - "mmb-04-01"
+tags:
+  - "分子生物学"
+  - "RNA"
+  - "mRNA"
+  - "转录"
+  - "剪接"
+  - "修饰"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“RNA 转录后加工、编辑、再编码与化学修饰”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：RNA 聚合酶、RNA 转录及其抑制剂](<MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：tRNA 与遗传密码 →](<../MMB 04 翻译/MMB 04-1 tRNA 与遗传密码.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 3 章 第 5 节：RNA 转录后加工、编辑、再编码与化学修饰
 #分子生物学 #RNA #mRNA #转录 #剪接 #修饰
 
-> 上一节链接🔗 [[MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂]]
 > 这是本章的最后一节~
-> 前往下一章🚀 [[MMB 04-1 tRNA 与遗传密码]]
 
 ---
 

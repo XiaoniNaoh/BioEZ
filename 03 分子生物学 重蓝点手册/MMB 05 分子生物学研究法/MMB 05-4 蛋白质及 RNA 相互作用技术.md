@@ -1,8 +1,44 @@
+---
+id: "mmb-05-04"
+title: "蛋白质及 RNA 相互作用技术"
+course: "molecular-biology"
+chapter: "分子生物学研究法"
+order: "05-04"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 5
+importance: 2
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "mmb-05-05"
+tags:
+  - "分子生物学"
+  - "实验技术"
+  - "蛋白质"
+  - "RNA"
+  - "互作"
+  - "杂交"
+  - "染色质"
+  - "RNAi"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“蛋白质及 RNA 相互作用技术”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：蛋白质与蛋白质组学技术](<MMB 05-3 蛋白质与蛋白质组学技术.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：基因克隆技术 →](<MMB 05-5 基因克隆技术.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 5 章 第 4 节：蛋白质及 RNA 相互作用技术
 #分子生物学  #实验技术 #蛋白质 #RNA #互作 #杂交 #染色质 #RNAi
 
-> 上一节链接🔗 [[MMB 05-3 蛋白质与蛋白质组学技术]]
-> 下一节链接🔗 [[MMB 05-5 基因克隆技术]]
 
 ---
 

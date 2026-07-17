@@ -1,3 +1,39 @@
+---
+id: "bc-sp"
+title: "大巧不工的幼教级米氏方程推导"
+course: "biochemistry-food-chemistry"
+chapter: "专题"
+order: "sp"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+  - "postgraduate-entrance-exam"
+difficulty: 3
+importance: 3
+estimated_minutes: 10
+prerequisites: []
+next: []
+tags:
+  - "生物化学"
+  - "酶"
+  - "酶促反应动力学"
+  - "米氏方程"
+  - "推导"
+authors:
+  - "脆弱的百里橘"
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《生物化学与食品化学 考研帮帮忙》中的“大巧不工的幼教级米氏方程推导”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：糖代谢](<BC 7 糖代谢.md>) · [课程目录](<COURSE_INDEX.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 #生物化学 #酶 #酶促反应动力学 #米氏方程 #推导
 
 研究生命，不得不品的一环就是研究酶。几乎没有生命活动可以离开酶促反应，相比于无机催化剂，酶的效率是那么高，又可以在很温和的条件下催化反应的发生，其本身的蛋白质结构又是那么精巧。

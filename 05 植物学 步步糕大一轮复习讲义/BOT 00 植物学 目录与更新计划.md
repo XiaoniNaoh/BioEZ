@@ -1,3 +1,33 @@
+---
+id: "bot-00"
+title: "植物学 目录与更新计划"
+course: "botany"
+chapter: "课程导航"
+order: "00"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 5
+prerequisites: []
+next: []
+tags:
+  - "植物"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《植物学 步步糕大一轮复习讲义》中的“植物学 目录与更新计划”主题。"
+references: []
+content_type: "course-index"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [课程目录](<COURSE_INDEX.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 植物学 目录与更新计划
 #植物
 

@@ -1,8 +1,39 @@
+---
+id: "fai-02"
+title: "样品"
+course: "food-analysis"
+chapter: "分析基础"
+order: "02"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 6
+prerequisites: []
+next:
+  - "fai-03"
+tags:
+  - "食品分析与检验"
+  - "食品"
+  - "采样"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《食品分析与检验 宝宝教程》中的“样品”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：绪论](<FAI 01 绪论.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：数据 →](<FAI 03 数据.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 食品分析与检验 第二讲：样品
 #食品分析与检验 #食品 #采样
 
-> 上一讲链接🔗[[FAI 01 绪论]]
-> 下一讲链接🔗[[FAI 03 数据]]
 
 ---
 ## 2.1 采样

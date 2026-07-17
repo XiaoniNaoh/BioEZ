@@ -1,0 +1,2770 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/build_course_catalog.py",
+  "courses": [
+    {
+      "slug": "food-analysis",
+      "title": "食品分析与检验 宝宝教程",
+      "directory": "01 食品分析与检验 宝宝教程",
+      "description": "从食品分析的基本原理出发，介绍样品、数据处理与常见成分分析方法。",
+      "progress": "completed",
+      "authors": [
+        "小倪"
+      ],
+      "audience": [
+        "undergraduate"
+      ],
+      "index_path": "01 食品分析与检验 宝宝教程/COURSE_INDEX.md",
+      "page_count": 7,
+      "lesson_count": 7,
+      "estimated_minutes": 40,
+      "lessons": [
+        {
+          "id": "fai-01",
+          "title": "绪论",
+          "path": "01 食品分析与检验 宝宝教程/FAI 01 绪论.md",
+          "content_type": "lesson",
+          "chapter": "分析基础",
+          "order": "01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "fai-02"
+          ],
+          "tags": [
+            "食品分析与检验",
+            "食品",
+            "化学试剂"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《食品分析与检验 宝宝教程》中的“绪论”主题。"
+        },
+        {
+          "id": "fai-02",
+          "title": "样品",
+          "path": "01 食品分析与检验 宝宝教程/FAI 02 样品.md",
+          "content_type": "lesson",
+          "chapter": "分析基础",
+          "order": "02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [
+            "fai-03"
+          ],
+          "tags": [
+            "食品分析与检验",
+            "食品",
+            "采样"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《食品分析与检验 宝宝教程》中的“样品”主题。"
+        },
+        {
+          "id": "fai-03",
+          "title": "数据",
+          "path": "01 食品分析与检验 宝宝教程/FAI 03 数据.md",
+          "content_type": "lesson",
+          "chapter": "分析基础",
+          "order": "03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "fai-sp-01"
+          ],
+          "tags": [
+            "食品分析与检验",
+            "食品",
+            "误差分析"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《食品分析与检验 宝宝教程》中的“数据”主题。"
+        },
+        {
+          "id": "fai-sp-01",
+          "title": "专题一：水分分析",
+          "path": "01 食品分析与检验 宝宝教程/FAI SP1 专题一：水分分析.md",
+          "content_type": "lesson",
+          "chapter": "分析专题",
+          "order": "sp-01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "fai-sp-02"
+          ],
+          "tags": [
+            "食品分析与检验",
+            "食品",
+            "水分",
+            "卡尔·费休法",
+            "实验技术"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《食品分析与检验 宝宝教程》中的“专题一：水分分析”主题。"
+        },
+        {
+          "id": "fai-sp-02",
+          "title": "专题二：糖类分析",
+          "path": "01 食品分析与检验 宝宝教程/FAI SP2 专题二：糖类分析.md",
+          "content_type": "lesson",
+          "chapter": "分析专题",
+          "order": "sp-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "fai-sp-03"
+          ],
+          "tags": [
+            "食品分析与检验",
+            "食品",
+            "糖类",
+            "实验技术"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《食品分析与检验 宝宝教程》中的“专题二：糖类分析”主题。"
+        },
+        {
+          "id": "fai-sp-03",
+          "title": "专题三：蛋白质分析",
+          "path": "01 食品分析与检验 宝宝教程/FAI SP3 专题三：蛋白质分析.md",
+          "content_type": "lesson",
+          "chapter": "分析专题",
+          "order": "sp-03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [
+            "fai-sp-04"
+          ],
+          "tags": [
+            "食品分析与检验",
+            "食品",
+            "蛋白质",
+            "双缩脲法",
+            "凯氏定氮法",
+            "实验技术"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《食品分析与检验 宝宝教程》中的“专题三：蛋白质分析”主题。"
+        },
+        {
+          "id": "fai-sp-04",
+          "title": "专题四：脂类分析",
+          "path": "01 食品分析与检验 宝宝教程/FAI SP4 专题四：脂类分析.md",
+          "content_type": "lesson",
+          "chapter": "分析专题",
+          "order": "sp-04",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "食品分析与检验",
+            "食品",
+            "脂质",
+            "实验技术"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《食品分析与检验 宝宝教程》中的“专题四：脂类分析”主题。"
+        }
+      ]
+    },
+    {
+      "slug": "microbiology",
+      "title": "微生物学 宝宝教程",
+      "directory": "02 微生物学 宝宝教程",
+      "description": "介绍微生物学基础、遗传代谢、生态、免疫与食品相关应用。",
+      "progress": "completed",
+      "authors": [
+        "小倪"
+      ],
+      "audience": [
+        "undergraduate"
+      ],
+      "index_path": "02 微生物学 宝宝教程/COURSE_INDEX.md",
+      "page_count": 11,
+      "lesson_count": 11,
+      "estimated_minutes": 79,
+      "lessons": [
+        {
+          "id": "mb-01",
+          "title": "绪论",
+          "path": "02 微生物学 宝宝教程/MB 01 绪论.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mb-02"
+          ],
+          "tags": [
+            "微生物学",
+            "食品",
+            "科学史",
+            "绪论"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“绪论”主题。"
+        },
+        {
+          "id": "mb-02",
+          "title": "原核微生物",
+          "path": "02 微生物学 宝宝教程/MB 02 原核微生物.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "mb-03"
+          ],
+          "tags": [
+            "微生物学",
+            "食品",
+            "原核生物",
+            "革兰氏染色",
+            "细菌",
+            "细胞"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“原核微生物”主题。"
+        },
+        {
+          "id": "mb-03",
+          "title": "真核微生物",
+          "path": "02 微生物学 宝宝教程/MB 03 真核微生物.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [
+            "mb-04"
+          ],
+          "tags": [
+            "微生物学",
+            "食品",
+            "真核生物",
+            "酵母菌",
+            "霉菌"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“真核微生物”主题。"
+        },
+        {
+          "id": "mb-04",
+          "title": "病毒",
+          "path": "02 微生物学 宝宝教程/MB 04 病毒.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "04",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mb-05"
+          ],
+          "tags": [
+            "微生物学",
+            "食品",
+            "病毒",
+            "噬菌体"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“病毒”主题。"
+        },
+        {
+          "id": "mb-05",
+          "title": "微生物的营养与生长",
+          "path": "02 微生物学 宝宝教程/MB 05 微生物的营养与生长.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "05",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 13,
+          "prerequisites": [],
+          "next": [
+            "mb-06"
+          ],
+          "tags": [
+            "微生物学",
+            "食品",
+            "培养",
+            "物质转运",
+            "营养"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“微生物的营养与生长”主题。"
+        },
+        {
+          "id": "mb-06",
+          "title": "微生物的代谢",
+          "path": "02 微生物学 宝宝教程/MB 06 微生物的代谢.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "06",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 9,
+          "prerequisites": [],
+          "next": [
+            "mb-07"
+          ],
+          "tags": [
+            "微生物学",
+            "食品",
+            "代谢",
+            "发酵",
+            "调节"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“微生物的代谢”主题。"
+        },
+        {
+          "id": "mb-07",
+          "title": "微生物的遗传与育种",
+          "path": "02 微生物学 宝宝教程/MB 07 微生物的遗传与育种.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "07",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 13,
+          "prerequisites": [],
+          "next": [
+            "mb-08"
+          ],
+          "tags": [
+            "微生物学",
+            "食品",
+            "遗传",
+            "育种",
+            "基因工程",
+            "菌种保藏",
+            "实验技术"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“微生物的遗传与育种”主题。"
+        },
+        {
+          "id": "mb-08",
+          "title": "微生物的生态",
+          "path": "02 微生物学 宝宝教程/MB 08 微生物的生态.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "08",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mb-09"
+          ],
+          "tags": [
+            "微生物学",
+            "食品",
+            "生态"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“微生物的生态”主题。"
+        },
+        {
+          "id": "mb-09",
+          "title": "微生物的分类与鉴定",
+          "path": "02 微生物学 宝宝教程/MB 09 微生物的分类与鉴定.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "09",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mb-10"
+          ],
+          "tags": [
+            "微生物学",
+            "食品",
+            "分类",
+            "命名"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“微生物的分类与鉴定”主题。"
+        },
+        {
+          "id": "mb-10",
+          "title": "免疫学基础",
+          "path": "02 微生物学 宝宝教程/MB 10 免疫学基础.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "10",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mb-11"
+          ],
+          "tags": [
+            "微生物学",
+            "食品",
+            "免疫",
+            "炎症"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“免疫学基础”主题。"
+        },
+        {
+          "id": "mb-11",
+          "title": "微生物与食品腐败变质",
+          "path": "02 微生物学 宝宝教程/MB 11 微生物与食品腐败变质.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "11",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "微生物学",
+            "食品",
+            "消毒",
+            "腐败"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学 宝宝教程》中的“微生物与食品腐败变质”主题。"
+        }
+      ]
+    },
+    {
+      "slug": "molecular-biology",
+      "title": "分子生物学 重蓝点手册",
+      "directory": "03 分子生物学 重蓝点手册",
+      "description": "围绕 DNA、RNA、蛋白质、基因表达调控和分子生物学技术构建系统学习路径。",
+      "progress": "completed",
+      "authors": [
+        "小倪"
+      ],
+      "audience": [
+        "undergraduate"
+      ],
+      "index_path": "03 分子生物学 重蓝点手册/COURSE_INDEX.md",
+      "page_count": 37,
+      "lesson_count": 37,
+      "estimated_minutes": 260,
+      "lessons": [
+        {
+          "id": "mmb-01",
+          "title": "绪论",
+          "path": "03 分子生物学 重蓝点手册/MMB 01 绪论/MMB 01 绪论.md",
+          "content_type": "lesson",
+          "chapter": "绪论",
+          "order": "01",
+          "status": "scientific-review",
+          "difficulty": 1,
+          "importance": 1,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-02-01"
+          ],
+          "tags": [
+            "分子生物学",
+            "绪论",
+            "实验技术"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“绪论”主题。"
+        },
+        {
+          "id": "mmb-02-01",
+          "title": "染色体",
+          "path": "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-1 染色体.md",
+          "content_type": "lesson",
+          "chapter": "染色体与 DNA",
+          "order": "02-01",
+          "status": "scientific-review",
+          "difficulty": 2,
+          "importance": 2,
+          "estimated_minutes": 11,
+          "prerequisites": [],
+          "next": [
+            "mmb-02-02"
+          ],
+          "tags": [
+            "分子生物学",
+            "染色体",
+            "结构",
+            "基因组"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“染色体”主题。"
+        },
+        {
+          "id": "mmb-02-02",
+          "title": "DNA 的结构",
+          "path": "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-2 DNA 的结构.md",
+          "content_type": "lesson",
+          "chapter": "染色体与 DNA",
+          "order": "2.2",
+          "status": "scientific-review",
+          "difficulty": 2,
+          "importance": 3,
+          "estimated_minutes": 15,
+          "prerequisites": [
+            "mmb-02-01"
+          ],
+          "next": [
+            "mmb-02-03"
+          ],
+          "tags": [
+            "DNA",
+            "分子生物学"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍 DNA 的一级、二级和高级结构，以及变性、复性与熔解温度。"
+        },
+        {
+          "id": "mmb-02-03",
+          "title": "DNA 的复制",
+          "path": "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-3 DNA 的复制.md",
+          "content_type": "lesson",
+          "chapter": "染色体与 DNA",
+          "order": "02-03",
+          "status": "scientific-review",
+          "difficulty": 5,
+          "importance": 4,
+          "estimated_minutes": 7,
+          "prerequisites": [],
+          "next": [
+            "mmb-02-04"
+          ],
+          "tags": [
+            "分子生物学",
+            "复制",
+            "DNA聚合酶"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“DNA 的复制”主题。"
+        },
+        {
+          "id": "mmb-02-04",
+          "title": "原核生物和真核生物 DNA 复制的特点",
+          "path": "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-4 原核生物和真核生物 DNA 复制的特点.md",
+          "content_type": "lesson",
+          "chapter": "染色体与 DNA",
+          "order": "02-04",
+          "status": "scientific-review",
+          "difficulty": 5,
+          "importance": 5,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "mmb-02-05"
+          ],
+          "tags": [
+            "分子生物学",
+            "复制",
+            "DNA聚合酶",
+            "调控"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“原核生物和真核生物 DNA 复制的特点”主题。"
+        },
+        {
+          "id": "mmb-02-05",
+          "title": "DNA 的突变与修复",
+          "path": "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-5 DNA 的突变与修复.md",
+          "content_type": "lesson",
+          "chapter": "染色体与 DNA",
+          "order": "02-05",
+          "status": "scientific-review",
+          "difficulty": 4,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-02-06"
+          ],
+          "tags": [
+            "分子生物学",
+            "基因突变"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“DNA 的突变与修复”主题。"
+        },
+        {
+          "id": "mmb-02-06",
+          "title": "DNA 的转座",
+          "path": "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-6 DNA 的转座.md",
+          "content_type": "lesson",
+          "chapter": "染色体与 DNA",
+          "order": "02-06",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-02-07"
+          ],
+          "tags": [
+            "分子生物学",
+            "转座",
+            "遗传"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“DNA 的转座”主题。"
+        },
+        {
+          "id": "mmb-02-07",
+          "title": "SNP 的理论与应用",
+          "path": "03 分子生物学 重蓝点手册/MMB 02 染色体与DNA/MMB 02-7 SNP 的理论与应用.md",
+          "content_type": "lesson",
+          "chapter": "染色体与 DNA",
+          "order": "02-07",
+          "status": "scientific-review",
+          "difficulty": 2,
+          "importance": 1,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-03-01"
+          ],
+          "tags": [
+            "分子生物学",
+            "SNP",
+            "实验技术"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“SNP 的理论与应用”主题。"
+        },
+        {
+          "id": "mmb-03-01",
+          "title": "RNA 概述",
+          "path": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-1 RNA 概述.md",
+          "content_type": "lesson",
+          "chapter": "转录",
+          "order": "03-01",
+          "status": "scientific-review",
+          "difficulty": 2,
+          "importance": 2,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-03-02"
+          ],
+          "tags": [
+            "分子生物学",
+            "RNA",
+            "结构",
+            "核糖体"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“RNA 概述”主题。"
+        },
+        {
+          "id": "mmb-03-02",
+          "title": "RNA 转录的基本过程",
+          "path": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-2 RNA 转录的基本过程.md",
+          "content_type": "lesson",
+          "chapter": "转录",
+          "order": "03-02",
+          "status": "scientific-review",
+          "difficulty": 5,
+          "importance": 5,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [
+            "mmb-03-03"
+          ],
+          "tags": [
+            "分子生物学",
+            "复制",
+            "转录",
+            "mRNA"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“RNA 转录的基本过程”主题。"
+        },
+        {
+          "id": "mmb-03-03",
+          "title": "原核生物与真核生物的转录及产物特征比较",
+          "path": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-3 原核生物与真核生物的转录及产物特征比较.md",
+          "content_type": "lesson",
+          "chapter": "转录",
+          "order": "03-03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 4,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-03-04"
+          ],
+          "tags": [
+            "分子生物学",
+            "转录",
+            "比较",
+            "mRNA"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“原核生物与真核生物的转录及产物特征比较”主题。"
+        },
+        {
+          "id": "mmb-03-04",
+          "title": "RNA 聚合酶、RNA 转录及其抑制剂",
+          "path": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-4 RNA 聚合酶、RNA 转录及其抑制剂.md",
+          "content_type": "lesson",
+          "chapter": "转录",
+          "order": "03-04",
+          "status": "scientific-review",
+          "difficulty": 5,
+          "importance": 4,
+          "estimated_minutes": 14,
+          "prerequisites": [],
+          "next": [
+            "mmb-03-05"
+          ],
+          "tags": [
+            "分子生物学",
+            "RNA",
+            "RNA聚合酶",
+            "顺式作用元件",
+            "转录",
+            "调控"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“RNA 聚合酶、RNA 转录及其抑制剂”主题。"
+        },
+        {
+          "id": "mmb-03-05",
+          "title": "RNA 转录后加工、编辑、再编码与化学修饰",
+          "path": "03 分子生物学 重蓝点手册/MMB 03 转录/MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰.md",
+          "content_type": "lesson",
+          "chapter": "转录",
+          "order": "03-05",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "mmb-04-01"
+          ],
+          "tags": [
+            "分子生物学",
+            "RNA",
+            "mRNA",
+            "转录",
+            "剪接",
+            "修饰"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“RNA 转录后加工、编辑、再编码与化学修饰”主题。"
+        },
+        {
+          "id": "mmb-04-01",
+          "title": "tRNA 与遗传密码",
+          "path": "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-1 tRNA 与遗传密码.md",
+          "content_type": "lesson",
+          "chapter": "翻译",
+          "order": "04-01",
+          "status": "scientific-review",
+          "difficulty": 5,
+          "importance": 5,
+          "estimated_minutes": 9,
+          "prerequisites": [],
+          "next": [
+            "mmb-04-02"
+          ],
+          "tags": [
+            "分子生物学",
+            "RNA",
+            "tRNA",
+            "遗传",
+            "蛋白质",
+            "密码子"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“tRNA 与遗传密码”主题。"
+        },
+        {
+          "id": "mmb-04-02",
+          "title": "蛋白质合成",
+          "path": "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-2 蛋白质合成.md",
+          "content_type": "lesson",
+          "chapter": "翻译",
+          "order": "04-02",
+          "status": "scientific-review",
+          "difficulty": 4,
+          "importance": 5,
+          "estimated_minutes": 7,
+          "prerequisites": [],
+          "next": [
+            "mmb-04-03"
+          ],
+          "tags": [
+            "分子生物学",
+            "核糖体",
+            "翻译",
+            "蛋白质",
+            "氨基酸"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“蛋白质合成”主题。"
+        },
+        {
+          "id": "mmb-04-03",
+          "title": "蛋白质的转运、修饰与降解",
+          "path": "03 分子生物学 重蓝点手册/MMB 04 翻译/MMB 04-3 蛋白质的转运、修饰与降解.md",
+          "content_type": "lesson",
+          "chapter": "翻译",
+          "order": "04-03",
+          "status": "scientific-review",
+          "difficulty": 4,
+          "importance": 2,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-05-01"
+          ],
+          "tags": [
+            "分子生物学",
+            "蛋白质",
+            "转运",
+            "修饰",
+            "降解"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“蛋白质的转运、修饰与降解”主题。"
+        },
+        {
+          "id": "mmb-05-01",
+          "title": "DNA 基本操作技术",
+          "path": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-1 DNA 基本操作技术.md",
+          "content_type": "lesson",
+          "chapter": "分子生物学研究法",
+          "order": "05-01",
+          "status": "scientific-review",
+          "difficulty": 5,
+          "importance": 5,
+          "estimated_minutes": 10,
+          "prerequisites": [],
+          "next": [
+            "mmb-05-02"
+          ],
+          "tags": [
+            "分子生物学",
+            "DNA",
+            "实验技术",
+            "科学史",
+            "蓝白斑试验",
+            "基因工程",
+            "PCR",
+            "cDNA",
+            "质粒",
+            "提取",
+            "电泳"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“DNA 基本操作技术”主题。"
+        },
+        {
+          "id": "mmb-05-02",
+          "title": "RNA 基本操作技术",
+          "path": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-2 RNA 基本操作技术.md",
+          "content_type": "lesson",
+          "chapter": "分子生物学研究法",
+          "order": "05-02",
+          "status": "scientific-review",
+          "difficulty": 4,
+          "importance": 5,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "mmb-05-03"
+          ],
+          "tags": [
+            "分子生物学",
+            "实验技术",
+            "RNA",
+            "mRNA",
+            "提取",
+            "cDNA",
+            "基因组",
+            "基因工程",
+            "非编码RNA"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“RNA 基本操作技术”主题。"
+        },
+        {
+          "id": "mmb-05-03",
+          "title": "蛋白质与蛋白质组学技术",
+          "path": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-3 蛋白质与蛋白质组学技术.md",
+          "content_type": "lesson",
+          "chapter": "分子生物学研究法",
+          "order": "05-03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 2,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-05-04"
+          ],
+          "tags": [
+            "分子生物学",
+            "实验技术",
+            "蛋白质",
+            "电泳",
+            "荧光"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“蛋白质与蛋白质组学技术”主题。"
+        },
+        {
+          "id": "mmb-05-04",
+          "title": "蛋白质及 RNA 相互作用技术",
+          "path": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-4 蛋白质及 RNA 相互作用技术.md",
+          "content_type": "lesson",
+          "chapter": "分子生物学研究法",
+          "order": "05-04",
+          "status": "scientific-review",
+          "difficulty": 5,
+          "importance": 2,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-05-05"
+          ],
+          "tags": [
+            "分子生物学",
+            "实验技术",
+            "蛋白质",
+            "RNA",
+            "互作",
+            "杂交",
+            "染色质",
+            "RNAi"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“蛋白质及 RNA 相互作用技术”主题。"
+        },
+        {
+          "id": "mmb-05-05",
+          "title": "基因克隆技术",
+          "path": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-5 基因克隆技术.md",
+          "content_type": "lesson",
+          "chapter": "分子生物学研究法",
+          "order": "05-05",
+          "status": "scientific-review",
+          "difficulty": 5,
+          "importance": 2,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-05-06"
+          ],
+          "tags": [
+            "分子生物学",
+            "实验技术",
+            "基因工程",
+            "克隆",
+            "cDNA",
+            "PCR"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“基因克隆技术”主题。"
+        },
+        {
+          "id": "mmb-05-06",
+          "title": "基因表达技术",
+          "path": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-6 基因表达技术.md",
+          "content_type": "lesson",
+          "chapter": "分子生物学研究法",
+          "order": "05-06",
+          "status": "scientific-review",
+          "difficulty": 4,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-05-07"
+          ],
+          "tags": [
+            "分子生物学",
+            "表达",
+            "转录",
+            "测序",
+            "RNA",
+            "实验技术",
+            "杂交",
+            "基因工程"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“基因表达技术”主题。"
+        },
+        {
+          "id": "mmb-05-07",
+          "title": "基因敲除技术",
+          "path": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-7 基因敲除技术.md",
+          "content_type": "lesson",
+          "chapter": "分子生物学研究法",
+          "order": "05-07",
+          "status": "scientific-review",
+          "difficulty": 2,
+          "importance": 1,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-05-08"
+          ],
+          "tags": [
+            "分子生物学",
+            "基因工程",
+            "敲除",
+            "实验技术"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“基因敲除技术”主题。"
+        },
+        {
+          "id": "mmb-05-08",
+          "title": "其他分子生物学技术",
+          "path": "03 分子生物学 重蓝点手册/MMB 05 分子生物学研究法/MMB 05-8 其他分子生物学技术.md",
+          "content_type": "lesson",
+          "chapter": "分子生物学研究法",
+          "order": "05-08",
+          "status": "scientific-review",
+          "difficulty": 2,
+          "importance": 1,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-06-01"
+          ],
+          "tags": [
+            "分子生物学",
+            "实验技术",
+            "电泳",
+            "WB",
+            "蛋白质"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“其他分子生物学技术”主题。"
+        },
+        {
+          "id": "mmb-06-01",
+          "title": "原核基因表达调控概述",
+          "path": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-1 原核基因表达调控概述.md",
+          "content_type": "lesson",
+          "chapter": "原核基因表达调控",
+          "order": "06-01",
+          "status": "scientific-review",
+          "difficulty": 2,
+          "importance": 4,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "mmb-06-02"
+          ],
+          "tags": [
+            "分子生物学",
+            "原核生物",
+            "基因",
+            "表达",
+            "调控",
+            "比较"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“原核基因表达调控概述”主题。"
+        },
+        {
+          "id": "mmb-06-02",
+          "title": "乳糖操纵子与负控诱导系统",
+          "path": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-2 乳糖操纵子与负控诱导系统.md",
+          "content_type": "lesson",
+          "chapter": "原核基因表达调控",
+          "order": "06-02",
+          "status": "scientific-review",
+          "difficulty": 4,
+          "importance": 5,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [
+            "mmb-06-03"
+          ],
+          "tags": [
+            "分子生物学",
+            "原核生物",
+            "乳糖操纵子",
+            "顺式作用元件",
+            "调控",
+            "基因",
+            "cAMP",
+            "表达"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“乳糖操纵子与负控诱导系统”主题。"
+        },
+        {
+          "id": "mmb-06-03",
+          "title": "色氨酸操纵子与负控阻遏系统",
+          "path": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-3 色氨酸操纵子与负控阻遏系统.md",
+          "content_type": "lesson",
+          "chapter": "原核基因表达调控",
+          "order": "06-03",
+          "status": "scientific-review",
+          "difficulty": 5,
+          "importance": 2,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-06-04"
+          ],
+          "tags": [
+            "分子生物学",
+            "原核生物",
+            "操纵子",
+            "调控",
+            "表达",
+            "顺式作用元件"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“色氨酸操纵子与负控阻遏系统”主题。"
+        },
+        {
+          "id": "mmb-06-04",
+          "title": "转录后调控",
+          "path": "03 分子生物学 重蓝点手册/MMB 06 原核基因表达调控/MMB 06-4 转录后调控.md",
+          "content_type": "lesson",
+          "chapter": "原核基因表达调控",
+          "order": "06-04",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 2,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [
+            "mmb-07-01"
+          ],
+          "tags": [
+            "分子生物学",
+            "转录",
+            "调控",
+            "mRNA",
+            "翻译",
+            "密码子"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“转录后调控”主题。"
+        },
+        {
+          "id": "mmb-07-01",
+          "title": "真核基因表达调控提纲",
+          "path": "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-1 真核基因表达调控提纲.md",
+          "content_type": "lesson",
+          "chapter": "真核基因表达调控",
+          "order": "07-01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "mmb-07-02"
+          ],
+          "tags": [
+            "分子生物学",
+            "真核生物",
+            "基因",
+            "基因组",
+            "断裂基因",
+            "剪接",
+            "基因家族",
+            "表达",
+            "调控"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“真核基因表达调控提纲”主题。"
+        },
+        {
+          "id": "mmb-07-02",
+          "title": "真核基因表达的转录调控",
+          "path": "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-2 真核基因表达的转录调控.md",
+          "content_type": "lesson",
+          "chapter": "真核基因表达调控",
+          "order": "07-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "mmb-07-03"
+          ],
+          "tags": [
+            "分子生物学",
+            "表达",
+            "真核生物",
+            "对比",
+            "调控",
+            "结构",
+            "顺式作用元件",
+            "反式作用因子",
+            "实验技术",
+            "TALENs"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“真核基因表达的转录调控”主题。"
+        },
+        {
+          "id": "mmb-07-03",
+          "title": "真核基因表达的染色质修饰和表观遗传调控",
+          "path": "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-3 真核基因表达的染色质修饰和表观遗传调控.md",
+          "content_type": "lesson",
+          "chapter": "真核基因表达调控",
+          "order": "07-03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "mmb-07-04"
+          ],
+          "tags": [
+            "分子生物学",
+            "真核生物",
+            "染色质",
+            "DNA",
+            "RNA",
+            "调控",
+            "遗传",
+            "表观遗传",
+            "修饰"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“真核基因表达的染色质修饰和表观遗传调控”主题。"
+        },
+        {
+          "id": "mmb-07-04",
+          "title": "非编码 RNA 对真核基因表达的调控",
+          "path": "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-4 非编码 RNA 对真核基因表达的调控.md",
+          "content_type": "lesson",
+          "chapter": "真核基因表达调控",
+          "order": "07-04",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 7,
+          "prerequisites": [],
+          "next": [
+            "mmb-07-05"
+          ],
+          "tags": [
+            "分子生物学",
+            "RNA",
+            "RNA聚合酶",
+            "非编码RNA",
+            "RNAi",
+            "基因",
+            "沉默",
+            "调控",
+            "真核生物"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“非编码 RNA 对真核基因表达的调控”主题。"
+        },
+        {
+          "id": "mmb-07-05",
+          "title": "真核基因其他水平上的表达调控",
+          "path": "03 分子生物学 重蓝点手册/MMB 07 真核基因表达调控/MMB 07-5 真核基因其他水平上的表达调控.md",
+          "content_type": "lesson",
+          "chapter": "真核基因表达调控",
+          "order": "07-05",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 7,
+          "prerequisites": [],
+          "next": [
+            "mmb-08-01"
+          ],
+          "tags": [
+            "分子生物学",
+            "基因",
+            "调控",
+            "表达",
+            "蛋白质",
+            "磷酸化",
+            "乙酰化",
+            "热激蛋白",
+            "激酶",
+            "翻译",
+            "mRNA"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“真核基因其他水平上的表达调控”主题。"
+        },
+        {
+          "id": "mmb-08-01",
+          "title": "肿瘤与癌症",
+          "path": "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康/MMB 08-1 肿瘤与癌症.md",
+          "content_type": "lesson",
+          "chapter": "疾病与人类健康",
+          "order": "08-01",
+          "status": "scientific-review",
+          "difficulty": 2,
+          "importance": 4,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "mmb-08-02"
+          ],
+          "tags": [
+            "分子生物学",
+            "肿瘤",
+            "癌症",
+            "免疫",
+            "逆转录",
+            "病毒",
+            "癌基因",
+            "互作",
+            "调控"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“肿瘤与癌症”主题。"
+        },
+        {
+          "id": "mmb-08-02",
+          "title": "逆转录病毒",
+          "path": "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康/MMB 08-2 逆转录病毒.md",
+          "content_type": "lesson",
+          "chapter": "疾病与人类健康",
+          "order": "08-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 4,
+          "estimated_minutes": 10,
+          "prerequisites": [],
+          "next": [
+            "mmb-08-03"
+          ],
+          "tags": [
+            "分子生物学",
+            "逆转录",
+            "病毒",
+            "HIV",
+            "AIDS",
+            "乙肝病毒",
+            "禽流感",
+            "感染",
+            "免疫",
+            "治疗"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“逆转录病毒”主题。"
+        },
+        {
+          "id": "mmb-08-03",
+          "title": "基因治疗",
+          "path": "03 分子生物学 重蓝点手册/MMB 08 疾病与人类健康/MMB 08-3 基因治疗.md",
+          "content_type": "lesson",
+          "chapter": "疾病与人类健康",
+          "order": "08-03",
+          "status": "scientific-review",
+          "difficulty": 1,
+          "importance": 1,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "mmb-sp-01"
+          ],
+          "tags": [
+            "分子生物学",
+            "基因",
+            "治疗",
+            "肿瘤",
+            "病毒"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“基因治疗”主题。"
+        },
+        {
+          "id": "mmb-sp-01",
+          "title": "原核细胞与真核细胞对比",
+          "path": "03 分子生物学 重蓝点手册/MMB SP 分子生物学附册/MMB SP-1 原核细胞与真核细胞对比.md",
+          "content_type": "lesson",
+          "chapter": "分子生物学附册",
+          "order": "sp-01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "分子生物学",
+            "原核生物",
+            "真核生物",
+            "对比",
+            "基因",
+            "基因组",
+            "转录",
+            "RNA",
+            "mRNA",
+            "rRNA",
+            "DNA",
+            "DNA聚合酶",
+            "翻译",
+            "调控",
+            "表达"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《分子生物学 重蓝点手册》中的“原核细胞与真核细胞对比”主题。"
+        }
+      ]
+    },
+    {
+      "slug": "cell-biology",
+      "title": "五年本科 三年细胞（科普）",
+      "directory": "04 五年本科 三年细胞 （科普）",
+      "description": "以科普方式介绍细胞的结构、功能和生命活动。",
+      "progress": "serializing",
+      "authors": [
+        "小倪"
+      ],
+      "audience": [
+        "general",
+        "undergraduate"
+      ],
+      "index_path": "04 五年本科 三年细胞 （科普）/COURSE_INDEX.md",
+      "page_count": 2,
+      "lesson_count": 1,
+      "estimated_minutes": 10,
+      "lessons": [
+        {
+          "id": "cb-00",
+          "title": "细胞生物学 目录与更新计划",
+          "path": "04 五年本科 三年细胞 （科普）/CB 00 细胞生物学 目录与更新计划.md",
+          "content_type": "course-index",
+          "chapter": "课程导航",
+          "order": "00",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "细胞生物学"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《五年本科 三年细胞（科普）》中的“细胞生物学 目录与更新计划”主题。"
+        },
+        {
+          "id": "cb-01",
+          "title": "细胞质膜与跨膜运输",
+          "path": "04 五年本科 三年细胞 （科普）/CB 01 细胞质膜与跨膜运输.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 10,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "细胞",
+            "质膜",
+            "科学史",
+            "模型",
+            "脂质"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《五年本科 三年细胞（科普）》中的“细胞质膜与跨膜运输”主题。"
+        }
+      ]
+    },
+    {
+      "slug": "botany",
+      "title": "植物学 步步糕大一轮复习讲义",
+      "directory": "05 植物学 步步糕大一轮复习讲义",
+      "description": "面向植物学入门与复习，梳理植物细胞、组织及后续主题。",
+      "progress": "serializing",
+      "authors": [
+        "小倪"
+      ],
+      "audience": [
+        "undergraduate"
+      ],
+      "index_path": "05 植物学 步步糕大一轮复习讲义/COURSE_INDEX.md",
+      "page_count": 4,
+      "lesson_count": 3,
+      "estimated_minutes": 38,
+      "lessons": [
+        {
+          "id": "bot-00",
+          "title": "植物学 目录与更新计划",
+          "path": "05 植物学 步步糕大一轮复习讲义/BOT 00 植物学 目录与更新计划.md",
+          "content_type": "course-index",
+          "chapter": "课程导航",
+          "order": "00",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "植物"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《植物学 步步糕大一轮复习讲义》中的“植物学 目录与更新计划”主题。"
+        },
+        {
+          "id": "bot-a-01",
+          "title": "植物的细胞",
+          "path": "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-1 植物的细胞.md",
+          "content_type": "lesson",
+          "chapter": "A 篇",
+          "order": "a-01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 15,
+          "prerequisites": [],
+          "next": [
+            "bot-a-02"
+          ],
+          "tags": [
+            "植物",
+            "细胞器",
+            "结构",
+            "细胞生物学",
+            "细胞壁",
+            "胞间连丝",
+            "后含物",
+            "原生质体"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《植物学 步步糕大一轮复习讲义》中的“植物的细胞”主题。"
+        },
+        {
+          "id": "bot-a-02",
+          "title": "植物细胞的生长、繁殖与分化",
+          "path": "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-2 植物细胞的生长、繁殖与分化.md",
+          "content_type": "lesson",
+          "chapter": "A 篇",
+          "order": "a-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 8,
+          "prerequisites": [],
+          "next": [
+            "bot-a-03"
+          ],
+          "tags": [
+            "植物",
+            "细胞生物学",
+            "细胞",
+            "细胞分裂"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《植物学 步步糕大一轮复习讲义》中的“植物细胞的生长、繁殖与分化”主题。"
+        },
+        {
+          "id": "bot-a-03",
+          "title": "植物组织的类型",
+          "path": "05 植物学 步步糕大一轮复习讲义/A篇/BOT A-3 植物组织的类型.md",
+          "content_type": "lesson",
+          "chapter": "A 篇",
+          "order": "a-03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 15,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "植物",
+            "分生组织",
+            "成熟组织"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《植物学 步步糕大一轮复习讲义》中的“植物组织的类型”主题。"
+        }
+      ]
+    },
+    {
+      "slug": "biochemistry-food-chemistry",
+      "title": "生物化学与食品化学 考研帮帮忙",
+      "directory": "06 生物化学与食品化学 考研帮帮忙",
+      "description": "围绕生物化学与食品化学的核心知识点提供考研复习材料。",
+      "progress": "serializing",
+      "authors": [
+        "脆弱的百里橘",
+        "小倪"
+      ],
+      "audience": [
+        "undergraduate",
+        "postgraduate-entrance-exam"
+      ],
+      "index_path": "06 生物化学与食品化学 考研帮帮忙/COURSE_INDEX.md",
+      "page_count": 21,
+      "lesson_count": 21,
+      "estimated_minutes": 112,
+      "lessons": [
+        {
+          "id": "bc-01-01",
+          "title": "氨基酸与多肽",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-1 氨基酸与多肽.md",
+          "content_type": "lesson",
+          "chapter": "蛋白质",
+          "order": "01-01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-01-02"
+          ],
+          "tags": [
+            "生物化学",
+            "蛋白质",
+            "氨基酸",
+            "多肽",
+            "结构"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“氨基酸与多肽”主题。"
+        },
+        {
+          "id": "bc-01-02",
+          "title": "蛋白质的结构",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-2 蛋白质的结构.md",
+          "content_type": "lesson",
+          "chapter": "蛋白质",
+          "order": "01-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-01-03"
+          ],
+          "tags": [
+            "生物化学",
+            "蛋白质",
+            "氨基酸",
+            "多肽",
+            "结构",
+            "功能"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“蛋白质的结构”主题。"
+        },
+        {
+          "id": "bc-01-03",
+          "title": "氨基酸与蛋白质的理化性质",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-3 氨基酸与蛋白质的理化性质.md",
+          "content_type": "lesson",
+          "chapter": "蛋白质",
+          "order": "01-03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-01-04"
+          ],
+          "tags": [
+            "生物化学",
+            "蛋白质",
+            "氨基酸",
+            "结构",
+            "理化性质",
+            "变性",
+            "等电点"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“氨基酸与蛋白质的理化性质”主题。"
+        },
+        {
+          "id": "bc-01-04",
+          "title": "蛋白质的功能性质",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-4 蛋白质的功能性质.md",
+          "content_type": "lesson",
+          "chapter": "蛋白质",
+          "order": "01-04",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [
+            "bc-01-05"
+          ],
+          "tags": [
+            "生物化学",
+            "蛋白质",
+            "结构",
+            "功能性质"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“蛋白质的功能性质”主题。"
+        },
+        {
+          "id": "bc-01-05",
+          "title": "影响蛋白质的因素",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-5 影响蛋白质的因素.md",
+          "content_type": "lesson",
+          "chapter": "蛋白质",
+          "order": "01-05",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-02-01"
+          ],
+          "tags": [
+            "生物化学",
+            "蛋白质"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“影响蛋白质的因素”主题。"
+        },
+        {
+          "id": "bc-02-01",
+          "title": "水的结构、性质与功能",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 2-1 水的结构、性质与功能.md",
+          "content_type": "lesson",
+          "chapter": "水",
+          "order": "02-01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-02-02"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "水",
+            "功能"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“水的结构、性质与功能”主题。"
+        },
+        {
+          "id": "bc-02-02",
+          "title": "水和溶质的相互作用",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 2-2 水和溶质的相互作用.md",
+          "content_type": "lesson",
+          "chapter": "水",
+          "order": "02-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-02-03"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "水",
+            "相互作用",
+            "偶极",
+            "净结构",
+            "离子",
+            "水桥作用",
+            "水合",
+            "疏水"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“水和溶质的相互作用”主题。"
+        },
+        {
+          "id": "bc-02-03",
+          "title": "水分活度",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 2-3 水分活度.md",
+          "content_type": "lesson",
+          "chapter": "水",
+          "order": "02-03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-02-04"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "水",
+            "水分活度",
+            "吸湿等温线",
+            "脂质",
+            "氧化",
+            "非酶褐变",
+            "美拉德反应"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“水分活度”主题。"
+        },
+        {
+          "id": "bc-02-04",
+          "title": "冷冻对食品稳定性的影响",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 2-4 冷冻对食品稳定性的影响.md",
+          "content_type": "lesson",
+          "chapter": "水",
+          "order": "02-04",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-03-01"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "水"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“冷冻对食品稳定性的影响”主题。"
+        },
+        {
+          "id": "bc-03-01",
+          "title": "单糖",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 3-1 单糖.md",
+          "content_type": "lesson",
+          "chapter": "糖类",
+          "order": "03-01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-03-02"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "糖类",
+            "分类",
+            "单糖",
+            "理化性质"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“单糖”主题。"
+        },
+        {
+          "id": "bc-03-02",
+          "title": "美拉德反应",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 3-2 美拉德反应.md",
+          "content_type": "lesson",
+          "chapter": "糖类",
+          "order": "03-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-03-03"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "糖类",
+            "美拉德反应"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“美拉德反应”主题。"
+        },
+        {
+          "id": "bc-03-03",
+          "title": "寡糖与多糖",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 3-3 寡糖与多糖.md",
+          "content_type": "lesson",
+          "chapter": "糖类",
+          "order": "03-03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-03-04"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "糖类",
+            "寡糖",
+            "多糖",
+            "结构"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“寡糖与多糖”主题。"
+        },
+        {
+          "id": "bc-03-04",
+          "title": "淀粉",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 3-4 淀粉.md",
+          "content_type": "lesson",
+          "chapter": "糖类",
+          "order": "03-04",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-03-05"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "糖类",
+            "碳水化合物",
+            "结构",
+            "糊化",
+            "老化",
+            "改性",
+            "淀粉",
+            "多糖"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“淀粉”主题。"
+        },
+        {
+          "id": "bc-03-05",
+          "title": "果胶",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 3-5 果胶.md",
+          "content_type": "lesson",
+          "chapter": "糖类",
+          "order": "03-05",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-04-01"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "糖类",
+            "碳水化合物",
+            "果胶",
+            "多糖"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“果胶”主题。"
+        },
+        {
+          "id": "bc-04-01",
+          "title": "脂质的物理性质",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 4-1 脂质的物理性质.md",
+          "content_type": "lesson",
+          "chapter": "脂质",
+          "order": "04-01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-04-02"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "脂质",
+            "乳化剂",
+            "同质多晶",
+            "理化性质"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“脂质的物理性质”主题。"
+        },
+        {
+          "id": "bc-04-02",
+          "title": "脂质的化学性质与加工特性",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 4-2 脂质的化学性质与加工特性.md",
+          "content_type": "lesson",
+          "chapter": "脂质",
+          "order": "04-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-05"
+          ],
+          "tags": [
+            "生物化学",
+            "食品",
+            "脂质",
+            "理化性质",
+            "加工",
+            "氧化",
+            "油脂精炼",
+            "脂肪酸",
+            "自由基",
+            "离子"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“脂质的化学性质与加工特性”主题。"
+        },
+        {
+          "id": "bc-05",
+          "title": "酶",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 5 酶.md",
+          "content_type": "lesson",
+          "chapter": "酶",
+          "order": "05",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-05-01"
+          ],
+          "tags": [
+            "生物化学",
+            "酶",
+            "催化",
+            "酶促反应动力学",
+            "抑制剂",
+            "调节",
+            "核酶"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“酶”主题。"
+        },
+        {
+          "id": "bc-05-01",
+          "title": "酶概述",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 5-1 酶概述.md",
+          "content_type": "lesson",
+          "chapter": "酶",
+          "order": "05-01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-06"
+          ],
+          "tags": [
+            "生物化学",
+            "酶",
+            "分类"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“酶概述”主题。"
+        },
+        {
+          "id": "bc-06",
+          "title": "核酸",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 6 核酸.md",
+          "content_type": "lesson",
+          "chapter": "核酸",
+          "order": "06",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [
+            "bc-07"
+          ],
+          "tags": [
+            "生物化学",
+            "DNA",
+            "RNA",
+            "碱基",
+            "糖类",
+            "结构",
+            "功能",
+            "理化性质"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“核酸”主题。"
+        },
+        {
+          "id": "bc-07",
+          "title": "糖代谢",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 7 糖代谢.md",
+          "content_type": "lesson",
+          "chapter": "糖代谢",
+          "order": "07",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-sp"
+          ],
+          "tags": [
+            "生物化学",
+            "糖类",
+            "代谢",
+            "糖酵解",
+            "糖异生",
+            "磷酸戊糖途径"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“糖代谢”主题。"
+        },
+        {
+          "id": "bc-sp",
+          "title": "大巧不工的幼教级米氏方程推导",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC SP 大巧不工的幼教级米氏方程推导.md",
+          "content_type": "lesson",
+          "chapter": "专题",
+          "order": "sp",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 10,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "生物化学",
+            "酶",
+            "酶促反应动力学",
+            "米氏方程",
+            "推导"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“大巧不工的幼教级米氏方程推导”主题。"
+        }
+      ]
+    },
+    {
+      "slug": "bioinformatics",
+      "title": "LLM 时代的生信入门",
+      "directory": "07 LLM 时代的生信入门",
+      "description": "以单细胞分析为主线，介绍生物信息学数据准备、分析与可视化。",
+      "progress": "serializing",
+      "authors": [
+        "脆弱的百里橘"
+      ],
+      "audience": [
+        "undergraduate"
+      ],
+      "index_path": "07 LLM 时代的生信入门/COURSE_INDEX.md",
+      "page_count": 6,
+      "lesson_count": 6,
+      "estimated_minutes": 40,
+      "lessons": [
+        {
+          "id": "bif-a-01",
+          "title": "单细胞分析｜样品准备与文库构建",
+          "path": "07 LLM 时代的生信入门/BIF A-1 单细胞分析｜样品准备与文库构建.md",
+          "content_type": "lesson",
+          "chapter": "单细胞分析",
+          "order": "a-01",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bif-a-02"
+          ],
+          "tags": [
+            "生信",
+            "细胞",
+            "单细胞分析",
+            "预处理",
+            "文库",
+            "测序"
+          ],
+          "authors": [
+            "脆弱的百里橘"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《LLM 时代的生信入门》中的“单细胞分析｜样品准备与文库构建”主题。"
+        },
+        {
+          "id": "bif-a-02",
+          "title": "单细胞分析｜数据导入和前期整理",
+          "path": "07 LLM 时代的生信入门/BIF A-2 单细胞分析｜数据导入和前期整理.md",
+          "content_type": "lesson",
+          "chapter": "单细胞分析",
+          "order": "a-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [
+            "bif-a-03"
+          ],
+          "tags": [
+            "生信",
+            "细胞",
+            "单细胞分析",
+            "预处理",
+            "文库",
+            "测序",
+            "数据库"
+          ],
+          "authors": [
+            "脆弱的百里橘"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《LLM 时代的生信入门》中的“单细胞分析｜数据导入和前期整理”主题。"
+        },
+        {
+          "id": "bif-a-03",
+          "title": "单细胞分析｜数据的初步分析",
+          "path": "07 LLM 时代的生信入门/BIF A-3 单细胞分析｜数据的初步分析.md",
+          "content_type": "lesson",
+          "chapter": "单细胞分析",
+          "order": "a-03",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bif-a-04"
+          ],
+          "tags": [
+            "生信",
+            "细胞",
+            "单细胞分析",
+            "预处理",
+            "文库",
+            "测序",
+            "数据库",
+            "数据分析",
+            "作图"
+          ],
+          "authors": [
+            "脆弱的百里橘"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《LLM 时代的生信入门》中的“单细胞分析｜数据的初步分析”主题。"
+        },
+        {
+          "id": "bif-a-04",
+          "title": "单细胞分析｜数据的深入分析",
+          "path": "07 LLM 时代的生信入门/BIF A-4 单细胞分析｜数据的深入分析.md",
+          "content_type": "lesson",
+          "chapter": "单细胞分析",
+          "order": "a-04",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 13,
+          "prerequisites": [],
+          "next": [
+            "bif-a-05"
+          ],
+          "tags": [
+            "生信",
+            "细胞",
+            "单细胞分析",
+            "预处理",
+            "文库",
+            "测序",
+            "数据库",
+            "数据分析",
+            "作图"
+          ],
+          "authors": [
+            "脆弱的百里橘"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《LLM 时代的生信入门》中的“单细胞分析｜数据的深入分析”主题。"
+        },
+        {
+          "id": "bif-a-05",
+          "title": "单细胞分析｜绘图描述",
+          "path": "07 LLM 时代的生信入门/BIF A-5 单细胞分析｜绘图描述.md",
+          "content_type": "lesson",
+          "chapter": "单细胞分析",
+          "order": "a-05",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bif-a-06"
+          ],
+          "tags": [
+            "生信",
+            "细胞",
+            "单细胞分析",
+            "预处理",
+            "文库",
+            "测序",
+            "数据库",
+            "数据分析",
+            "作图"
+          ],
+          "authors": [
+            "脆弱的百里橘"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《LLM 时代的生信入门》中的“单细胞分析｜绘图描述”主题。"
+        },
+        {
+          "id": "bif-a-06",
+          "title": "单细胞分析｜参考名词索引",
+          "path": "07 LLM 时代的生信入门/BIF A-6 单细胞分析｜参考名词索引.md",
+          "content_type": "lesson",
+          "chapter": "单细胞分析",
+          "order": "a-06",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 6,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "生信",
+            "细胞",
+            "单细胞分析",
+            "预处理",
+            "文库",
+            "测序",
+            "数据库",
+            "数据分析",
+            "索引",
+            "参考"
+          ],
+          "authors": [
+            "脆弱的百里橘"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《LLM 时代的生信入门》中的“单细胞分析｜参考名词索引”主题。"
+        }
+      ]
+    }
+  ]
+}

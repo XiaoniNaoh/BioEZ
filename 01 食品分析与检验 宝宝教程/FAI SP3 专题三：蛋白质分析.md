@@ -1,8 +1,42 @@
+---
+id: "fai-sp-03"
+title: "专题三：蛋白质分析"
+course: "food-analysis"
+chapter: "分析专题"
+order: "sp-03"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 6
+prerequisites: []
+next:
+  - "fai-sp-04"
+tags:
+  - "食品分析与检验"
+  - "食品"
+  - "蛋白质"
+  - "双缩脲法"
+  - "凯氏定氮法"
+  - "实验技术"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《食品分析与检验 宝宝教程》中的“专题三：蛋白质分析”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：专题二：糖类分析](<FAI SP2 专题二：糖类分析.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：专题四：脂类分析 →](<FAI SP4 专题四：脂类分析.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 食品分析与检验 专题三：蛋白质分析
 #食品分析与检验 #食品 #蛋白质 #双缩脲法 #凯氏定氮法 #实验技术
 
-> 上一讲链接🔗[[FAI SP2 专题二：糖类分析]]
-> 下一讲链接🔗[[FAI SP4 专题四：脂类分析]]
 
 ---
 ## SP 3.1 蛋白质测定的意义

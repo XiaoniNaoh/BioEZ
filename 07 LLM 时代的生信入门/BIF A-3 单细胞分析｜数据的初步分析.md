@@ -1,3 +1,42 @@
+---
+id: "bif-a-03"
+title: "单细胞分析｜数据的初步分析"
+course: "bioinformatics"
+chapter: "单细胞分析"
+order: "a-03"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "bif-a-04"
+tags:
+  - "生信"
+  - "细胞"
+  - "单细胞分析"
+  - "预处理"
+  - "文库"
+  - "测序"
+  - "数据库"
+  - "数据分析"
+  - "作图"
+authors:
+  - "脆弱的百里橘"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《LLM 时代的生信入门》中的“单细胞分析｜数据的初步分析”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：单细胞分析｜数据导入和前期整理](<BIF A-2 单细胞分析｜数据导入和前期整理.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：单细胞分析｜数据的深入分析 →](<BIF A-4 单细胞分析｜数据的深入分析.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 生信入门-单细胞分析 A-3：数据的初步分析
 #生信 #细胞 #单细胞分析 #预处理 #文库 #测序 #数据库 #数据分析 #作图
 

@@ -1,3 +1,42 @@
+---
+id: "bc-06"
+title: "核酸"
+course: "biochemistry-food-chemistry"
+chapter: "核酸"
+order: "06"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+  - "postgraduate-entrance-exam"
+difficulty: 3
+importance: 3
+estimated_minutes: 6
+prerequisites: []
+next:
+  - "bc-07"
+tags:
+  - "生物化学"
+  - "DNA"
+  - "RNA"
+  - "碱基"
+  - "糖类"
+  - "结构"
+  - "功能"
+  - "理化性质"
+authors:
+  - "脆弱的百里橘"
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《生物化学与食品化学 考研帮帮忙》中的“核酸”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：酶概述](<BC 5-1 酶概述.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：糖代谢 →](<BC 7 糖代谢.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
 
 #生物化学 #DNA #RNA #碱基 #糖类 #结构 #功能 #理化性质
 

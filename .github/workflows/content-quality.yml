@@ -5,6 +5,10 @@ on:
     paths:
       - "**/*.md"
       - "scripts/validate_content.py"
+      - "scripts/course_catalog.py"
+      - "scripts/migrate_course_metadata.py"
+      - "scripts/build_course_catalog.py"
+      - "data/*.json"
       - "tests/**"
       - ".github/workflows/content-quality.yml"
   push:
@@ -25,6 +29,10 @@ jobs:
           python-version: "3.12"
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
+      - name: Validate all course metadata
+        run: python scripts/validate_content.py --all
+      - name: Check generated course catalog
+        run: python scripts/build_course_catalog.py --check
       - name: Validate changed course content
         if: github.event_name == 'pull_request'
         run: python scripts/validate_content.py --base "${{ github.event.pull_request.base.sha }}" --head "${{ github.event.pull_request.head.sha }}"

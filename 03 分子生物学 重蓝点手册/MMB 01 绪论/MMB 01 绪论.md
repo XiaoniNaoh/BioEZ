@@ -1,8 +1,40 @@
+---
+id: "mmb-01"
+title: "绪论"
+course: "molecular-biology"
+chapter: "绪论"
+order: "01"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 1
+importance: 1
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "mmb-02-01"
+tags:
+  - "分子生物学"
+  - "绪论"
+  - "实验技术"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“绪论”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [课程目录](<../COURSE_INDEX.md>) · [下一篇：染色体 →](<../MMB 02 染色体与DNA/MMB 02-1 染色体.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 1 章：绪论
 #分子生物学 #绪论 #实验技术
 
 > 本章就这一节~
-> 前往下一章🚀 [[MMB 02-1 染色体]]
 
 ---
 

@@ -1,3 +1,42 @@
+---
+id: "bif-a-05"
+title: "单细胞分析｜绘图描述"
+course: "bioinformatics"
+chapter: "单细胞分析"
+order: "a-05"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "bif-a-06"
+tags:
+  - "生信"
+  - "细胞"
+  - "单细胞分析"
+  - "预处理"
+  - "文库"
+  - "测序"
+  - "数据库"
+  - "数据分析"
+  - "作图"
+authors:
+  - "脆弱的百里橘"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《LLM 时代的生信入门》中的“单细胞分析｜绘图描述”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：单细胞分析｜数据的深入分析](<BIF A-4 单细胞分析｜数据的深入分析.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：单细胞分析｜参考名词索引 →](<BIF A-6 单细胞分析｜参考名词索引.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 生信入门-单细胞分析 A-5：绘图描述
 #生信 #细胞 #单细胞分析 #预处理 #文库 #测序 #数据库 #数据分析 #作图
 

@@ -20,13 +20,12 @@ reviewers: []
 last_scientific_review: null
 summary: 用一句话说明读者将学到什么。
 references: []
+content_type: lesson
 ---
 
 # 教程标题
 
-> 上一节链接：`[[页面名]]`
->
-> 下一节链接：`[[页面名]]`
+<!-- 课程导航由 scripts/build_course_catalog.py 自动生成。 -->
 
 ## 学习目标
 

@@ -1,8 +1,42 @@
+---
+id: "mmb-03-04"
+title: "RNA 聚合酶、RNA 转录及其抑制剂"
+course: "molecular-biology"
+chapter: "转录"
+order: "03-04"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 5
+importance: 4
+estimated_minutes: 14
+prerequisites: []
+next:
+  - "mmb-03-05"
+tags:
+  - "分子生物学"
+  - "RNA"
+  - "RNA聚合酶"
+  - "顺式作用元件"
+  - "转录"
+  - "调控"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“RNA 聚合酶、RNA 转录及其抑制剂”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：原核生物与真核生物的转录及产物特征比较](<MMB 03-3 原核生物与真核生物的转录及产物特征比较.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：RNA 转录后加工、编辑、再编码与化学修饰 →](<MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 3 章 第 4 节：RNA 聚合酶、RNA 转录及其抑制剂
 #分子生物学 #RNA #RNA聚合酶 #顺式作用元件 #转录 #调控
 
-> 上一节链接🔗 [[MMB 03-3 原核生物与真核生物的转录及产物特征比较]]
-> 下一节链接🔗 [[MMB 03-5 RNA 转录后加工、编辑、再编码与化学修饰]]
 
 ---
 

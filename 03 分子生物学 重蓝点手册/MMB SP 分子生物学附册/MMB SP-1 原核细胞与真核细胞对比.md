@@ -1,3 +1,47 @@
+---
+id: "mmb-sp-01"
+title: "原核细胞与真核细胞对比"
+course: "molecular-biology"
+chapter: "分子生物学附册"
+order: "sp-01"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 3
+importance: 3
+estimated_minutes: 6
+prerequisites: []
+next: []
+tags:
+  - "分子生物学"
+  - "原核生物"
+  - "真核生物"
+  - "对比"
+  - "基因"
+  - "基因组"
+  - "转录"
+  - "RNA"
+  - "mRNA"
+  - "rRNA"
+  - "DNA"
+  - "DNA聚合酶"
+  - "翻译"
+  - "调控"
+  - "表达"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“原核细胞与真核细胞对比”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：基因治疗](<../MMB 08 疾病与人类健康/MMB 08-3 基因治疗.md>) · [课程目录](<../COURSE_INDEX.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学附册 专题一：原核细胞与真核细胞对比
 #分子生物学 #原核生物 #真核生物 #对比 #基因 #基因组 #转录 #RNA #mRNA #rRNA #DNA #DNA聚合酶 #翻译 #调控 #表达
 

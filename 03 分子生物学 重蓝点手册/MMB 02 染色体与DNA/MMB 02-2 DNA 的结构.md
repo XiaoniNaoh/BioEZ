@@ -1,35 +1,39 @@
 ---
-id: mmb-02-02
-title: DNA 的结构
-course: molecular-biology
-chapter: 染色体与 DNA
+id: "mmb-02-02"
+title: "DNA 的结构"
+course: "molecular-biology"
+chapter: "染色体与 DNA"
 order: 2.2
-status: scientific-review
+status: "scientific-review"
 audience:
-  - undergraduate
+  - "undergraduate"
 difficulty: 2
 importance: 3
 estimated_minutes: 15
 prerequisites:
-  - mmb-02-01
+  - "mmb-02-01"
 next:
-  - mmb-02-03
+  - "mmb-02-03"
 tags:
-  - DNA
-  - 分子生物学
+  - "DNA"
+  - "分子生物学"
 authors:
-  - 小倪
+  - "小倪"
 reviewers: []
 last_scientific_review: null
-summary: 介绍 DNA 的一级、二级和高级结构，以及变性、复性与熔解温度。
+summary: "介绍 DNA 的一级、二级和高级结构，以及变性、复性与熔解温度。"
 references: []
+content_type: "lesson"
 ---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：染色体](<MMB 02-1 染色体.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：DNA 的复制 →](<MMB 02-3 DNA 的复制.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
 
 # 分子生物学 第 2 章 第 2 节：DNA 的结构
 #分子生物学 #结构 
 
-> 上一节链接🔗 [[MMB 02-1 染色体]]
-> 下一节链接🔗 [[MMB 02-3 DNA 的复制]]
 
 ---
 

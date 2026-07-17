@@ -28,6 +28,7 @@ BioEZ 欢迎错误修正、新教程、图表和工程改进。教程是可公�
 - 使用清晰、简洁的语言，首次出现的专业词给出定义。
 - 新建教程使用 [教程模板](docs/tutorial-template.md)，并遵循 [Frontmatter 规范](docs/content-frontmatter.md)。
 - 使用 Obsidian Wikilink 时确保目标文件存在；不要手工复制难度、重要性等可从元数据生成的信息。
+- 新增或重命名课程页后运行课程构建脚本；不要手工编辑 `COURSE_INDEX.md`、`data/courses.json` 或自动导航区块。
 - 事实性主张应引用教科书、同行评议论文、标准或权威数据库。
 
 ## 科学审校
@@ -50,6 +51,13 @@ AI 可用于头脑风暴、结构编辑和草稿，但不能代替科学审校�
 
 ```bash
 python3 -m unittest discover -s tests -v
+# 补齐元数据并刷新课程清单、目录和导航
+python3 scripts/migrate_course_metadata.py
+python3 scripts/build_course_catalog.py
+# 全量验证 Frontmatter 与页面 ID 关系
+python3 scripts/validate_content.py --all
+# 确认生成文件没有漂移
+python3 scripts/build_course_catalog.py --check
 # 检查本次添加或修改的资源
 python3 scripts/check_repository_hygiene.py --base origin/main --head HEAD
 # 未提交时，显式列出本次修改的教程

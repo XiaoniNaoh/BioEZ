@@ -1,8 +1,40 @@
+---
+id: "mmb-03-02"
+title: "RNA 转录的基本过程"
+course: "molecular-biology"
+chapter: "转录"
+order: "03-02"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 5
+importance: 5
+estimated_minutes: 6
+prerequisites: []
+next:
+  - "mmb-03-03"
+tags:
+  - "分子生物学"
+  - "复制"
+  - "转录"
+  - "mRNA"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“RNA 转录的基本过程”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：RNA 概述](<MMB 03-1 RNA 概述.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：原核生物与真核生物的转录及产物特征比较 →](<MMB 03-3 原核生物与真核生物的转录及产物特征比较.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 3 章 第 2 节：RNA 转录的基本过程
 #分子生物学 #复制 #转录 #mRNA
 
-> 上一节链接🔗 [[MMB 03-1 RNA 概述]]
-> 下一节链接🔗 [[MMB 03-3 原核生物与真核生物的转录及产物特征比较]]
 
 ---
 

@@ -1,9 +1,40 @@
+---
+id: "mmb-02-07"
+title: "SNP 的理论与应用"
+course: "molecular-biology"
+chapter: "染色体与 DNA"
+order: "02-07"
+status: "scientific-review"
+audience:
+  - "undergraduate"
+difficulty: 2
+importance: 1
+estimated_minutes: 5
+prerequisites: []
+next:
+  - "mmb-03-01"
+tags:
+  - "分子生物学"
+  - "SNP"
+  - "实验技术"
+authors:
+  - "小倪"
+reviewers: []
+last_scientific_review: null
+summary: "介绍《分子生物学 重蓝点手册》中的“SNP 的理论与应用”主题。"
+references: []
+content_type: "lesson"
+---
+
+<!-- BEGIN AUTO-GENERATED NAVIGATION -->
+> [!NOTE] 课程导航
+> [← 上一篇：DNA 的转座](<MMB 02-6 DNA 的转座.md>) · [课程目录](<../COURSE_INDEX.md>) · [下一篇：RNA 概述 →](<../MMB 03 转录/MMB 03-1 RNA 概述.md>)
+<!-- END AUTO-GENERATED NAVIGATION -->
+
 # 分子生物学 第 2 章 第 7 节：SNP 的理论与应用
 #分子生物学 #SNP #实验技术 
 
-> 上一节链接🔗 [[MMB 02-6 DNA 的转座]]
 > 这是本章的最后一节~
-> 前往下一章🚀 [[MMB 03-1 RNA 概述]]
 
 ---
 
