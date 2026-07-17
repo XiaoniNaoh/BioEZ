@@ -1,0 +1,5 @@
+# PDF 是发布资产，不应被 Git 当作文本比较。
+*.pdf binary
+
+# 历史上打包的插件是第三方构建产物，不审阅其压缩代码 diff。
+.obsidian/plugins/** binary

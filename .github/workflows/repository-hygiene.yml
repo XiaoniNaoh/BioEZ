@@ -1,0 +1,28 @@
+name: Repository hygiene
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run repository hygiene tests
+        run: python -m unittest discover -s tests -p 'test_repository_hygiene.py' -v
+      - name: Check pull request files
+        if: github.event_name == 'pull_request'
+        run: python scripts/check_repository_hygiene.py --base "${{ github.event.pull_request.base.sha }}" --head "${{ github.event.pull_request.head.sha }}"
+      - name: Check latest main-branch change
+        if: github.event_name == 'push'
+        run: python scripts/check_repository_hygiene.py --base "${{ github.event.before }}" --head "${{ github.sha }}"
