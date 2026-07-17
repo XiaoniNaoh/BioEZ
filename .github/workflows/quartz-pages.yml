@@ -1,0 +1,69 @@
+name: Build and deploy course site
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "data/**"
+      - "site/**"
+      - "scripts/build_quartz_site.mjs"
+      - "scripts/check_content_resources.py"
+      - ".github/workflows/quartz-pages.yml"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate resource quality report when checker is available
+        shell: bash
+        run: |
+          if [[ -f scripts/check_content_resources.py ]]; then
+            mkdir -p data
+            python3 scripts/check_content_resources.py --json-report data/quality-report.json || {
+              status=$?
+              test -s data/quality-report.json
+              echo "Resource checker reported findings (exit ${status}); publishing them in the dashboard."
+            }
+          fi
+      - name: Build Quartz site
+        env:
+          QUARTZ_BASE_URL: ${{ vars.QUARTZ_BASE_URL || 'XiaoniNaoh.github.io/BioEZ' }}
+        run: node scripts/build_quartz_site.mjs --check
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
