@@ -40,6 +40,7 @@ BioEZ 欢迎错误修正、新教程、图表和工程改进。教程是可公�
 - 不上传未经授权的教材全文、扫描书、课件或付费数据库内容；改用 DOI、ISBN、出版社或图书馆页面。
 - 图片必须包含有意义的 `alt` 文本，图注注明作者、来源链接和许可证。避免依赖可失效的第三方热链。
 - 优先提交压缩后的 WebP/AVIF/SVG；单张图片建议小于 2 MB。
+- PDF 导出物和大型可复现数据应发布到 GitHub Releases 或可追溯的数据仓库，源码库只保留来源、许可、下载方法和校验和。详见 [仓库资源与版权政策](docs/repository-hygiene.md)。
 
 ## AI 辅助内容
 
@@ -49,6 +50,8 @@ AI 可用于头脑风暴、结构编辑和草稿，但不能代替科学审校�
 
 ```bash
 python3 -m unittest discover -s tests -v
+# 检查本次添加或修改的资源
+python3 scripts/check_repository_hygiene.py --base origin/main --head HEAD
 # 未提交时，显式列出本次修改的教程
 python3 scripts/validate_content.py --paths "path/to/tutorial.md"
 # 提交后，模拟 PR 的增量检查

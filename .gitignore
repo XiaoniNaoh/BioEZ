@@ -7,6 +7,7 @@
 .obsidian/plugins/
 
 # 教材和其他大型二进制资料不应直接加入教程仓库
+/00 参考资料/
 *.pdf
 
 # Python 本地缓存
