@@ -1,0 +1,33 @@
+name: Content quality
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "scripts/validate_content.py"
+      - "tests/**"
+      - ".github/workflows/content-quality.yml"
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate changed course content
+        if: github.event_name == 'pull_request'
+        run: python scripts/validate_content.py --base "${{ github.event.pull_request.base.sha }}" --head "${{ github.event.pull_request.head.sha }}"
+      - name: Validate the latest main-branch change
+        if: github.event_name == 'push'
+        run: python scripts/validate_content.py --base "${{ github.event.before }}" --head "${{ github.sha }}"
