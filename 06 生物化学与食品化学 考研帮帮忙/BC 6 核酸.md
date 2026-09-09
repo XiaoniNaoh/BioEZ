@@ -35,7 +35,7 @@ content_type: "lesson"
 
 <!-- BEGIN AUTO-GENERATED NAVIGATION -->
 > [!NOTE] 课程导航
-> [← 上一篇：酶概述](<BC 5-1 酶概述.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：糖代谢 →](<BC 7 糖代谢.md>)
+> [← 上一篇：酶促反应动力学](<BC 5-2 酶促反应动力学.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：糖代谢 →](<BC 7 糖代谢.md>)
 <!-- END AUTO-GENERATED NAVIGATION -->
 
 #生物化学 #DNA #RNA #碱基 #糖类 #结构 #功能 #理化性质
