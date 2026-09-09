@@ -260,3 +260,4 @@ $$
 
 有关米氏方程的意义，后续的生物化学与食品化学相关章节中会更新。
 
+> Photo by [ANIRUDH](https://unsplash.com/@lanirudhreddy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-group-of-orange-and-red-objects-floating-in-the-air-tiTzBRnr7PY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
