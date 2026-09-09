@@ -1899,9 +1899,9 @@
         "postgraduate-entrance-exam"
       ],
       "index_path": "06 生物化学与食品化学 考研帮帮忙/COURSE_INDEX.md",
-      "page_count": 21,
-      "lesson_count": 21,
-      "estimated_minutes": 112,
+      "page_count": 23,
+      "lesson_count": 23,
+      "estimated_minutes": 122,
       "lessons": [
         {
           "id": "bc-01-01",
@@ -2038,7 +2038,7 @@
           "estimated_minutes": 5,
           "prerequisites": [],
           "next": [
-            "bc-02-01"
+            "bc-01-06"
           ],
           "tags": [
             "生物化学",
@@ -2051,6 +2051,33 @@
           "reviewers": [],
           "last_scientific_review": null,
           "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“影响蛋白质的因素”主题。"
+        },
+        {
+          "id": "bc-01-06",
+          "title": "蛋白质的生物学功能",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 1-6 蛋白质的生物学功能.md",
+          "content_type": "lesson",
+          "chapter": "蛋白质",
+          "order": "01-06",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-02-01"
+          ],
+          "tags": [
+            "生物化学",
+            "蛋白质"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“蛋白质的生物学功能”主题。"
         },
         {
           "id": "bc-02-01",
@@ -2446,7 +2473,7 @@
           "estimated_minutes": 5,
           "prerequisites": [],
           "next": [
-            "bc-06"
+            "bc-05-02"
           ],
           "tags": [
             "生物化学",
@@ -2460,6 +2487,33 @@
           "reviewers": [],
           "last_scientific_review": null,
           "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“酶概述”主题。"
+        },
+        {
+          "id": "bc-05-02",
+          "title": "酶促反应动力学",
+          "path": "06 生物化学与食品化学 考研帮帮忙/BC 5-2 酶促反应动力学.md",
+          "content_type": "lesson",
+          "chapter": "酶",
+          "order": "05-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-06"
+          ],
+          "tags": [
+            "生物化学",
+            "酶"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“酶促反应动力学”主题。"
         },
         {
           "id": "bc-06",
