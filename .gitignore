@@ -26,3 +26,9 @@ __pycache__/
 
 # Playwright 本地验收快照
 /.playwright-cli/
+
+# 屏蔽整个 Obsidian 配置目录（含主题与代码片段）
+.obsidian/
+
+# 食品风味化学与分析 -- 新模块，暂不推送
+08 食品风味化学与分析/
