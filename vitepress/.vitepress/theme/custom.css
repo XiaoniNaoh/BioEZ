@@ -1,0 +1,115 @@
+/* BioEZ Wiki — 淡雅鼠尾草绿 · 暖白底 · 柔和深灰文字 */
+
+:root {
+  --vp-c-bg: #fbfbf9;
+  --vp-c-bg-alt: #f3f3ef;
+  --vp-c-bg-soft: #f3f3ef;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-border: #e3e2dd;
+  --vp-c-divider: #e6e5e0;
+  --vp-c-gutter: #e6e5e0;
+  --vp-c-text-1: #23252a;
+  --vp-c-text-2: rgba(35, 37, 42, 0.7);
+  --vp-c-text-3: rgba(35, 37, 42, 0.48);
+
+  --vp-c-brand-1: #5a7565;
+  --vp-c-brand-2: #6a8478;
+  --vp-c-brand-3: #6a8478;
+  --vp-c-brand-soft: rgba(106, 132, 120, 0.14);
+
+  --vp-font-family-base:
+    'Inter', 'Noto Sans CJK SC', 'PingFang SC', -apple-system, 'Segoe UI',
+    'Microsoft YaHei', sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --vp-sidebar-width: 288px;
+  --vp-nav-height: 64px;
+}
+
+.dark {
+  --vp-c-bg: #1a1c1b;
+  --vp-c-bg-alt: #212423;
+  --vp-c-bg-soft: #212423;
+  --vp-c-bg-elv: #242726;
+  --vp-c-border: #33312e;
+  --vp-c-divider: #34322f;
+  --vp-c-gutter: #34322f;
+  --vp-c-text-1: #e8e7e2;
+  --vp-c-text-2: rgba(232, 231, 226, 0.68);
+  --vp-c-text-3: rgba(232, 231, 226, 0.46);
+  --vp-c-brand-1: #a9c4b4;
+  --vp-c-brand-2: #8faf9d;
+  --vp-c-brand-3: #a9c4b4;
+  --vp-c-brand-soft: rgba(169, 196, 180, 0.14);
+}
+
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.82;
+}
+
+.vp-doc h1 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.vp-doc h2 {
+  border-top: none;
+  padding-top: 0;
+  font-weight: 650;
+}
+
+.custom-block {
+  border-radius: 12px;
+}
+
+.custom-block.tip {
+  background-color: var(--vp-c-brand-soft);
+}
+
+.vp-doc table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-bg-alt);
+  font-weight: 600;
+}
+
+.VPNavBar {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPHomeHero .name {
+  font-size: 3.1rem;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  background: linear-gradient(120deg, #4e685b 0%, #5a7565 55%, #6a8478 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .VPHomeHero .name {
+  background: linear-gradient(120deg, #c4d6c9 0%, #a9c4b4 55%, #8faf9d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.VPHomeHero .action .VPButton.medium {
+  border-radius: 999px;
+}
+
+/* 笔记顶部的 Obsidian 内联 #标签：弱化显示 */
+.vp-doc p:has(> a[href^="#"]:only-child) {
+  color: var(--vp-c-text-3);
+  font-size: 0.85em;
+}

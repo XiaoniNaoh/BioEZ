@@ -1,0 +1,57 @@
+name: Deploy BioEZ Wiki (VitePress)
+
+# 推送到 main 时，用 VitePress 构建并发布到香港服务器 wiki.bioez.xyz
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: vitepress-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 安装依赖
+        working-directory: vitepress
+        run: npm install --no-audit --no-fund
+
+      - name: 构建 VitePress
+        working-directory: vitepress
+        run: npm run build
+
+      - name: 打包产物
+        working-directory: vitepress
+        run: tar -C .vitepress/dist -czf ../vp-dist.tar.gz .
+
+      - name: 部署到香港服务器
+        env:
+          SSH_KEY: ${{ secrets.WIKI_SSH_KEY }}
+          SSH_HOST: ${{ secrets.WIKI_SSH_HOST }}
+          SSH_USER: ${{ secrets.WIKI_SSH_USER }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          scp -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=accept-new \
+            vp-dist.tar.gz "$SSH_USER@$SSH_HOST:/tmp/vp-dist.tar.gz"
+          ssh -i ~/.ssh/id_ed25519 "$SSH_USER@$SSH_HOST" '
+            set -e
+            DEST=/opt/1panel/apps/openresty/openresty/www/sites/wiki.bioez.xyz
+            find "$DEST" -mindepth 1 -maxdepth 1 ! -name ssl ! -name log -exec rm -rf {} +
+            tar -xzf /tmp/vp-dist.tar.gz -C "$DEST"
+            find "$DEST" -name "._*" -delete 2>/dev/null || true
+            chmod -R a+rX "$DEST"
+            docker exec 1Panel-openresty-YVEg /usr/local/openresty/nginx/sbin/nginx -s reload
+            echo "deployed to $DEST"
+          '

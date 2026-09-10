@@ -1,0 +1,17 @@
+{
+  "name": "bioez-wiki-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "stage": "node scripts/stage.mjs",
+    "dev": "node scripts/stage.mjs && vitepress dev",
+    "build": "node scripts/stage.mjs && vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.6.0",
+    "vue": "^3.5.0"
+  }
+}
