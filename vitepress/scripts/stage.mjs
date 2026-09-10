@@ -187,8 +187,23 @@ ${courses.map((c) => `- **${c.title}**：${(c.description || '').replace(/\\n/g,
 )
 
 // 团队页（数据来自 data/contributors.json）
+// 头像本地化：从 vitepress/team-avatars/ 拷到 content/public/team/，
+// 避免依赖 github.com 的头像（国内经常加载不出来）；没有本地头像时回退到 GitHub。
+const AVATAR_DIR = join(PROJECT, 'team-avatars')
+const PUBLIC_TEAM = join(CONTENT, 'public', 'team')
+mkdirSync(PUBLIC_TEAM, { recursive: true })
+
+const localAvatars = new Set()
+for (const c of contributors) {
+  const source = join(AVATAR_DIR, `${c.github}.png`)
+  if (existsSync(source)) {
+    cpSync(source, join(PUBLIC_TEAM, `${c.github}.png`))
+    localAvatars.add(c.github)
+  }
+}
+
 const teamMembers = contributors.map((c) => ({
-  avatar: `https://github.com/${c.github}.png`,
+  avatar: localAvatars.has(c.github) ? `/team/${c.github}.png` : `https://github.com/${c.github}.png`,
   name: c.name,
   title: c.title ?? '',
   desc: c.desc ?? '',
@@ -211,7 +226,7 @@ const members = ${JSON.stringify(teamMembers, null, 2)}
   <VPTeamPageTitle>
     <template #title>关于我们</template>
     <template #lead>
-      这套笔记由两个人一起维护：一个写课程正文，一个写脚本和站点。下面的信息按各自的 GitHub 主页整理。
+      BioEZ 是一套中文生物类课程笔记，由两个人协作完成。
     </template>
   </VPTeamPageTitle>
 
