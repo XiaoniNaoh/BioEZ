@@ -28,6 +28,9 @@ IGNORED_DIRECTORIES = {
     # vitepress/ 是站点工程，其 content/ 下是课程正文的构建副本，
     # 不应参与内容资源检查（CI 中也不存在该目录）。
     "vitepress",
+    # 08 / 09 为暂不发布模块，仅存在于本地，不参与检查（CI 中也不存在）。
+    "08 食品风味化学与分析",
+    "09 益生菌",
     "__pycache__",
 }
 COURSE_DIRECTORY = re.compile(r"^0[1-7] ")
