@@ -6,6 +6,15 @@ const courses: any[] = JSON.parse(
   readFileSync(fileURLToPath(new URL('../../data/courses.json', import.meta.url)), 'utf8'),
 ).courses ?? []
 
+// 课程图标（统一维护在 data/course-config.json 的 icon 字段）
+const courseIcons: Record<string, string> = Object.fromEntries(
+  (
+    JSON.parse(
+      readFileSync(fileURLToPath(new URL('../../data/course-config.json', import.meta.url)), 'utf8'),
+    ).courses ?? []
+  ).map((c: any) => [c.slug, c.icon ?? '📘']),
+)
+
 const toLink = (p: string) => '/' + p.replace(/\.md$/, '')
 
 // 用文件名（不含扩展名）作为侧栏文字，保留编制的前缀，如「MB 01 绪论」「MMB 02-1 染色体」
@@ -41,7 +50,8 @@ const sidebar = courses
     for (const [name, sub] of groups) items.push({ text: name, collapsed: true, items: sub })
     // 课名前加目录序号（如「02」）便于分辨；课程默认折叠，仅当前所在课程自动展开
     const num = (c.directory.match(/^(\d+)/) || [])[1]
-    return { text: num ? `${num} ${c.title}` : c.title, collapsed: true, items }
+    const label = num ? `${num} ${c.title}` : c.title
+    return { text: `${courseIcons[c.slug] ?? ''} ${label}`.trim(), collapsed: true, items }
   })
 
 export default defineConfig({
