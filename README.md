@@ -34,7 +34,7 @@ git clone https://github.com/XiaoniNaoh/BioEZ.git
 <!-- BEGIN AUTO-GENERATED COURSE CATALOG -->
 <!-- 此区域由 scripts/build_course_catalog.py 自动生成，请勿手工编辑。 -->
 
-课程页均提供稳定目录与前后篇导航。历史正文正在逐篇科学审校，页面状态以元数据为准。
+课程页均提供稳定目录与前后篇导航。
 
 ### 🎊 已完成教程
 
