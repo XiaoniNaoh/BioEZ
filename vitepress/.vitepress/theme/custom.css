@@ -1,24 +1,24 @@
 /* BioEZ Wiki
    完全沿用 VitePress 默认主题（字体、字间距、行间距、间距、深色底等全部默认），
-   仅替换主色为鲜绿。
+   仅替换主色为明亮的黄绿色（BioEZ 的柠檬绿调）。
 
    对比度：
-   - 浅色 #15803d 在纯白底上 ≈ 5.0:1（正文链接可读）
-   - 深色 #4ade80 在默认深色底 #1b1b1f 上 ≈ 9.8:1
+   - 浅色 #65a30d 在白底上 ≈ 3.1:1（黄绿本身偏亮，这是同色系里较可读的一档）
+   - 深色 #a3e635 在默认深色底 #1b1b1f 上 ≈ 11:1
 */
 
 :root {
-  --vp-c-brand-1: #15803d;
-  --vp-c-brand-2: #166534;
-  --vp-c-brand-3: #15803d;
-  --vp-c-brand-soft: rgba(21, 128, 61, 0.14);
+  --vp-c-brand-1: #65a30d;
+  --vp-c-brand-2: #4d7c0f;
+  --vp-c-brand-3: #65a30d;
+  --vp-c-brand-soft: rgba(101, 163, 13, 0.14);
 }
 
 .dark {
-  --vp-c-brand-1: #4ade80;
-  --vp-c-brand-2: #6ee7a0;
-  --vp-c-brand-3: #4ade80;
-  --vp-c-brand-soft: rgba(74, 222, 128, 0.16);
+  --vp-c-brand-1: #a3e635;
+  --vp-c-brand-2: #bef264;
+  --vp-c-brand-3: #a3e635;
+  --vp-c-brand-soft: rgba(163, 230, 53, 0.16);
 }
 
 /* 让没有二级目录的课程，条目也统一缩进一级（带左侧细导线），

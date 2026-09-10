@@ -49,6 +49,18 @@ const route = (p) => encodeURI('/' + p.replace(/\.md$/, ''))
 rmSync(CONTENT, { recursive: true, force: true })
 mkdirSync(CONTENT, { recursive: true })
 
+// 目录改名后若未重新生成 data/courses.json，这里会直接失败，
+// 避免静默发布出「只剩几门课」的残缺站点。
+const missing = courses.filter((c) => c && c.directory && !existsSync(join(REPO, c.directory)))
+if (missing.length > 0) {
+  console.error('✖ 以下课程目录不存在（通常是把文件夹改名后，没有重新生成 data/courses.json）：')
+  for (const c of missing) console.error(`    - ${c.directory}`)
+  console.error('  请先在仓库根目录运行：')
+  console.error('    python3 scripts/migrate_course_metadata.py')
+  console.error('    python3 scripts/build_course_catalog.py')
+  process.exit(1)
+}
+
 let copied = 0
 for (const c of courses) {
   const dir = join(REPO, c.directory)
