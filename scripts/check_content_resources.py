@@ -74,12 +74,41 @@ class Finding:
         return f"{self.path}:{self.line}: {self.message}{target}"
 
 
+# 已确认、长期存在、不影响发布的提醒：默认不出现在输出与报告里，避免每次刷屏。
+# 每条都要写清 code 与匹配范围，以及为什么可以忽略；用 --show-acknowledged 可以查看。
+ACKNOWLEDGED_FINDINGS: tuple[dict[str, str], ...] = (
+    {
+        "code": "origin-metadata-missing",
+        "path_prefix": "07 LLM 时代的生信入门/scRNAseq 入门-图片/",
+        "reason": "仓库既有截图的原始来源待补；已在 assets/image-sources.json 记录 custody_status，未冒充已授权",
+    },
+    {
+        "code": "orphan-page",
+        "path": "03 分子生物学/MMB 99 分子生物学｜一本全.md",
+        "reason": "「一本全」草稿页，构建时有意排除，不进入课程目录",
+    },
+)
+
+
+def is_acknowledged(finding: "Finding") -> bool:
+    """该条提醒是否属于「已知且可忽略」。"""
+    for rule in ACKNOWLEDGED_FINDINGS:
+        if rule.get("code") != finding.code:
+            continue
+        if "path" in rule and rule["path"] == finding.path:
+            return True
+        if "path_prefix" in rule and finding.path.startswith(rule["path_prefix"]):
+            return True
+    return False
+
+
 @dataclass(frozen=True)
 class ScanReport:
     summary: dict[str, int]
     findings: tuple[Finding, ...]
     orphans: tuple[str, ...]
     unreferenced_assets: tuple[str, ...]
+    acknowledged: tuple[Finding, ...] = ()
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -451,6 +480,9 @@ def scan_repository(root: Path = ROOT) -> ScanReport:
     manifest_findings, manifest_assets, license_review = check_image_manifest(root, image_assets)
     findings.extend(manifest_findings)
     findings.sort(key=lambda item: (item.severity != "error", item.path, item.line, item.code))
+    acknowledged = tuple(finding for finding in findings if is_acknowledged(finding))
+    findings = [finding for finding in findings if not is_acknowledged(finding)]
+    orphan_paths = tuple(finding.path for finding in findings if finding.code == "orphan-page")
     broken_codes = {"broken-link", "broken-wikilink", "broken-heading", "missing-image", "invalid-image-target"}
     summary = {
         "markdown_files": len(markdown_files),
@@ -468,8 +500,9 @@ def scan_repository(root: Path = ROOT) -> ScanReport:
         "license_review_required": license_review,
         "errors": sum(finding.severity == "error" for finding in findings),
         "warnings": sum(finding.severity == "warning" for finding in findings),
+        "acknowledged": len(acknowledged),
     }
-    return ScanReport(summary, tuple(findings), orphan_paths, unreferenced)
+    return ScanReport(summary, tuple(findings), orphan_paths, unreferenced, acknowledged)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -479,6 +512,7 @@ def main(argv: list[str] | None = None) -> int:
     report_output.add_argument("--json-report", type=Path, help="写入机器可读 JSON 报告")
     report_output.add_argument("--check-report", type=Path, help="检查已提交 JSON 报告是否漂移")
     parser.add_argument("--strict-orphans", action="store_true", help="将孤立教程页也视为失败")
+    parser.add_argument("--show-acknowledged", action="store_true", help="同时列出已知且可忽略的提醒")
     args = parser.parse_args(argv)
 
     report = scan_repository(args.root)
@@ -495,11 +529,16 @@ def main(argv: list[str] | None = None) -> int:
 
     for finding in report.findings:
         print(f"{finding.severity.upper()}: {finding}")
+    if args.show_acknowledged:
+        for finding in report.acknowledged:
+            print(f"（已确认）{finding.severity.upper()}: {finding}")
     summary = report.summary
+    ignored = summary.get("acknowledged", 0)
+    suffix = f"（另有 {ignored} 条已确认提醒，未列出）" if ignored else ""
     print(
         "\n资源检查完成："
         f"{summary['markdown_files']} 个 Markdown，{summary['image_assets']} 个图像资产，"
-        f"{summary['errors']} 个错误，{summary['warnings']} 个警告。"
+        f"{summary['errors']} 个错误，{summary['warnings']} 个警告{suffix}。"
     )
     blocking = summary["errors"] > 0 or (args.strict_orphans and summary["orphan_pages"] > 0)
     return 1 if blocking else 0

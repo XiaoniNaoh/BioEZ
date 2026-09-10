@@ -316,7 +316,7 @@ AI 是工具，不是作者。
 | `scripts/migrate_course_metadata.py` | 给老页面**补**缺失的 frontmatter 字段（只补缺，不覆盖已有值） |
 | `scripts/build_course_catalog.py` | 生成目录、课程清单、页面导航；`--check` 只检查是否有漂移 |
 | `scripts/validate_content.py` | 校验 frontmatter 与页面 ID；支持 `--all` / `--paths` / `--base --head` |
-| `scripts/check_content_resources.py` | 检查链接、图片、图片来源与孤立页；`--json-report` 写报告，`--check-report` 查漂移 |
+| `scripts/check_content_resources.py` | 检查链接、图片、图片来源与孤立页；`--json-report` 写报告，`--check-report` 查漂移，`--show-acknowledged` 查看已确认提醒（默认不列出） |
 | `scripts/build_image_manifest.py` | 维护 `assets/image-sources.json` 图片清单 |
 | `scripts/generate_teaching_figures.py` | 生成 / 校验可复现的教学 SVG 图 |
 | `scripts/check_repository_hygiene.py` | 仓库规范（大文件、二进制、许可） |
