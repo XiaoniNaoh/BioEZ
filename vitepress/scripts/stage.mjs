@@ -57,16 +57,11 @@ const ICON_SVG = {
 const indexPath = (c) => c.index_path || `${c.directory}/COURSE_INDEX.md`
 const route = (p) => encodeURI('/' + p.replace(/\.md$/, ''))
 
-// 每门课在首页卡片上的图标
-const ICONS = {
-  'food-analysis': '🧪',
-  microbiology: '🦠',
-  'molecular-biology': '🧬',
-  'cell-biology': '🔬',
-  botany: '🌿',
-  'biochemistry-food-chemistry': '⚗️',
-  bioinformatics: '💻',
-}
+// 课程图标统一维护在 data/course-config.json 的 icon 字段（首页卡片、侧栏、课程列表共用）
+const courseConfig = existsSync(join(DATA, 'course-config.json'))
+  ? JSON.parse(readFileSync(join(DATA, 'course-config.json'), 'utf8')).courses ?? []
+  : []
+const COURSE_ICONS = Object.fromEntries(courseConfig.map((c) => [c.slug, c.icon ?? '📘']))
 
 rmSync(CONTENT, { recursive: true, force: true })
 mkdirSync(CONTENT, { recursive: true })
@@ -100,7 +95,7 @@ const features = courses
   .map((c) => {
     const n = c.lesson_count ?? (c.lessons?.length ?? 0)
     const mins = c.estimated_minutes ?? '?'
-    const icon = ICONS[c.slug] ?? '📘'
+    const icon = COURSE_ICONS[c.slug] ?? '📘'
     const desc = (c.description || '').replace(/\n/g, ' ')
     return `  - icon: ${icon}\n    title: ${c.title}\n    details: ${desc}（${n} 篇 · 约 ${mins} 分钟）\n    link: ${route(indexPath(c))}`
   })
@@ -144,8 +139,12 @@ writeFileSync(
 
 ${courses
   .map(
-    (c, i) =>
-      `## ${i + 1}. ${c.title}\n\n${c.description || ''}\n\n- 篇数：${c.lesson_count ?? (c.lessons?.length ?? 0)}　·　预计阅读：${c.estimated_minutes ?? '?'} 分钟\n- [进入课程 →](${route(indexPath(c))})\n`,
+    (c, i) => {
+      const done = c.progress === 'completed'
+      const badge = done ? '<Badge type="tip" text="已完成" />' : '<Badge type="warning" text="连载中" />'
+      const icon = c.icon ?? COURSE_ICONS[c.slug] ?? '📘'
+      return `## ${i + 1}. ${icon} ${c.title} ${badge}\n\n${c.description || ''}\n\n- 篇数：${c.lesson_count ?? (c.lessons?.length ?? 0)}　·　预计阅读：${c.estimated_minutes ?? '?'} 分钟\n- [进入课程 →](${route(indexPath(c))})\n`
+    },
   )
   .join('\n')}
 `,

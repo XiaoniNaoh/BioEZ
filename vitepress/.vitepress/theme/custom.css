@@ -88,3 +88,87 @@
     padding: 8px 64px 32px !important;
   }
 }
+
+/* ── 现代化细节（参考 vitepress.yiov.top/style 的做法，保持克制） ───────── */
+
+/* 平滑滚动（对锚点跳转更友好） */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 顶部导航：毛玻璃（旧浏览器自动回退为不透明背景） */
+.VPNavBar,
+.VPNavBar .content-body {
+  backdrop-filter: saturate(1.8) blur(14px);
+  -webkit-backdrop-filter: saturate(1.8) blur(14px);
+}
+
+@supports (background-color: color-mix(in srgb, red 50%, transparent)) {
+  .VPNavBar {
+    background-color: color-mix(in srgb, var(--vp-c-bg) 72%, transparent);
+  }
+
+  .VPNavBar .content-body {
+    background-color: transparent;
+  }
+}
+
+/* 首页卡片：悬停轻微上浮 + 品牌色描边 */
+.VPFeatures .item {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.VPFeatures .item:hover {
+  transform: translateY(-4px);
+}
+
+.VPFeature.link:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+}
+
+.dark .VPFeature.link:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* 正文外链显示「新窗口」小图标 */
+:root {
+  --external-link-icon: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3E%3Cpath d='M0 0h24v24H0V0z' fill='none' /%3E%3Cpath d='M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z' /%3E%3C/svg%3E");
+}
+
+.vp-doc a[href^='http']:not(:has(img, svg))::after {
+  content: '';
+  display: inline-block;
+  width: 0.72em;
+  height: 0.72em;
+  margin-left: 0.22em;
+  vertical-align: 0;
+  background-color: currentColor;
+  -webkit-mask-image: var(--external-link-icon);
+  mask-image: var(--external-link-icon);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* 代码块：圆角 + 细描边 */
+.vp-doc div[class*='language-'] {
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+/* 侧边栏条目：圆角 hover，和当前项的高亮更统一 */
+.VPSidebarItem.is-link > .item > .link {
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  transition: background-color 0.2s ease;
+}
+
+.VPSidebarItem.is-link > .item > .link:hover {
+  background-color: var(--vp-c-bg-soft);
+}
