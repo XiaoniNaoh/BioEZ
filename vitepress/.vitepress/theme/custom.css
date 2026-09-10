@@ -1,34 +1,29 @@
 /* BioEZ Wiki
    完全沿用 VitePress 默认主题（字体、字间距、行间距、间距、深色底等全部默认），
-   仅替换主色为典雅的蓝绿色（teal），并做两处极小的呼应。
+   仅替换主色为清亮的水蓝色，并做一处图标底色呼应。
 
    主色对比度：
-   - 浅色 #0f766e 在白底上 ≈ 5.5:1（正文链接清晰可读）
-   - 深色 #2dd4bf 在默认深色底 #1b1b1f 上 ≈ 8:1
+   - 浅色 #0ea5e9 在白底上 ≈ 3.1:1（偏亮，属水蓝色系里较清晰的一档）
+   - 深色 #7dd3fc 在默认深色底 #1b1b1f 上 ≈ 9:1
 */
 
 :root {
-  --vp-c-brand-1: #0f766e;
-  --vp-c-brand-2: #115e59;
-  --vp-c-brand-3: #0f766e;
-  --vp-c-brand-soft: rgba(15, 118, 110, 0.14);
+  --vp-c-brand-1: #0ea5e9;
+  --vp-c-brand-2: #0284c7;
+  --vp-c-brand-3: #0ea5e9;
+  --vp-c-brand-soft: rgba(14, 165, 233, 0.14);
 }
 
 .dark {
-  --vp-c-brand-1: #2dd4bf;
-  --vp-c-brand-2: #5eead4;
-  --vp-c-brand-3: #2dd4bf;
-  --vp-c-brand-soft: rgba(45, 212, 191, 0.16);
+  --vp-c-brand-1: #7dd3fc;
+  --vp-c-brand-2: #a5e8fd;
+  --vp-c-brand-3: #7dd3fc;
+  --vp-c-brand-soft: rgba(125, 211, 252, 0.16);
 }
 
 /* 首页卡片图标块的底色，跟主色呼应 */
 .VPFeature .icon {
   background-color: var(--vp-c-brand-soft);
-}
-
-/* 首页 hero 的线条插画在深色模式下提亮 */
-.dark .VPHomeHero .image img {
-  filter: brightness(1.45) saturate(1.05);
 }
 
 /* 让没有二级目录的课程，条目也统一缩进一级（带左侧细导线），

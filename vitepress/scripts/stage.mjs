@@ -17,7 +17,6 @@ const HERE = dirname(fileURLToPath(import.meta.url))
 const PROJECT = resolve(HERE, '..') // vitepress/
 const REPO = resolve(PROJECT, '..') // 库根目录
 const CONTENT = join(PROJECT, 'content')
-const PUBLIC = join(CONTENT, 'public')
 const DATA = join(REPO, 'data')
 
 const ALLOWED = new Set(['.md', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.avif'])
@@ -96,22 +95,6 @@ const features = courses
   })
   .join('\n')
 
-// 首页 hero 的线条插画（DNA 双螺旋）；深色模式下由 CSS 提亮
-const HERO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 320" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round">
-  <path d="M80 16 C 150 66, 150 106, 80 156 C 10 206, 10 246, 80 296"/>
-  <path d="M80 16 C 10 66, 10 106, 80 156 C 150 206, 150 246, 80 296"/>
-  <path d="M40 50 L120 50" stroke-width="4" opacity="0.45"/>
-  <path d="M32 90 L128 90" stroke-width="4" opacity="0.45"/>
-  <path d="M40 130 L120 130" stroke-width="4" opacity="0.45"/>
-  <path d="M120 182 L40 182" stroke-width="4" opacity="0.45"/>
-  <path d="M128 222 L32 222" stroke-width="4" opacity="0.45"/>
-  <path d="M120 262 L40 262" stroke-width="4" opacity="0.45"/>
-</svg>
-`
-// 放到 VitePress 的 public 目录，才会被原样拷贝到站点根（content/ 里的非 md 文件不会被拷贝）
-mkdirSync(PUBLIC, { recursive: true })
-writeFileSync(join(PUBLIC, 'hero.svg'), HERO_SVG)
-
 writeFileSync(
   join(CONTENT, 'index.md'),
   `---
@@ -122,9 +105,6 @@ hero:
   name: BioEZ
   text: 生物学宝宝教程
   tagline: 面向生物相关课程的中文学习资料库 —— 按课程分册，配好目录与前后篇导航。
-  image:
-    src: /hero.svg
-    alt: BioEZ 生命科学
   actions:
     - theme: brand
       text: 开始学习
