@@ -62,3 +62,29 @@
   border-left: 1px solid var(--vp-c-divider);
   padding-left: 16px;
 }
+
+/* 团队页：组件默认留白偏大（外层 margin 128px + 标题 padding 80px），
+   这是给「没有导航栏的独立页面」设计的；本站有导航和侧栏，收紧一些。 */
+.VPTeamPage {
+  margin: 40px 0 72px !important;
+}
+
+.VPTeamPageTitle {
+  padding: 8px 24px 32px !important;
+}
+
+@media (min-width: 768px) {
+  .VPTeamPage {
+    margin: 48px 0 88px !important;
+  }
+
+  .VPTeamPageTitle {
+    padding: 8px 48px 32px !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPTeamPageTitle {
+    padding: 8px 64px 32px !important;
+  }
+}
