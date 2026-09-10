@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "summary": {
-    "markdown_files": 117,
-    "wikilinks": 10,
-    "markdown_links": 388,
+    "markdown_files": 122,
+    "wikilinks": 14,
+    "markdown_links": 390,
     "image_references": 31,
     "image_assets": 31,
     "manifest_assets": 31,
@@ -12,12 +12,19 @@
     "broken_links": 0,
     "ambiguous_wikilinks": 0,
     "unreferenced_assets": 0,
-    "orphan_pages": 0,
+    "orphan_pages": 1,
     "license_review_required": 20,
     "errors": 0,
-    "warnings": 20
+    "warnings": 21
   },
   "findings": [
+    {
+      "code": "orphan-page",
+      "severity": "warning",
+      "path": "03 分子生物学/MMB 99 分子生物学｜一本全.md",
+      "line": 1,
+      "message": "教程页没有入站链接，应接入课程目录或学习路径"
+    },
     {
       "code": "origin-metadata-missing",
       "severity": "warning",
@@ -159,6 +166,8 @@
       "message": "仓库既有截图的原始作者、捕获日期和生成脚本尚未记录"
     }
   ],
-  "orphans": [],
+  "orphans": [
+    "03 分子生物学/MMB 99 分子生物学｜一本全.md"
+  ],
   "unreferenced_assets": []
 }
