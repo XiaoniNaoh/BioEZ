@@ -32,7 +32,7 @@ R / RStudio 环境
 ## 来源与授权状态
 
 - 11 个替代 SVG 由仓库脚本原始生成，使用 CC BY-SA 4.0，固定种子为 `20260717`。原幕布 URL 只作为热链替换审计记录，原图未进入最终仓库。
-- 20 张 scRNAseq PNG 是仓库既有资产。原始作者、捕获日期和生成脚本无记录，因此清单标记为 `origin_status: unknown` 与 `license: not-asserted`。这 20 项仍是待补充来源的警告，未被伪装成已授权内容。
+- 20 张 scRNAseq PNG 是仓库既有资产。原始作者、捕获日期和生成脚本无记录，因此清单标记为 `origin_status: unknown` 与 `license: not-asserted`，未被伪装成已授权内容。这 20 项属于**已确认提醒**，默认不在检查输出里重复列出（要查看加 `--show-acknowledged`），其状态以 `assets/image-sources.json` 为准。
 
 ## 验证
 
