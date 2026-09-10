@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "contributors": [
+    {
+      "name": "小倪",
+      "github": "XiaoniNaoh",
+      "title": "发起人 · 主要作者",
+      "desc": "陕西师范大学食品专业本科生。整理并撰写了食品分析、微生物学、分子生物学、细胞生物学、植物学、生物化学与食品化学六门课程，同时维护目录脚本与两个站点（Quartz / VitePress）的构建部署。",
+      "links": [
+        { "icon": "github", "link": "https://github.com/XiaoniNaoh" },
+        { "icon": "site", "link": "https://bioez.xyz/" }
+      ]
+    },
+    {
+      "name": "脆弱的百里橘",
+      "github": "LightChainr",
+      "title": "《LLM 时代的生信入门》作者",
+      "desc": "生信入门课程的作者，以单细胞分析为主线串起数据准备、分析与可视化；也参与了生物化学与食品化学的部分章节。",
+      "links": [
+        { "icon": "github", "link": "https://github.com/LightChainr" }
+      ]
+    }
+  ]
+}

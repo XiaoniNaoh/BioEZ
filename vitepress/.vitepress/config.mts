@@ -64,6 +64,7 @@ export default defineConfig({
       { text: '主页', link: '/' },
       { text: '全部课程', link: '/courses' },
       { text: '关于', link: '/about' },
+      { text: '团队', link: '/team' },
     ],
     sidebar,
     outline: { level: [2, 3], label: '页面导航' },
