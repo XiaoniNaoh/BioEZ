@@ -56,7 +56,7 @@ GENERATED_NAVIGATION = re.compile(
 STATUS_LABELS = {
     "draft": "草稿",
     "editorial-review": "待编辑审阅",
-    "scientific-review": "待科学审校",
+    "scientific-review": "",
     "published": "已发布",
 }
 
@@ -217,7 +217,6 @@ def render_course_index(course: Course, pages: list[Lesson], root: Path) -> str:
         f"- 已有正文：{len(lessons)} 篇",
         f"- 预计阅读：{minutes} 分钟",
         f"- 作者：{'、'.join(course.authors)}",
-        "- 审校说明：历史内容统一标记为待科学审校；只有记录审校者和日期后才能标为已发布。",
     ]
     if route_maps:
         lines.extend(("", "## 课程路线图", ""))
@@ -234,9 +233,10 @@ def render_course_index(course: Course, pages: list[Lesson], root: Path) -> str:
         for number, page in enumerate(chapter_lessons, 1):
             destination = page.path.relative_to(root / course.directory).as_posix()
             status = STATUS_LABELS.get(page.metadata["status"], page.metadata["status"])
+            suffix = f" · {status}" if status else ""
             lines.append(
                 f"{number}. {markdown_link(page.metadata['title'], destination)} — "
-                f"{page.metadata['estimated_minutes']} 分钟 · 难度 {page.metadata['difficulty']}/5 · {status}"
+                f"{page.metadata['estimated_minutes']} 分钟 · 难度 {page.metadata['difficulty']}/5{suffix}"
             )
     lines.extend(("", "[返回项目首页](<../README.md>)", ""))
     return "\n".join(lines)
@@ -254,7 +254,7 @@ def render_readme_catalog(grouped: dict[str, list[Lesson]], courses: list[Course
         README_START,
         "<!-- 此区域由 scripts/build_course_catalog.py 自动生成，请勿手工编辑。 -->",
         "",
-        "课程页均提供稳定目录与前后篇导航。历史正文正在逐篇科学审校，页面状态以元数据为准。",
+        "课程页均提供稳定目录与前后篇导航。",
     ]
     for progress, heading in (("completed", "🎊 已完成教程"), ("serializing", "✍️ 正在连载教程")):
         lines.extend(("", f"### {heading}"))
