@@ -37,8 +37,10 @@ const sidebar = courses
       }
     }
     items.push(...top)
-    for (const [name, sub] of groups) items.push({ text: name, collapsed: false, items: sub })
-    return { text: c.title, collapsed: false, items }
+    for (const [name, sub] of groups) items.push({ text: name, collapsed: true, items: sub })
+    // 课名前加目录序号（如「02」），便于一眼分辨
+    const num = (c.directory.match(/^(\d+)/) || [])[1]
+    return { text: num ? `${num} ${c.title}` : c.title, collapsed: true, items }
   })
 
 export default defineConfig({

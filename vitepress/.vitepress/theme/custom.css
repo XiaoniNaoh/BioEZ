@@ -15,8 +15,8 @@
     'Microsoft YaHei', sans-serif;
   --vp-font-family-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
-  /* 侧栏宽度与开往一致 */
-  --vp-sidebar-width: 272px;
+  /* 侧栏宽度：比开往略宽，容纳较长的中文课名 */
+  --vp-sidebar-width: 300px;
 }
 
 /* 深色：与开往一致的柔和深灰（#1b1b1f 系），主色换鼠尾草绿 */
@@ -87,4 +87,38 @@
   margin: 24px 0;
   padding: 20px 24px;
   line-height: 1.9;
+}
+
+/* ── 侧栏：课程（一级分组）更醒目、彼此分隔，避免挤成一团 ── */
+
+.VPSidebarItem.level-0 {
+  padding: 6px 0 10px;
+}
+
+/* 每门课之间加一道细分隔线 */
+.VPSidebarItem.level-0 + .VPSidebarItem.level-0 {
+  margin-top: 10px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 16px;
+}
+
+/* 课名加粗、放大，颜色更实 */
+.VPSidebarItem.level-0 > .item > .text,
+.VPSidebarItem.level-0 > .item > .link > .text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  letter-spacing: 0.01em;
+}
+
+/* 二级分组（如 MMB 章 / A篇）稍作区分 */
+.VPSidebarItem.level-1 > .item > .text {
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+}
+
+/* 侧栏整体行距松一点 */
+.VPSidebar .VPSidebarItem.level-2 .text,
+.VPSidebar .VPSidebarItem.level-3 .text {
+  line-height: 1.7;
 }
