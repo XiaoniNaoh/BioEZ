@@ -1,99 +1,112 @@
 # 贡献指南
 
-BioEZ 欢迎错误修正、新教程、图表和工程改进。教程是可公开传播的科学内容，因此可追溯性、版权和审校记录与文字风格同样重要。
+BioEZ 是一套中文生物类课程笔记：正文用 Markdown 写，目录与导航由脚本生成，构建和发布交给 CI。欢迎纠错、补充教程、改进配图，或者帮忙修工程问题。
 
-## 如何贡献
+## 可以怎么参与
 
-您可以通过以下方式为 BioEZ 做出贡献：
+- **报错**：概念、数据、图注、链接有问题。
+- **补正文**：新增一节，或把某段讲得更清楚。
+- **出配图与例题**：自制示意图、习题与解答。
+- **改工程**：脚本、CI、站点样式。
 
-- 报告教程中的错误或问题。
-- 建议新的教程主题或对现有教程的改进。
-- 编写新的教程或更新现有教程。
-- 改进项目的文档。
+不确定要不要做，先在 [Issues](https://github.com/XiaoniNaoh/BioEZ/issues) 里说一下即可。
 
-## 设置开发环境
+## 先把仓库跑起来
 
-要开始贡献，请确保您已经安装了 Git 和一个 Markdown 编辑器（如 Obsidian、Typora 或 Visual Studio Code），然后按照以下步骤操作：
+需要 Git 和任意 Markdown 编辑器（Obsidian、Typora、VS Code 都可以）。
 
-1. 在 GitHub 上 Fork BioEZ 仓库到您的账户。
-2. 克隆 Fork 的仓库到本地：
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/BioEZ.git
-   ```
-   请将 YOUR_USERNAME 替换为您的 GitHub 用户名。
-3. 打开克隆的仓库文件夹，使用 Markdown 编辑器编辑文件。
+```bash
+git clone https://github.com/YOUR_USERNAME/BioEZ.git
+cd BioEZ
+```
 
-## 编写与元数据
+直接用 Obsidian 打开仓库根目录就能开始写。想在本地预览站点，见 [VitePress 课程站说明](docs/vitepress-wiki.md)。
 
-- 使用清晰、简洁的语言，首次出现的专业词给出定义。
-- 新建教程使用 [教程模板](docs/tutorial-template.md)，并遵循 [Frontmatter 规范](docs/content-frontmatter.md)。
-- 使用 Obsidian Wikilink 时确保目标文件存在；不要手工复制难度、重要性等可从元数据生成的信息。
-- 新增或重命名课程页后运行课程构建脚本；不要手工编辑 `COURSE_INDEX.md`、`data/courses.json` 或自动导航区块。
-- 事实性主张应引用教科书、同行评议论文、标准或权威数据库。
+## 仓库结构
 
-## 科学审校
+```text
+01 食品分析与检验/ … 07 LLM 时代的生信入门/   # 课程正文，按课程分目录
+        └── COURSE_INDEX.md                    # 课程入口（脚本生成，勿手改）
+data/course-config.json                        # 课程清单（人工维护：slug / 标题 / 目录 / 前缀 / 简介）
+data/courses.json                              # 由脚本汇总生成，勿手改
+scripts/                                       # 目录、校验、构建脚本
+site/                                          # Quartz 站点配置
+vitepress/                                     # VitePress 站点与构建脚本
+docs/                                          # 维护者文档
+```
 
-内容状态依次为 `draft` → `editorial-review` → `scientific-review` → `published`。发布页面必须记录审校者和日期。修改核心结论后，页面应退回 `scientific-review`，直到再次审校。
+> `08 食品风味化学与分析`、`09 益生菌` 目前属于未发布模块，暂不进仓库、也不上站。
+
+## 写正文
+
+- 语言尽量直白；专业词第一次出现时给出解释。
+- 新建页面建议从 [教程模板](docs/tutorial-template.md) 起步，并遵循 [Frontmatter 规范](docs/content-frontmatter.md)。
+- 每页顶部的「课程导航」、每门课的 `COURSE_INDEX.md`、README 的课程清单和 `data/courses.json` 都由脚本生成，**不要手工编辑**。
+- 用 Wikilink 时先确认目标文件存在；能从元数据算出来的信息（篇数、难度、前后篇）不要手抄，让脚本生成。
+- 涉及事实的地方，尽量给出教科书、论文、标准或权威数据库的出处。
+
+## 新增、改名或移动课程时
+
+1. 在 `data/course-config.json` 里登记 slug、标题、目录名、前缀与简介。
+2. 依次运行：
+
+```bash
+python3 scripts/migrate_course_metadata.py      # 补齐并刷新每页 frontmatter
+python3 scripts/build_course_catalog.py         # 生成 COURSE_INDEX / README / courses.json / 页面导航
+python3 scripts/validate_content.py --all       # 校验 frontmatter 与页面 ID
+python3 scripts/build_course_catalog.py --check # 确认生成结果没有漂移
+```
+
+> 目录改名后如果没同步 `data/course-config.json`，构建会**直接报错**。这是刻意设计的，免得发出"缺了几门课"的站点。
 
 ## 图片、引用与版权
 
-- 仅提交自制资料、公共领域资料，或明确允许在 CC BY-SA 4.0 项目中再分发的素材。
-- 不上传未经授权的教材全文、扫描书、课件或付费数据库内容；改用 DOI、ISBN、出版社或图书馆页面。
-- 图片必须包含有意义的 `alt` 文本，图注注明作者、来源链接和许可证。避免依赖可失效的第三方热链。
-- 优先提交压缩后的 WebP/AVIF/SVG；单张图片建议小于 2 MB。
-- PDF 导出物和大型可复现数据应发布到 GitHub Releases 或可追溯的数据仓库，源码库只保留来源、许可、下载方法和校验和。详见 [仓库资源与版权政策](docs/repository-hygiene.md)。
+- 只提交自己制作的、公共领域的，或明确允许在 CC BY-SA 4.0 项目中再分发的素材。
+- 不要上传未授权的教材全文、扫描件、课件或付费数据库内容；改用 DOI / ISBN / 出版社页面链接。
+- 图片要有有意义的 `alt`，图注注明作者、来源链接与许可证；尽量不要热链第三方资源。
+- 图片优先用压缩过的 WebP / AVIF / SVG，单张建议小于 2 MB。
+- PDF 导出物与大型可复现数据放 GitHub Releases 或可追溯的数据仓库；源码库只保留来源、许可、下载方式与校验和。详见 [仓库资源与版权政策](docs/repository-hygiene.md)。
 
-## AI 辅助内容
+## 关于 AI 辅助
 
-AI 可用于头脑风暴、结构编辑和草稿，但不能代替科学审校。贡献者必须核对事实、引用和版权，并在 PR 中说明使用的模型、用途和人工复核范围。AI 名称或图标不应被当作审校记录。
+AI 可以用来打草稿、整理结构和检查表达，但**不能替代作者核对内容**。
+
+- 提交前请自己核对事实、引用与版权。
+- 不要在页面开头放"AI 生成摘要"这类块；需要摘要就直接写进正文。
+- 用了什么模型、怎么用的，在 PR 描述里说明即可；**AI 的名字不能当作作者或审校记录**。
 
 ## 本地检查
 
 ```bash
 python3 -m unittest discover -s tests -v
-# 补齐元数据并刷新课程清单、目录和导航
-python3 scripts/migrate_course_metadata.py
-python3 scripts/build_course_catalog.py
-# 全量验证 Frontmatter 与页面 ID 关系
 python3 scripts/validate_content.py --all
-# 确认生成文件没有漂移
 python3 scripts/build_course_catalog.py --check
-# 检查本次添加或修改的资源
+python3 scripts/check_content_resources.py
 python3 scripts/check_repository_hygiene.py --base origin/main --head HEAD
-# 未提交时，显式列出本次修改的教程
+```
+
+只改了某几篇、还没提交时，可以只校验这几篇：
+
+```bash
 python3 scripts/validate_content.py --paths "path/to/tutorial.md"
-# 提交后，模拟 PR 的增量检查
-python3 scripts/validate_content.py --base origin/main --head HEAD
 ```
 
 ## 提交 Pull Request
 
-提交贡献时，请遵循以下步骤：
+1. 从 `main` 开一个分支：`git checkout -b fix/typo-in-mmb-03`
+2. 改完后跑一遍上面的检查。
+3. 提交并推送，然后开 PR，说明改了什么、为什么改。
+4. CI 会自动跑内容校验、资源检查，并构建两个站点。
 
-1. 在您的 Fork 仓库中创建一个新的分支：
-   ```bash
-   git checkout -b feature/add-new-tutorial
-   ```
-2. 在该分支上进行您的更改。
-3. 运行内容检查，然后提交更改并编写清晰的提交消息：
-   ```bash
-   git commit -m 'Add new tutorial: Genetics'
-   ```
-4. 将您的分支推送到 GitHub：
-   ```bash
-   git push origin feature/add-new-tutorial
-   ```
-5. 在 GitHub 上提交一个 Pull Request，描述您的更改和目的。
-6. 等待项目维护者的审查和合并。
+## 发布到哪里
 
-## 报告问题
+同一份正文会同时发布到两个地方，互不影响：
 
-如果您发现教程中的错误或有改进建议，请在 [GitHub Issues](https://github.com/XiaoniNaoh/BioEZ/issues) 中提交问题报告。请提供详细的信息，包括问题的描述、复现步骤（如果适用）以及任何相关的截图或文件。
-
-## 建议新功能
-
-如果您有新的教程主题或功能建议，请在 [GitHub Issues](https://github.com/XiaoniNaoh/BioEZ/issues) 中提交建议。请描述您的想法以及它将如何改进项目。
+| 站点 | 构建方式 | 地址 |
+| --- | --- | --- |
+| 课程地图（数字花园） | Quartz → GitHub Pages | <https://xiaoninaoh.github.io/BioEZ/> |
+| 课程 Wiki | VitePress → 服务器 | <https://wiki.bioez.xyz/> |
 
 ## 许可证
 
-BioEZ 项目采用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 许可证。提交贡献即表示您同意您的贡献也在此许可证下发布。
+本项目采用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 许可。提交贡献即表示你同意自己的贡献以同一许可发布。
