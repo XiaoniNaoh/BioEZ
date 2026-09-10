@@ -50,6 +50,9 @@ export default defineConfig({
   titleTemplate: ':title · BioEZ',
   description: '面向生物相关课程的中文学习资料库',
   srcDir: './content',
+  // publicDir 默认会相对 srcDir 解析；这里显式指到 vitepress/content/public，
+  // 让 stage.mjs 生成的 hero.svg 能被原样拷贝到站点根。
+  publicDir: fileURLToPath(new URL('../content/public', import.meta.url)),
   cleanUrls: true,
   ignoreDeadLinks: true,
   lastUpdated: true,

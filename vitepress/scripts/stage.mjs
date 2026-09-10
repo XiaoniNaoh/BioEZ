@@ -17,6 +17,7 @@ const HERE = dirname(fileURLToPath(import.meta.url))
 const PROJECT = resolve(HERE, '..') // vitepress/
 const REPO = resolve(PROJECT, '..') // 库根目录
 const CONTENT = join(PROJECT, 'content')
+const PUBLIC = join(CONTENT, 'public')
 const DATA = join(REPO, 'data')
 
 const ALLOWED = new Set(['.md', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.avif'])
@@ -45,6 +46,17 @@ const courses = existsSync(join(DATA, 'courses.json'))
 // 课程入口的相对路径（含 .md），以及编码后的站点路由（空格/中文需转义，否则 Markdown 链接解析失败）
 const indexPath = (c) => c.index_path || `${c.directory}/COURSE_INDEX.md`
 const route = (p) => encodeURI('/' + p.replace(/\.md$/, ''))
+
+// 每门课在首页卡片上的图标
+const ICONS = {
+  'food-analysis': '🧪',
+  microbiology: '🦠',
+  'molecular-biology': '🧬',
+  'cell-biology': '🔬',
+  botany: '🌿',
+  'biochemistry-food-chemistry': '⚗️',
+  bioinformatics: '💻',
+}
 
 rmSync(CONTENT, { recursive: true, force: true })
 mkdirSync(CONTENT, { recursive: true })
@@ -76,9 +88,29 @@ for (const extra of ['资料卡与图库', 'assets']) {
 
 const features = courses
   .map((c) => {
-    return `  - icon: 📘\n    title: ${c.title}\n    details: ${(c.description || '').replace(/\n/g, ' ')}\n    link: ${route(indexPath(c))}`
+    const n = c.lesson_count ?? (c.lessons?.length ?? 0)
+    const mins = c.estimated_minutes ?? '?'
+    const icon = ICONS[c.slug] ?? '📘'
+    const desc = (c.description || '').replace(/\n/g, ' ')
+    return `  - icon: ${icon}\n    title: ${c.title}\n    details: ${desc}（${n} 篇 · 约 ${mins} 分钟）\n    link: ${route(indexPath(c))}`
   })
   .join('\n')
+
+// 首页 hero 的线条插画（DNA 双螺旋）；深色模式下由 CSS 提亮
+const HERO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 320" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round">
+  <path d="M80 16 C 150 66, 150 106, 80 156 C 10 206, 10 246, 80 296"/>
+  <path d="M80 16 C 10 66, 10 106, 80 156 C 150 206, 150 246, 80 296"/>
+  <path d="M40 50 L120 50" stroke-width="4" opacity="0.45"/>
+  <path d="M32 90 L128 90" stroke-width="4" opacity="0.45"/>
+  <path d="M40 130 L120 130" stroke-width="4" opacity="0.45"/>
+  <path d="M120 182 L40 182" stroke-width="4" opacity="0.45"/>
+  <path d="M128 222 L32 222" stroke-width="4" opacity="0.45"/>
+  <path d="M120 262 L40 262" stroke-width="4" opacity="0.45"/>
+</svg>
+`
+// 放到 VitePress 的 public 目录，才会被原样拷贝到站点根（content/ 里的非 md 文件不会被拷贝）
+mkdirSync(PUBLIC, { recursive: true })
+writeFileSync(join(PUBLIC, 'hero.svg'), HERO_SVG)
 
 writeFileSync(
   join(CONTENT, 'index.md'),
@@ -89,22 +121,29 @@ titleTemplate: false
 hero:
   name: BioEZ
   text: 生物学宝宝教程
-  tagline: 面向生物相关课程的中文学习资料库，按课程分册，提供稳定的目录与前后篇导航。
+  tagline: 面向生物相关课程的中文学习资料库 —— 按课程分册，配好目录与前后篇导航。
+  image:
+    src: /hero.svg
+    alt: BioEZ 生命科学
   actions:
     - theme: brand
       text: 开始学习
       link: /courses
     - theme: alt
-      text: 关于
+      text: 关于本站
       link: /about
 features:
 ${features}
 ---
 
-## 这是什么
+## 从这里开始
 
-覆盖食品分析与检验、微生物学、分子生物学、细胞生物学、植物学、生物化学与食品化学、生信入门等课程。
-正文含公式、图表与示例，适合考研复习与日常自学。每门课有独立的课程目录页作为入口。
+1. **选一门课** —— 点上面任意一张卡片，或浏览 [全部课程](/courses)
+2. **按目录读** —— 每门课都有一份「课程目录」，顺着读即可
+3. **跟着导航走** —— 每页顶部都有「上一篇 · 课程目录 · 下一篇」
+
+> [!TIP]
+> 内容持续更新。右上角可切换深色 / 浅色，长时间阅读更舒服。
 `,
 )
 
