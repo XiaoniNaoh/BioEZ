@@ -4,7 +4,7 @@
     {
       "slug": "food-analysis",
       "title": "食品分析与检验 宝宝教程",
-      "directory": "01 食品分析与检验 宝宝教程",
+      "directory": "01 食品分析与检验",
       "prefix": "FAI",
       "description": "从食品分析的基本原理出发，介绍样品、数据处理与常见成分分析方法。",
       "progress": "completed",
@@ -14,7 +14,7 @@
     {
       "slug": "microbiology",
       "title": "微生物学 宝宝教程",
-      "directory": "02 微生物学 宝宝教程",
+      "directory": "02 微生物学",
       "prefix": "MB",
       "description": "介绍微生物学基础、遗传代谢、生态、免疫与食品相关应用。",
       "progress": "completed",
@@ -24,7 +24,7 @@
     {
       "slug": "molecular-biology",
       "title": "分子生物学 重蓝点手册",
-      "directory": "03 分子生物学 重蓝点手册",
+      "directory": "03 分子生物学",
       "prefix": "MMB",
       "description": "围绕 DNA、RNA、蛋白质、基因表达调控和分子生物学技术构建系统学习路径。",
       "progress": "completed",
@@ -34,7 +34,7 @@
     {
       "slug": "cell-biology",
       "title": "五年本科 三年细胞（科普）",
-      "directory": "04 五年本科 三年细胞 （科普）",
+      "directory": "04 细胞生物学",
       "prefix": "CB",
       "description": "以科普方式介绍细胞的结构、功能和生命活动。",
       "progress": "serializing",
@@ -44,7 +44,7 @@
     {
       "slug": "botany",
       "title": "植物学 步步糕大一轮复习讲义",
-      "directory": "05 植物学 步步糕大一轮复习讲义",
+      "directory": "05 植物学",
       "prefix": "BOT",
       "description": "面向植物学入门与复习，梳理植物细胞、组织及后续主题。",
       "progress": "serializing",
@@ -54,7 +54,7 @@
     {
       "slug": "biochemistry-food-chemistry",
       "title": "生物化学与食品化学 考研帮帮忙",
-      "directory": "06 生物化学与食品化学 考研帮帮忙",
+      "directory": "06 生物化学与食品化学",
       "prefix": "BC",
       "description": "围绕生物化学与食品化学的核心知识点提供考研复习材料。",
       "progress": "serializing",

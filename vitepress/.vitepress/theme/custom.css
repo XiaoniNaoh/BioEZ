@@ -3,22 +3,22 @@
    仅替换主色为明亮的黄绿色（BioEZ 的柠檬绿调）。
 
    对比度：
-   - 浅色 #65a30d 在白底上 ≈ 3.1:1（黄绿本身偏亮，这是同色系里较可读的一档）
-   - 深色 #a3e635 在默认深色底 #1b1b1f 上 ≈ 11:1
+   - 浅色 #76b900 在白底上 ≈ 2.5:1（更亮的代价，这里是同色系里较亮且仍可看的一档）
+   - 深色 #bef264 在默认深色底 #1b1b1f 上 ≈ 13:1
 */
 
 :root {
-  --vp-c-brand-1: #65a30d;
-  --vp-c-brand-2: #4d7c0f;
-  --vp-c-brand-3: #65a30d;
-  --vp-c-brand-soft: rgba(101, 163, 13, 0.14);
+  --vp-c-brand-1: #76b900;
+  --vp-c-brand-2: #65a30d;
+  --vp-c-brand-3: #76b900;
+  --vp-c-brand-soft: rgba(118, 185, 0, 0.14);
 }
 
 .dark {
-  --vp-c-brand-1: #a3e635;
-  --vp-c-brand-2: #bef264;
-  --vp-c-brand-3: #a3e635;
-  --vp-c-brand-soft: rgba(163, 230, 53, 0.16);
+  --vp-c-brand-1: #bef264;
+  --vp-c-brand-2: #d9f99d;
+  --vp-c-brand-3: #bef264;
+  --vp-c-brand-soft: rgba(190, 242, 100, 0.16);
 }
 
 /* 让没有二级目录的课程，条目也统一缩进一级（带左侧细导线），

@@ -33,6 +33,9 @@ __pycache__/
 # 食品风味化学与分析 -- 新模块，暂不推送
 08 食品风味化学与分析/
 
+# 益生菌 -- 新模块，暂不推送
+09 益生菌/
+
 # VitePress 本地依赖与构建产物（构建在 CI 或本地按需生成，不进仓库）
 /vitepress/node_modules/
 /vitepress/content/
