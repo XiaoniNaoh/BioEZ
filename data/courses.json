@@ -1906,7 +1906,7 @@
         {
           "id": "bc-01-01",
           "title": "氨基酸与多肽",
-          "path": "06 生物化学与食品化学/BC 1-1 氨基酸与多肽.md",
+          "path": "06 生物化学与食品化学/BC 1 蛋白质专题/BC 1-1 氨基酸与多肽.md",
           "content_type": "lesson",
           "chapter": "蛋白质",
           "order": "01-01",
@@ -1936,7 +1936,7 @@
         {
           "id": "bc-01-02",
           "title": "蛋白质的结构",
-          "path": "06 生物化学与食品化学/BC 1-2 蛋白质的结构.md",
+          "path": "06 生物化学与食品化学/BC 1 蛋白质专题/BC 1-2 蛋白质的结构.md",
           "content_type": "lesson",
           "chapter": "蛋白质",
           "order": "01-02",
@@ -1967,7 +1967,7 @@
         {
           "id": "bc-01-03",
           "title": "氨基酸与蛋白质的理化性质",
-          "path": "06 生物化学与食品化学/BC 1-3 氨基酸与蛋白质的理化性质.md",
+          "path": "06 生物化学与食品化学/BC 1 蛋白质专题/BC 1-3 氨基酸与蛋白质的理化性质.md",
           "content_type": "lesson",
           "chapter": "蛋白质",
           "order": "01-03",
@@ -1999,7 +1999,7 @@
         {
           "id": "bc-01-04",
           "title": "蛋白质的功能性质",
-          "path": "06 生物化学与食品化学/BC 1-4 蛋白质的功能性质.md",
+          "path": "06 生物化学与食品化学/BC 1 蛋白质专题/BC 1-4 蛋白质的功能性质.md",
           "content_type": "lesson",
           "chapter": "蛋白质",
           "order": "01-04",
@@ -2028,7 +2028,7 @@
         {
           "id": "bc-01-05",
           "title": "影响蛋白质的因素",
-          "path": "06 生物化学与食品化学/BC 1-5 影响蛋白质的因素.md",
+          "path": "06 生物化学与食品化学/BC 1 蛋白质专题/BC 1-5 影响蛋白质的因素.md",
           "content_type": "lesson",
           "chapter": "蛋白质",
           "order": "01-05",
@@ -2055,7 +2055,7 @@
         {
           "id": "bc-01-06",
           "title": "蛋白质的生物学功能",
-          "path": "06 生物化学与食品化学/BC 1-6 蛋白质的生物学功能.md",
+          "path": "06 生物化学与食品化学/BC 1 蛋白质专题/BC 1-6 蛋白质的生物学功能.md",
           "content_type": "lesson",
           "chapter": "蛋白质",
           "order": "01-06",
@@ -2082,7 +2082,7 @@
         {
           "id": "bc-02-01",
           "title": "水的结构、性质与功能",
-          "path": "06 生物化学与食品化学/BC 2-1 水的结构、性质与功能.md",
+          "path": "06 生物化学与食品化学/BC 2 水专题/BC 2-1 水的结构、性质与功能.md",
           "content_type": "lesson",
           "chapter": "水",
           "order": "02-01",
@@ -2111,7 +2111,7 @@
         {
           "id": "bc-02-02",
           "title": "水和溶质的相互作用",
-          "path": "06 生物化学与食品化学/BC 2-2 水和溶质的相互作用.md",
+          "path": "06 生物化学与食品化学/BC 2 水专题/BC 2-2 水和溶质的相互作用.md",
           "content_type": "lesson",
           "chapter": "水",
           "order": "02-02",
@@ -2146,7 +2146,7 @@
         {
           "id": "bc-02-03",
           "title": "水分活度",
-          "path": "06 生物化学与食品化学/BC 2-3 水分活度.md",
+          "path": "06 生物化学与食品化学/BC 2 水专题/BC 2-3 水分活度.md",
           "content_type": "lesson",
           "chapter": "水",
           "order": "02-03",
@@ -2180,7 +2180,7 @@
         {
           "id": "bc-02-04",
           "title": "冷冻对食品稳定性的影响",
-          "path": "06 生物化学与食品化学/BC 2-4 冷冻对食品稳定性的影响.md",
+          "path": "06 生物化学与食品化学/BC 2 水专题/BC 2-4 冷冻对食品稳定性的影响.md",
           "content_type": "lesson",
           "chapter": "水",
           "order": "02-04",
@@ -2208,7 +2208,7 @@
         {
           "id": "bc-03-01",
           "title": "单糖",
-          "path": "06 生物化学与食品化学/BC 3-1 单糖.md",
+          "path": "06 生物化学与食品化学/BC 3 糖专题/BC 3-1 单糖.md",
           "content_type": "lesson",
           "chapter": "糖类",
           "order": "03-01",
@@ -2239,7 +2239,7 @@
         {
           "id": "bc-03-02",
           "title": "美拉德反应",
-          "path": "06 生物化学与食品化学/BC 3-2 美拉德反应.md",
+          "path": "06 生物化学与食品化学/BC 3 糖专题/BC 3-2 美拉德反应.md",
           "content_type": "lesson",
           "chapter": "糖类",
           "order": "03-02",
@@ -2268,7 +2268,7 @@
         {
           "id": "bc-03-03",
           "title": "寡糖与多糖",
-          "path": "06 生物化学与食品化学/BC 3-3 寡糖与多糖.md",
+          "path": "06 生物化学与食品化学/BC 3 糖专题/BC 3-3 寡糖与多糖.md",
           "content_type": "lesson",
           "chapter": "糖类",
           "order": "03-03",
@@ -2299,7 +2299,7 @@
         {
           "id": "bc-03-04",
           "title": "淀粉",
-          "path": "06 生物化学与食品化学/BC 3-4 淀粉.md",
+          "path": "06 生物化学与食品化学/BC 3 糖专题/BC 3-4 淀粉.md",
           "content_type": "lesson",
           "chapter": "糖类",
           "order": "03-04",
@@ -2334,7 +2334,7 @@
         {
           "id": "bc-03-05",
           "title": "果胶",
-          "path": "06 生物化学与食品化学/BC 3-5 果胶.md",
+          "path": "06 生物化学与食品化学/BC 3 糖专题/BC 3-5 果胶.md",
           "content_type": "lesson",
           "chapter": "糖类",
           "order": "03-05",
@@ -2365,7 +2365,7 @@
         {
           "id": "bc-04-01",
           "title": "脂质的物理性质",
-          "path": "06 生物化学与食品化学/BC 4-1 脂质的物理性质.md",
+          "path": "06 生物化学与食品化学/BC 4 脂质专题/BC 4-1 脂质的物理性质.md",
           "content_type": "lesson",
           "chapter": "脂质",
           "order": "04-01",
@@ -2396,7 +2396,7 @@
         {
           "id": "bc-04-02",
           "title": "脂质的化学性质与加工特性",
-          "path": "06 生物化学与食品化学/BC 4-2 脂质的化学性质与加工特性.md",
+          "path": "06 生物化学与食品化学/BC 4 脂质专题/BC 4-2 脂质的化学性质与加工特性.md",
           "content_type": "lesson",
           "chapter": "脂质",
           "order": "04-02",
@@ -2406,7 +2406,7 @@
           "estimated_minutes": 5,
           "prerequisites": [],
           "next": [
-            "bc-05"
+            "bc-05-01"
           ],
           "tags": [
             "生物化学",
@@ -2429,41 +2429,9 @@
           "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“脂质的化学性质与加工特性”主题。"
         },
         {
-          "id": "bc-05",
-          "title": "酶",
-          "path": "06 生物化学与食品化学/BC 5 酶.md",
-          "content_type": "lesson",
-          "chapter": "酶",
-          "order": "05",
-          "status": "scientific-review",
-          "difficulty": 3,
-          "importance": 3,
-          "estimated_minutes": 5,
-          "prerequisites": [],
-          "next": [
-            "bc-05-01"
-          ],
-          "tags": [
-            "生物化学",
-            "酶",
-            "催化",
-            "酶促反应动力学",
-            "抑制剂",
-            "调节",
-            "核酶"
-          ],
-          "authors": [
-            "脆弱的百里橘",
-            "小倪"
-          ],
-          "reviewers": [],
-          "last_scientific_review": null,
-          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“酶”主题。"
-        },
-        {
           "id": "bc-05-01",
           "title": "酶概述",
-          "path": "06 生物化学与食品化学/BC 5-1 酶概述.md",
+          "path": "06 生物化学与食品化学/BC 5 酶专题/BC 5-1 酶概述.md",
           "content_type": "lesson",
           "chapter": "酶",
           "order": "05-01",
@@ -2490,11 +2458,43 @@
         },
         {
           "id": "bc-05-02",
-          "title": "酶促反应动力学",
-          "path": "06 生物化学与食品化学/BC 5-2 酶促反应动力学.md",
+          "title": "酶",
+          "path": "06 生物化学与食品化学/BC 5 酶专题/BC 5-2 酶.md",
           "content_type": "lesson",
           "chapter": "酶",
           "order": "05-02",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [
+            "bc-05-03"
+          ],
+          "tags": [
+            "生物化学",
+            "酶",
+            "催化",
+            "酶促反应动力学",
+            "抑制剂",
+            "调节",
+            "核酶"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“酶”主题。"
+        },
+        {
+          "id": "bc-05-03",
+          "title": "酶促反应动力学",
+          "path": "06 生物化学与食品化学/BC 5 酶专题/BC 5-3 酶促反应动力学.md",
+          "content_type": "lesson",
+          "chapter": "酶",
+          "order": "05-03",
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
