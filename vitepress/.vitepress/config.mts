@@ -8,16 +8,38 @@ const courses: any[] = JSON.parse(
 
 const toLink = (p: string) => '/' + p.replace(/\.md$/, '')
 
+// 用文件名（不含扩展名）作为侧栏文字，保留编制的前缀，如「MB 01 绪论」「MMB 02-1 染色体」
+const stem = (p: string) => p.split('/').pop()!.replace(/\.md$/, '')
+
+// 不发布的文件（与 scripts/stage.mjs 的 SKIP 保持一致）
+const SKIP = ['模板', '一本全']
+const published = (p: string) => !SKIP.some((s) => p.includes(s))
+
 const sidebar = courses
   .filter((c) => c && c.directory)
-  .map((c) => ({
-    text: c.title,
-    collapsed: false,
-    items: [
-      ...(c.index_path ? [{ text: '课程目录', link: toLink(c.index_path) }] : []),
-      ...(c.lessons ?? []).map((l: any) => ({ text: l.title, link: toLink(l.path) })),
-    ],
-  }))
+  .map((c) => {
+    const items: any[] = []
+    if (c.index_path) items.push({ text: '课程目录', link: toLink(c.index_path) })
+
+    const top: any[] = []
+    const groups = new Map<string, any[]>()
+    for (const l of (c.lessons ?? []).filter((l: any) => published(l.path))) {
+      const prefix = c.directory + '/'
+      const rel: string = l.path.startsWith(prefix) ? l.path.slice(prefix.length) : l.path
+      const segs = rel.split('/')
+      const item = { text: stem(l.path), link: toLink(l.path) }
+      if (segs.length > 1) {
+        const key = segs[0]
+        if (!groups.has(key)) groups.set(key, [])
+        groups.get(key)!.push(item)
+      } else {
+        top.push(item)
+      }
+    }
+    items.push(...top)
+    for (const [name, sub] of groups) items.push({ text: name, collapsed: false, items: sub })
+    return { text: c.title, collapsed: false, items }
+  })
 
 export default defineConfig({
   lang: 'zh-CN',
