@@ -7,7 +7,7 @@ BioEZ 是一套中文生物类课程笔记。**你只需要把内容写好、提
 | 你的情况 | 看这一节 |
 | --- | --- |
 | 第一次贡献，想跟着做一遍 | **一、从零开始**（用 Obsidian + GitHub Desktop，不用命令行） |
-| 想知道提交之后系统做了什么 | **1.8 提交之后会发生什么** |
+| 想知道提交之后系统做了什么 | **1.9 提交之后会发生什么** |
 | 想知道文章怎么写、文件怎么命名 | **二、文章风格**、**三、文件命名** |
 | 只是想报个错，不想装软件 | **四、其他贡献方式** |
 | 想改脚本、主题、站点配置 | **七、进阶：BioEZ 是怎么跑起来的** |
@@ -50,7 +50,37 @@ Obsidian → **Open folder as vault** → 选中刚才 Clone 下来的文件夹�
 
 > Obsidian 会在仓库里建一个 `.obsidian` 文件夹（你自己的界面配置）。它不影响内容，已经在 `.gitignore` 里，不用管它。
 
-### 1.6 提交并推送（commit → push）
+### 1.6 提交前：跑一次「准备提交」
+
+文章写好后，还有几件小事需要工具帮忙：给文章补上元数据、在开头插入「课程导航」、更新课程目录。
+
+**这些不会自动发生**——GitHub 和 Quartz 都只会**读**你的笔记，不会**回写**你的文件。所以提交前先跑一次准备脚本，两种方式随你挑：
+
+**方式一：双击运行（macOS，推荐）**
+
+在仓库根目录双击 **`准备提交.command`**。会弹出一个终端窗口，自动跑完并把结果显示出来，按任意键关闭。
+
+**方式二：终端命令**
+
+```bash
+cd "/Users/naohinc./档案馆/6 代码/BioEZ"      # 换成你自己的 clone 路径
+python3 scripts/prepare_contribution.py
+```
+
+它会依次做这几件事：
+
+| 步骤 | 作用 |
+| --- | --- |
+| 补齐元数据 | 给没写 frontmatter 的文章补上（只补缺，**不覆盖**你已经写好的） |
+| 生成导航与目录 | 把「课程导航」块写进文章，同时更新 `COURSE_INDEX.md`、课程清单与 README |
+| 刷新图片清单与质量报告 | 免得 CI 因为"报告过期"而失败 |
+| 跑一遍检查 | 元数据、生成一致性、教学图、链接与图片、单元测试，有问题一次性告诉你 |
+
+看到 **`全部完成 ✓`** 就可以提交了；如果显示 **`有步骤没通过`**，按提示改好再跑一次。
+
+> 它**不写正文**，也**不替你提交**：正文还是在 Obsidian 里写，Commit / Push 还是在 GitHub Desktop 里点。
+
+### 1.7 提交并推送（commit → push）
 
 回到 **GitHub Desktop**：
 
@@ -61,7 +91,7 @@ Obsidian → **Open folder as vault** → 选中刚才 Clone 下来的文件夹�
 
 > commit 和 push 的区别：commit 是"在本机存档"，push 是"把这个存档上传到 GitHub"。只 commit 不 push，别人看不到。
 
-### 1.7 发起合并请求（Pull Request）
+### 1.8 发起合并请求（Pull Request）
 
 Push 完成后，GitHub Desktop 会提示 **Create Pull Request**（或 **Preview Pull Request**），点它会在浏览器里打开一个页面：
 
@@ -70,7 +100,7 @@ Push 完成后，GitHub Desktop 会提示 **Create Pull Request**（或 **Previe
 
 这就是 **PR（Pull Request，合并请求）**：你请求维护者把你这份改动合并进正式仓库。
 
-### 1.8 提交之后会发生什么（原理）
+### 1.9 提交之后会发生什么（原理）
 
 维护者点了合并（或者你自己就是维护者）之后，事情全在云端自动发生：
 
@@ -126,14 +156,15 @@ VitePress 负责发布到 **wiki.bioez.xyz**：
 - 这些目录和导航**都是脚本自动生成的**，你不需要去别的地方手动补链接。
 - 如果检查失败：**两个站点都不会更新**，继续保持上一次正常的样子；修好再推一次即可。
 
-### 1.9 以后每次怎么改
+### 1.10 以后每次怎么改
 
 重复这个循环就行：
 
 1. 打开 GitHub Desktop，先点 **Fetch origin**；如果提示落后，点 **Pull**（把别人的新改动同步下来）。
 2. 在 Obsidian 里改。
-3. GitHub Desktop 里 **Commit** → **Push**。
-4. 在 GitHub 上开一个新的 Pull Request（GitHub Desktop 会提示入口）。
+3. 双击 **`准备提交.command`**（或跑一次脚本），看到 `全部完成 ✓`。
+4. GitHub Desktop 里 **Commit** → **Push**。
+5. 在 GitHub 上开一个新的 Pull Request（GitHub Desktop 会提示入口）。
 
 > 如果你被加成了仓库协作者（有写权限），可以不用 Fork，直接 Clone 原仓库，改完 Push 即可。
 
@@ -221,7 +252,7 @@ BOT A-1 植物的细胞.md                # A 篇第 1 讲
 2. 直接改，拉到底部写一句说明，点 **Commit changes**（GitHub 会自动帮你 Fork 并提交）。
 3. 回到仓库首页，点出现的 **Compare & pull request**，填一句说明后提交。
 
-**已经有 Fork 的仓库**：走第一节的 1.9 循环即可。
+**已经有 Fork 的仓库**：走第一节的 1.10 循环即可。
 
 ## 五、提交信息怎么写
 
@@ -237,7 +268,7 @@ BOT A-1 植物的细胞.md                # A 篇第 1 讲
 
 例子：`content(MB 05): 补全微生物生长曲线一节`、`fix(BC 2-2): 修正水分活度数值`。
 
-再记两条：**一次提交只做一件事**；**新增、改名或移动文件后，先看第七节的 7.2 跑一遍脚本**，否则 CI 会失败。
+再记两条：**一次提交只做一件事**；**提交前先按 1.6 跑一次「准备提交」**，否则新增或改名的文章不会进目录，CI 也会失败。
 
 ## 六、对 AI 的限制
 
@@ -280,6 +311,7 @@ AI 是工具，不是作者。
 
 | 脚本 | 作用 |
 | --- | --- |
+| `scripts/prepare_contribution.py` | **一键准备提交**（就是 1.6 用的那个）：串起下面的迁移与生成步骤，再跑一遍本地检查 |
 | `scripts/course_catalog.py` | 共享库：解析 frontmatter、校验命名、推导默认元数据、序列化回文件 |
 | `scripts/migrate_course_metadata.py` | 给老页面**补**缺失的 frontmatter 字段（只补缺，不覆盖已有值） |
 | `scripts/build_course_catalog.py` | 生成目录、课程清单、页面导航；`--check` 只检查是否有漂移 |
@@ -290,7 +322,13 @@ AI 是工具，不是作者。
 | `scripts/check_repository_hygiene.py` | 仓库规范（大文件、二进制、许可） |
 | `scripts/build_quartz_site.mjs` | 构建 Quartz 站点（见 7.3） |
 
-常规流程：
+日常提交只需要一条命令（就是 1.6 里的那个，它把下面这些串起来跑，并额外刷新图片清单与质量报告）：
+
+```bash
+python3 scripts/prepare_contribution.py
+```
+
+想手动逐步来，也可以按顺序单独执行：
 
 ```bash
 python3 scripts/migrate_course_metadata.py      # 新页面补元数据
