@@ -4,7 +4,8 @@
     {
       "name": "小倪",
       "github": "XiaoniNaoh",
-      "title": "陕西师范大学 · 食品专业",
+      "title": "发起人",
+      "desc": "正在码一部莎士比亚全集的灵长类。",
       "links": [
         { "icon": "github", "link": "https://github.com/XiaoniNaoh" },
         { "icon": "site", "link": "https://bioez.xyz/" }
@@ -14,6 +15,7 @@
       "name": "脆弱的百里橘",
       "github": "LightChainr",
       "title": "",
+      "desc": "参与课程编写，本站的 Quartz 课程地图由他搭建。",
       "links": [
         { "icon": "github", "link": "https://github.com/LightChainr" }
       ]
