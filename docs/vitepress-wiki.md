@@ -45,7 +45,14 @@ npm run build    # 本地构建
 - CI 通过 GitHub Secrets 里的 `WIKI_SSH_HOST` / `WIKI_SSH_USER` / `WIKI_SSH_KEY` 登录服务器部署。
 - 服务器为直连（灰云、绕过 Cloudflare），HTTPS 用 Let's Encrypt 证书。
 
-## 与 Quartz 的关系
+## 与 Quartz 并行
 
-仓库仍保留原有的 Quartz 发布（`.github/workflows/quartz-pages.yml` → GitHub Pages）。
-若不再需要，可删除该 workflow 与 `site/` 目录下的 Quartz 配置。
+两条发布流水线互不影响，push 到 `main` 时同时触发，共用同一份课程内容与 `data/courses.json`：
+
+| 流水线 | Workflow | 发布目标 |
+| --- | --- | --- |
+| Quartz（原有） | `.github/workflows/quartz-pages.yml` | GitHub Pages：<https://xiaoninaoh.github.io/BioEZ/> |
+| VitePress（新增） | `.github/workflows/vitepress-deploy.yml` | 香港服务器：<https://wiki.bioez.xyz/> |
+
+定位：Quartz 面向公开的开源阅读（GitHub Pages，数字花园），VitePress 面向自有站点的 wiki。
+写一次笔记，两条线同时更新。
