@@ -1,124 +1,22 @@
 /* BioEZ Wiki
-   参考「开往 Travellings」的观感：本质是 VitePress 默认主题 + 主色 / 字体覆盖。
-   这里只改主色（鼠尾草绿）与字体，其余全部沿用 VitePress 默认，保持干净的文档观感。 */
+   完全沿用 VitePress 默认主题（字体、字间距、行间距、间距、深色底等全部默认），
+   仅替换主色为鲜绿。
+
+   对比度：
+   - 浅色 #15803d 在纯白底上 ≈ 5.0:1（正文链接可读）
+   - 深色 #4ade80 在默认深色底 #1b1b1f 上 ≈ 9.8:1
+*/
 
 :root {
-  /* 鼠尾草绿（白底上对比度 ≈ 4.6:1，清晰但不刺眼） */
-  --vp-c-brand-1: #5f7d63;
-  --vp-c-brand-2: #51705a;
-  --vp-c-brand-3: #5f7d63;
-  --vp-c-brand-soft: rgba(95, 125, 99, 0.14);
-
-  /* 字体：与开往一致（Inter 西文 + Noto Sans CJK 中文） */
-  --vp-font-family-base:
-    'Inter', 'Noto Sans CJK SC', 'PingFang SC', -apple-system, 'Segoe UI',
-    'Microsoft YaHei', sans-serif;
-  --vp-font-family-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-
-  /* 侧栏宽度：比开往略宽，容纳较长的中文课名 */
-  --vp-sidebar-width: 300px;
+  --vp-c-brand-1: #15803d;
+  --vp-c-brand-2: #166534;
+  --vp-c-brand-3: #15803d;
+  --vp-c-brand-soft: rgba(21, 128, 61, 0.14);
 }
 
-/* 深色：与开往一致的柔和深灰（#1b1b1f 系），主色换鼠尾草绿 */
 .dark {
-  --vp-c-bg: #1b1b1f;
-  --vp-c-bg-alt: #161618;
-  --vp-c-bg-soft: #202127;
-  --vp-c-bg-elv: #202127;
-  --vp-c-border: #3c3f44;
-  --vp-c-divider: #2e2e32;
-  --vp-c-gutter: #000000;
-  --vp-c-text-1: rgba(255, 255, 245, 0.86);
-  --vp-c-text-2: rgba(235, 235, 245, 0.6);
-  --vp-c-text-3: rgba(235, 235, 245, 0.38);
-
-  --vp-c-brand-1: #a3c09a;
-  --vp-c-brand-2: #b8cfb0;
-  --vp-c-brand-3: #a3c09a;
-  --vp-c-brand-soft: rgba(163, 192, 154, 0.16);
-}
-
-/* ── 正文排版：比默认更松，适合中文长文阅读 ── */
-
-.vp-doc {
-  font-size: 17px;
-}
-
-.vp-doc p,
-.vp-doc li {
-  line-height: 1.9;
-}
-
-.vp-doc p {
-  margin: 20px 0;
-}
-
-.vp-doc li {
-  margin: 6px 0;
-}
-
-.vp-doc ul,
-.vp-doc ol {
-  margin: 16px 0;
-}
-
-.vp-doc h2 {
-  margin-top: 56px;
-  padding-top: 28px;
-}
-
-.vp-doc h3 {
-  margin-top: 40px;
-  padding-top: 20px;
-}
-
-.vp-doc blockquote {
-  margin: 20px 0;
-  padding: 4px 0 4px 18px;
-  line-height: 1.9;
-}
-
-.vp-doc table {
-  margin: 24px 0;
-}
-
-/* 自定义块（提示框）也更透气 */
-.custom-block {
-  margin: 24px 0;
-  padding: 20px 24px;
-  line-height: 1.9;
-}
-
-/* ── 侧栏：课程（一级分组）更醒目、彼此分隔，避免挤成一团 ── */
-
-.VPSidebarItem.level-0 {
-  padding: 6px 0 10px;
-}
-
-/* 每门课之间加一道细分隔线 */
-.VPSidebarItem.level-0 + .VPSidebarItem.level-0 {
-  margin-top: 10px;
-  border-top: 1px solid var(--vp-c-divider);
-  padding-top: 16px;
-}
-
-/* 课名加粗、放大，颜色更实 */
-.VPSidebarItem.level-0 > .item > .text,
-.VPSidebarItem.level-0 > .item > .link > .text {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-  letter-spacing: 0.01em;
-}
-
-/* 二级分组（如 MMB 章 / A篇）稍作区分 */
-.VPSidebarItem.level-1 > .item > .text {
-  font-weight: 600;
-  color: var(--vp-c-text-2);
-}
-
-/* 侧栏整体行距松一点 */
-.VPSidebar .VPSidebarItem.level-2 .text,
-.VPSidebar .VPSidebarItem.level-3 .text {
-  line-height: 1.7;
+  --vp-c-brand-1: #4ade80;
+  --vp-c-brand-2: #6ee7a0;
+  --vp-c-brand-3: #4ade80;
+  --vp-c-brand-soft: rgba(74, 222, 128, 0.16);
 }
