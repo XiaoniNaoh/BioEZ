@@ -39,9 +39,9 @@ const sidebar = courses
     items.push(...top)
     // 章节层（二级目录，如「MMB 02 染色体与DNA」「A篇」）可折叠
     for (const [name, sub] of groups) items.push({ text: name, collapsed: true, items: sub })
-    // 课名前加目录序号（如「02」），便于一眼分辨
+    // 课名前加目录序号（如「02」）便于分辨；课程默认折叠，仅当前所在课程自动展开
     const num = (c.directory.match(/^(\d+)/) || [])[1]
-    return { text: num ? `${num} ${c.title}` : c.title, items }
+    return { text: num ? `${num} ${c.title}` : c.title, collapsed: true, items }
   })
 
 export default defineConfig({

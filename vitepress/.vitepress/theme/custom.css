@@ -1,29 +1,59 @@
-/* BioEZ Wiki
-   完全沿用 VitePress 默认主题（字体、字间距、行间距、间距、深色底等全部默认），
-   仅替换主色为清亮的水蓝色，并做一处图标底色呼应。
-
-   主色对比度：
-   - 浅色 #0ea5e9 在白底上 ≈ 3.1:1（偏亮，属水蓝色系里较清晰的一档）
-   - 深色 #7dd3fc 在默认深色底 #1b1b1f 上 ≈ 9:1
-*/
+/* BioEZ Wiki — 色板对齐参考站 https://bioez.xyz/docs/BioEZ 的设计
+   （品牌薄荷绿 #4DCBA0，浅底 #f6f8fa，描边 #e2e8f0，正文 #213547；
+     深色底 #1b1b1f）
+   字体、字间距、行间距等排版仍全部沿用 VitePress 默认。 */
 
 :root {
-  --vp-c-brand-1: #0ea5e9;
-  --vp-c-brand-2: #0284c7;
-  --vp-c-brand-3: #0ea5e9;
-  --vp-c-brand-soft: rgba(14, 165, 233, 0.14);
+  /* 品牌薄荷绿 */
+  --vp-c-brand-1: #4dcba0;
+  --vp-c-brand-2: #3eb892;
+  --vp-c-brand-3: #4dcba0;
+  --vp-c-brand-soft: rgba(77, 203, 160, 0.15);
+
+  /* 背景 / 描边 / 文字 */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f6f8fa;
+  --vp-c-bg-soft: #f9f9f9;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-border: #e2e8f0;
+  --vp-c-divider: #e2e8f0;
+  --vp-c-gutter: #e2e8f0;
+  --vp-c-text-1: #213547;
+  --vp-c-text-2: #48576a;
+  --vp-c-text-3: #7c8b9a;
 }
 
 .dark {
-  --vp-c-brand-1: #7dd3fc;
-  --vp-c-brand-2: #a5e8fd;
-  --vp-c-brand-3: #7dd3fc;
-  --vp-c-brand-soft: rgba(125, 211, 252, 0.16);
+  --vp-c-brand-1: #4dcba0;
+  --vp-c-brand-2: #6fd9b4;
+  --vp-c-brand-3: #4dcba0;
+  --vp-c-brand-soft: rgba(77, 203, 160, 0.15);
+
+  --vp-c-bg: #1b1b1f;
+  --vp-c-bg-alt: #161618;
+  --vp-c-bg-soft: #262629;
+  --vp-c-bg-elv: #202127;
+  --vp-c-border: #2e2e32;
+  --vp-c-divider: #2e2e32;
+  --vp-c-gutter: #000000;
+  --vp-c-text-1: rgba(255, 255, 245, 0.86);
+  --vp-c-text-2: rgba(235, 235, 245, 0.68);
+  --vp-c-text-3: rgba(235, 235, 245, 0.38);
 }
 
-/* 首页卡片图标块的底色，跟主色呼应 */
+/* 首页卡片图标块的底色，跟品牌色呼应 */
 .VPFeature .icon {
   background-color: var(--vp-c-brand-soft);
+}
+
+/* 侧栏当前项：淡薄荷底高亮（与参考站一致） */
+.VPSidebarItem.is-active > .item > .link {
+  background-color: var(--vp-c-brand-soft);
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 /* 让没有二级目录的课程，条目也统一缩进一级（带左侧细导线），
