@@ -25,6 +25,9 @@ IGNORED_DIRECTORIES = {
     ".playwright-cli",
     "node_modules",
     "public",
+    # vitepress/ 是站点工程，其 content/ 下是课程正文的构建副本，
+    # 不应参与内容资源检查（CI 中也不存在该目录）。
+    "vitepress",
     "__pycache__",
 }
 COURSE_DIRECTORY = re.compile(r"^0[1-7] ")
