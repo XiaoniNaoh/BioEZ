@@ -120,7 +120,8 @@ def render_frontmatter(metadata: dict[str, Any]) -> str:
         value = metadata[key]
         if isinstance(value, list):
             if not value:
-                lines.append(f"{key}: []")
+                # last_scientific_review 的合法值只有日期或 null，空列表要写成 null
+                lines.append(f"{key}: null" if key == "last_scientific_review" else f"{key}: []")
             else:
                 lines.append(f"{key}:")
                 lines.extend(f"  - {yaml_scalar(item)}" for item in value)
