@@ -37,7 +37,8 @@ const sidebar = courses
       }
     }
     items.push(...top)
-    for (const [name, sub] of groups) items.push({ text: name, items: sub })
+    // 章节层（二级目录，如「MMB 02 染色体与DNA」「A篇」）可折叠
+    for (const [name, sub] of groups) items.push({ text: name, collapsed: true, items: sub })
     // 课名前加目录序号（如「02」），便于一眼分辨
     const num = (c.directory.match(/^(\d+)/) || [])[1]
     return { text: num ? `${num} ${c.title}` : c.title, items }
