@@ -42,6 +42,17 @@ const courses = existsSync(join(DATA, 'courses.json'))
   ? JSON.parse(readFileSync(join(DATA, 'courses.json'), 'utf8')).courses ?? []
   : []
 
+const contributors = existsSync(join(DATA, 'contributors.json'))
+  ? JSON.parse(readFileSync(join(DATA, 'contributors.json'), 'utf8')).contributors ?? []
+  : []
+
+// 团队页用到的图标：内联 SVG，避免浏览器运行时去 api.iconify.design 取图（国内可能取不到）
+const ICON_SVG = {
+  github:
+    '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>',
+  site: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20a14.5 14.5 0 0 0 0-20M2 12h20"/></g></svg>',
+}
+
 // 课程入口的相对路径（含 .md），以及编码后的站点路由（空格/中文需转义，否则 Markdown 链接解析失败）
 const indexPath = (c) => c.index_path || `${c.directory}/COURSE_INDEX.md`
 const route = (p) => encodeURI('/' + p.replace(/\.md$/, ''))
@@ -162,12 +173,50 @@ ${courses.map((c) => `- **${c.title}**：${(c.description || '').replace(/\\n/g,
 
 内容一直在补，也一直在改。有些篇目是早先整理的，后面会陆续回看和修订。要是发现哪里写错、或者讲得不清楚，欢迎到仓库提 Issue，也欢迎直接提交修改。
 
+## 谁在维护
+
+这套笔记由两个人一起整理，分工与联系方式见[团队页面](/team)。
+
 ## 许可与出处
 
 除特别注明外，本站内容以 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 许可开放：转载时注明出处，并以相同方式共享即可。
 
 - 仓库：<https://github.com/XiaoniNaoh/BioEZ>
 - 在线版：<https://wiki.bioez.xyz/>
+`,
+)
+
+// 团队页（数据来自 data/contributors.json）
+const teamMembers = contributors.map((c) => ({
+  avatar: `https://github.com/${c.github}.png`,
+  name: c.name,
+  title: c.title ?? '',
+  desc: c.desc ?? '',
+  links: (c.links ?? []).map((l) => ({ icon: { svg: ICON_SVG[l.icon] ?? '' }, link: l.link })),
+}))
+
+writeFileSync(
+  join(CONTENT, 'team.md'),
+  `---
+layout: page
+---
+
+<script setup>
+import { VPTeamPage, VPTeamPageTitle, VPTeamMembers } from 'vitepress/theme'
+
+const members = ${JSON.stringify(teamMembers, null, 2)}
+</script>
+
+<VPTeamPage>
+  <VPTeamPageTitle>
+    <template #title>关于我们</template>
+    <template #lead>
+      这套笔记由两个人一起维护：一个写课程正文，一个写脚本和站点。下面的信息按各自的 GitHub 主页整理。
+    </template>
+  </VPTeamPageTitle>
+
+  <VPTeamMembers size="medium" :members="members" />
+</VPTeamPage>
 `,
 )
 
