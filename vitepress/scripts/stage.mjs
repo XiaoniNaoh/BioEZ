@@ -42,6 +42,10 @@ const courses = existsSync(join(DATA, 'courses.json'))
   ? JSON.parse(readFileSync(join(DATA, 'courses.json'), 'utf8')).courses ?? []
   : []
 
+// 课程入口的相对路径（含 .md），以及编码后的站点路由（空格/中文需转义，否则 Markdown 链接解析失败）
+const indexPath = (c) => c.index_path || `${c.directory}/COURSE_INDEX.md`
+const route = (p) => encodeURI('/' + p.replace(/\.md$/, ''))
+
 rmSync(CONTENT, { recursive: true, force: true })
 mkdirSync(CONTENT, { recursive: true })
 
@@ -60,8 +64,7 @@ for (const extra of ['资料卡与图库', 'assets']) {
 
 const features = courses
   .map((c) => {
-    const link = '/' + (c.index_path || c.directory).replace(/\.md$/, '')
-    return `  - icon: 📘\n    title: ${c.title}\n    details: ${(c.description || '').replace(/\n/g, ' ')}\n    link: ${link}`
+    return `  - icon: 📘\n    title: ${c.title}\n    details: ${(c.description || '').replace(/\n/g, ' ')}\n    link: ${route(indexPath(c))}`
   })
   .join('\n')
 
@@ -100,9 +103,7 @@ writeFileSync(
 ${courses
   .map(
     (c, i) =>
-      `## ${i + 1}. ${c.title}\n\n${c.description || ''}\n\n- 篇数：${c.lesson_count ?? (c.lessons?.length ?? 0)}　·　预计阅读：${c.estimated_minutes ?? '?'} 分钟\n- 进入：[${
-        c.index_path || c.directory
-      }](/${(c.index_path || c.directory).replace(/\.md$/, '')})\n`,
+      `## ${i + 1}. ${c.title}\n\n${c.description || ''}\n\n- 篇数：${c.lesson_count ?? (c.lessons?.length ?? 0)}　·　预计阅读：${c.estimated_minutes ?? '?'} 分钟\n- [进入课程 →](${route(indexPath(c))})\n`,
   )
   .join('\n')}
 `,
