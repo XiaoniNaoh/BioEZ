@@ -36,7 +36,7 @@ content_type: "lesson"
 > [← 上一篇：核酸](<BC 6 核酸.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：大巧不工的幼教级米氏方程推导 →](<BC SP 大巧不工的幼教级米氏方程推导.md>)
 <!-- END AUTO-GENERATED NAVIGATION -->
 
-#  生物化学 话题 4：糖代谢
+# BC 7：糖代谢
 #生物化学 #糖类 #代谢 #糖酵解 #糖异生 #磷酸戊糖途径
 
 ## 1 糖的分解代谢

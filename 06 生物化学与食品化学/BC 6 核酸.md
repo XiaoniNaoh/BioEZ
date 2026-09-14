@@ -38,6 +38,7 @@ content_type: "lesson"
 > [← 上一篇：酶促反应动力学](<BC 5 酶专题/BC 5-3 酶促反应动力学.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：糖代谢 →](<BC 7 糖代谢.md>)
 <!-- END AUTO-GENERATED NAVIGATION -->
 
+# BC 6 核酸
 #生物化学 #DNA #RNA #碱基 #糖类 #结构 #功能 #理化性质
 
 ## 1 核酸的化学组成
