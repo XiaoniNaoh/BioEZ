@@ -58,7 +58,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'BioEZ',
   titleTemplate: ':title · BioEZ',
-  description: '面向生物相关课程的中文学习资料库',
+  description: '几门生物课的笔记。按课程分册，顺着往下读就行。',
   srcDir: './content',
   cleanUrls: true,
   ignoreDeadLinks: true,

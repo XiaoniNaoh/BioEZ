@@ -7,4 +7,4 @@ enableToc: false
 
 BioEZ 把课程正文保留为普通 Markdown，同时从结构化课程清单自动生成下面的学习路线。课程顺序、章节、阅读时间和状态以 `data/courses.json` 为准。
 
-想看课程之外的东西？主站 [bioez.xyz](https://bioez.xyz) 更杂也更随意——这里放整理好的，那里放还没整理好的。
+课程之外的东西都在主站 [bioez.xyz](https://bioez.xyz)，这一页只管课程。

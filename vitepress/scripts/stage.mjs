@@ -110,7 +110,7 @@ titleTemplate: false
 hero:
   name: BioEZ
   text: 生物学宝宝教程
-  tagline: 面向生物相关课程的中文学习资料库 —— 按课程分册，配好目录与前后篇导航。
+  tagline: 几门生物课的笔记。按课程分册，顺着往下读就行。
   actions:
     - theme: brand
       text: 开始学习
@@ -133,7 +133,7 @@ ${features}
 
 ## 另一摊
 
-课程之外的杂想、折腾记录，以及几篇写着写着发现没有结论的稿子，都在主站 [bioez.xyz](https://bioez.xyz)。那边没有目录，更新随缘，但偶尔会有这里放不下的东西。
+课程以外的东西都写在主站 [bioez.xyz](https://bioez.xyz)。那边没编目录，翻到哪算哪。
 `,
 )
 
