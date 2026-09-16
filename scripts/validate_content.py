@@ -171,9 +171,50 @@ def validate_file(path: Path) -> tuple[dict[str, Any] | None, list[Finding]]:
     return data, findings
 
 
+def revision_exists(rev: str) -> bool:
+    """该提交在本地仓库里是否真的存在。"""
+    if not rev:
+        return False
+    return (
+        subprocess.run(
+            ["git", "cat-file", "-e", f"{rev}^{{commit}}"],
+            cwd=ROOT,
+            capture_output=True,
+        ).returncode
+        == 0
+    )
+
+
+def resolve_base(base: str, head: str) -> str:
+    """强制推送后，CI 传来的基础提交可能已经从仓库里消失。
+
+    这种情况下退回比较本次提交自身（head^..head），只检查这一提交带来的文件，
+    而不是让脚本直接抛异常、把检查卡在一次报错上。
+    """
+    if revision_exists(base):
+        return base
+    parent = subprocess.run(
+        ["git", "rev-parse", "--verify", "--quiet", f"{head}^"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    print(f"提示：基础提交 {base or '（空）'} 不在仓库中（常见于强制推送），改以 {parent or head} 为基准。")
+    return parent or head
+
+
 def changed_paths(base: str, head: str) -> list[Path]:
     result = subprocess.run(
-        ["git", "diff", "--name-only", "-z", "--diff-filter=ACMR", f"{base}...{head}", "--", "*.md"],
+        [
+            "git",
+            "diff",
+            "--name-only",
+            "-z",
+            "--diff-filter=ACMR",
+            f"{resolve_base(base, head)}...{head}",
+            "--",
+            "*.md",
+        ],
         cwd=ROOT, check=True, capture_output=True,
     )
     return [ROOT / os.fsdecode(item) for item in result.stdout.split(b"\0") if item]
