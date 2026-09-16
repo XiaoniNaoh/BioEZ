@@ -9,6 +9,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/XiaoniNaoh/BioEZ",
+      博客: "https://bioez.xyz",
       "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/",
     },
   }),

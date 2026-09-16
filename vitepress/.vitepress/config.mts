@@ -75,6 +75,7 @@ export default defineConfig({
       { text: '全部课程', link: '/courses' },
       { text: '关于', link: '/about' },
       { text: '团队', link: '/team' },
+      { text: '博客', link: 'https://bioez.xyz' },
     ],
     sidebar,
     outline: { level: [2, 3], label: '页面导航' },
