@@ -32,7 +32,7 @@ node scripts/build_quartz_site.mjs --skip-install --serve
 
 首页课程树读取 `data/courses.json`（schema v1），使用 `courses[].directory/index_path/lessons[]`。课程清单缺失或无效时，首页显示明确提示，正文与 Explorer 仍可浏览。
 
-维护看板读取 `data/quality-report.json`（schema v1）：
+维护看板读取 `data/quality-report.json`（schema v1）。这份报告**不进仓库**，由构建流程在 CI 里按当前内容现算后放进站点：
 
 - `summary`：资源检查器的数值汇总；
 - `findings[]`：`code`、`severity`、`path`、`line`、`target`、`message`；

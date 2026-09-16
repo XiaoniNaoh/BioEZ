@@ -80,10 +80,6 @@ ADVICE_RULES: list[tuple[str, str]] = [
         "如果还是失败，多半是课程目录改名后没有同步 `data/course-config.json`。",
     ),
     (
-        r"quality report is stale",
-        "质量报告过期：重新运行本脚本，它会自动刷新 `data/quality-report.json`。",
-    ),
-    (
         r"可复现图像检查|教学 SVG",
         "教学图和脚本生成的结果不一致：运行 `python3 scripts/generate_teaching_figures.py` 重新生成。",
     ),
@@ -137,10 +133,7 @@ CHECK_STEPS: list[tuple[str, list[str]]] = [
     ("生成一致性检查", ["scripts/build_course_catalog.py", "--check"]),
     ("教学图可复现性", ["scripts/generate_teaching_figures.py", "--check"]),
     ("图片清单一致性", ["scripts/build_image_manifest.py", "--check"]),
-    (
-        "链接与图片检查",
-        ["scripts/check_content_resources.py", "--check-report", "data/quality-report.json"],
-    ),
+    ("链接与图片检查", ["scripts/check_content_resources.py"]),
     ("单元测试", ["-m", "unittest", "discover", "-s", "tests"]),
 ]
 
@@ -171,11 +164,44 @@ def changed_files() -> list[str]:
     return [row for row in (result.stdout or "").splitlines() if row.strip()]
 
 
+def uncommitted_course_notes() -> list[str]:
+    """列出课程目录里还没提交的 Markdown。
+
+    本地留草稿很正常，但生成脚本只看目录里有什么文件，草稿会被一起写进课程目录与
+    清单。这里只做提醒，不改变生成结果。
+    """
+    try:
+        result = subprocess.run(
+            [
+                "git", "-c", "core.quotePath=false",
+                "ls-files", "--others", "--exclude-standard", "--", "*.md",
+            ],
+            cwd=ROOT, check=True, capture_output=True, text=True,
+        )
+    except (OSError, subprocess.CalledProcessError):
+        return []
+    drafts = [
+        line for line in result.stdout.splitlines()
+        if len(line) > 2 and line[:2].isdigit()
+    ]
+    if not drafts:
+        return []
+    lines = ["", f"注意：下面 {len(drafts)} 个课程文件还没提交到 git，但会被写进本次生成的目录与清单："]
+    lines.extend(f"    {path}" for path in drafts[:10])
+    if len(drafts) > 10:
+        lines.append(f"    …… 另有 {len(drafts) - 10} 个")
+    lines.append("    如果它们还没定稿、不打算一起推送，就别把这次的 COURSE_INDEX.md、data/courses.json、README 一起提交。")
+    return lines
+
+
 def main() -> int:
     print("=" * 56)
     print("准备提交：先把该生成的东西生成好，再检查一遍")
     print("（某一步没通过时，会给出对应的修复建议）")
     print("=" * 56)
+
+    for line in uncommitted_course_notes():
+        print(line)
 
     print("\n【第一步】自动生成（会修改文件）")
     for label, args in WRITE_STEPS:

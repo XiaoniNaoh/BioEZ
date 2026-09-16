@@ -309,13 +309,15 @@ AI 是工具，不是作者。
 | 课程地图（数字花园） | Quartz | <https://xiaoninaoh.github.io/BioEZ/> |
 | 课程 Wiki | VitePress | <https://wiki.bioez.xyz/> |
 
-两条流水线互相独立，push 到 `main` 会同时触发，互不影响。**如果检查失败，两个站都不会更新**，线上会保持上一次正常的样子。
+两条流水线互相独立，push 到 `main` 会同时触发。两条都会**先跑一遍内容检查**（`Content checks`），
+只有检查全绿才会继续构建与发布；**检查失败时两个站都不更新**，线上保持上一次正常的样子。
 
 ### 7.2 内容管线（脚本）
 
 **唯一的人工数据源**是 `data/course-config.json`：课程 slug、标题、目录名、前缀、简介、进度、作者都记在这里。
 
-由脚本生成、**不要手工编辑**的东西：每门课的 `COURSE_INDEX.md`、每页顶部的「课程导航」块、README 里的课程清单、`data/courses.json`、`data/quality-report.json`。
+由脚本生成、**不要手工编辑**的东西：每门课的 `COURSE_INDEX.md`、每页顶部的「课程导航」块、README 里的课程清单、`data/courses.json`。
+`data/quality-report.json`（资源质量报告）同样由脚本生成，但它**不进仓库**：本地跑脚本会生成一份供你自己看，CI 在构建站点时现算，所以不存在"报告过期"这回事。
 
 脚本分工：
 
@@ -345,7 +347,7 @@ python3 scripts/migrate_course_metadata.py      # 新页面补元数据
 python3 scripts/build_course_catalog.py         # 生成目录 / 清单 / 导航
 python3 scripts/validate_content.py --all       # 校验元数据
 python3 scripts/build_course_catalog.py --check # 确认没有生成漂移
-python3 scripts/check_content_resources.py --json-report data/quality-report.json
+python3 scripts/check_content_resources.py      # 检查链接、图片与孤立页
 ```
 
 > 目录改名后若没同步 `data/course-config.json`，构建会**直接报错**——这是刻意的，避免发出"缺了几门课"的站点。
@@ -364,7 +366,7 @@ python3 scripts/check_content_resources.py --json-report data/quality-report.jso
 4. 在 Quartz 目录里 `npm ci`，然后执行 `quartz/bootstrap-cli.mjs build --directory .cache/site-content --output public`。
 5. 产物落在 `public/`（已被 `.gitignore` 忽略，不进仓库）。
 
-CI 在 `.github/workflows/quartz-pages.yml`：push 到 `main` 后安装 Node 22 / Python 3.12 → 先跑资源质量报告 → `node scripts/build_quartz_site.mjs --check` → `actions/upload-pages-artifact` 上传 `public/` → `actions/deploy-pages@v4` 发布到 GitHub Pages。（PR 时只构建、不发布。）
+CI 在 `.github/workflows/quartz-pages.yml`：push 到 `main` 后**先跑内容检查**（`Content checks`，失败就停在这里），通过后安装 Node 22 / Python 3.12 → 现算一份资源质量报告给看板用 → `node scripts/build_quartz_site.mjs --check` → `actions/upload-pages-artifact` 上传 `public/` → `actions/deploy-pages@v4` 发布到 GitHub Pages。（PR 时只构建、不发布。）
 
 本地复现：
 
@@ -405,7 +407,7 @@ npm run preview    # 预览构建结果
 npm run stage      # 只跑内容暂存，不构建
 ```
 
-**CI 与部署**（`.github/workflows/vitepress-deploy.yml`）：`npm install` → `npm run build` → 把 `.vitepress/dist` 打成压缩包 → 用 SSH 上传并解包到 `/opt/1panel/apps/openresty/openresty/www/sites/wiki.bioez.xyz`（保留 `ssl/`、`log/`）→ `docker exec 1Panel-openresty-YVEg /usr/local/openresty/nginx/sbin/nginx -s reload` 重载 OpenResty。凭据放在仓库 Secrets：`WIKI_SSH_HOST`、`WIKI_SSH_USER`、`WIKI_SSH_KEY`。站点是**直连**（DNS 灰云、绕过 Cloudflare），HTTPS 用 Let's Encrypt 证书。
+**CI 与部署**（`.github/workflows/vitepress-deploy.yml`）：**先跑内容检查**（失败就停在这里）→ `npm install` → `npm run build` → 把 `.vitepress/dist` 打成压缩包 → 用 SSH 上传并解包到 `/opt/1panel/apps/openresty/openresty/www/sites/wiki.bioez.xyz`（保留 `ssl/`、`log/`）→ `docker exec 1Panel-openresty-YVEg /usr/local/openresty/nginx/sbin/nginx -s reload` 重载 OpenResty。凭据放在仓库 Secrets：`WIKI_SSH_HOST`、`WIKI_SSH_USER`、`WIKI_SSH_KEY`。站点是**直连**（DNS 灰云、绕过 Cloudflare），HTTPS 用 Let's Encrypt 证书。
 
 > `vitepress/content/` 是构建产物（已被 `.gitignore` 忽略）。资源检查脚本也把 `vitepress/` 排除在外，避免把这份副本当成正文重复统计。
 
@@ -413,11 +415,11 @@ npm run stage      # 只跑内容暂存，不构建
 
 | 工作流 | 触发 | 做什么 |
 | --- | --- | --- |
-| `content-quality.yml` | push `main`；相关文件的 PR | `validate_content.py --all` 校验元数据 |
-| `content-resources.yml` | push `main`；相关文件的 PR | 图片清单漂移、教学图可复现性、链接与图片检查 |
-| `repository-hygiene.yml` | push `main`；所有 PR | 仓库规范（大文件、二进制、许可） |
-| `quartz-pages.yml` | push `main`（PR 只构建） | 构建并发布 Quartz 到 GitHub Pages |
-| `vitepress-deploy.yml` | push `main` | 构建并发布 VitePress 到 wiki.bioez.xyz |
+| `content-checks.yml` | push `main`；PR；手动；被下面两个部署调用 | 三组检查：元数据与生成文件、资源与链接、仓库卫生 |
+| `quartz-pages.yml` | push `main`（PR 只构建） | 先跑内容检查，通过后构建并发布 Quartz 到 GitHub Pages |
+| `vitepress-deploy.yml` | push `main`；手动 | 先跑内容检查，通过后构建并发布 VitePress 到 wiki.bioez.xyz |
+
+> 内容检查只有一份，放在 `content-checks.yml` 里；两个部署 workflow 通过 `uses: ./.github/workflows/content-checks.yml` 复用它，所以改检查逻辑只需要改这一处。
 
 ### 7.6 进阶贡献可以改什么
 

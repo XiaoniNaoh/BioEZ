@@ -1,0 +1,75 @@
+name: Content checks
+
+# 内容检查：元数据与生成文件、资源与链接、仓库卫生。
+# 本仓库 push / PR 时自己跑一遍；两个部署 workflow 也会调用它，
+# 只有这里全绿才会继续构建与发布（失败时线上保持上一次正常的样子）。
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: 元数据与生成文件
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate all course metadata
+        run: python scripts/validate_content.py --all
+      - name: Check generated course catalog
+        run: python scripts/build_course_catalog.py --check
+      - name: Validate changed content in a pull request
+        if: github.event_name == 'pull_request'
+        run: python scripts/validate_content.py --base "${{ github.event.pull_request.base.sha }}" --head "${{ github.event.pull_request.head.sha }}"
+      - name: Validate the latest main-branch change
+        if: github.event_name == 'push'
+        run: python scripts/validate_content.py --base "${{ github.event.before }}" --head "${{ github.sha }}"
+
+  resources:
+    name: 资源与链接
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run resource checker tests
+        run: python -m unittest discover -s tests -p 'test_content_resources.py' -v
+      - name: Check generated teaching figures
+        run: python scripts/generate_teaching_figures.py --check
+      - name: Check image manifest drift
+        run: python scripts/build_image_manifest.py --check
+      - name: Check links and image assets
+        run: python scripts/check_content_resources.py
+
+  hygiene:
+    name: 仓库卫生
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run repository hygiene tests
+        run: python -m unittest discover -s tests -p 'test_repository_hygiene.py' -v
+      - name: Check changed files in a pull request
+        if: github.event_name == 'pull_request'
+        run: python scripts/check_repository_hygiene.py --base "${{ github.event.pull_request.base.sha }}" --head "${{ github.event.pull_request.head.sha }}"
+      - name: Check the latest main-branch change
+        if: github.event_name == 'push'
+        run: python scripts/check_repository_hygiene.py --base "${{ github.event.before }}" --head "${{ github.sha }}"

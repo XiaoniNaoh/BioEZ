@@ -38,3 +38,6 @@ __pycache__/
 /vitepress/content/
 /vitepress/.vitepress/dist/
 /vitepress/.vitepress/cache/
+
+# 资源质量报告由脚本按当前内容生成，构建站点时在 CI 里现算，不进仓库
+/data/quality-report.json

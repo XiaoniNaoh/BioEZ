@@ -73,10 +73,9 @@ git clone https://github.com/XiaoniNaoh/BioEZ.git
 1. Fork 本仓库。
 2. 新建分支，例如 `git checkout -b add-xxx`。
 3. 修改后推送分支并提交 Pull Request。
-4. 若改动涉及课程列表、导航或顺序，请先本地运行以下命令再提交，否则 CI 会失败：
+4. 提交前跑一次准备脚本（补元数据、生成目录与导航、再自查一遍），否则 CI 会失败：
    ```bash
-   python3 scripts/build_course_catalog.py
-   python3 scripts/check_content_resources.py --json-report data/quality-report.json
+   python3 scripts/prepare_contribution.py
    ```
 
 ## 常见问题

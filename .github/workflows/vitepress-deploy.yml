@@ -11,7 +11,12 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  checks:
+    # 内容检查通过才继续构建与发布（检查逻辑与 Content checks 共用一份）
+    uses: ./.github/workflows/content-checks.yml
+
   deploy:
+    needs: checks
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4

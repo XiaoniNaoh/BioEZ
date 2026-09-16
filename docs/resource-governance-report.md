@@ -1,6 +1,8 @@
 # Markdown 资源治理报告
 
-本报告记录资源治理基线、处理策略和可重复验证结果。机器可读的当前结果见 [`data/quality-report.json`](../data/quality-report.json)。
+本报告记录资源治理基线、处理策略和可重复验证结果。机器可读的当前结果由脚本按当前内容现算：
+本地跑 `python3 scripts/check_content_resources.py --json-report data/quality-report.json`，
+站点构建时由 CI 现算发布到看板（该文件不进仓库）。
 
 ## 处理结果
 
