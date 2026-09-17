@@ -2862,9 +2862,9 @@
         "undergraduate"
       ],
       "index_path": "08 食品风味化学与分析/COURSE_INDEX.md",
-      "page_count": 3,
-      "lesson_count": 3,
-      "estimated_minutes": 15,
+      "page_count": 1,
+      "lesson_count": 1,
+      "estimated_minutes": 5,
       "lessons": [
         {
           "id": "ffc-01",
@@ -2878,9 +2878,7 @@
           "importance": 3,
           "estimated_minutes": 5,
           "prerequisites": [],
-          "next": [
-            "ffc-02"
-          ],
+          "next": [],
           "tags": [
             "食品风味化学",
             "食品",
@@ -2892,58 +2890,6 @@
           "reviewers": [],
           "last_scientific_review": null,
           "summary": "介绍《食品风味化学与分析》中的“绪论”主题。"
-        },
-        {
-          "id": "ffc-02",
-          "title": "食品风味感官",
-          "path": "08 食品风味化学与分析/FFC 2 食品风味感官.md",
-          "content_type": "lesson",
-          "chapter": "课程正文",
-          "order": "02",
-          "status": "scientific-review",
-          "difficulty": 3,
-          "importance": 3,
-          "estimated_minutes": 5,
-          "prerequisites": [],
-          "next": [
-            "ffc-03"
-          ],
-          "tags": [
-            "食品风味化学",
-            "食品",
-            "食品风味"
-          ],
-          "authors": [
-            "小倪"
-          ],
-          "reviewers": [],
-          "last_scientific_review": null,
-          "summary": "介绍《食品风味化学与分析》中的“食品风味感官”主题。"
-        },
-        {
-          "id": "ffc-03",
-          "title": "风味物质的制备与创制",
-          "path": "08 食品风味化学与分析/FFC 3 风味物质的制备与创制.md",
-          "content_type": "lesson",
-          "chapter": "课程正文",
-          "order": "03",
-          "status": "scientific-review",
-          "difficulty": 3,
-          "importance": 3,
-          "estimated_minutes": 5,
-          "prerequisites": [],
-          "next": [],
-          "tags": [
-            "食品风味化学",
-            "食品",
-            "风味物质"
-          ],
-          "authors": [
-            "小倪"
-          ],
-          "reviewers": [],
-          "last_scientific_review": null,
-          "summary": "介绍《食品风味化学与分析》中的“风味物质的制备与创制”主题。"
         }
       ]
     }

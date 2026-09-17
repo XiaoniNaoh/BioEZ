@@ -33,6 +33,9 @@ __pycache__/
 # 益生菌 -- 新模块，暂不推送
 09 益生菌/
 
+# 未发布的草稿：放在各课程目录下的「未发布/」里，不进仓库、不进目录、不进站点
+未发布/
+
 # VitePress 本地依赖与构建产物（构建在 CI 或本地按需生成，不进仓库）
 /vitepress/node_modules/
 /vitepress/content/

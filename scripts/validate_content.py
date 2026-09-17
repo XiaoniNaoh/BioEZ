@@ -18,6 +18,8 @@ from typing import Any, Iterable
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = Path("data/course-config.json")
 COURSE_DIRECTORY = re.compile(r"^0[1-9] ")
+# 未发布草稿目录：放在课程目录下的同名子目录里，不参与校验
+UNPUBLISHED_DIR = "未发布"
 ID_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ALLOWED_STATUS = {"draft", "editorial-review", "scientific-review", "published"}
 REQUIRED_FIELDS = (
@@ -129,6 +131,7 @@ def is_content_path(path: Path) -> bool:
         path.suffix.lower() == ".md"
         and bool(relative.parts)
         and is_course_directory(relative.parts[0])
+        and UNPUBLISHED_DIR not in relative.parts
         and "模板" not in path.name
         and "一本全" not in path.name
         and path.name != "COURSE_INDEX.md"
