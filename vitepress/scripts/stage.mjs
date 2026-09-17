@@ -20,7 +20,7 @@ const CONTENT = join(PROJECT, 'content')
 const DATA = join(REPO, 'data')
 
 const ALLOWED = new Set(['.md', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.avif'])
-const SKIP = ['模板', '一本全', '未发布']
+const SKIP = ['模板', '一本全']
 
 function copyTree(src, dst) {
   for (const entry of readdirSync(src, { withFileTypes: true })) {

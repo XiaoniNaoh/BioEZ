@@ -65,7 +65,6 @@ const allowedExtensions = new Set([".md", ".png", ".jpg", ".jpeg", ".gif", ".svg
 function copyPublishedTree(source, target) {
   for (const entry of readdirSync(source, { withFileTypes: true })) {
     if (entry.name.startsWith(".")) continue
-    if (entry.name === "未发布") continue
     const from = join(source, entry.name)
     const to = join(target, entry.name)
     if (entry.isDirectory()) {

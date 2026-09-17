@@ -20,8 +20,6 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = Path("data/course-config.json")
 CATALOG_PATH = Path("data/courses.json")
 INDEX_NAME = "COURSE_INDEX.md"
-# 未发布草稿目录：放在课程目录下的同名子目录里，不参与目录生成与站点构建
-UNPUBLISHED_DIR = "未发布"
 NAV_START = "<!-- BEGIN AUTO-GENERATED NAVIGATION -->"
 NAV_END = "<!-- END AUTO-GENERATED NAVIGATION -->"
 README_START = "<!-- BEGIN AUTO-GENERATED COURSE CATALOG -->"
@@ -72,8 +70,6 @@ def load_courses(root: Path = ROOT) -> list[Course]:
 def is_lesson_path(path: Path) -> bool:
     """Return whether a Markdown file is course content rather than scaffolding."""
     if path.suffix.lower() != ".md":
-        return False
-    if UNPUBLISHED_DIR in path.parts:
         return False
     name = path.name
     return (

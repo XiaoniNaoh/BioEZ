@@ -31,13 +31,9 @@ IGNORED_DIRECTORIES = {
     "vitepress",
     # 09 为暂不发布模块，仅存在于本地，不参与检查（CI 中也不存在）。
     "09 益生菌",
-    # 各课程目录下的「未发布/」子目录是本地草稿，不参与检查。
-    "未发布",
     "__pycache__",
 }
 COURSE_DIRECTORY = re.compile(r"^0[1-9] ")
-# 未发布草稿目录：放在课程目录下的同名子目录里，不参与检查
-UNPUBLISHED_DIR = "未发布"
 
 
 def configured_course_directories(root: Path = ROOT) -> set[str]:
@@ -290,8 +286,6 @@ def resolve_wikilink(
 def is_course_page(path: Path, root: Path) -> bool:
     relative = path.relative_to(root)
     if not relative.parts or not is_course_directory(relative.parts[0]):
-        return False
-    if UNPUBLISHED_DIR in relative.parts:
         return False
     if "模板" in path.name or "目录" in path.name or "更新计划" in path.name:
         return False
