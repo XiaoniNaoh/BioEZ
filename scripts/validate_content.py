@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import json
 import os
 import re
 import subprocess
@@ -15,7 +16,8 @@ from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parents[1]
-COURSE_DIRECTORY = re.compile(r"^0[1-7] ")
+CONFIG_PATH = Path("data/course-config.json")
+COURSE_DIRECTORY = re.compile(r"^0[1-9] ")
 ID_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ALLOWED_STATUS = {"draft", "editorial-review", "scientific-review", "published"}
 REQUIRED_FIELDS = (
@@ -26,6 +28,30 @@ REQUIRED_FIELDS = (
 )
 LIST_FIELDS = {"audience", "prerequisites", "next", "tags", "authors", "reviewers", "references"}
 ALLOWED_CONTENT_TYPE = {"lesson", "course-index"}
+
+
+def configured_course_directories(root: Path = ROOT) -> set[str]:
+    """登记在 course-config.json 里的课程目录。
+
+    只有登记过的课程才参与校验：本地暂不发布的模块（如 09 益生菌）不在配置里，
+    自动跳过；新课程写进配置后即被纳入，不必再改这里的判断逻辑。
+    """
+    try:
+        data = json.loads((root / CONFIG_PATH).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return set()
+    courses = data.get("courses", [])
+    return {str(item["directory"]) for item in courses if item.get("directory")}
+
+
+CONFIGURED_COURSE_DIRECTORIES = configured_course_directories()
+
+
+def is_course_directory(name: str) -> bool:
+    if CONFIGURED_COURSE_DIRECTORIES:
+        return name in CONFIGURED_COURSE_DIRECTORIES
+    # 配置读不到时退回按目录名前缀判断，避免静默跳过全部内容。
+    return bool(COURSE_DIRECTORY.match(name))
 
 
 @dataclass(frozen=True)
@@ -102,7 +128,7 @@ def is_content_path(path: Path) -> bool:
     return (
         path.suffix.lower() == ".md"
         and bool(relative.parts)
-        and bool(COURSE_DIRECTORY.match(relative.parts[0]))
+        and is_course_directory(relative.parts[0])
         and "模板" not in path.name
         and "一本全" not in path.name
         and path.name != "COURSE_INDEX.md"

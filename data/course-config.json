@@ -77,6 +77,17 @@
       "progress": "serializing",
       "authors": ["脆弱的百里橘"],
       "audience": ["undergraduate"]
+    },
+    {
+      "slug": "food-flavor-chemistry",
+      "title": "食品风味化学与分析",
+      "directory": "08 食品风味化学与分析",
+      "prefix": "FFC",
+      "icon": "🍋",
+      "description": "从风味物质的化学本质出发，讲清风味的形成途径、感知规律与分析方法。",
+      "progress": "serializing",
+      "authors": ["小倪"],
+      "audience": ["undergraduate"]
     }
   ]
 }

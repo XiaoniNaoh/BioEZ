@@ -34,7 +34,7 @@ ADVICE_RULES: list[tuple[str, str]] = [
     ),
     (
         r"文件名必须以",
-        "文件名前缀不对。每门课有固定前缀（FAI / MB / MMB / CB / BOT / BC / BIF），"
+        "文件名前缀不对。每门课有固定前缀（FAI / MB / MMB / CB / BOT / BC / BIF / FFC），"
         "文件名必须以「前缀 + 空格」开头，例如 `MB 01 绪论.md`。",
     ),
     (

@@ -17,6 +17,7 @@ from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
+CONFIG_PATH = Path("data/course-config.json")
 IMAGE_SUFFIXES = {".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"}
 IGNORED_DIRECTORIES = {
     ".cache",
@@ -28,12 +29,31 @@ IGNORED_DIRECTORIES = {
     # vitepress/ 是站点工程，其 content/ 下是课程正文的构建副本，
     # 不应参与内容资源检查（CI 中也不存在该目录）。
     "vitepress",
-    # 08 / 09 为暂不发布模块，仅存在于本地，不参与检查（CI 中也不存在）。
-    "08 食品风味化学与分析",
+    # 09 为暂不发布模块，仅存在于本地，不参与检查（CI 中也不存在）。
     "09 益生菌",
     "__pycache__",
 }
-COURSE_DIRECTORY = re.compile(r"^0[1-7] ")
+COURSE_DIRECTORY = re.compile(r"^0[1-9] ")
+
+
+def configured_course_directories(root: Path = ROOT) -> set[str]:
+    """登记在 course-config.json 里的课程目录（与 validate_content.py 保持一致）。"""
+    try:
+        data = json.loads((root / CONFIG_PATH).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return set()
+    courses = data.get("courses", [])
+    return {str(item["directory"]) for item in courses if item.get("directory")}
+
+
+CONFIGURED_COURSE_DIRECTORIES = configured_course_directories()
+
+
+def is_course_directory(name: str) -> bool:
+    if CONFIGURED_COURSE_DIRECTORIES:
+        return name in CONFIGURED_COURSE_DIRECTORIES
+    # 配置读不到时退回按目录名前缀判断，避免静默跳过全部内容。
+    return bool(COURSE_DIRECTORY.match(name))
 WIKILINK_RE = re.compile(r"(?P<embed>!)?\[\[(?P<target>[^\]\n]+)\]\]")
 MARKDOWN_LINK_RE = re.compile(
     r"(?P<image>!)?\[(?P<label>[^\]\n]*)\]\(\s*"
@@ -265,7 +285,7 @@ def resolve_wikilink(
 
 def is_course_page(path: Path, root: Path) -> bool:
     relative = path.relative_to(root)
-    if not relative.parts or not COURSE_DIRECTORY.match(relative.parts[0]):
+    if not relative.parts or not is_course_directory(relative.parts[0]):
         return False
     if "模板" in path.name or "目录" in path.name or "更新计划" in path.name:
         return False
