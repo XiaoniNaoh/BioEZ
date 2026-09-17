@@ -73,7 +73,7 @@ python3 scripts/prepare_contribution.py
 | ----------- | ------------------------------------------------ |
 | 补齐元数据       | 给没写 frontmatter 的文章补上（只补缺，**不覆盖**你已经写好的）         |
 | 生成导航与目录     | 把「课程导航」块写进文章，同时更新 `COURSE_INDEX.md`、课程清单与 README |
-| 刷新图片清单与质量报告 | 免得 CI 因为"报告过期"而失败                                |
+| 刷新图片清单与质量报告 | 图片清单要和 `assets/image-sources.json` 对得上；质量报告只是给你自己看的本地快照（不进仓库） |
 | 跑一遍检查       | 元数据、生成一致性、教学图、链接与图片、单元测试，有问题一次性告诉你               |
 
 看到 **`全部完成 ✓`** 就可以提交了。
@@ -87,6 +87,12 @@ python3 scripts/prepare_contribution.py
 
 按建议改好，再运行一次即可。
 
+> **课程目录里还有没定稿的草稿时**：生成脚本只看目录里有什么文件，所以草稿会被一起写进课程目录、
+> `data/courses.json` 和 README 的课程清单。脚本会在开头把这些文件列出来提醒你。
+> 如果这些草稿这次不打算上线，就**别把本次生成出来的 `COURSE_INDEX.md`、`data/courses.json`、
+> README 课程清单一起提交**——只提交你这次真正要发布的正文改动即可，CI 看到的仓库里没有这些草稿，
+> 检查照样能过。等草稿要发布时，再跑一次脚本，把生成物和正文一起提交。
+
 > 它**不写正文**，也**不替你提交**：正文还是在 Obsidian 里写，Commit / Push 还是在 GitHub Desktop 里点。
 
 ### 1.7 提交并推送（commit → push）
@@ -99,6 +105,10 @@ python3 scripts/prepare_contribution.py
 4. 点顶部 **Push origin** —— 这一步叫 **push（推送）**，把本地提交送到 GitHub 上。
 
 > commit 和 push 的区别：commit 是"在本机存档"，push 是"把这个存档上传到 GitHub"。只 commit 不 push，别人看不到。
+
+> **Push 失败时**：国内网络偶尔连不上 `github.com` 的 443 端口，表现为超时或 `HTTP2 framing layer` 报错。
+> 先重试几次；仍然不通的话，可以改用 GitHub API 推送（用 `gh auth token` 创建提交并更新 `refs/heads/main`），
+> 或者把改动留在本地、等网络恢复再推。
 
 ### 1.8 发起合并请求（Pull Request）
 
@@ -328,7 +338,7 @@ AI 是工具，不是作者。
 | `scripts/migrate_course_metadata.py` | 给老页面**补**缺失的 frontmatter 字段（只补缺，不覆盖已有值） |
 | `scripts/build_course_catalog.py` | 生成目录、课程清单、页面导航；`--check` 只检查是否有漂移 |
 | `scripts/validate_content.py` | 校验 frontmatter 与页面 ID；支持 `--all` / `--paths` / `--base --head` |
-| `scripts/check_content_resources.py` | 检查链接、图片、图片来源与孤立页；`--json-report` 写报告，`--check-report` 查漂移，`--show-acknowledged` 查看已确认提醒（默认不列出） |
+| `scripts/check_content_resources.py` | 检查链接、图片、图片来源与孤立页；`--json-report` 写一份本地快照（不进仓库），`--check-report` 拿快照比对漂移（本地自查用），`--show-acknowledged` 查看已确认提醒（默认不列出） |
 | `scripts/build_image_manifest.py` | 维护 `assets/image-sources.json` 图片清单 |
 | `scripts/generate_teaching_figures.py` | 生成 / 校验可复现的教学 SVG 图 |
 | `scripts/check_repository_hygiene.py` | 仓库规范（大文件、二进制、许可） |
@@ -366,7 +376,7 @@ python3 scripts/check_content_resources.py      # 检查链接、图片与孤立
 4. 在 Quartz 目录里 `npm ci`，然后执行 `quartz/bootstrap-cli.mjs build --directory .cache/site-content --output public`。
 5. 产物落在 `public/`（已被 `.gitignore` 忽略，不进仓库）。
 
-CI 在 `.github/workflows/quartz-pages.yml`：push 到 `main` 后**先跑内容检查**（`Content checks`，失败就停在这里），通过后安装 Node 22 / Python 3.12 → 现算一份资源质量报告给看板用 → `node scripts/build_quartz_site.mjs --check` → `actions/upload-pages-artifact` 上传 `public/` → `actions/deploy-pages@v4` 发布到 GitHub Pages。（PR 时只构建、不发布。）
+CI 在 `.github/workflows/quartz-pages.yml`：push 到 `main` 后**先跑内容检查**（`Content checks`，失败就停在这里），通过后安装 Node 22 / Python 3.12 → 现算一份资源质量报告给看板用 → `node scripts/build_quartz_site.mjs --check` → `actions/upload-pages-artifact@v5` 上传 `public/` → `actions/deploy-pages@v5` 发布到 GitHub Pages。（PR 时只构建、不发布。）
 
 本地复现：
 
@@ -420,6 +430,8 @@ npm run stage      # 只跑内容暂存，不构建
 | `vitepress-deploy.yml` | push `main`；手动 | 先跑内容检查，通过后构建并发布 VitePress 到 wiki.bioez.xyz |
 
 > 内容检查只有一份，放在 `content-checks.yml` 里；两个部署 workflow 通过 `uses: ./.github/workflows/content-checks.yml` 复用它，所以改检查逻辑只需要改这一处。
+
+> Actions 统一用大版本 tag（`actions/checkout@v7`、`actions/setup-python@v7`、`actions/setup-node@v7`、`actions/upload-pages-artifact@v5`、`actions/deploy-pages@v5`）。GitHub 哪天弃用某个 Node 运行时（例如 2026 年 9 月 23 日移除 Node 20），把这三个 workflow 里 `uses:` 的版本号升上去即可，逻辑不用动。
 
 ### 7.6 进阶贡献可以改什么
 
