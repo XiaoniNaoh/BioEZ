@@ -61,7 +61,7 @@ git clone https://github.com/XiaoniNaoh/BioEZ.git
 - **[LLM 时代的生信入门](<07 LLM 时代的生信入门/COURSE_INDEX.md>)** — 7 篇 · 预计 47 分钟 · 作者：脆弱的百里橘
   以单细胞分析为主线，介绍生物信息学数据准备、分析与可视化。
 
-- **[食品风味化学与分析](<08 食品风味化学与分析/COURSE_INDEX.md>)** — 1 篇 · 预计 5 分钟 · 作者：小倪
+- **[食品风味化学与分析](<08 食品风味化学与分析/COURSE_INDEX.md>)** — 3 篇 · 预计 15 分钟 · 作者：小倪
   从风味物质的化学本质出发，讲清风味的形成途径、感知规律与分析方法。
 
 <!-- END AUTO-GENERATED COURSE CATALOG -->
