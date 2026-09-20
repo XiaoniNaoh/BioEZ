@@ -1,0 +1,67 @@
+#!/bin/bash
+# BioEZ 提交前检查。
+# 由「安装提交前检查.command」启用（把 core.hooksPath 指到 .githooks）。
+#
+# 做一件事：把暂存区的内容（也就是这次提交真正会写入仓库的内容）导出到临时目录，
+# 在那里跑一次生成一致性检查——课程正文和课程目录 / 导航 / 课程清单必须对得上。
+#
+# 跳过某一次检查：git commit --no-verify
+# 彻底关掉：      git config --unset core.hooksPath
+
+set -u
+
+root=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+cd "$root" || exit 0
+
+# 本次提交里有课程正文（含新增、改名、删除）才检查；只改文档、脚本时不拦。
+# core.quotePath=false：否则中文路径会被转义成 "08 \351..."，正则匹配不到。
+if ! git -c core.quotePath=false diff --cached --name-only --diff-filter=ACDMR | grep -qE '^[0-9][0-9] .+\.md$'; then
+  exit 0
+fi
+
+# 找一个可用的 python3（GUI 里提交时 PATH 可能不全）
+PY=""
+for candidate in "$(command -v python3 2>/dev/null)" /opt/homebrew/bin/python3 /usr/local/bin/python3 /usr/bin/python3; do
+  if [ -n "$candidate" ] && [ -x "$candidate" ]; then PY="$candidate"; break; fi
+done
+if [ -z "$PY" ]; then
+  echo "提交前检查：没找到 python3，跳过。"
+  exit 0
+fi
+
+tmp=$(mktemp -d) || exit 0
+trap 'rm -rf "$tmp"' EXIT
+
+if ! git checkout-index -a --prefix="$tmp/" >/dev/null 2>&1; then
+  echo "提交前检查：导出暂存内容失败，跳过。"
+  exit 0
+fi
+
+output=$("$PY" "$tmp/scripts/build_course_catalog.py" --check 2>&1)
+status=$?
+if [ "$status" -eq 0 ]; then
+  exit 0
+fi
+
+cat <<EOF
+
+✗ 提交前检查没通过：这次提交里的课程正文，和课程目录 / 导航 / 课程清单对不上。
+
+  检查的是暂存区内容，也就是这次提交真正会写入仓库的东西，所以本地还没提交的草稿不会干扰判断。
+
+$output
+
+  怎么修：
+
+    1. 跑一次「准备提交.command」（或 python3 scripts/prepare_contribution.py）
+    2. 把它生成或修改的 COURSE_INDEX.md、data/courses.json、README 课程清单，
+       和你这次要发布的正文一起提交
+
+  如果课程目录里还有这次不打算上线的草稿：它们也会被算进目录，于是目录引用了
+  这次没有提交的章节。那种情况要么把草稿一起发布，要么先别提交生成文件——但远程
+  CI 会给出同样的提示，所以最省事的做法还是：草稿要发布时和正文一起走一遍准备脚本。
+
+  确认无误、要强行提交：git commit --no-verify
+
+EOF
+exit 1
