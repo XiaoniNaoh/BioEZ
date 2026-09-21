@@ -68,7 +68,12 @@ export default defineConfig({
     math: true,
     image: { lazyLoading: true },
   },
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/logo.png' }],
+  ],
   themeConfig: {
+    logo: '/logo.png',
     siteTitle: 'BioEZ Wiki',
     nav: [
       { text: '主页', link: '/' },

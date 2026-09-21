@@ -96,21 +96,125 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 顶部导航：毛玻璃（旧浏览器自动回退为不透明背景） */
-.VPNavBar,
-.VPNavBar .content-body {
-  backdrop-filter: saturate(1.8) blur(14px);
-  -webkit-backdrop-filter: saturate(1.8) blur(14px);
+/* ── 毛玻璃（全局） ──────────────────────────────────────────────────────
+   页面底色是一层固定的淡渐变（body::before），玻璃面板把这层底色和滚到
+   下面的内容一起虚化。面板不透明度都在 0.7 以上，正文对比度不受影响；
+   不支持 backdrop-filter 的浏览器退化成半透明纯色，依然可读。
+   背景直接改 VitePress 自己的变量（--vp-nav-bg-color 等），这样组件在
+   各种状态下（首页顶部、移动端抽屉、滚动后）都由这一处决定。 */
+
+:root {
+  --glass-blur: saturate(180%) blur(14px);
+  --glass-bg: rgba(255, 255, 255, 0.62);
+  --glass-bg-strong: rgba(255, 255, 255, 0.8);
+  --glass-bg-soft: rgba(255, 255, 255, 0.58);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-edge: rgba(226, 232, 240, 0.9);
+  --glass-shadow: 0 8px 32px rgba(31, 38, 63, 0.07);
+
+  --vp-nav-bg-color: var(--glass-bg);
+  --vp-nav-screen-bg-color: var(--glass-bg-strong);
+  --vp-sidebar-bg-color: var(--glass-bg);
+  --vp-local-nav-bg-color: var(--glass-bg);
+  --vp-code-block-bg: var(--glass-bg-soft);
 }
 
-@supports (background-color: color-mix(in srgb, red 50%, transparent)) {
-  .VPNavBar {
-    background-color: color-mix(in srgb, var(--vp-c-bg) 72%, transparent);
-  }
+.dark {
+  --glass-bg: rgba(27, 27, 31, 0.6);
+  --glass-bg-strong: rgba(27, 27, 31, 0.8);
+  --glass-bg-soft: rgba(27, 27, 31, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-edge: rgba(46, 46, 50, 0.9);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
 
-  .VPNavBar .content-body {
-    background-color: transparent;
-  }
+/* 底层渐变：玻璃得有东西可虚化 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(44rem 30rem at 10% 0%, rgba(77, 203, 160, 0.36), transparent 64%),
+    radial-gradient(40rem 26rem at 100% 8%, rgba(56, 189, 248, 0.24), transparent 62%),
+    radial-gradient(52rem 34rem at 88% 104%, rgba(77, 203, 160, 0.28), transparent 66%);
+}
+
+.dark body::before {
+  background-image:
+    radial-gradient(44rem 30rem at 10% 0%, rgba(77, 203, 160, 0.26), transparent 64%),
+    radial-gradient(40rem 26rem at 100% 8%, rgba(56, 189, 248, 0.18), transparent 62%),
+    radial-gradient(52rem 34rem at 88% 104%, rgba(77, 203, 160, 0.22), transparent 66%);
+}
+
+/* 需要虚化的面板 */
+.VPNavBar,
+.VPNavScreen,
+.VPSidebar,
+.VPLocalNav,
+.VPFooter,
+.VPMenu,
+.VPLocalSearchBox .shell,
+.VPFeatures .VPFeature,
+.VPTeamMembersItem .profile,
+.VPNavBarSearch .DocSearch-Button,
+.vp-doc div[class*='language-'],
+.vp-doc .custom-block {
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+/* 导航条的背景统一铺在自己身上，避免和 content-body 叠成两层半透明。
+   VitePress 按页面类型把背景铺在 VPNavBar 或 .content-body 上，用
+   !important 才能稳定压过它自己的状态规则。 */
+.VPNavBar {
+  background-color: var(--glass-bg) !important;
+}
+
+.VPNavBar .content-body {
+  background-color: transparent !important;
+}
+
+.VPNavScreen {
+  background-color: var(--glass-bg-strong);
+}
+
+.VPFooter {
+  background-color: var(--glass-bg) !important;
+}
+
+.VPNavBarSearch .DocSearch-Button {
+  background-color: var(--glass-bg);
+}
+
+.VPMenu,
+.VPLocalSearchBox .shell {
+  background-color: var(--glass-bg-strong);
+}
+
+.VPFeatures .VPFeature,
+.VPTeamMembersItem .profile {
+  background-color: var(--glass-bg-soft);
+  box-shadow: var(--glass-shadow);
+}
+
+.VPFeatures .VPFeature {
+  border-color: var(--glass-edge);
+}
+
+.VPMenu,
+.VPLocalSearchBox .shell {
+  box-shadow: var(--glass-shadow);
+}
+
+/* 代码块与提示块：沿用原有配色，只是换成磨砂面 */
+.vp-doc div[class*='language-'] {
+  background-color: var(--glass-bg-soft);
+}
+
+.vp-doc .custom-block div[class*='language-'] {
+  background-color: var(--glass-bg);
 }
 
 /* 首页卡片：悬停轻微上浮 + 品牌色描边 */

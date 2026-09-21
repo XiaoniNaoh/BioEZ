@@ -196,6 +196,18 @@ const AVATAR_DIR = join(PROJECT, 'team-avatars')
 const PUBLIC_TEAM = join(CONTENT, 'public', 'team')
 mkdirSync(PUBLIC_TEAM, { recursive: true })
 
+// 站点图标（导航 logo、favicon）：放在 vitepress/site-assets/，构建时复制到 public 根目录。
+// 本地化保存，不直接引用 bioez.xyz 上的文件，站点之间互不牵连。
+const SITE_ASSETS = join(PROJECT, 'site-assets')
+const PUBLIC_DIR_ROOT = join(CONTENT, 'public')
+if (existsSync(SITE_ASSETS)) {
+  mkdirSync(PUBLIC_DIR_ROOT, { recursive: true })
+  cpSync(SITE_ASSETS, PUBLIC_DIR_ROOT, {
+    recursive: true,
+    filter: (src) => !src.split('/').pop().startsWith('.'),
+  })
+}
+
 const localAvatars = new Set()
 for (const c of contributors) {
   const source = join(AVATAR_DIR, `${c.github}.png`)
