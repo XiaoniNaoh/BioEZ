@@ -9,6 +9,12 @@
   --vp-c-brand-3: #1d764a;
   --vp-c-brand-soft: rgba(29, 118, 74, 0.1);
 
+  /* 右侧「页面导航」当前项：文字发光 */
+  --outline-active-glow: rgba(29, 118, 74, 0.45);
+
+  /* 正文一级/二级标题的荧光笔底：奶油淡蓝 */
+  --heading-highlight: rgba(206, 227, 242, 0.9);
+
   --vp-c-tip-1: #1d764a;
   --vp-c-tip-2: #175f3c;
   --vp-c-tip-3: #1d764a;
@@ -32,6 +38,10 @@
   --vp-c-brand-2: #8ad2ab;
   --vp-c-brand-3: #6cbf95;
   --vp-c-brand-soft: rgba(108, 191, 149, 0.14);
+
+  --outline-active-glow: rgba(108, 191, 149, 0.4);
+
+  --heading-highlight: rgba(120, 170, 205, 0.22);
 
   --vp-c-tip-1: #6cbf95;
   --vp-c-tip-2: #8ad2ab;
@@ -63,6 +73,41 @@
   padding-right: 10px;
   margin-left: -10px;
   margin-right: -10px;
+}
+
+/* 右侧「页面导航」当前项：只把文字换成主题色，并在周围发一点光。
+   不加底框，原来那条竖线标记（outline-marker）保留。 */
+.VPDocAsideOutline .content .outline-link.active {
+  color: var(--vp-c-brand-1);
+  text-shadow: 0 0 10px var(--outline-active-glow);
+}
+
+/* 正文一级 / 二级标题：主题色 + 一道奶油淡蓝的圆角荧光笔痕。
+   width: fit-content 让笔痕只跟着标题文字走，不横贯整栏；
+   笔痕用 ::before 画，这样才上得了圆角（渐变做不到圆角）。 */
+.vp-doc h1,
+.vp-doc h2 {
+  color: var(--vp-c-brand-1);
+  width: fit-content;
+  max-width: 100%;
+  /* 宽度收窄后，原来那条横贯整栏的分隔线会变成一小截，改用荧光笔痕分隔小节 */
+  border-top: none;
+  padding-top: 0;
+  padding-inline: 0.3em;
+  margin-inline-start: -0.3em;
+}
+
+.vp-doc h1::before,
+.vp-doc h2::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0.06em;
+  right: 0.06em;
+  bottom: 0.1em;
+  height: 0.4em;
+  border-radius: 999px;
+  background-color: var(--heading-highlight);
 }
 
 /* 让没有二级目录的课程，条目也统一缩进一级（带左侧细导线），
