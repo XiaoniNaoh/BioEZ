@@ -1,16 +1,20 @@
-/* BioEZ Wiki — 色板对齐参考站 https://bioez.xyz/docs/BioEZ 的设计
-   （品牌薄荷绿 #4DCBA0，浅底 #f6f8fa，描边 #e2e8f0，正文 #213547；
-     深色底 #1b1b1f）
-   字体、字间距、行间距等排版仍全部沿用 VitePress 默认。 */
+/* BioEZ Wiki —— 中性色系（原来的白底 / 黑底）不动，只把主题绿换成松绿
+   （#1d764a），页面底部一层松绿 + 奶油淡蓝的极光；
+   字体、字间距、行间距等排版仍然完全沿用 VitePress 默认。 */
 
 :root {
-  /* 品牌薄荷绿 */
-  --vp-c-brand-1: #4dcba0;
-  --vp-c-brand-2: #3eb892;
-  --vp-c-brand-3: #4dcba0;
-  --vp-c-brand-soft: rgba(77, 203, 160, 0.15);
+  /* 主题色：松绿 */
+  --vp-c-brand-1: #1d764a;
+  --vp-c-brand-2: #175f3c;
+  --vp-c-brand-3: #1d764a;
+  --vp-c-brand-soft: rgba(29, 118, 74, 0.1);
 
-  /* 背景 / 描边 / 文字 */
+  --vp-c-tip-1: #1d764a;
+  --vp-c-tip-2: #175f3c;
+  --vp-c-tip-3: #1d764a;
+  --vp-c-tip-soft: rgba(29, 118, 74, 0.1);
+
+  /* 背景 / 描边 / 文字：沿用原来的中性色 */
   --vp-c-bg: #ffffff;
   --vp-c-bg-alt: #f6f8fa;
   --vp-c-bg-soft: #f9f9f9;
@@ -24,10 +28,15 @@
 }
 
 .dark {
-  --vp-c-brand-1: #4dcba0;
-  --vp-c-brand-2: #6fd9b4;
-  --vp-c-brand-3: #4dcba0;
-  --vp-c-brand-soft: rgba(77, 203, 160, 0.15);
+  --vp-c-brand-1: #6cbf95;
+  --vp-c-brand-2: #8ad2ab;
+  --vp-c-brand-3: #6cbf95;
+  --vp-c-brand-soft: rgba(108, 191, 149, 0.14);
+
+  --vp-c-tip-1: #6cbf95;
+  --vp-c-tip-2: #8ad2ab;
+  --vp-c-tip-3: #6cbf95;
+  --vp-c-tip-soft: rgba(108, 191, 149, 0.14);
 
   --vp-c-bg: #1b1b1f;
   --vp-c-bg-alt: #161618;
@@ -105,12 +114,12 @@ html {
 
 :root {
   --glass-blur: saturate(180%) blur(14px);
-  --glass-bg: rgba(255, 255, 255, 0.62);
-  --glass-bg-strong: rgba(255, 255, 255, 0.8);
-  --glass-bg-soft: rgba(255, 255, 255, 0.58);
-  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-bg: rgba(255, 255, 255, 0.68);
+  --glass-bg-strong: rgba(255, 255, 255, 0.86);
+  --glass-bg-soft: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.6);
   --glass-edge: rgba(226, 232, 240, 0.9);
-  --glass-shadow: 0 8px 32px rgba(31, 38, 63, 0.07);
+  --glass-shadow: 0 8px 32px rgba(31, 38, 63, 0.06);
 
   --vp-nav-bg-color: var(--glass-bg);
   --vp-nav-screen-bg-color: var(--glass-bg-strong);
@@ -120,26 +129,31 @@ html {
 }
 
 .dark {
-  --glass-bg: rgba(27, 27, 31, 0.6);
-  --glass-bg-strong: rgba(27, 27, 31, 0.8);
+  --glass-bg: rgba(27, 27, 31, 0.62);
+  --glass-bg-strong: rgba(27, 27, 31, 0.86);
   --glass-bg-soft: rgba(27, 27, 31, 0.55);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-edge: rgba(46, 46, 50, 0.9);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
-/* 底层光影：只在页面底部中间留一处品牌色光晕，玻璃面板负责把它虚化 */
+/* 极光：松绿是主光带（左上），奶油淡蓝只在右上补一点冷色，
+   两种颜色不等量，所以看着是「一层绿光」而不是两种颜色在打架。 */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image: radial-gradient(70rem 26rem at 50% 104%, rgba(77, 203, 160, 0.42), transparent 72%);
+  background-image:
+    linear-gradient(135deg, rgba(29, 118, 74, 0.15) 0%, rgba(29, 118, 74, 0) 46%),
+    linear-gradient(225deg, rgba(150, 196, 216, 0.09) 0%, rgba(150, 196, 216, 0) 40%);
 }
 
 .dark body::before {
-  background-image: radial-gradient(70rem 26rem at 50% 104%, rgba(77, 203, 160, 0.34), transparent 72%);
+  background-image:
+    linear-gradient(135deg, rgba(108, 191, 149, 0.16) 0%, rgba(108, 191, 149, 0) 46%),
+    linear-gradient(225deg, rgba(130, 178, 205, 0.08) 0%, rgba(130, 178, 205, 0) 40%);
 }
 
 /* 右下角那块 224×32 是 VitePress 用来淡出大纲的「幕布」，原本渐变到纯白；
