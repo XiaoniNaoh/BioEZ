@@ -128,24 +128,29 @@ html {
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
-/* 底层渐变：玻璃得有东西可虚化 */
+/* 底层光影：只在页面底部中间留一处品牌色光晕，玻璃面板负责把它虚化 */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image:
-    radial-gradient(44rem 30rem at 10% 0%, rgba(77, 203, 160, 0.36), transparent 64%),
-    radial-gradient(40rem 26rem at 100% 8%, rgba(56, 189, 248, 0.24), transparent 62%),
-    radial-gradient(52rem 34rem at 88% 104%, rgba(77, 203, 160, 0.28), transparent 66%);
+  background-image: radial-gradient(70rem 26rem at 50% 104%, rgba(77, 203, 160, 0.42), transparent 72%);
 }
 
 .dark body::before {
-  background-image:
-    radial-gradient(44rem 30rem at 10% 0%, rgba(77, 203, 160, 0.26), transparent 64%),
-    radial-gradient(40rem 26rem at 100% 8%, rgba(56, 189, 248, 0.18), transparent 62%),
-    radial-gradient(52rem 34rem at 88% 104%, rgba(77, 203, 160, 0.22), transparent 66%);
+  background-image: radial-gradient(70rem 26rem at 50% 104%, rgba(77, 203, 160, 0.34), transparent 72%);
+}
+
+/* 右下角那块 224×32 是 VitePress 用来淡出大纲的「幕布」，原本渐变到纯白；
+   页面底色换成光影之后它会变成一块突兀的白方块，改成渐隐的磨砂。 */
+/* 右边距的大纲到底部时用一层渐隐磨砂收尾，而不是一块白 */
+.aside .aside-curtain {
+  background: none !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -webkit-mask-image: linear-gradient(transparent, #000 70%);
+  mask-image: linear-gradient(transparent, #000 70%);
 }
 
 /* 需要虚化的面板 */
