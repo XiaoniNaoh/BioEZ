@@ -20,6 +20,16 @@
   /* 正文一级/二级标题的荧光笔底：奶油淡蓝 */
   --heading-highlight: rgba(206, 227, 242, 0.9);
 
+  /* NOTE 提示框：中性灰，比 VitePress 默认那层偏蓝的灰更干净 */
+  --vp-custom-block-note-bg: #f6f6f7;
+  --vp-custom-block-note-border: #eaeaec;
+
+  /* 上一篇 / 下一篇按钮：奶油淡蓝 */
+  --pager-bg: rgba(206, 227, 242, 0.45);
+  --pager-bg-hover: rgba(206, 227, 242, 0.72);
+  --pager-border: rgba(150, 190, 218, 0.45);
+  --pager-border-hover: rgba(120, 170, 205, 0.7);
+
   --vp-c-tip-1: #1d764a;
   --vp-c-tip-2: #175f3c;
   --vp-c-tip-3: #1d764a;
@@ -53,6 +63,14 @@
     0 0 26px rgba(108, 191, 149, 0.32);
 
   --heading-highlight: rgba(120, 170, 205, 0.22);
+
+  --vp-custom-block-note-bg: rgba(255, 255, 255, 0.045);
+  --vp-custom-block-note-border: rgba(255, 255, 255, 0.09);
+
+  --pager-bg: rgba(120, 170, 205, 0.1);
+  --pager-bg-hover: rgba(120, 170, 205, 0.17);
+  --pager-border: rgba(130, 178, 205, 0.26);
+  --pager-border-hover: rgba(140, 190, 220, 0.5);
 
   --vp-c-tip-1: #6cbf95;
   --vp-c-tip-2: #8ad2ab;
@@ -119,6 +137,20 @@
   height: 0.4em;
   border-radius: 999px;
   background-color: var(--heading-highlight);
+}
+
+/* 上一篇 / 下一篇按钮：淡蓝底 + 淡蓝描边，悬停时加深 */
+.VPDocFooter .pager-link {
+  background-color: var(--pager-bg);
+  border-color: var(--pager-border);
+  transition:
+    border-color 0.25s,
+    background-color 0.25s;
+}
+
+.VPDocFooter .pager-link:hover {
+  background-color: var(--pager-bg-hover);
+  border-color: var(--pager-border-hover);
 }
 
 /* 让没有二级目录的课程，条目也统一缩进一级（带左侧细导线），
@@ -194,26 +226,12 @@ html {
 }
 
 /* ── 极光 ──────────────────────────────────────────────────────────────
-   浅色下整页铺一层光会压到正文，所以极光只出现在「玻璃」后面：顶部导航
-   条和左侧栏各铺一道，光从玻璃里透出来，正文栏保持纯白。深色底不容易被
-   光干扰阅读，继续用整页光带。 */
+   浅色下只在左侧栏那一列铺一道，光从磨砂玻璃里透出来，导航条与正文栏都
+   保持干净。深色底不容易被光干扰阅读，继续用整页光带。 */
 
-/* 顶部：只有导航条那么高 */
+/* 浅色不铺顶部导航条的光 */
 body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--vp-nav-height, 64px);
-  z-index: -1;
-  pointer-events: none;
-  background-image: linear-gradient(
-    100deg,
-    rgba(29, 118, 74, 0.32) 0%,
-    rgba(150, 196, 216, 0.36) 62%,
-    rgba(150, 196, 216, 0) 100%
-  );
+  content: none;
 }
 
 /* 左侧：只在有侧栏的页面铺，宽度就是侧栏那一列（窄屏没有侧栏，不铺） */
@@ -241,9 +259,12 @@ body::after {
 }
 
 .dark body::before {
-  /* 深色沿用整页光带，而不是只在导航条那一条 */
-  bottom: 0;
-  height: auto;
+  /* 深色：整页光带 */
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background-image:
     linear-gradient(135deg, rgba(108, 191, 149, 0.16) 0%, rgba(108, 191, 149, 0) 46%),
     linear-gradient(225deg, rgba(130, 178, 205, 0.08) 0%, rgba(130, 178, 205, 0) 40%);
@@ -255,17 +276,14 @@ body::after {
 
 /* 右下角那块 224×32 是 VitePress 用来淡出大纲的「幕布」，原本渐变到纯白；
    页面底色换成光影之后它会变成一块突兀的白方块，改成渐隐的磨砂。 */
-/* 右边距的大纲到底部时用一层渐隐磨砂收尾，而不是一块白 */
+/* 右边距的大纲到底部时不再铺那块渐变到纯白的「幕布」——底部统一由下面
+   那条渐隐磨砂收尾，这里只把白底去掉，避免两层模糊叠在一起。 */
 .aside .aside-curtain {
   background: none !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  -webkit-mask-image: linear-gradient(transparent, #000 70%);
-  mask-image: linear-gradient(transparent, #000 70%);
 }
 
-/* 正文栏与左侧目录的底部也做同样的收尾：视口最下面一条渐隐磨砂，
-   内容滚到底部时不会硬生生被裁断。首页是整块 hero，不适用。 */
+/* 正文栏与左侧目录的底部收尾：视口最下面一条渐隐磨砂。遮罩分成五段，
+   让模糊是慢慢浓起来的，不会在某个高度突然出现一道横向的边。 */
 .VPContent:not(.is-home)::after {
   content: '';
   position: fixed;
@@ -273,12 +291,26 @@ body::after {
   right: 0;
   bottom: 0;
   z-index: 10;
-  height: 36px;
+  height: 72px;
   pointer-events: none;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  -webkit-mask-image: linear-gradient(transparent, #000 70%);
-  mask-image: linear-gradient(transparent, #000 70%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.72) 26%,
+    rgba(0, 0, 0, 0.42) 50%,
+    rgba(0, 0, 0, 0.18) 74%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.72) 26%,
+    rgba(0, 0, 0, 0.42) 50%,
+    rgba(0, 0, 0, 0.18) 74%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 /* 需要虚化的面板 */
