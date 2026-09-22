@@ -18,17 +18,17 @@
     0 0 26px rgba(29, 118, 74, 0.14);
 
   /* 正文一级/二级标题的荧光笔底：奶油淡蓝 */
-  --heading-highlight: rgba(206, 227, 242, 0.9);
+  --heading-highlight: rgba(226, 239, 249, 0.5);
 
   /* NOTE 提示框：中性灰，比 VitePress 默认那层偏蓝的灰更干净 */
   --vp-custom-block-note-bg: #f6f6f7;
   --vp-custom-block-note-border: #eaeaec;
 
   /* 上一篇 / 下一篇按钮：奶油淡蓝 */
-  --pager-bg: rgba(206, 227, 242, 0.45);
-  --pager-bg-hover: rgba(206, 227, 242, 0.72);
-  --pager-border: rgba(150, 190, 218, 0.45);
-  --pager-border-hover: rgba(120, 170, 205, 0.7);
+  --pager-bg: rgba(226, 239, 249, 0.22);
+  --pager-bg-hover: rgba(226, 239, 249, 0.38);
+  --pager-border: rgba(190, 216, 234, 0.3);
+  --pager-border-hover: rgba(175, 208, 228, 0.45);
 
   --vp-c-tip-1: #1d764a;
   --vp-c-tip-2: #175f3c;
@@ -62,15 +62,15 @@
     0 0 14px rgba(108, 191, 149, 0.55),
     0 0 26px rgba(108, 191, 149, 0.32);
 
-  --heading-highlight: rgba(120, 170, 205, 0.22);
+  --heading-highlight: rgba(142, 188, 214, 0.11);
 
   --vp-custom-block-note-bg: rgba(255, 255, 255, 0.045);
   --vp-custom-block-note-border: rgba(255, 255, 255, 0.09);
 
-  --pager-bg: rgba(120, 170, 205, 0.1);
-  --pager-bg-hover: rgba(120, 170, 205, 0.17);
-  --pager-border: rgba(130, 178, 205, 0.26);
-  --pager-border-hover: rgba(140, 190, 220, 0.5);
+  --pager-bg: rgba(142, 188, 214, 0.05);
+  --pager-bg-hover: rgba(142, 188, 214, 0.09);
+  --pager-border: rgba(150, 195, 220, 0.15);
+  --pager-border-hover: rgba(160, 200, 224, 0.28);
 
   --vp-c-tip-1: #6cbf95;
   --vp-c-tip-2: #8ad2ab;
@@ -253,7 +253,7 @@ body::after {
       165deg,
       rgba(29, 118, 74, 0.3) 0%,
       rgba(29, 118, 74, 0) 52%,
-      rgba(150, 196, 216, 0.34) 100%
+      rgba(188, 215, 233, 0.19) 100%
     );
   }
 }
@@ -267,7 +267,7 @@ body::after {
   pointer-events: none;
   background-image:
     linear-gradient(135deg, rgba(108, 191, 149, 0.16) 0%, rgba(108, 191, 149, 0) 46%),
-    linear-gradient(225deg, rgba(130, 178, 205, 0.08) 0%, rgba(130, 178, 205, 0) 40%);
+    linear-gradient(225deg, rgba(142, 188, 214, 0.045) 0%, rgba(130, 178, 205, 0) 40%);
 }
 
 .dark body::after {
