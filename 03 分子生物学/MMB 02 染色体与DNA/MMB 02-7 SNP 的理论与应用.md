@@ -9,7 +9,7 @@ audience:
   - "undergraduate"
 difficulty: 2
 importance: 1
-estimated_minutes: 5
+estimated_minutes: 2
 prerequisites: []
 next:
   - "mmb-03-01"

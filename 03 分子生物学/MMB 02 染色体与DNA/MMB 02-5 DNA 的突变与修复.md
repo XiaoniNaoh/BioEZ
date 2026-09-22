@@ -7,7 +7,7 @@ order: "02-05"
 status: "scientific-review"
 audience:
   - "undergraduate"
-difficulty: 4
+difficulty: 3
 importance: 3
 estimated_minutes: 5
 prerequisites: []

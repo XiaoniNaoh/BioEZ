@@ -9,7 +9,7 @@ audience:
   - "undergraduate"
 difficulty: 3
 importance: 3
-estimated_minutes: 5
+estimated_minutes: 4
 prerequisites: []
 next: []
 tags:

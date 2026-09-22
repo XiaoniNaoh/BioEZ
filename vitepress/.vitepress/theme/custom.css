@@ -10,7 +10,12 @@
   --vp-c-brand-soft: rgba(29, 118, 74, 0.1);
 
   /* 右侧「页面导航」当前项：文字发光 */
-  --outline-active-glow: rgba(29, 118, 74, 0.45);
+  --outline-active-ink: #1d764a;
+  --outline-active-shadow:
+    0 0 1px rgba(29, 118, 74, 0.6),
+    0 0 6px rgba(29, 118, 74, 0.42),
+    0 0 14px rgba(29, 118, 74, 0.26),
+    0 0 26px rgba(29, 118, 74, 0.14);
 
   /* 正文一级/二级标题的荧光笔底：奶油淡蓝 */
   --heading-highlight: rgba(206, 227, 242, 0.9);
@@ -39,7 +44,13 @@
   --vp-c-brand-3: #6cbf95;
   --vp-c-brand-soft: rgba(108, 191, 149, 0.14);
 
-  --outline-active-glow: rgba(108, 191, 149, 0.4);
+  /* 深色下做成霓虹：越往外越淡的多层光 */
+  --outline-active-ink: #8fe3b6;
+  --outline-active-shadow:
+    0 0 1px rgba(210, 255, 232, 0.9),
+    0 0 6px rgba(108, 191, 149, 0.85),
+    0 0 14px rgba(108, 191, 149, 0.55),
+    0 0 26px rgba(108, 191, 149, 0.32);
 
   --heading-highlight: rgba(120, 170, 205, 0.22);
 
@@ -78,8 +89,8 @@
 /* 右侧「页面导航」当前项：只把文字换成主题色，并在周围发一点光。
    不加底框，原来那条竖线标记（outline-marker）保留。 */
 .VPDocAsideOutline .content .outline-link.active {
-  color: var(--vp-c-brand-1);
-  text-shadow: 0 0 10px var(--outline-active-glow);
+  color: var(--outline-active-ink);
+  text-shadow: var(--outline-active-shadow);
 }
 
 /* 正文一级 / 二级标题：主题色 + 一道奶油淡蓝的圆角荧光笔痕。
@@ -182,23 +193,64 @@ html {
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
-/* 极光：松绿是主光带（左上），奶油淡蓝只在右上补一点冷色，
-   两种颜色不等量，所以看着是「一层绿光」而不是两种颜色在打架。 */
+/* ── 极光 ──────────────────────────────────────────────────────────────
+   浅色下整页铺一层光会压到正文，所以极光只出现在「玻璃」后面：顶部导航
+   条和左侧栏各铺一道，光从玻璃里透出来，正文栏保持纯白。深色底不容易被
+   光干扰阅读，继续用整页光带。 */
+
+/* 顶部：只有导航条那么高 */
 body::before {
   content: '';
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--vp-nav-height, 64px);
   z-index: -1;
   pointer-events: none;
-  background-image:
-    linear-gradient(135deg, rgba(29, 118, 74, 0.15) 0%, rgba(29, 118, 74, 0) 46%),
-    linear-gradient(225deg, rgba(150, 196, 216, 0.09) 0%, rgba(150, 196, 216, 0) 40%);
+  background-image: linear-gradient(
+    100deg,
+    rgba(29, 118, 74, 0.32) 0%,
+    rgba(150, 196, 216, 0.36) 62%,
+    rgba(150, 196, 216, 0) 100%
+  );
+}
+
+/* 左侧：只在有侧栏的页面铺，宽度就是侧栏那一列（窄屏没有侧栏，不铺） */
+body::after {
+  content: none;
+}
+
+@media (min-width: 960px) {
+  body:has(.VPSidebar)::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--vp-sidebar-width, 272px);
+    z-index: -1;
+    pointer-events: none;
+    background-image: linear-gradient(
+      165deg,
+      rgba(29, 118, 74, 0.3) 0%,
+      rgba(29, 118, 74, 0) 52%,
+      rgba(150, 196, 216, 0.34) 100%
+    );
+  }
 }
 
 .dark body::before {
+  /* 深色沿用整页光带，而不是只在导航条那一条 */
+  bottom: 0;
+  height: auto;
   background-image:
     linear-gradient(135deg, rgba(108, 191, 149, 0.16) 0%, rgba(108, 191, 149, 0) 46%),
     linear-gradient(225deg, rgba(130, 178, 205, 0.08) 0%, rgba(130, 178, 205, 0) 40%);
+}
+
+.dark body::after {
+  content: none;
 }
 
 /* 右下角那块 224×32 是 VitePress 用来淡出大纲的「幕布」，原本渐变到纯白；
@@ -206,6 +258,23 @@ body::before {
 /* 右边距的大纲到底部时用一层渐隐磨砂收尾，而不是一块白 */
 .aside .aside-curtain {
   background: none !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -webkit-mask-image: linear-gradient(transparent, #000 70%);
+  mask-image: linear-gradient(transparent, #000 70%);
+}
+
+/* 正文栏与左侧目录的底部也做同样的收尾：视口最下面一条渐隐磨砂，
+   内容滚到底部时不会硬生生被裁断。首页是整块 hero，不适用。 */
+.VPContent:not(.is-home)::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  height: 36px;
+  pointer-events: none;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   -webkit-mask-image: linear-gradient(transparent, #000 70%);

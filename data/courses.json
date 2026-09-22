@@ -6,7 +6,7 @@
       "slug": "food-analysis",
       "title": "食品分析与检验",
       "directory": "01 食品分析与检验",
-      "description": "从食品分析的基本原理出发，介绍样品、数据处理与常见成分分析方法。",
+      "description": "样品处理、数据处理，以及水分、糖类、蛋白质、脂类四个分析方法专题。",
       "progress": "completed",
       "authors": [
         "小倪"
@@ -17,7 +17,7 @@
       "index_path": "01 食品分析与检验/COURSE_INDEX.md",
       "page_count": 7,
       "lesson_count": 7,
-      "estimated_minutes": 40,
+      "estimated_minutes": 36,
       "lessons": [
         {
           "id": "fai-01",
@@ -27,7 +27,7 @@
           "chapter": "分析基础",
           "order": "01",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 1,
           "importance": 3,
           "estimated_minutes": 5,
           "prerequisites": [],
@@ -54,9 +54,9 @@
           "chapter": "分析基础",
           "order": "02",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
-          "estimated_minutes": 6,
+          "estimated_minutes": 8,
           "prerequisites": [],
           "next": [
             "fai-03"
@@ -81,9 +81,9 @@
           "chapter": "分析基础",
           "order": "03",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 3,
           "prerequisites": [],
           "next": [
             "fai-sp-01"
@@ -139,7 +139,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "fai-sp-03"
@@ -197,7 +197,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [],
           "tags": [
@@ -219,7 +219,7 @@
       "slug": "microbiology",
       "title": "微生物学",
       "directory": "02 微生物学",
-      "description": "介绍微生物学基础、遗传代谢、生态、免疫与食品相关应用。",
+      "description": "原核微生物、真核微生物、病毒，以及营养、代谢、遗传、生态、分类鉴定与免疫，最后落到食品腐败。",
       "progress": "completed",
       "authors": [
         "小倪"
@@ -230,7 +230,7 @@
       "index_path": "02 微生物学/COURSE_INDEX.md",
       "page_count": 11,
       "lesson_count": 11,
-      "estimated_minutes": 79,
+      "estimated_minutes": 90,
       "lessons": [
         {
           "id": "mb-01",
@@ -240,7 +240,7 @@
           "chapter": "课程正文",
           "order": "01",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 1,
           "importance": 3,
           "estimated_minutes": 5,
           "prerequisites": [],
@@ -270,7 +270,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 8,
+          "estimated_minutes": 12,
           "prerequisites": [],
           "next": [
             "mb-03"
@@ -298,9 +298,9 @@
           "chapter": "课程正文",
           "order": "03",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
-          "estimated_minutes": 6,
+          "estimated_minutes": 7,
           "prerequisites": [],
           "next": [
             "mb-04"
@@ -327,9 +327,9 @@
           "chapter": "课程正文",
           "order": "04",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "mb-05"
@@ -357,7 +357,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 13,
+          "estimated_minutes": 14,
           "prerequisites": [],
           "next": [
             "mb-06"
@@ -384,7 +384,7 @@
           "chapter": "课程正文",
           "order": "06",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
           "estimated_minutes": 9,
           "prerequisites": [],
@@ -413,9 +413,9 @@
           "chapter": "课程正文",
           "order": "07",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
-          "estimated_minutes": 13,
+          "estimated_minutes": 14,
           "prerequisites": [],
           "next": [
             "mb-08"
@@ -444,9 +444,9 @@
           "chapter": "课程正文",
           "order": "08",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "mb-09"
@@ -471,9 +471,9 @@
           "chapter": "课程正文",
           "order": "09",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 12,
           "prerequisites": [],
           "next": [
             "mb-10"
@@ -501,7 +501,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "mb-11"
@@ -551,7 +551,7 @@
       "slug": "molecular-biology",
       "title": "分子生物学",
       "directory": "03 分子生物学",
-      "description": "围绕 DNA、RNA、蛋白质、基因表达调控和分子生物学技术构建系统学习路径。",
+      "description": "染色体与 DNA、转录、翻译，加上基因表达调控和分子生物学研究法。",
       "progress": "completed",
       "authors": [
         "小倪"
@@ -562,7 +562,7 @@
       "index_path": "03 分子生物学/COURSE_INDEX.md",
       "page_count": 37,
       "lesson_count": 37,
-      "estimated_minutes": 260,
+      "estimated_minutes": 245,
       "lessons": [
         {
           "id": "mmb-01",
@@ -599,9 +599,9 @@
           "chapter": "染色体与 DNA",
           "order": "02-01",
           "status": "scientific-review",
-          "difficulty": 2,
+          "difficulty": 3,
           "importance": 2,
-          "estimated_minutes": 11,
+          "estimated_minutes": 15,
           "prerequisites": [],
           "next": [
             "mmb-02-02"
@@ -629,7 +629,7 @@
           "status": "scientific-review",
           "difficulty": 2,
           "importance": 3,
-          "estimated_minutes": 15,
+          "estimated_minutes": 7,
           "prerequisites": [
             "mmb-02-01"
           ],
@@ -655,9 +655,9 @@
           "chapter": "染色体与 DNA",
           "order": "02-03",
           "status": "scientific-review",
-          "difficulty": 5,
+          "difficulty": 4,
           "importance": 4,
-          "estimated_minutes": 7,
+          "estimated_minutes": 8,
           "prerequisites": [],
           "next": [
             "mmb-02-04"
@@ -682,9 +682,9 @@
           "chapter": "染色体与 DNA",
           "order": "02-04",
           "status": "scientific-review",
-          "difficulty": 5,
+          "difficulty": 3,
           "importance": 5,
-          "estimated_minutes": 8,
+          "estimated_minutes": 9,
           "prerequisites": [],
           "next": [
             "mmb-02-05"
@@ -710,7 +710,7 @@
           "chapter": "染色体与 DNA",
           "order": "02-05",
           "status": "scientific-review",
-          "difficulty": 4,
+          "difficulty": 3,
           "importance": 3,
           "estimated_minutes": 5,
           "prerequisites": [],
@@ -738,7 +738,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 3,
           "prerequisites": [],
           "next": [
             "mmb-02-07"
@@ -765,7 +765,7 @@
           "status": "scientific-review",
           "difficulty": 2,
           "importance": 1,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "mmb-03-01"
@@ -792,7 +792,7 @@
           "status": "scientific-review",
           "difficulty": 2,
           "importance": 2,
-          "estimated_minutes": 5,
+          "estimated_minutes": 6,
           "prerequisites": [],
           "next": [
             "mmb-03-02"
@@ -818,7 +818,7 @@
           "chapter": "转录",
           "order": "03-02",
           "status": "scientific-review",
-          "difficulty": 5,
+          "difficulty": 4,
           "importance": 5,
           "estimated_minutes": 6,
           "prerequisites": [],
@@ -874,7 +874,7 @@
           "chapter": "转录",
           "order": "03-04",
           "status": "scientific-review",
-          "difficulty": 5,
+          "difficulty": 4,
           "importance": 4,
           "estimated_minutes": 14,
           "prerequisites": [],
@@ -904,9 +904,9 @@
           "chapter": "转录",
           "order": "03-05",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
-          "estimated_minutes": 8,
+          "estimated_minutes": 7,
           "prerequisites": [],
           "next": [
             "mmb-04-01"
@@ -934,7 +934,7 @@
           "chapter": "翻译",
           "order": "04-01",
           "status": "scientific-review",
-          "difficulty": 5,
+          "difficulty": 4,
           "importance": 5,
           "estimated_minutes": 9,
           "prerequisites": [],
@@ -964,7 +964,7 @@
           "chapter": "翻译",
           "order": "04-02",
           "status": "scientific-review",
-          "difficulty": 4,
+          "difficulty": 5,
           "importance": 5,
           "estimated_minutes": 7,
           "prerequisites": [],
@@ -993,9 +993,9 @@
           "chapter": "翻译",
           "order": "04-03",
           "status": "scientific-review",
-          "difficulty": 4,
+          "difficulty": 3,
           "importance": 2,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "mmb-05-01"
@@ -1022,9 +1022,9 @@
           "chapter": "分子生物学研究法",
           "order": "05-01",
           "status": "scientific-review",
-          "difficulty": 5,
+          "difficulty": 4,
           "importance": 5,
-          "estimated_minutes": 10,
+          "estimated_minutes": 12,
           "prerequisites": [],
           "next": [
             "mmb-05-02"
@@ -1092,7 +1092,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 2,
-          "estimated_minutes": 5,
+          "estimated_minutes": 3,
           "prerequisites": [],
           "next": [
             "mmb-05-04"
@@ -1119,9 +1119,9 @@
           "chapter": "分子生物学研究法",
           "order": "05-04",
           "status": "scientific-review",
-          "difficulty": 5,
+          "difficulty": 4,
           "importance": 2,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "mmb-05-05"
@@ -1151,9 +1151,9 @@
           "chapter": "分子生物学研究法",
           "order": "05-05",
           "status": "scientific-review",
-          "difficulty": 5,
+          "difficulty": 4,
           "importance": 2,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "mmb-05-06"
@@ -1183,7 +1183,7 @@
           "status": "scientific-review",
           "difficulty": 4,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "mmb-05-07"
@@ -1213,9 +1213,9 @@
           "chapter": "分子生物学研究法",
           "order": "05-07",
           "status": "scientific-review",
-          "difficulty": 2,
+          "difficulty": 4,
           "importance": 1,
-          "estimated_minutes": 5,
+          "estimated_minutes": 3,
           "prerequisites": [],
           "next": [
             "mmb-05-08"
@@ -1241,9 +1241,9 @@
           "chapter": "分子生物学研究法",
           "order": "05-08",
           "status": "scientific-review",
-          "difficulty": 2,
+          "difficulty": 3,
           "importance": 1,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "mmb-06-01"
@@ -1270,7 +1270,7 @@
           "chapter": "原核基因表达调控",
           "order": "06-01",
           "status": "scientific-review",
-          "difficulty": 2,
+          "difficulty": 3,
           "importance": 4,
           "estimated_minutes": 8,
           "prerequisites": [],
@@ -1300,9 +1300,9 @@
           "chapter": "原核基因表达调控",
           "order": "06-02",
           "status": "scientific-review",
-          "difficulty": 4,
+          "difficulty": 5,
           "importance": 5,
-          "estimated_minutes": 6,
+          "estimated_minutes": 5,
           "prerequisites": [],
           "next": [
             "mmb-06-03"
@@ -1334,7 +1334,7 @@
           "status": "scientific-review",
           "difficulty": 5,
           "importance": 2,
-          "estimated_minutes": 5,
+          "estimated_minutes": 3,
           "prerequisites": [],
           "next": [
             "mmb-06-04"
@@ -1362,7 +1362,7 @@
           "chapter": "原核基因表达调控",
           "order": "06-04",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 2,
           "estimated_minutes": 6,
           "prerequisites": [],
@@ -1392,7 +1392,7 @@
           "chapter": "真核基因表达调控",
           "order": "07-01",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
           "estimated_minutes": 8,
           "prerequisites": [],
@@ -1425,7 +1425,7 @@
           "chapter": "真核基因表达调控",
           "order": "07-02",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 5,
           "importance": 3,
           "estimated_minutes": 8,
           "prerequisites": [],
@@ -1459,9 +1459,9 @@
           "chapter": "真核基因表达调控",
           "order": "07-03",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 5,
           "importance": 3,
-          "estimated_minutes": 8,
+          "estimated_minutes": 10,
           "prerequisites": [],
           "next": [
             "mmb-07-04"
@@ -1492,7 +1492,7 @@
           "chapter": "真核基因表达调控",
           "order": "07-04",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
           "estimated_minutes": 7,
           "prerequisites": [],
@@ -1525,7 +1525,7 @@
           "chapter": "真核基因表达调控",
           "order": "07-05",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
           "estimated_minutes": 7,
           "prerequisites": [],
@@ -1560,7 +1560,7 @@
           "chapter": "疾病与人类健康",
           "order": "08-01",
           "status": "scientific-review",
-          "difficulty": 2,
+          "difficulty": 3,
           "importance": 4,
           "estimated_minutes": 8,
           "prerequisites": [],
@@ -1595,7 +1595,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 4,
-          "estimated_minutes": 10,
+          "estimated_minutes": 11,
           "prerequisites": [],
           "next": [
             "mmb-08-03"
@@ -1627,9 +1627,9 @@
           "chapter": "疾病与人类健康",
           "order": "08-03",
           "status": "scientific-review",
-          "difficulty": 1,
+          "difficulty": 3,
           "importance": 1,
-          "estimated_minutes": 5,
+          "estimated_minutes": 3,
           "prerequisites": [],
           "next": [
             "mmb-sp-01"
@@ -1656,9 +1656,9 @@
           "chapter": "分子生物学附册",
           "order": "sp-01",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
-          "estimated_minutes": 6,
+          "estimated_minutes": 9,
           "prerequisites": [],
           "next": [],
           "tags": [
@@ -1691,7 +1691,7 @@
       "slug": "cell-biology",
       "title": "细胞生物学",
       "directory": "04 细胞生物学",
-      "description": "以科普方式介绍细胞的结构、功能和生命活动。",
+      "description": "目前只有一章：细胞质膜与跨膜运输。",
       "progress": "serializing",
       "authors": [
         "小倪"
@@ -1703,7 +1703,7 @@
       "index_path": "04 细胞生物学/COURSE_INDEX.md",
       "page_count": 2,
       "lesson_count": 1,
-      "estimated_minutes": 10,
+      "estimated_minutes": 11,
       "lessons": [
         {
           "id": "cb-00",
@@ -1713,9 +1713,9 @@
           "chapter": "课程导航",
           "order": "00",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 1,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [],
           "tags": [
@@ -1738,7 +1738,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 10,
+          "estimated_minutes": 11,
           "prerequisites": [],
           "next": [],
           "tags": [
@@ -1761,7 +1761,7 @@
       "slug": "botany",
       "title": "植物学",
       "directory": "05 植物学",
-      "description": "面向植物学入门与复习，梳理植物细胞、组织及后续主题。",
+      "description": "植物细胞、细胞的生长与分化，以及植物组织的类型。",
       "progress": "serializing",
       "authors": [
         "小倪"
@@ -1772,7 +1772,7 @@
       "index_path": "05 植物学/COURSE_INDEX.md",
       "page_count": 4,
       "lesson_count": 3,
-      "estimated_minutes": 38,
+      "estimated_minutes": 39,
       "lessons": [
         {
           "id": "bot-00",
@@ -1782,9 +1782,9 @@
           "chapter": "课程导航",
           "order": "00",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 1,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [],
           "tags": [
@@ -1867,7 +1867,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 15,
+          "estimated_minutes": 16,
           "prerequisites": [],
           "next": [],
           "tags": [
@@ -1888,7 +1888,7 @@
       "slug": "biochemistry-food-chemistry",
       "title": "生物化学与食品化学",
       "directory": "06 生物化学与食品化学",
-      "description": "围绕生物化学与食品化学的核心知识点提供考研复习材料。",
+      "description": "蛋白质、水、糖、脂、酶五个专题，偏食品方向的生物化学。",
       "progress": "serializing",
       "authors": [
         "脆弱的百里橘",
@@ -1901,7 +1901,7 @@
       "index_path": "06 生物化学与食品化学/COURSE_INDEX.md",
       "page_count": 23,
       "lesson_count": 23,
-      "estimated_minutes": 120,
+      "estimated_minutes": 103,
       "lessons": [
         {
           "id": "bc-01-01",
@@ -1913,7 +1913,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "bc-01-02"
@@ -1941,9 +1941,9 @@
           "chapter": "蛋白质",
           "order": "01-02",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 6,
           "prerequisites": [],
           "next": [
             "bc-01-03"
@@ -1974,7 +1974,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 3,
           "prerequisites": [],
           "next": [
             "bc-01-04"
@@ -2033,9 +2033,9 @@
           "chapter": "蛋白质",
           "order": "01-05",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "bc-01-06"
@@ -2060,7 +2060,7 @@
           "chapter": "蛋白质",
           "order": "01-06",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
           "estimated_minutes": 5,
           "prerequisites": [],
@@ -2087,9 +2087,9 @@
           "chapter": "水",
           "order": "02-01",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 3,
           "prerequisites": [],
           "next": [
             "bc-02-02"
@@ -2118,7 +2118,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 3,
+          "estimated_minutes": 5,
           "prerequisites": [],
           "next": [
             "bc-02-03"
@@ -2151,7 +2151,7 @@
           "chapter": "水",
           "order": "02-03",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
           "estimated_minutes": 5,
           "prerequisites": [],
@@ -2187,7 +2187,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "bc-03-01"
@@ -2215,7 +2215,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "bc-03-02"
@@ -2246,7 +2246,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "bc-03-03"
@@ -2275,7 +2275,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "bc-03-04"
@@ -2306,7 +2306,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "bc-03-05"
@@ -2341,7 +2341,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "bc-04-01"
@@ -2372,7 +2372,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 3,
           "prerequisites": [],
           "next": [
             "bc-04-02"
@@ -2403,7 +2403,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 6,
           "prerequisites": [],
           "next": [
             "bc-05-01"
@@ -2498,7 +2498,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "bc-06"
@@ -2556,9 +2556,9 @@
           "chapter": "糖代谢",
           "order": "07",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "bc-sp"
@@ -2587,9 +2587,9 @@
           "chapter": "专题",
           "order": "sp",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 5,
           "importance": 3,
-          "estimated_minutes": 10,
+          "estimated_minutes": 17,
           "prerequisites": [],
           "next": [],
           "tags": [
@@ -2613,7 +2613,7 @@
       "slug": "bioinformatics",
       "title": "LLM 时代的生信入门",
       "directory": "07 LLM 时代的生信入门",
-      "description": "以单细胞分析为主线，介绍生物信息学数据准备、分析与可视化。",
+      "description": "以单细胞转录组为例，从样品准备、数据整理做到聚类、注释与绘图。",
       "progress": "serializing",
       "authors": [
         "脆弱的百里橘"
@@ -2624,7 +2624,7 @@
       "index_path": "07 LLM 时代的生信入门/COURSE_INDEX.md",
       "page_count": 7,
       "lesson_count": 7,
-      "estimated_minutes": 47,
+      "estimated_minutes": 46,
       "lessons": [
         {
           "id": "bif-a-01",
@@ -2636,7 +2636,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "bif-a-02"
@@ -2695,9 +2695,9 @@
           "chapter": "单细胞分析",
           "order": "a-03",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "bif-a-04"
@@ -2728,7 +2728,7 @@
           "chapter": "单细胞分析",
           "order": "a-04",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
           "estimated_minutes": 13,
           "prerequisites": [],
@@ -2794,7 +2794,7 @@
           "chapter": "单细胞分析",
           "order": "a-06",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
           "estimated_minutes": 6,
           "prerequisites": [],
@@ -2828,9 +2828,9 @@
           "chapter": "scRNAseq 实操",
           "order": "b-02",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 4,
           "importance": 3,
-          "estimated_minutes": 7,
+          "estimated_minutes": 10,
           "prerequisites": [],
           "next": [],
           "tags": [
@@ -2853,7 +2853,7 @@
       "slug": "food-flavor-chemistry",
       "title": "食品风味化学与分析",
       "directory": "08 食品风味化学与分析",
-      "description": "从风味物质的化学本质出发，讲清风味的形成途径、感知规律与分析方法。",
+      "description": "风味化学的绪论、感官评价，以及风味物质的制备与创制。",
       "progress": "serializing",
       "authors": [
         "小倪"
@@ -2864,7 +2864,7 @@
       "index_path": "08 食品风味化学与分析/COURSE_INDEX.md",
       "page_count": 3,
       "lesson_count": 3,
-      "estimated_minutes": 15,
+      "estimated_minutes": 12,
       "lessons": [
         {
           "id": "ffc-01",
@@ -2874,9 +2874,9 @@
           "chapter": "课程正文",
           "order": "01",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 1,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 4,
           "prerequisites": [],
           "next": [
             "ffc-02"
@@ -2901,9 +2901,9 @@
           "chapter": "课程正文",
           "order": "02",
           "status": "scientific-review",
-          "difficulty": 3,
+          "difficulty": 2,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 2,
           "prerequisites": [],
           "next": [
             "ffc-03"
@@ -2930,7 +2930,7 @@
           "status": "scientific-review",
           "difficulty": 3,
           "importance": 3,
-          "estimated_minutes": 5,
+          "estimated_minutes": 6,
           "prerequisites": [],
           "next": [],
           "tags": [

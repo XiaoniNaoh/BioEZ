@@ -7,9 +7,9 @@ order: "02-03"
 status: "scientific-review"
 audience:
   - "undergraduate"
-difficulty: 5
+difficulty: 4
 importance: 4
-estimated_minutes: 7
+estimated_minutes: 8
 prerequisites: []
 next:
   - "mmb-02-04"

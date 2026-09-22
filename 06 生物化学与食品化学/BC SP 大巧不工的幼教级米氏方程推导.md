@@ -8,9 +8,9 @@ status: "scientific-review"
 audience:
   - "undergraduate"
   - "postgraduate-entrance-exam"
-difficulty: 3
+difficulty: 5
 importance: 3
-estimated_minutes: 10
+estimated_minutes: 17
 prerequisites: []
 next: []
 tags:

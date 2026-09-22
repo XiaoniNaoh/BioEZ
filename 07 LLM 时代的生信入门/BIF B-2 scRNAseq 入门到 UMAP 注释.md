@@ -7,9 +7,9 @@ order: "b-02"
 status: "scientific-review"
 audience:
   - "undergraduate"
-difficulty: 3
+difficulty: 4
 importance: 3
-estimated_minutes: 7
+estimated_minutes: 10
 prerequisites: []
 next: []
 tags:

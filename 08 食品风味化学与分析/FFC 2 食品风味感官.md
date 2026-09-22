@@ -7,9 +7,9 @@ order: "02"
 status: "scientific-review"
 audience:
   - "undergraduate"
-difficulty: 3
+difficulty: 2
 importance: 3
-estimated_minutes: 5
+estimated_minutes: 2
 prerequisites: []
 next:
   - "ffc-03"
