@@ -179,6 +179,28 @@ ${courses
 `,
 )
 
+// 站点概况：从课程清单里现算，不手写数字（关于页、团队页共用）
+const totalLessons = courses.reduce((n, c) => n + (c.lesson_count ?? (c.lessons?.length ?? 0)), 0)
+const totalMinutes = courses.reduce((n, c) => n + (c.estimated_minutes ?? 0), 0)
+const totalHours = Math.round(totalMinutes / 60)
+const finishedCourses = courses.filter((c) => c.progress === 'completed').length
+
+// 关于页的课程清单：一行一门课（序号 / 课名 / 篇数与时长 / 一句说明）
+const courseRows = courses
+  .map((c, i) => {
+    const desc = (c.description || '').replace(/\s+/g, ' ').trim()
+    const n = c.lesson_count ?? (c.lessons?.length ?? 0)
+    const mins = c.estimated_minutes ?? '?'
+    const done = c.progress === 'completed'
+    return `  <a class="aurora-course" href="${route(indexPath(c))}">
+    <span class="aurora-course-no">${String(i + 1).padStart(2, '0')}</span>
+    <b class="aurora-course-title">${c.title}</b>
+    <span class="aurora-course-meta">${n} 篇 · ${mins} 分钟<span class="aurora-tag${done ? '' : ' is-live'}">${done ? '已完成' : '连载中'}</span></span>
+    <span class="aurora-course-desc">${desc}</span>
+  </a>`
+  })
+  .join('\n')
+
 writeFileSync(
   join(CONTENT, 'about.md'),
   `---
@@ -188,61 +210,93 @@ prev: false
 next: false
 ---
 
+<p class="aurora-kicker">About</p>
+
 # 关于本站
 
-这里是小倪整理的生物类课程笔记，内容是课堂笔记和复习提纲，原先放在 Obsidian 里，现在搬到网上。按课程分册，每页有前后篇导航，可以顺着读，也可以跳着看。
+小倪的课堂笔记。2024 年夏天开始记，课上随手写，考试前再整理一遍。原先一直躺在 Obsidian 里，后来按课程分了册、给每页补上上一篇和下一篇，才搬出来放到网上。
 
-## 都有什么
-
-<div class="aurora-grid">
-${courses
-  .map((c) => {
-    const desc = (c.description || '').replace(/\\n/g, ' ')
-    return `  <a class="aurora-chip" href="${route(indexPath(c))}">
-    <span class="aurora-chip-icon">${courseIcon(c)}</span>
-    <b>${c.title}</b>
-    <span class="aurora-chip-desc">${desc}</span>
-  </a>`
-  })
-  .join('\n')}
+<div class="aurora-metrics">
+  <div class="aurora-metric"><b>${courses.length}</b><span>门课程</span></div>
+  <div class="aurora-metric"><b>${totalLessons}</b><span>篇正文</span></div>
+  <div class="aurora-metric"><b>${totalHours}</b><span>小时阅读量</span></div>
+  <div class="aurora-metric"><b>${finishedCourses}</b><span>门已完成</span></div>
 </div>
 
-每门课另有一份「课程目录」，写明篇数、预计阅读时间和先后顺序。
+## 现在有什么
 
-## 怎么用
+写完的 ${finishedCourses} 门标了「已完成」，剩下 ${courses.length - finishedCourses} 门还在往下写。点一行进一门的目录。
+
+<div class="aurora-courses">
+${courseRows}
+</div>
+
+每门课另有一份目录页，写着篇数和大概要读多久。想一次看全，去[全部课程](/courses)。
+
+## 怎么读
+
+不用从头看，随便进一门都行。
 
 <div class="aurora-steps">
   <div class="aurora-step">
     <span class="aurora-step-no">01</span>
-    <b>挑一门课</b>
-    <p>从首页卡片或顶部「全部课程」进任意一门课。</p>
+    <b>挑一门</b>
+    <p>从「全部课程」里挑一门进。</p>
   </div>
   <div class="aurora-step">
     <span class="aurora-step-no">02</span>
-    <b>顺着读</b>
-    <p>每页顶部有「上一篇 · 课程目录 · 下一篇」，可以一路翻下去。</p>
+    <b>顺着翻</b>
+    <p>页顶还有上一篇和下一篇。</p>
   </div>
   <div class="aurora-step">
     <span class="aurora-step-no">03</span>
-    <b>换外观</b>
-    <p>右上角可以切换深色和浅色，晚上看字不刺眼。</p>
+    <b>查个词</b>
+    <p>右上角搜索，比翻目录快。</p>
   </div>
 </div>
 
+<p class="aurora-note">右上角还能切深色，晚上看不刺眼。</p>
+
+## 怎么做的
+
+笔记在 Obsidian 里写，正文就是 Markdown，公式和图表跟正文放在一起，没有什么需要额外转换的东西。
+
+站点用 VitePress 生成，推到 main 之后由 GitHub Actions 自动构建、发到香港的一台服务器上，一两分钟就能看到新的。同一份笔记还发了一份 Quartz 版挂在 GitHub Pages 上，是给想连着跳着看的人准备的课程地图。
+
 ## 关于更新
 
-内容还在补，早先整理的篇目也会陆续回看修订。发现写错或讲得不清楚的地方，可以到仓库提 Issue，或直接提交修改。
+写完的篇目也一直在改：有的术语第一次出现忘了给全称，有的例子回头看不顺眼。看到写错的地方，去仓库提 issue 就行，或者自己改。
 
-## 谁在维护
+## 谁在做
 
-由两个人一起整理，分工和联系方式见[团队页面](/team)。
+两个人的事。小倪写课，脆弱的百里橘写生信那部分，Quartz 课程地图也是他搭的。分工和联系方式在[团队页面](/team)。
 
 ## 许可与出处
 
-除特别注明外，本站内容以 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 许可开放：转载时注明出处，并以相同方式共享即可。
+除特别注明外，正文按 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 开放，转载时注明出处、用同样方式分享就行。
 
-- 仓库：<https://github.com/XiaoniNaoh/BioEZ>
-- 在线版：<https://wiki.bioez.xyz/>
+<div class="aurora-terms">
+  <div class="aurora-term">
+    <span>仓库</span>
+    <p><a href="https://github.com/XiaoniNaoh/BioEZ" target="_blank" rel="noopener">github.com/XiaoniNaoh/BioEZ</a></p>
+  </div>
+  <div class="aurora-term">
+    <span>在线版</span>
+    <p><a href="https://wiki.bioez.xyz/" target="_blank" rel="noopener">wiki.bioez.xyz</a></p>
+  </div>
+</div>
+
+<div class="aurora-cta">
+  <div>
+    <b>发现错误，或者想补一节？</b>
+    <p>仓库开着，Issue 和 Pull Request 都收。</p>
+  </div>
+  <a href="https://github.com/XiaoniNaoh/BioEZ" target="_blank" rel="noopener">去 GitHub</a>
+</div>
+
+<p class="aurora-foot">
+  课程以外的内容写在<a href="https://bioez.xyz" target="_blank" rel="noopener">主站</a>，那边没编目录，翻到哪算哪。
+</p>
 `,
 )
 
@@ -281,11 +335,6 @@ const teamMembers = contributors.map((c) => ({
   desc: c.desc ?? '',
   links: (c.links ?? []).map((l) => ({ icon: { svg: ICON_SVG[l.icon] ?? '' }, link: l.link })),
 }))
-
-// 团队页的站点概况：从课程清单里现算，不手写数字
-const totalLessons = courses.reduce((n, c) => n + (c.lesson_count ?? (c.lessons?.length ?? 0)), 0)
-const totalMinutes = courses.reduce((n, c) => n + (c.estimated_minutes ?? 0), 0)
-const totalHours = Math.round(totalMinutes / 60)
 
 writeFileSync(
   join(CONTENT, 'team.md'),

@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
+import { obsidianCallouts } from './plugins/obsidian-callouts.mjs'
 
 const courses: any[] = JSON.parse(
   readFileSync(fileURLToPath(new URL('../../data/courses.json', import.meta.url)), 'utf8'),
@@ -58,6 +59,10 @@ export default defineConfig({
     lineNumbers: true,
     math: true,
     image: { lazyLoading: true },
+    // 补上 Obsidian 的 ATTENTION / EXAMPLE（以及 [!Notes] 这种写法）
+    config: (md) => {
+      md.use(obsidianCallouts)
+    },
   },
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],

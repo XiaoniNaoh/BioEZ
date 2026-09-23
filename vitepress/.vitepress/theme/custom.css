@@ -24,6 +24,16 @@
   --vp-custom-block-note-bg: #f6f6f7;
   --vp-custom-block-note-border: #eaeaec;
 
+  /* EXAMPLE 提示框（Obsidian 的 [!example]）：奶油淡蓝，
+     和标题荧光笔、翻页按钮同一个色系 */
+  --vp-c-example-1: #3f6484;
+  --vp-c-example-2: #33526e;
+  --vp-c-example-soft: rgba(190, 216, 234, 0.4);
+  --vp-custom-block-example-border: rgba(190, 216, 234, 0.5);
+  --vp-custom-block-example-text: var(--vp-c-text-1);
+  --vp-custom-block-example-bg: rgba(226, 239, 249, 0.45);
+  --vp-custom-block-example-code-bg: rgba(190, 216, 234, 0.36);
+
   /* 上一篇 / 下一篇按钮：奶油淡蓝 */
   --pager-bg: rgba(226, 239, 249, 0.22);
   --pager-bg-hover: rgba(226, 239, 249, 0.38);
@@ -66,6 +76,14 @@
 
   --vp-custom-block-note-bg: rgba(255, 255, 255, 0.045);
   --vp-custom-block-note-border: rgba(255, 255, 255, 0.09);
+
+  --vp-c-example-1: #a9c8dd;
+  --vp-c-example-2: #c3dcec;
+  --vp-c-example-soft: rgba(142, 188, 214, 0.08);
+  --vp-custom-block-example-border: rgba(142, 188, 214, 0.18);
+  --vp-custom-block-example-text: var(--vp-c-text-1);
+  --vp-custom-block-example-bg: rgba(142, 188, 214, 0.08);
+  --vp-custom-block-example-code-bg: rgba(142, 188, 214, 0.12);
 
   --pager-bg: rgba(142, 188, 214, 0.05);
   --pager-bg-hover: rgba(142, 188, 214, 0.09);
@@ -391,6 +409,54 @@ body::after {
   background-color: var(--glass-bg);
 }
 
+/* ── Obsidian 的 ATTENTION / EXAMPLE 提示块 ──────────────────────────────
+   VitePress 自带 TIP / NOTE / INFO / IMPORTANT / WARNING / CAUTION /
+   DANGER，笔记里另外用到的两类由 plugins/obsidian-callouts.mjs 认下来，
+   渲染结构和 github-alert 一致，所以只在这里补配色。 */
+
+/* ATTENTION 在 Obsidian 里就是 WARNING 的别名（同一个橙色三角），
+   配色直接沿用 warning，只是标题写「注意」 */
+.custom-block.attention {
+  border-color: var(--vp-custom-block-warning-border);
+  color: var(--vp-custom-block-warning-text);
+  background-color: var(--vp-custom-block-warning-bg);
+}
+
+.custom-block.attention a,
+.custom-block.attention code {
+  color: var(--vp-c-warning-1);
+}
+
+.custom-block.attention a:hover,
+.custom-block.attention a:hover > code {
+  color: var(--vp-c-warning-2);
+}
+
+.custom-block.attention code {
+  background-color: var(--vp-custom-block-warning-code-bg);
+}
+
+/* EXAMPLE 单独一类：奶油淡蓝的底，偏冷、不抢戏 */
+.custom-block.example {
+  border-color: var(--vp-custom-block-example-border);
+  color: var(--vp-custom-block-example-text);
+  background-color: var(--vp-custom-block-example-bg);
+}
+
+.custom-block.example a,
+.custom-block.example code {
+  color: var(--vp-c-example-1);
+}
+
+.custom-block.example a:hover,
+.custom-block.example a:hover > code {
+  color: var(--vp-c-example-2);
+}
+
+.custom-block.example code {
+  background-color: var(--vp-custom-block-example-code-bg);
+}
+
 /* 首页卡片：悬停轻微上浮 + 品牌色描边 */
 .VPFeatures .item {
   transition:
@@ -468,7 +534,7 @@ body::after {
   position: relative;
 }
 
-.Layout:not(.aurora-home):not(.aurora-team)::before {
+.Layout:not(.aurora-home):not(.aurora-team):not(.aurora-about)::before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -483,7 +549,7 @@ body::after {
     linear-gradient(180deg, rgba(150, 196, 216, 0.12), rgba(150, 196, 216, 0) 76%);
 }
 
-.dark .Layout:not(.aurora-home):not(.aurora-team)::before {
+.dark .Layout:not(.aurora-home):not(.aurora-team):not(.aurora-about)::before {
   background-image:
     radial-gradient(46% 86% at 16% 0%, rgba(108, 191, 149, 0.28), transparent 72%),
     radial-gradient(46% 86% at 84% 0%, rgba(120, 170, 210, 0.28), transparent 74%),
@@ -534,104 +600,378 @@ body::after {
   );
 }
 
-/* 关于页：首段做成引子 */
-.aurora-about .vp-doc > h1 + p {
-  max-width: 42em;
-  color: var(--vp-c-text-2);
+/* ── 关于页 ──────────────────────────────────────────────────────────────
+   开场沿用首页 / 团队页那套：一条深色天空，标题区放一句定位话，一串数字
+   压在天空下缘。再往下全部走发丝线——课程一行一门、读法三列、做法键值
+   行——不铺卡片，靠留白和分割线撑住版面。 */
+
+/* 天空的范围跟着正文栏走：左右各让出一列，右边正好停在「页面导航」前面，
+   不会在目录后面留下一片泛白的光。宽屏时整个版心居中，留白要从两边补回来。 */
+.aurora-about {
+  --aurora-gutter: max(0px, (100vw - var(--vp-layout-max-width, 1440px)) / 2);
 }
 
-/* 课程卡片网格 */
-.aurora-about .aurora-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
-  gap: 14px;
-  margin: 24px 0 8px;
+.aurora-about::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: calc(var(--aurora-gutter) + var(--vp-sidebar-width, 272px));
+  right: calc(var(--aurora-gutter) + 272px);
+  height: 416px;
+  pointer-events: none;
+  background-color: #051318;
+  background-image:
+    radial-gradient(46% 62% at 2% -6%, rgba(94, 214, 165, 0.5), transparent 58%),
+    radial-gradient(44% 58% at 100% -12%, rgba(98, 172, 232, 0.56), transparent 60%),
+    linear-gradient(180deg, #051318 0%, #071a21 58%, #08202a 100%);
+  /* 右缘化开：从正文栏右边界开始收（96px），中间垫几档，
+     渐隐是慢慢淡出的，不会看到一条边，也照不到右边那一列目录 */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 calc(100% - 180px),
+    rgba(0, 0, 0, 0.9) calc(100% - 140px),
+    rgba(0, 0, 0, 0.66) calc(100% - 100px),
+    rgba(0, 0, 0, 0.38) calc(100% - 62px),
+    rgba(0, 0, 0, 0.14) calc(100% - 30px),
+    rgba(0, 0, 0, 0.03) calc(100% - 10px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 calc(100% - 180px),
+    rgba(0, 0, 0, 0.9) calc(100% - 140px),
+    rgba(0, 0, 0, 0.66) calc(100% - 100px),
+    rgba(0, 0, 0, 0.38) calc(100% - 62px),
+    rgba(0, 0, 0, 0.14) calc(100% - 30px),
+    rgba(0, 0, 0, 0.03) calc(100% - 10px),
+    transparent 100%
+  );
 }
 
-.aurora-about .aurora-chip {
+/* 窄屏没有右侧目录，天空铺到右边缘 */
+@media (max-width: 1279px) {
+  .aurora-about::before {
+    right: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+@media (max-width: 959px) {
+  .aurora-about::before {
+    left: 0;
+    height: 398px;
+  }
+}
+
+.dark .aurora-about::before {
+  background-color: #082730;
+  background-image:
+    radial-gradient(46% 62% at 2% -6%, rgba(94, 214, 165, 0.34), transparent 58%),
+    radial-gradient(44% 58% at 100% -12%, rgba(98, 172, 232, 0.4), transparent 60%),
+    linear-gradient(180deg, #0a2c36 0%, #082630 58%, #061c24 100%);
+}
+
+/* 顶部导航压在天空上：玻璃调白一档，跟下面的深色分开。
+   右侧那列「页面导航」是深色字，所以天空在它之前就淡出了，
+   导航条不跟着变透明，保持深色文字可读。滚下去自动恢复成普通玻璃。 */
+.aurora-about .VPNavBar.top,
+.aurora-about .VPNavBar.top .content-body {
+  background-color: var(--glass-bg-strong) !important;
+}
+
+/* 标题区（在天空里）：和团队页一样居中；h1 不用荧光笔痕，引子压暗一档 */
+.aurora-about .aurora-kicker {
+  text-align: center;
+}
+
+.aurora-about .vp-doc h1 {
+  padding-top: 6px;
+  margin-inline: auto;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #f3fbf8;
+}
+
+.aurora-about .vp-doc h1::before {
+  display: none;
+}
+
+.aurora-about .vp-doc h1 + p {
+  max-width: 40em;
+  margin: 14px auto 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(214, 240, 232, 0.64);
+}
+
+/* 数字条：白玻璃块压在天空下缘，和首页课程卡一样骑在深色块上 */
+.aurora-about .aurora-metrics {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-areas:
-    'icon title'
-    'desc desc';
-  gap: 6px 10px;
-  padding: 16px 18px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 56px 0 0;
   border: 1px solid var(--glass-edge);
-  border-radius: 14px;
-  background-color: var(--glass-bg-soft);
-  box-shadow: var(--glass-shadow);
+  border-radius: 18px;
+  overflow: hidden;
+  /* 比通用玻璃再实一档：天空右缘的渐隐不会从卡片里透出来，
+     压在深色上仍旧是磨砂玻璃的观感 */
+  background-color: rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 24px 60px rgba(4, 24, 20, 0.2),
+    0 2px 8px rgba(4, 24, 20, 0.08);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.dark .aurora-about .aurora-metrics {
+  border-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(32, 33, 39, 0.94);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.aurora-about .aurora-metric {
+  padding: 26px 12px 24px;
+  border-left: 1px solid var(--glass-edge);
+  text-align: center;
+}
+
+.aurora-about .aurora-metric:first-child {
+  border-left: none;
+}
+
+.aurora-about .aurora-metric b {
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--vp-c-brand-1);
+}
+
+.aurora-about .aurora-metric span {
+  display: block;
+  padding-top: 6px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--vp-c-text-3);
+}
+
+.aurora-about .aurora-metrics + h2 {
+  margin-top: 60px;
+}
+
+/* 「现在有什么」：一行一门课，发丝线分隔，悬停才亮一下 */
+.aurora-about .aurora-courses {
+  margin: 22px 0 8px;
+  border-top: 1px solid var(--glass-edge);
+}
+
+.aurora-about .aurora-course {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  grid-template-areas:
+    'no title meta'
+    '. desc desc';
+  align-items: baseline;
+  column-gap: 16px;
+  row-gap: 5px;
+  padding: 15px 10px 15px 6px;
+  border-bottom: 1px solid var(--glass-edge);
   text-decoration: none;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
-.aurora-about .aurora-chip:hover {
-  transform: translateY(-2px);
-  border-color: var(--vp-c-brand-1);
+.aurora-about .aurora-course:hover {
+  background-color: var(--vp-c-brand-soft);
 }
 
-.aurora-about .aurora-chip-icon {
-  grid-area: icon;
-  font-size: 18px;
-  line-height: 1.5;
+.aurora-about .aurora-course-no {
+  grid-area: no;
+  font-size: 12px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+  color: var(--vp-c-text-3);
 }
 
-.aurora-about .aurora-chip b {
+.aurora-about .aurora-course-title {
   grid-area: title;
-  font-size: 14.5px;
-  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--vp-c-text-1);
+  transition: color 0.2s ease;
 }
 
-.aurora-about .aurora-chip-desc {
+.aurora-about .aurora-course:hover .aurora-course-title {
+  color: var(--vp-c-brand-1);
+}
+
+.aurora-about .aurora-course-meta {
+  grid-area: meta;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--vp-c-text-3);
+}
+
+.aurora-about .aurora-course-desc {
   grid-area: desc;
-  font-size: 13px;
-  line-height: 1.65;
+  font-size: 13.5px;
+  line-height: 1.7;
   color: var(--vp-c-text-2);
 }
 
-/* 「怎么用」三步：小卡片，左上角一个序号 */
+/* 完结状态：一颗小胶囊，「连载中」退成灰描边 */
+.aurora-about .aurora-tag {
+  padding: 2px 9px 3px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background-color: var(--vp-c-brand-soft);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--vp-c-brand-1);
+}
+
+.aurora-about .aurora-tag.is-live {
+  border-color: var(--glass-edge);
+  background-color: transparent;
+  color: var(--vp-c-text-3);
+}
+
+/* 「怎么读」：三列，列与列之间一条竖发丝线 */
 .aurora-about .aurora-steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
-  gap: 14px;
-  margin: 24px 0 8px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 22px 0 4px;
 }
 
 .aurora-about .aurora-step {
-  padding: 18px 20px 20px;
-  border: 1px solid var(--glass-edge);
-  border-radius: 14px;
-  background-color: var(--glass-bg-soft);
-  box-shadow: var(--glass-shadow);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
+  padding: 2px 22px;
+  border-left: 1px solid var(--glass-edge);
+}
+
+.aurora-about .aurora-step:first-child {
+  padding-left: 0;
+  border-left: none;
 }
 
 .aurora-about .aurora-step-no {
   display: block;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1em;
   color: var(--vp-c-brand-1);
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .aurora-about .aurora-step b {
   display: block;
-  padding-top: 6px;
-  font-size: 15px;
+  padding-top: 8px;
+  font-size: 15.5px;
+  letter-spacing: -0.01em;
   color: var(--vp-c-text-1);
 }
 
 .aurora-about .aurora-step p {
   margin: 6px 0 0;
   font-size: 13.5px;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--vp-c-text-2);
+}
+
+/* 「怎么做的」/「许可」里的键值行：左边一个短标签，右边一句话 */
+.aurora-about .aurora-terms {
+  margin: 20px 0 8px;
+  border-top: 1px solid var(--glass-edge);
+}
+
+.aurora-about .aurora-term {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--glass-edge);
+}
+
+.aurora-about .aurora-term > span {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--vp-c-text-3);
+}
+
+.aurora-about .aurora-term p {
+  margin: 0;
+  font-size: 13.8px;
+  line-height: 1.75;
+  color: var(--vp-c-text-2);
+}
+
+/* 「谁在做」用团队页那张两栏分工表，间距收紧一点 */
+.aurora-about .aurora-roles {
+  margin-top: 24px;
+}
+
+/* 小节末尾的小字备注（切深色、去哪儿找人） */
+.aurora-about .aurora-note {
+  margin: 14px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--vp-c-text-3);
+}
+
+@media (max-width: 767px) {
+  .aurora-about .aurora-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 34px;
+  }
+
+  .aurora-about .aurora-metric:nth-child(odd) {
+    border-left: none;
+  }
+
+  .aurora-about .aurora-metric:nth-child(n + 3) {
+    border-top: 1px solid var(--glass-edge);
+  }
+
+  .aurora-about .aurora-course {
+    grid-template-columns: 26px minmax(0, 1fr);
+    grid-template-areas:
+      'no title'
+      '. meta'
+      '. desc';
+  }
+
+  .aurora-about .aurora-steps {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+
+  .aurora-about .aurora-step {
+    padding: 0;
+    border-left: none;
+  }
+
+  .aurora-about .aurora-roles {
+    grid-template-columns: 1fr;
+    row-gap: 26px;
+  }
+
+  .aurora-about .aurora-role {
+    padding: 0;
+    border-left: none;
+  }
 }
 
 
@@ -723,7 +1063,7 @@ body::after {
   color: rgba(228, 246, 240, 0.74);
 }
 
-.aurora-team .aurora-kicker {
+.aurora-kicker {
   display: block;
   padding-bottom: 14px;
   font-size: 11px;
@@ -797,24 +1137,24 @@ body::after {
   padding: 0 24px;
 }
 
-.aurora-team .aurora-stats {
+.aurora-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--glass-edge);
   border-bottom: 1px solid var(--glass-edge);
 }
 
-.aurora-team .aurora-stat {
+.aurora-stat {
   padding: 28px 14px 26px;
   border-left: 1px solid var(--glass-edge);
   text-align: center;
 }
 
-.aurora-team .aurora-stat:first-child {
+.aurora-stat:first-child {
   border-left: none;
 }
 
-.aurora-team .aurora-stat b {
+.aurora-stat b {
   display: block;
   font-size: 34px;
   font-weight: 600;
@@ -823,7 +1163,7 @@ body::after {
   color: var(--vp-c-brand-1);
 }
 
-.aurora-team .aurora-stat span {
+.aurora-stat span {
   display: block;
   padding-top: 8px;
   font-size: 12px;
@@ -831,23 +1171,23 @@ body::after {
   color: var(--vp-c-text-3);
 }
 
-.aurora-team .aurora-roles {
+.aurora-roles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 56px;
 }
 
-.aurora-team .aurora-role {
+.aurora-role {
   padding: 0 36px;
   border-left: 1px solid var(--glass-edge);
 }
 
-.aurora-team .aurora-role:first-child {
+.aurora-role:first-child {
   border-left: none;
   padding-left: 0;
 }
 
-.aurora-team .aurora-role-tag {
+.aurora-role-tag {
   display: inline-block;
   font-size: 11px;
   font-weight: 600;
@@ -856,7 +1196,7 @@ body::after {
   color: var(--vp-c-brand-1);
 }
 
-.aurora-team .aurora-role b {
+.aurora-role b {
   display: block;
   padding-top: 10px;
   font-size: 19px;
@@ -865,7 +1205,7 @@ body::after {
   color: var(--vp-c-text-1);
 }
 
-.aurora-team .aurora-role p {
+.aurora-role p {
   margin: 8px 0 0;
   font-size: 14px;
   line-height: 1.75;
@@ -873,7 +1213,7 @@ body::after {
 }
 
 /* 贡献条：走深色，和天空首尾呼应 */
-.aurora-team .aurora-cta {
+.aurora-cta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -890,7 +1230,7 @@ body::after {
   color: #eaf6f1;
 }
 
-.aurora-team .aurora-cta b {
+.aurora-cta b {
   display: block;
   font-size: 17px;
   font-weight: 600;
@@ -898,13 +1238,13 @@ body::after {
   color: #f3fbf8;
 }
 
-.aurora-team .aurora-cta p {
+.aurora-cta p {
   margin: 6px 0 0;
   font-size: 13.5px;
   color: rgba(228, 246, 240, 0.68);
 }
 
-.aurora-team .aurora-cta > a {
+.aurora-cta > a {
   flex: none;
   padding: 11px 24px;
   border-radius: 999px;
@@ -916,12 +1256,12 @@ body::after {
   transition: background-color 0.2s ease;
 }
 
-.aurora-team .aurora-cta > a:hover {
+.aurora-cta > a:hover {
   background-color: #ffffff;
 }
 
 /* 页脚那行小字 */
-.aurora-team .aurora-foot {
+.aurora-foot {
   margin: 28px auto 0;
   max-width: 620px;
   text-align: center;
@@ -930,7 +1270,7 @@ body::after {
   color: var(--vp-c-text-3);
 }
 
-.aurora-team .aurora-foot a {
+.aurora-foot a {
   color: var(--vp-c-brand-1);
   text-decoration: none;
   border-bottom: 1px solid var(--vp-c-brand-soft);
