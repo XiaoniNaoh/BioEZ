@@ -12,6 +12,10 @@ const toLink = (p: string) => '/' + p.replace(/\.md$/, '')
 // 用文件名（不含扩展名）作为侧栏文字，保留编制的前缀，如「MB 01 绪论」「MMB 02-1 染色体」
 const stem = (p: string) => p.split('/').pop()!.replace(/\.md$/, '')
 
+// 目录里省掉课程代号（MMB 03-5 → 03-5、BIF A-1 → A-1、MMB 03 转录 → 03 转录）；
+// 页面标题、正文，以及鼠标悬浮时 title 里的全名都不动
+const short = (s: string) => s.replace(/^[A-Z]{2,3}\s+/, '')
+
 // 不发布的文件（与 scripts/stage.mjs 的 SKIP 保持一致）
 const SKIP = ['模板', '一本全']
 const published = (p: string) => !SKIP.some((s) => p.includes(s))
@@ -28,7 +32,7 @@ const sidebar = courses
       const prefix = c.directory + '/'
       const rel: string = l.path.startsWith(prefix) ? l.path.slice(prefix.length) : l.path
       const segs = rel.split('/')
-      const item = { text: stem(l.path), link: toLink(l.path) }
+      const item = { text: short(stem(l.path)), link: toLink(l.path) }
       if (segs.length > 1) {
         const key = segs[0]
         if (!groups.has(key)) groups.set(key, [])
@@ -39,7 +43,7 @@ const sidebar = courses
     }
     items.push(...top)
     // 章节层（二级目录，如「MMB 02 染色体与DNA」「A篇」）可折叠
-    for (const [name, sub] of groups) items.push({ text: name, collapsed: true, items: sub })
+    for (const [name, sub] of groups) items.push({ text: short(name), collapsed: true, items: sub })
     // 课名前加目录序号（如「02」）便于分辨；课程默认折叠，仅当前所在课程自动展开
     const num = (c.directory.match(/^(\d+)/) || [])[1]
     const label = num ? `${num} ${c.title}` : c.title
