@@ -156,21 +156,54 @@ ${courses
 
 writeFileSync(
   join(CONTENT, 'about.md'),
-  `# 关于本站
+  `---
+title: 关于本站
+pageClass: aurora-about
+prev: false
+next: false
+---
 
-这里是小倪整理的生物类课程笔记，内容是课堂笔记和复习提纲，原先放在 Obsidian 里，现在搬到网上。
+# 关于本站
+
+这里是小倪整理的生物类课程笔记，内容是课堂笔记和复习提纲，原先放在 Obsidian 里，现在搬到网上。按课程分册，每页有前后篇导航，可以顺着读，也可以跳着看。
 
 ## 都有什么
 
-${courses.map((c) => `- **${c.title}**：${(c.description || '').replace(/\\n/g, ' ')}`).join('\n')}
+<div class="aurora-grid">
+${courses
+  .map((c) => {
+    const icon = c.icon ?? COURSE_ICONS[c.slug] ?? '📘'
+    const desc = (c.description || '').replace(/\\n/g, ' ')
+    return `  <a class="aurora-chip" href="${route(indexPath(c))}">
+    <span class="aurora-chip-icon">${icon}</span>
+    <b>${c.title}</b>
+    <span class="aurora-chip-desc">${desc}</span>
+  </a>`
+  })
+  .join('\n')}
+</div>
 
 每门课另有一份「课程目录」，写明篇数、预计阅读时间和先后顺序。
 
 ## 怎么用
 
-- 从首页卡片或顶部「全部课程」进任意一门课；
-- 每页顶部有「上一篇 · 课程目录 · 下一篇」；
-- 右上角可以切换深色和浅色。
+<div class="aurora-steps">
+  <div class="aurora-step">
+    <span class="aurora-step-no">01</span>
+    <b>挑一门课</b>
+    <p>从首页卡片或顶部「全部课程」进任意一门课。</p>
+  </div>
+  <div class="aurora-step">
+    <span class="aurora-step-no">02</span>
+    <b>顺着读</b>
+    <p>每页顶部有「上一篇 · 课程目录 · 下一篇」，可以一路翻下去。</p>
+  </div>
+  <div class="aurora-step">
+    <span class="aurora-step-no">03</span>
+    <b>换外观</b>
+    <p>右上角可以切换深色和浅色，晚上看字不刺眼。</p>
+  </div>
+</div>
 
 ## 关于更新
 
@@ -225,10 +258,16 @@ const teamMembers = contributors.map((c) => ({
   links: (c.links ?? []).map((l) => ({ icon: { svg: ICON_SVG[l.icon] ?? '' }, link: l.link })),
 }))
 
+// 团队页的站点概况：从课程清单里现算，不手写数字
+const totalLessons = courses.reduce((n, c) => n + (c.lesson_count ?? (c.lessons?.length ?? 0)), 0)
+const totalMinutes = courses.reduce((n, c) => n + (c.estimated_minutes ?? 0), 0)
+const totalHours = Math.round(totalMinutes / 60)
+
 writeFileSync(
   join(CONTENT, 'team.md'),
   `---
 layout: page
+pageClass: aurora-team
 ---
 
 <script setup>
@@ -239,7 +278,10 @@ const members = ${JSON.stringify(teamMembers, null, 2)}
 
 <VPTeamPage>
   <VPTeamPageTitle>
-    <template #title>关于我们</template>
+    <template #title>
+      <span class="aurora-kicker">Team</span>
+      关于我们
+    </template>
     <template #lead>
       BioEZ 的课程笔记由两个人一起整理。
     </template>
@@ -247,6 +289,52 @@ const members = ${JSON.stringify(teamMembers, null, 2)}
 
   <VPTeamMembers size="medium" :members="members" />
 </VPTeamPage>
+
+<div class="aurora-extra">
+  <div class="aurora-stats">
+    <div class="aurora-stat">
+      <b>${courses.length}</b>
+      <span>门课程</span>
+    </div>
+    <div class="aurora-stat">
+      <b>${totalLessons}</b>
+      <span>篇正文</span>
+    </div>
+    <div class="aurora-stat">
+      <b>${totalHours}</b>
+      <span>小时阅读量</span>
+    </div>
+    <div class="aurora-stat">
+      <b>2</b>
+      <span>套站点</span>
+    </div>
+  </div>
+
+  <div class="aurora-roles">
+    <div class="aurora-role">
+      <span class="aurora-role-tag">小倪</span>
+      <b>其余课程与本站</b>
+      <p>除生信部分以外的课程正文、排版与更新，以及本站（wiki.bioez.xyz）的维护。</p>
+    </div>
+    <div class="aurora-role">
+      <span class="aurora-role-tag">脆弱的百里橘</span>
+      <b>生信部分与课程地图</b>
+      <p>「LLM 时代的生信入门」部分由他编写；Quartz 课程地图与构建流程也由他搭建。</p>
+    </div>
+  </div>
+
+  <div class="aurora-cta">
+    <div>
+      <b>发现错误，或者想补一节？</b>
+      <p>仓库开着，Issue 和 Pull Request 都收。</p>
+    </div>
+    <a href="https://github.com/XiaoniNaoh/BioEZ" target="_blank" rel="noopener">去 GitHub</a>
+  </div>
+
+  <p class="aurora-foot">
+    课程以外的内容写在<a href="https://bioez.xyz" target="_blank" rel="noopener">主站</a>。
+  </p>
+</div>
 `,
 )
 

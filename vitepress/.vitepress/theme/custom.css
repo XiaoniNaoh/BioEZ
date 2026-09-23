@@ -441,3 +441,482 @@ body::after {
 .VPSidebarItem.is-link > .item > .link:hover {
   background-color: var(--vp-c-bg-soft);
 }
+
+/* ── 关于页 / 团队页：极光 ──────────────────────────────────────────────
+   两页共用一套语言：页面顶部一整层极光带，内容做成磨砂卡片，
+   颜色仍然只有松绿与奶油淡蓝，不引入新色。 */
+
+.aurora-about,
+.aurora-team {
+  position: relative;
+}
+
+
+
+
+/* 关于页：从页面上缘落下的极光带（团队页改用下面的 .aurora-band） */
+.aurora-about::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 520px;
+  pointer-events: none;
+  background-image:
+    radial-gradient(46% 86% at 16% 0%, rgba(29, 118, 74, 0.2), transparent 72%),
+    radial-gradient(46% 86% at 84% 0%, rgba(150, 196, 216, 0.28), transparent 74%),
+    linear-gradient(180deg, rgba(150, 196, 216, 0.12), rgba(150, 196, 216, 0) 76%);
+}
+
+.dark .aurora-about::before {
+  background-image:
+    radial-gradient(46% 86% at 16% 0%, rgba(108, 191, 149, 0.28), transparent 72%),
+    radial-gradient(46% 86% at 84% 0%, rgba(120, 170, 210, 0.28), transparent 74%),
+    linear-gradient(180deg, rgba(120, 170, 210, 0.12), rgba(120, 170, 210, 0) 76%);
+}
+
+/* 极光：从页面上缘落下的一层光，横向由松绿过渡到奶油淡蓝，
+   纵向用遮罩渐隐，再靠模糊化开边缘——是「光」而不是一块色斑。 */
+.aurora-band {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 360px;
+  pointer-events: none;
+  background-image: linear-gradient(
+    96deg,
+    rgba(29, 118, 74, 0.22) 0%,
+    rgba(29, 118, 74, 0.1) 30%,
+    rgba(150, 196, 216, 0.26) 66%,
+    rgba(150, 196, 216, 0.08) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.42) 46%,
+    rgba(0, 0, 0, 0.12) 74%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.42) 46%,
+    rgba(0, 0, 0, 0.12) 74%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: blur(16px);
+}
+
+.dark .aurora-band {
+  background-image: linear-gradient(
+    96deg,
+    rgba(108, 191, 149, 0.26) 0%,
+    rgba(108, 191, 149, 0.12) 30%,
+    rgba(120, 170, 210, 0.26) 66%,
+    rgba(120, 170, 210, 0.08) 100%
+  );
+}
+
+/* 关于页：首段做成引子 */
+.aurora-about .vp-doc > h1 + p {
+  max-width: 42em;
+  color: var(--vp-c-text-2);
+}
+
+/* 课程卡片网格 */
+.aurora-about .aurora-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  gap: 14px;
+  margin: 24px 0 8px;
+}
+
+.aurora-about .aurora-chip {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'icon title'
+    'desc desc';
+  gap: 6px 10px;
+  padding: 16px 18px;
+  border: 1px solid var(--glass-edge);
+  border-radius: 14px;
+  background-color: var(--glass-bg-soft);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.aurora-about .aurora-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--vp-c-brand-1);
+}
+
+.aurora-about .aurora-chip-icon {
+  grid-area: icon;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.aurora-about .aurora-chip b {
+  grid-area: title;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--vp-c-text-1);
+}
+
+.aurora-about .aurora-chip-desc {
+  grid-area: desc;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--vp-c-text-2);
+}
+
+/* 「怎么用」三步：小卡片，左上角一个序号 */
+.aurora-about .aurora-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
+  gap: 14px;
+  margin: 24px 0 8px;
+}
+
+.aurora-about .aurora-step {
+  padding: 18px 20px 20px;
+  border: 1px solid var(--glass-edge);
+  border-radius: 14px;
+  background-color: var(--glass-bg-soft);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.aurora-about .aurora-step-no {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--vp-c-brand-1);
+  opacity: 0.75;
+}
+
+.aurora-about .aurora-step b {
+  display: block;
+  padding-top: 6px;
+  font-size: 15px;
+  color: var(--vp-c-text-1);
+}
+
+.aurora-about .aurora-step p {
+  margin: 6px 0 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--vp-c-text-2);
+}
+
+
+/* ── 团队页 ────────────────────────────────────────────────────────────
+   布局：顶部一条深色极光天空（大色块），标题压在天空里，成员卡骑在天空
+   下缘；再往下是白底上的发丝线排版（数据条 / 分工 / 贡献条）。
+   光影：天空里两团极光（薄荷绿 + 淡蓝）加一层底部反光，卡片用大而软的
+   阴影从深色里浮起来，贡献条也走深色，首尾呼应。 */
+
+/* 天空：整幅铺满页面，从最上缘开始（挂在页面容器上，所以不受正文栏限制） */
+.aurora-team::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  /* 浅色下不垫到左侧目录栏下面，避免目录栏泛灰 */
+  left: var(--vp-sidebar-width, 272px);
+  right: 0;
+  height: 520px;
+  pointer-events: none;
+  background-color: #051318;
+  background-image:
+    radial-gradient(46% 62% at 2% -6%, rgba(94, 214, 165, 0.5), transparent 58%),
+    radial-gradient(44% 58% at 100% -12%, rgba(98, 172, 232, 0.56), transparent 60%),
+    linear-gradient(180deg, #051318 0%, #071a21 58%, #08202a 100%);
+}
+
+@media (max-width: 959px) {
+  .aurora-team::before {
+    left: 0;
+  }
+}
+
+/* 深色下页面本身就很深，天空要比页面亮一点才看得出是「一块天」 */
+.dark .aurora-team::before {
+  left: 0;
+  background-color: #082730;
+  background-image:
+    radial-gradient(46% 62% at 2% -6%, rgba(94, 214, 165, 0.34), transparent 58%),
+    radial-gradient(44% 58% at 100% -12%, rgba(98, 172, 232, 0.4), transparent 60%),
+    linear-gradient(180deg, #0a2c36 0%, #082630 58%, #061c24 100%);
+}
+
+/* 顶部时导航条也让给天空，不留白条；滚下去之后自动恢复成普通玻璃 */
+.aurora-team .VPNavBar.top,
+.aurora-team .VPNavBar.top .content-body {
+  background-color: transparent !important;
+}
+
+/* 站名在左侧栏上方（浅色玻璃），保持深色；只有右侧菜单压在天空上，用浅色 */
+.aurora-team .VPNavBar.top .VPNavBarMenuLink {
+  color: rgba(236, 252, 246, 0.92);
+}
+
+.aurora-team .VPNavBar.top .VPNavBarMenuLink:hover,
+.aurora-team .VPNavBar.top .VPNavBarMenuLink.active {
+  color: #ffffff;
+}
+
+.aurora-team .VPNavBar.top .DocSearch-Button {
+  background-color: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.aurora-team .VPNavBar.top .DocSearch-Button .DocSearch-Button-Placeholder,
+.aurora-team .VPNavBar.top .DocSearch-Button .DocSearch-Search-Icon,
+.aurora-team .VPNavBar.top .DocSearch-Button .DocSearch-Button-Key {
+  color: rgba(236, 252, 246, 0.82);
+}
+
+.aurora-team .VPNavBar.top .DocSearch-Button .DocSearch-Button-Key {
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+/* 标题区（在天空里） */
+.aurora-team .VPTeamPageTitle {
+  padding-top: 96px !important;
+  padding-bottom: 24px !important;
+}
+
+.aurora-team .VPTeamPageTitle .title {
+  color: #f3fbf8;
+  letter-spacing: -0.02em;
+}
+
+.aurora-team .VPTeamPageTitle .lead {
+  color: rgba(228, 246, 240, 0.74);
+}
+
+.aurora-team .aurora-kicker {
+  display: block;
+  padding-bottom: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(150, 220, 195, 0.9);
+}
+
+/* 成员卡：骑在天空下缘 */
+.aurora-team .VPTeamMembers {
+  margin-top: -12px;
+}
+
+.aurora-team .VPTeamMembersItem {
+  border-radius: 20px;
+}
+
+.aurora-team .VPTeamMembersItem .profile {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 24px 60px rgba(4, 24, 20, 0.28),
+    0 2px 8px rgba(4, 24, 20, 0.12);
+}
+
+.aurora-team .VPTeamMembersItem .profile::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -90px;
+  left: -20%;
+  width: 140%;
+  height: 240px;
+  pointer-events: none;
+  background-image:
+    radial-gradient(42% 62% at 32% 50%, rgba(94, 214, 165, 0.22), transparent 70%),
+    radial-gradient(42% 62% at 68% 46%, rgba(98, 172, 232, 0.26), transparent 72%);
+}
+
+.dark .aurora-team .VPTeamMembersItem .profile {
+  border-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(27, 27, 31, 0.86);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.aurora-team .VPTeamMembersItem .avatar {
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.9),
+    0 10px 26px rgba(29, 118, 74, 0.2);
+}
+
+.aurora-team .VPTeamMembersItem .links a {
+  border-radius: 999px;
+  padding: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.aurora-team .VPTeamMembersItem .links a:hover {
+  background-color: var(--vp-c-brand-soft);
+}
+
+/* 白底部分：标题用发丝线排版，不做成一堆卡片 */
+.aurora-team .aurora-extra {
+  max-width: 900px;
+  margin: 72px auto 0;
+  padding: 0 24px;
+}
+
+.aurora-team .aurora-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--glass-edge);
+  border-bottom: 1px solid var(--glass-edge);
+}
+
+.aurora-team .aurora-stat {
+  padding: 28px 14px 26px;
+  border-left: 1px solid var(--glass-edge);
+  text-align: center;
+}
+
+.aurora-team .aurora-stat:first-child {
+  border-left: none;
+}
+
+.aurora-team .aurora-stat b {
+  display: block;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--vp-c-brand-1);
+}
+
+.aurora-team .aurora-stat span {
+  display: block;
+  padding-top: 8px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--vp-c-text-3);
+}
+
+.aurora-team .aurora-roles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 56px;
+}
+
+.aurora-team .aurora-role {
+  padding: 0 36px;
+  border-left: 1px solid var(--glass-edge);
+}
+
+.aurora-team .aurora-role:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.aurora-team .aurora-role-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vp-c-brand-1);
+}
+
+.aurora-team .aurora-role b {
+  display: block;
+  padding-top: 10px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--vp-c-text-1);
+}
+
+.aurora-team .aurora-role p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--vp-c-text-2);
+}
+
+/* 贡献条：走深色，和天空首尾呼应 */
+.aurora-team .aurora-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 64px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background-color: #051318;
+  background-image:
+    radial-gradient(60% 120% at 2% 0%, rgba(94, 214, 165, 0.3), transparent 62%),
+    radial-gradient(56% 120% at 98% 100%, rgba(98, 172, 232, 0.32), transparent 64%),
+    linear-gradient(120deg, #051318 0%, #08202a 100%);
+  color: #eaf6f1;
+}
+
+.aurora-team .aurora-cta b {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #f3fbf8;
+}
+
+.aurora-team .aurora-cta p {
+  margin: 6px 0 0;
+  font-size: 13.5px;
+  color: rgba(228, 246, 240, 0.68);
+}
+
+.aurora-team .aurora-cta > a {
+  flex: none;
+  padding: 11px 24px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.94);
+  color: #0b201d;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.aurora-team .aurora-cta > a:hover {
+  background-color: #ffffff;
+}
+
+/* 页脚那行小字 */
+.aurora-team .aurora-foot {
+  margin: 28px auto 0;
+  max-width: 620px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 2;
+  color: var(--vp-c-text-3);
+}
+
+.aurora-team .aurora-foot a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  border-bottom: 1px solid var(--vp-c-brand-soft);
+}
