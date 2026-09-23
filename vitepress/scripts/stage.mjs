@@ -57,11 +57,39 @@ const ICON_SVG = {
 const indexPath = (c) => c.index_path || `${c.directory}/COURSE_INDEX.md`
 const route = (p) => encodeURI('/' + p.replace(/\.md$/, ''))
 
-// 课程图标统一维护在 data/course-config.json 的 icon 字段（首页卡片、侧栏、课程列表共用）
-const courseConfig = existsSync(join(DATA, 'course-config.json'))
-  ? JSON.parse(readFileSync(join(DATA, 'course-config.json'), 'utf8')).courses ?? []
-  : []
-const COURSE_ICONS = Object.fromEntries(courseConfig.map((c) => [c.slug, c.icon ?? '📘']))
+
+// 课程图标：统一的线性 SVG（描边 1.6、跟随 currentColor），替代原来的 emoji
+const SVG_OPEN =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'
+const svg = (inner) => `${SVG_OPEN}${inner}</svg>`
+const COURSE_SVG = {
+  'food-analysis': svg(
+    '<path d="M9 3h6"/><path d="M10 3v5.4L5.7 16.2A3.2 3.2 0 0 0 8.5 21h7a3.2 3.2 0 0 0 2.8-4.8L14 8.4V3"/><path d="M7.3 14.6h9.4"/>',
+  ),
+  microbiology: svg(
+    '<circle cx="12" cy="12" r="6.2"/><path d="M12 5.8V2.8M12 21.2v-3M5.8 12h-3M21.2 12h-3"/><circle cx="10.4" cy="10.6" r="1" fill="currentColor" stroke="none"/><circle cx="13.6" cy="13.4" r="1" fill="currentColor" stroke="none"/>',
+  ),
+  'molecular-biology': svg(
+    '<path d="M8.6 2.8c0 4.6 6.8 5.2 6.8 9.2s-6.8 4.6-6.8 9.2"/><path d="M15.4 2.8c0 4.6-6.8 5.2-6.8 9.2s6.8 4.6 6.8 9.2"/><path d="M9.7 7h4.6M9.3 12h5.4M9.7 17h4.6"/>',
+  ),
+  'cell-biology': svg(
+    '<circle cx="12" cy="12" r="8.4"/><circle cx="10.3" cy="11.2" r="2.9"/><path d="M15.6 16.4c1 .6 2.1.6 3 0"/>',
+  ),
+  botany: svg(
+    '<path d="M20.4 3.6c0 9.2-4.8 14-11 14-2 0-3.6-.6-4.6-1.8C4.8 8.6 10.2 3.6 20.4 3.6z"/><path d="M4.8 20.4c2-4.8 5.4-8.4 10-10.8"/>',
+  ),
+  'biochemistry-food-chemistry': svg(
+    '<path d="M12 2.8l6.2 3.6v7.2L12 17.2l-6.2-3.6V6.4z"/><path d="M12 17.2v1.4"/><circle cx="12" cy="20" r="1.4"/>',
+  ),
+  bioinformatics: svg(
+    '<path d="M4 4.6v14.8h16"/><path d="M8.4 16.6v-5.2M12.4 16.6V9.4M16.4 16.6v-3.4"/>',
+  ),
+  'food-flavor-chemistry': svg(
+    '<path d="M12 3.4c3.5 3.9 5.3 7 5.3 9.5a5.3 5.3 0 0 1-10.6 0c0-2.5 1.8-5.6 5.3-9.5z"/><path d="M9.6 14.2a2.6 2.6 0 0 0 1.6 2"/>',
+  ),
+}
+const courseIcon = (c) => COURSE_SVG[c.slug] ?? ''
+
 
 rmSync(CONTENT, { recursive: true, force: true })
 mkdirSync(CONTENT, { recursive: true })
@@ -95,9 +123,8 @@ const features = courses
   .map((c) => {
     const n = c.lesson_count ?? (c.lessons?.length ?? 0)
     const mins = c.estimated_minutes ?? '?'
-    const icon = COURSE_ICONS[c.slug] ?? '📘'
     const desc = (c.description || '').replace(/\n/g, ' ')
-    return `  - icon: ${icon}\n    title: ${c.title}\n    details: ${desc}（${n} 篇 · 约 ${mins} 分钟）\n    link: ${route(indexPath(c))}`
+    return `  - icon: '${courseIcon(c)}'\n    title: ${c.title}\n    details: ${desc}（${n} 篇 · 约 ${mins} 分钟）\n    link: ${route(indexPath(c))}`
   })
   .join('\n')
 
@@ -107,6 +134,7 @@ writeFileSync(
 layout: home
 title: BioEZ · 生物学宝宝教程
 titleTemplate: false
+pageClass: aurora-home
 hero:
   name: BioEZ
   text: 生物学宝宝教程
@@ -146,8 +174,7 @@ ${courses
     (c, i) => {
       const done = c.progress === 'completed'
       const badge = done ? '<Badge type="tip" text="已完成" />' : '<Badge type="warning" text="连载中" />'
-      const icon = c.icon ?? COURSE_ICONS[c.slug] ?? '📘'
-      return `## ${i + 1}. ${icon} ${c.title} ${badge}\n\n${c.description || ''}\n\n- 篇数：${c.lesson_count ?? (c.lessons?.length ?? 0)}　·　预计阅读：${c.estimated_minutes ?? '?'} 分钟\n- [进入课程 →](${route(indexPath(c))})\n`
+      return `## ${i + 1}. <span class="course-icon">${courseIcon(c)}</span> ${c.title} ${badge}\n\n${c.description || ''}\n\n- 篇数：${c.lesson_count ?? (c.lessons?.length ?? 0)}　·　预计阅读：${c.estimated_minutes ?? '?'} 分钟\n- [进入课程 →](${route(indexPath(c))})\n`
     },
   )
   .join('\n')}
@@ -172,10 +199,9 @@ next: false
 <div class="aurora-grid">
 ${courses
   .map((c) => {
-    const icon = c.icon ?? COURSE_ICONS[c.slug] ?? '📘'
     const desc = (c.description || '').replace(/\\n/g, ' ')
     return `  <a class="aurora-chip" href="${route(indexPath(c))}">
-    <span class="aurora-chip-icon">${icon}</span>
+    <span class="aurora-chip-icon">${courseIcon(c)}</span>
     <b>${c.title}</b>
     <span class="aurora-chip-desc">${desc}</span>
   </a>`
