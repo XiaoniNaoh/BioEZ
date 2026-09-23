@@ -13,7 +13,7 @@ const toLink = (p: string) => '/' + p.replace(/\.md$/, '')
 const stem = (p: string) => p.split('/').pop()!.replace(/\.md$/, '')
 
 // 目录里省掉课程代号（MMB 03-5 → 03-5、BIF A-1 → A-1、MMB 03 转录 → 03 转录）；
-// 页面标题、正文，以及鼠标悬浮时 title 里的全名都不动
+// 页面标题与正文里的全名不动
 const short = (s: string) => s.replace(/^[A-Z]{2,3}\s+/, '')
 
 // 不发布的文件（与 scripts/stage.mjs 的 SKIP 保持一致）
@@ -24,7 +24,9 @@ const sidebar = courses
   .filter((c) => c && c.directory)
   .map((c) => {
     const items: any[] = []
-    if (c.index_path) items.push({ text: '课程目录', link: toLink(c.index_path) })
+    // 课程目录是每门课的入口，单独给个标记，样式上做成一档（见 custom.css 的 .side-index）
+    if (c.index_path)
+      items.push({ text: '<span class="side-index">课程目录</span>', link: toLink(c.index_path) })
 
     const top: any[] = []
     const groups = new Map<string, any[]>()

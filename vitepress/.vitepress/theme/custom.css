@@ -200,6 +200,93 @@
   text-overflow: ellipsis;
 }
 
+/* 侧栏三层：科目 / 文件夹 / 具体文件，用字号、字重、颜色和小圆点区分 */
+
+/* 科目（一级）：最大、最重、最深 */
+.VPSidebar .VPSidebarItem.level-0 > .item > .link > .text,
+.VPSidebar .VPSidebarItem.level-0 > .item > .text {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  color: var(--vp-c-text-1);
+}
+
+/* 文件夹（带子项的条目）：次重，走主题绿，配折叠箭头与已有的淡底 */
+.VPSidebar .VPSidebarItem.level-1:has(> .items) > .item > .link > .text,
+.VPSidebar .VPSidebarItem.level-1:has(> .items) > .item > .text,
+.VPSidebar .VPSidebarItem.level-2:has(> .items) > .item > .link > .text,
+.VPSidebar .VPSidebarItem.level-2:has(> .items) > .item > .text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+}
+
+/* 具体文件（叶子条目）：最小、常规字重、颜色更淡 */
+.VPSidebar .VPSidebarItem:not(:has(> .items)) > .item > .link > .text,
+.VPSidebar .VPSidebarItem:not(:has(> .items)) > .item > .text {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--vp-c-text-2);
+}
+
+/* 文件前面一个小圆点，配合缩进看出层级 */
+.VPSidebar .VPSidebarItem:not(.level-0):not(:has(> .items)):not(.is-active) > .item > .link > .text::before,
+.VPSidebar .VPSidebarItem:not(.level-0):not(:has(> .items)):not(.is-active) > .item > .text::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+  vertical-align: 0.3em;
+  opacity: 0.5;
+}
+
+/* 「课程目录」是每门课的入口，单独一档：淡绿胶囊，不带小圆点 */
+.VPSidebar .VPSidebarItem .text:has(.side-index)::before {
+  content: none;
+}
+
+.VPSidebar .VPSidebarItem .side-index {
+  display: inline-block;
+  padding: 2px 10px 3px;
+  border-radius: 999px;
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* 目录条目被截断时，悬浮立刻弹出的全名气泡（脚本见 theme/index.ts） */
+.sidebar-tip {
+  position: fixed;
+  z-index: 60;
+  max-width: min(420px, 60vw);
+  padding: 7px 11px;
+  border: 1px solid var(--glass-edge);
+  border-radius: 9px;
+  background-color: var(--vp-c-bg-elv);
+  box-shadow: 0 10px 30px rgba(15, 35, 50, 0.16);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--vp-c-text-1);
+  word-break: break-word;
+  /* 不挡鼠标，免得和 hover 打架 */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.06s ease;
+}
+
+.sidebar-tip.is-open {
+  opacity: 1;
+}
+
+.dark .sidebar-tip {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
 /* 团队页：组件默认留白偏大（外层 margin 128px + 标题 padding 80px），
    这是给「没有导航栏的独立页面」设计的；本站有导航和侧栏，收紧一些。 */
 .VPTeamPage {
