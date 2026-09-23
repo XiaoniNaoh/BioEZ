@@ -2862,9 +2862,9 @@
         "undergraduate"
       ],
       "index_path": "08 食品风味化学与分析/COURSE_INDEX.md",
-      "page_count": 3,
-      "lesson_count": 3,
-      "estimated_minutes": 12,
+      "page_count": 4,
+      "lesson_count": 4,
+      "estimated_minutes": 19,
       "lessons": [
         {
           "id": "ffc-01",
@@ -2932,7 +2932,9 @@
           "importance": 3,
           "estimated_minutes": 6,
           "prerequisites": [],
-          "next": [],
+          "next": [
+            "ffc-04"
+          ],
           "tags": [
             "食品风味化学",
             "食品",
@@ -2944,6 +2946,33 @@
           "reviewers": [],
           "last_scientific_review": null,
           "summary": "介绍《食品风味化学与分析》中的“风味物质的制备与创制”主题。"
+        },
+        {
+          "id": "ffc-04",
+          "title": "风味分析方法",
+          "path": "08 食品风味化学与分析/FFC 4 风味分析方法.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "04",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 7,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "食品风味化学",
+            "食品",
+            "分析",
+            "顶空分析",
+            "固相微萃取"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《食品风味化学与分析》中的“风味分析方法”主题。"
         }
       ]
     }

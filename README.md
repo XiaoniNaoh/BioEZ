@@ -61,7 +61,7 @@ git clone https://github.com/XiaoniNaoh/BioEZ.git
 - **[LLM 时代的生信入门](<07 LLM 时代的生信入门/COURSE_INDEX.md>)** — 7 篇 · 预计 46 分钟 · 作者：脆弱的百里橘
   以单细胞转录组走一遍流程：样品准备、数据导入、初步分析、深入分析、绘图，到 UMAP 注释。
 
-- **[食品风味化学与分析](<08 食品风味化学与分析/COURSE_INDEX.md>)** — 3 篇 · 预计 12 分钟 · 作者：小倪
+- **[食品风味化学与分析](<08 食品风味化学与分析/COURSE_INDEX.md>)** — 4 篇 · 预计 19 分钟 · 作者：小倪
   目前三讲：绪论、感官评价、风味物质的制备与创制。
 
 <!-- END AUTO-GENERATED COURSE CATALOG -->
