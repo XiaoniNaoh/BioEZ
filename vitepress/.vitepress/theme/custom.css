@@ -274,11 +274,13 @@
   /* 不挡鼠标，免得和 hover 打架 */
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.06s ease;
+  /* 出现要快（悬浮立刻响应）；收起走的是这条，慢一点淡出 */
+  transition: opacity 0.45s ease;
 }
 
 .sidebar-expand.is-open {
   opacity: 1;
+  transition: opacity 0.06s ease;
 }
 
 /* 文件那一档的小圆点，展开时保持一致 */
