@@ -419,6 +419,21 @@ const members = ${JSON.stringify(teamMembers, null, 2)}
     课程以外的内容写在<a href="https://bioez.xyz" target="_blank" rel="noopener">主站</a>。
   </p>
 </div>
+
+<!-- 彩蛋：正文之后留一大片夜空，一直往下拉，最底下接一张极光图 -->
+<div class="aurora-night">
+  <div class="aurora-night-stars" aria-hidden="true"></div>
+  <div class="aurora-night-glow" aria-hidden="true"></div>
+  <img
+    class="aurora-night-art"
+    src="/easter/aurora-night.webp"
+    alt="极光铺开的夜空，一个人坐在草地上仰头看天"
+    width="1672"
+    height="941"
+    loading="lazy"
+    decoding="async"
+  />
+</div>
 `,
 )
 

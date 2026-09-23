@@ -675,12 +675,13 @@ body::after {
     linear-gradient(180deg, #0a2c36 0%, #082630 58%, #061c24 100%);
 }
 
-/* 顶部导航压在天空上：玻璃调白一档，跟下面的深色分开。
-   右侧那列「页面导航」是深色字，所以天空在它之前就淡出了，
-   导航条不跟着变透明，保持深色文字可读。滚下去自动恢复成普通玻璃。 */
+/* 顶部导航压在天空上：天空左右两端都在导航条底下收了边，
+   半透明玻璃会把下面深浅不一的背景透出来（左边白、中间深、右边白），
+   看着像断成三截，所以这一页的导航条直接铺成不透明的页面底色。
+   滚下去自动恢复成普通玻璃。 */
 .aurora-about .VPNavBar.top,
 .aurora-about .VPNavBar.top .content-body {
-  background-color: var(--glass-bg-strong) !important;
+  background-color: var(--vp-c-bg) !important;
 }
 
 /* 标题区（在天空里）：和团队页一样居中；h1 不用荧光笔痕，引子压暗一档 */
@@ -990,13 +991,14 @@ body::after {
   /* 浅色下不垫到左侧目录栏下面，避免目录栏泛灰 */
   left: var(--vp-sidebar-width, 272px);
   right: 0;
-  height: 520px;
+  /* 整页都是夜空：从顶上的极光一路压到页脚，越往下越深 */
+  height: 100%;
   pointer-events: none;
   background-color: #051318;
   background-image:
-    radial-gradient(46% 62% at 2% -6%, rgba(94, 214, 165, 0.5), transparent 58%),
-    radial-gradient(44% 58% at 100% -12%, rgba(98, 172, 232, 0.56), transparent 60%),
-    linear-gradient(180deg, #051318 0%, #071a21 58%, #08202a 100%);
+    radial-gradient(760px 440px at 2% -60px, rgba(94, 214, 165, 0.46), transparent 68%),
+    radial-gradient(700px 420px at 100% -110px, rgba(98, 172, 232, 0.5), transparent 70%),
+    linear-gradient(180deg, #061821 0%, #051318 26%, #041014 68%, #02151e 100%);
 }
 
 @media (max-width: 959px) {
@@ -1010,9 +1012,28 @@ body::after {
   left: 0;
   background-color: #082730;
   background-image:
-    radial-gradient(46% 62% at 2% -6%, rgba(94, 214, 165, 0.34), transparent 58%),
-    radial-gradient(44% 58% at 100% -12%, rgba(98, 172, 232, 0.4), transparent 60%),
-    linear-gradient(180deg, #0a2c36 0%, #082630 58%, #061c24 100%);
+    radial-gradient(760px 440px at 2% -60px, rgba(94, 214, 165, 0.3), transparent 68%),
+    radial-gradient(700px 420px at 100% -110px, rgba(98, 172, 232, 0.34), transparent 70%),
+    linear-gradient(180deg, #0a2c36 0%, #082630 30%, #061e26 70%, #02151e 100%);
+}
+
+/* 正文压在夜空上：这一页的文字、发丝线、玻璃都换成浅色那一套
+   （只改正文栏，左边的课程目录栏保持原样） */
+.aurora-team .VPContent {
+  --vp-c-text-1: rgba(238, 250, 246, 0.94);
+  --vp-c-text-2: rgba(222, 240, 234, 0.72);
+  --vp-c-text-3: rgba(222, 240, 234, 0.5);
+  --vp-c-brand-1: #8fe0b8;
+  --vp-c-brand-2: #a9e8c8;
+  --vp-c-brand-soft: rgba(143, 224, 184, 0.14);
+  --glass-edge: rgba(255, 255, 255, 0.14);
+  --glass-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
+}
+
+/* 触底/触顶继续拉（macOS 与 iOS 的回弹）时露出来的是画布底色，
+   这层不在页面里，得单独压成夜空的黑，不然回弹会闪一下白 */
+html:has(.aurora-team) {
+  background-color: #02151e;
 }
 
 /* 顶部时导航条也让给天空，不留白条；滚下去之后自动恢复成普通玻璃 */
@@ -1085,12 +1106,14 @@ body::after {
 .aurora-team .VPTeamMembersItem .profile {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(12, 22, 27, 0.72);
   box-shadow:
-    0 24px 60px rgba(4, 24, 20, 0.28),
-    0 2px 8px rgba(4, 24, 20, 0.12);
+    0 24px 60px rgba(0, 0, 0, 0.42),
+    0 2px 8px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
 }
 
 .aurora-team .VPTeamMembersItem .profile::before {
@@ -1108,16 +1131,16 @@ body::after {
 }
 
 .dark .aurora-team .VPTeamMembersItem .profile {
-  border-color: rgba(255, 255, 255, 0.1);
-  background-color: rgba(27, 27, 31, 0.86);
+  border-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(16, 30, 36, 0.66);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
 }
 
 .aurora-team .VPTeamMembersItem .avatar {
   border-radius: 50%;
   box-shadow:
-    0 0 0 3px rgba(255, 255, 255, 0.9),
-    0 10px 26px rgba(29, 118, 74, 0.2);
+    0 0 0 3px rgba(255, 255, 255, 0.16),
+    0 10px 26px rgba(0, 0, 0, 0.42);
 }
 
 .aurora-team .VPTeamMembersItem .links a {
@@ -1274,6 +1297,124 @@ body::after {
   color: var(--vp-c-brand-1);
   text-decoration: none;
   border-bottom: 1px solid var(--vp-c-brand-soft);
+}
+
+/* 夜空上的贡献条：改成一块浅玻璃，别和背景糊在一起 */
+.aurora-team .aurora-cta {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.05);
+  background-image:
+    radial-gradient(60% 120% at 2% 0%, rgba(94, 214, 165, 0.14), transparent 62%),
+    radial-gradient(56% 120% at 98% 100%, rgba(98, 172, 232, 0.16), transparent 64%);
+}
+
+/* 页脚本来是一条浅色玻璃，压在夜空上很突兀，这一页让它透明 */
+.aurora-team .VPFooter {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: transparent !important;
+  color: rgba(222, 240, 234, 0.5);
+}
+
+/* ── 团队页的彩蛋 ──────────────────────────────────────────────────────
+   正文之后留一大片夜空，用户可以一直往下拉；最底下接一张极光图
+   （figure 坐在草地上仰头看天，图上自带手写标语与「小倪」落款）。
+   星星和极光铺得比正文栏宽一点、两端用遮罩淡出去，接进整页夜空里。 */
+
+.aurora-night {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* 正文之后可以一直往下拉：星空拉得长一点，最底下才接上那张图 */
+  min-height: 180vh;
+  margin-top: 96px;
+  pointer-events: none;
+}
+
+.aurora-night-stars,
+.aurora-night-glow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -18%;
+  right: -18%;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+}
+
+/* 星星：两层不同步长的点阵错开，慢速呼吸 */
+.aurora-night-stars {
+  background-image:
+    radial-gradient(1.7px 1.7px at 26px 34px, rgba(255, 255, 255, 0.9), transparent 100%),
+    radial-gradient(1.2px 1.2px at 124px 92px, rgba(255, 255, 255, 0.62), transparent 100%),
+    radial-gradient(1.5px 1.5px at 72px 172px, rgba(255, 255, 255, 0.78), transparent 100%),
+    radial-gradient(1px 1px at 198px 46px, rgba(255, 255, 255, 0.5), transparent 100%),
+    radial-gradient(1.4px 1.4px at 158px 210px, rgba(255, 255, 255, 0.66), transparent 100%),
+    radial-gradient(1.1px 1.1px at 216px 158px, rgba(255, 255, 255, 0.56), transparent 100%),
+    radial-gradient(1.6px 1.6px at 42px 112px, rgba(255, 255, 255, 0.72), transparent 100%),
+    radial-gradient(1px 1px at 176px 132px, rgba(255, 255, 255, 0.44), transparent 100%);
+  background-size: 236px 236px;
+  animation: aurora-twinkle 9s ease-in-out infinite alternate;
+}
+
+/* 贴地的一层极光，比顶上那团淡 */
+.aurora-night-glow {
+  background-image:
+    radial-gradient(40% 26% at 26% 58%, rgba(94, 214, 165, 0.15), transparent 72%),
+    radial-gradient(36% 24% at 72% 70%, rgba(98, 172, 232, 0.14), transparent 74%),
+    radial-gradient(30% 20% at 50% 86%, rgba(143, 224, 184, 0.1), transparent 76%);
+  filter: blur(26px);
+  animation: aurora-drift 90s ease-in-out infinite alternate;
+}
+
+/* 最底下那张极光图：上缘慢慢化进夜空里，接缝看不出来 */
+.aurora-night-art {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 14%, #000 44%);
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 14%, #000 44%);
+  user-select: none;
+}
+
+/* 图片下面再接一段草地色，一直铺到页面最底，
+   免得露出页面底色，把沉浸感断掉 */
+.aurora-night::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 140px;
+  background-color: #02151e;
+}
+
+@keyframes aurora-twinkle {
+  from {
+    opacity: 0.68;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes aurora-drift {
+  from {
+    transform: translate3d(-2%, 0, 0) scale(1.02);
+  }
+  to {
+    transform: translate3d(2%, -1%, 0) scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-night-stars,
+  .aurora-night-glow {
+    animation: none;
+  }
 }
 
 /* ── 首页：沿用团队页那套极光天空 ──────────────────────────────────────
