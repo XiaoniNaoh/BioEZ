@@ -49,7 +49,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'BioEZ',
   titleTemplate: ':title · BioEZ',
-  description: '几门生物课的笔记。按课程分册，顺着往下读就行。',
+  description: '适合全年龄段、入口即化的生物、食品背景的知识维基。',
   srcDir: './content',
   cleanUrls: true,
   ignoreDeadLinks: true,

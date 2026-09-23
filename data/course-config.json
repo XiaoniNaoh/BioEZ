@@ -7,7 +7,7 @@
       "directory": "01 食品分析与检验",
       "prefix": "FAI",
       "icon": "🧪",
-      "description": "样品处理、数据处理，以及水分、糖类、蛋白质、脂类四个分析方法专题。",
+      "description": "食品分析课的整理稿：取样与数据处理各一节，后四节按水分、糖、蛋白质、脂类讲分析方法。",
       "progress": "completed",
       "authors": ["小倪"],
       "audience": ["undergraduate"]
@@ -18,7 +18,7 @@
       "directory": "02 微生物学",
       "prefix": "MB",
       "icon": "🦠",
-      "description": "原核微生物、真核微生物、病毒，以及营养、代谢、遗传、生态、分类鉴定与免疫，最后落到食品腐败。",
+      "description": "微生物学的课堂笔记；原核、真核、病毒、营养与代谢、遗传育种、生态、鉴定、免疫都覆盖到了，最后一节讲食品腐败。",
       "progress": "completed",
       "authors": ["小倪"],
       "audience": ["undergraduate"]
@@ -29,7 +29,7 @@
       "directory": "03 分子生物学",
       "prefix": "MMB",
       "icon": "🧬",
-      "description": "染色体与 DNA、转录、翻译，加上基因表达调控和分子生物学研究法。",
+      "description": "篇幅最长的一门。DNA、转录、翻译、基因表达调控四部分，加最后的分子生物学研究法。",
       "progress": "completed",
       "authors": ["小倪"],
       "audience": ["undergraduate"]
@@ -40,7 +40,7 @@
       "directory": "04 细胞生物学",
       "prefix": "CB",
       "icon": "🔬",
-      "description": "目前只有一章：细胞质膜与跨膜运输。",
+      "description": "刚开头，目前只有一章：细胞质膜与跨膜运输。",
       "progress": "serializing",
       "authors": ["小倪"],
       "audience": ["general", "undergraduate"]
@@ -51,7 +51,7 @@
       "directory": "05 植物学",
       "prefix": "BOT",
       "icon": "🌿",
-      "description": "植物细胞、细胞的生长与分化，以及植物组织的类型。",
+      "description": "起步三节：植物的细胞、细胞的生长繁殖与分化、组织的类型。",
       "progress": "serializing",
       "authors": ["小倪"],
       "audience": ["undergraduate"]
@@ -62,7 +62,7 @@
       "directory": "06 生物化学与食品化学",
       "prefix": "BC",
       "icon": "⚗️",
-      "description": "蛋白质、水、糖、脂、酶五个专题，偏食品方向的生物化学。",
+      "description": "五个专题：蛋白质、水、糖、脂、酶。另外附了一篇米氏方程的推导。",
       "progress": "serializing",
       "authors": ["脆弱的百里橘", "小倪"],
       "audience": ["undergraduate", "postgraduate-entrance-exam"]
@@ -73,7 +73,7 @@
       "directory": "07 LLM 时代的生信入门",
       "prefix": "BIF",
       "icon": "💻",
-      "description": "以单细胞转录组为例，从样品准备、数据整理做到聚类、注释与绘图。",
+      "description": "以单细胞转录组走一遍流程：样品准备、数据导入、初步分析、深入分析、绘图，到 UMAP 注释。",
       "progress": "serializing",
       "authors": ["脆弱的百里橘"],
       "audience": ["undergraduate"]
@@ -84,7 +84,7 @@
       "directory": "08 食品风味化学与分析",
       "prefix": "FFC",
       "icon": "🍋",
-      "description": "风味化学的绪论、感官评价，以及风味物质的制备与创制。",
+      "description": "目前三讲：绪论、感官评价、风味物质的制备与创制。",
       "progress": "serializing",
       "authors": ["小倪"],
       "audience": ["undergraduate"]

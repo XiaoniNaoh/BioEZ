@@ -1009,6 +1009,8 @@ body::after {
 }
 
 .aurora-home .VPHero .tagline {
+  /* 默认 tagline 限宽 392px，这句会折成「知识维 / 基。」，放宽到一行装得下 */
+  max-width: 660px;
   color: rgba(228, 246, 240, 0.74);
 }
 
