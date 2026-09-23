@@ -22,6 +22,13 @@ const DATA = join(REPO, 'data')
 const ALLOWED = new Set(['.md', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.avif'])
 const SKIP = ['模板', '一本全']
 
+// 课程目录底部那句「返回项目首页」指向仓库的 README.md：站点上没有这个页面
+// （README 不在 content/ 里），点进去是 404，这里改成回站点首页。
+// 只改构建时生成的副本，笔记原文不动——Quartz 那边本来就能点开。
+const LINK_FIXES = [[/\]\(<?\s*\.\.\/README\.md\s*>?\)/g, '](/)']]
+
+const rewriteLinks = (text) => LINK_FIXES.reduce((out, [re, to]) => out.replace(re, to), text)
+
 function copyTree(src, dst) {
   for (const entry of readdirSync(src, { withFileTypes: true })) {
     if (entry.name.startsWith('.')) continue
@@ -33,7 +40,11 @@ function copyTree(src, dst) {
       copyTree(from, to)
     } else if (entry.isFile() && ALLOWED.has(extname(entry.name).toLowerCase())) {
       mkdirSync(dirname(to), { recursive: true })
-      cpSync(from, to)
+      if (extname(entry.name).toLowerCase() === '.md') {
+        writeFileSync(to, rewriteLinks(readFileSync(from, 'utf8')))
+      } else {
+        cpSync(from, to)
+      }
     }
   }
 }

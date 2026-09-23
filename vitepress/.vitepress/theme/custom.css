@@ -181,7 +181,7 @@
 /* 团队页：组件默认留白偏大（外层 margin 128px + 标题 padding 80px），
    这是给「没有导航栏的独立页面」设计的；本站有导航和侧栏，收紧一些。 */
 .VPTeamPage {
-  margin: 40px 0 72px !important;
+  margin: 20px 0 72px !important;
 }
 
 .VPTeamPageTitle {
@@ -190,7 +190,7 @@
 
 @media (min-width: 768px) {
   .VPTeamPage {
-    margin: 48px 0 88px !important;
+    margin: 24px 0 88px !important;
   }
 
   .VPTeamPageTitle {
@@ -1050,7 +1050,7 @@ body::after {
 
 /* 标题区（在天空里） */
 .aurora-team .VPTeamPageTitle {
-  padding-top: 96px !important;
+  padding-top: 36px !important;
   padding-bottom: 24px !important;
 }
 
@@ -1336,6 +1336,27 @@ body::after {
 
 .aurora-home .VPNavBar.top .DocSearch-Button .DocSearch-Button-Key {
   border-color: rgba(255, 255, 255, 0.24);
+}
+
+/* 手机端天空铺满整幅，导航条整条压在深色上。浅色模式下站名和菜单按钮
+   默认是深色的，会糊进天空里看不见，这里跟着转浅（只在导航条透明、
+   也就是停在页面顶部时生效，往下滚恢复成普通玻璃条 + 深色字）。 */
+.aurora-home .VPNavBar.top .VPNavBarHamburger,
+.aurora-team .VPNavBar.top .VPNavBarHamburger {
+  --vp-c-text-1: rgba(236, 252, 246, 0.92);
+  --vp-c-text-2: rgba(236, 252, 246, 0.72);
+}
+
+/* 团队页在窄屏下天空也从最左边铺起（宽屏时左边让给目录栏，
+   站名压在浅色上，保持深色不动） */
+@media (max-width: 959px) {
+  .aurora-team .VPNavBar.top .VPNavBarTitle .title {
+    color: rgba(236, 252, 246, 0.92);
+  }
+
+  .aurora-team .VPNavBar.top .VPNavBarTitle .title:hover {
+    color: #ffffff;
+  }
 }
 
 /* hero：站名走薄荷→天青渐变，正文与副标题转浅色 */
