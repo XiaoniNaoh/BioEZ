@@ -988,44 +988,70 @@ body::after {
   position: absolute;
   z-index: -1;
   top: 0;
-  /* 浅色下不垫到左侧目录栏下面，避免目录栏泛灰 */
-  left: var(--vp-sidebar-width, 272px);
+  /* 整幅铺满（含左侧目录栏那一列）：这一页目录栏也压成深色了 */
+  left: 0;
   right: 0;
   /* 整页都是夜空：从顶上的极光一路压到页脚，越往下越深 */
   height: 100%;
   pointer-events: none;
   background-color: #051318;
   background-image:
-    radial-gradient(760px 440px at 2% -60px, rgba(94, 214, 165, 0.46), transparent 68%),
-    radial-gradient(700px 420px at 100% -110px, rgba(98, 172, 232, 0.5), transparent 70%),
-    linear-gradient(180deg, #061821 0%, #051318 26%, #041014 68%, #02151e 100%);
-}
-
-@media (max-width: 959px) {
-  .aurora-team::before {
-    left: 0;
-  }
+    /* 顶上这两团光晕沿用原来 520px 天空里的尺寸（46%/62% 那组换算成固定值），
+       换成固定 px 才不会因为页面变长而被拉散；
+       左边那团的位置原本是从目录栏右边起算的，天空铺满全幅之后要补回来 */
+    radial-gradient(
+      540px 322px at calc(var(--aurora-sky-left, 272px) + 24px) -31px,
+      rgba(94, 214, 165, 0.5),
+      transparent 58%
+    ),
+    radial-gradient(515px 302px at 100% -62px, rgba(98, 172, 232, 0.56), transparent 60%),
+    linear-gradient(180deg, #051318 0px, #071a21 300px, #041014 62%, #02151e 100%);
 }
 
 /* 深色下页面本身就很深，天空要比页面亮一点才看得出是「一块天」 */
 .dark .aurora-team::before {
-  left: 0;
   background-color: #082730;
   background-image:
-    radial-gradient(760px 440px at 2% -60px, rgba(94, 214, 165, 0.3), transparent 68%),
-    radial-gradient(700px 420px at 100% -110px, rgba(98, 172, 232, 0.34), transparent 70%),
-    linear-gradient(180deg, #0a2c36 0%, #082630 30%, #061e26 70%, #02151e 100%);
+    radial-gradient(
+      540px 322px at calc(var(--aurora-sky-left, 272px) + 24px) -31px,
+      rgba(94, 214, 165, 0.34),
+      transparent 58%
+    ),
+    radial-gradient(515px 302px at 100% -62px, rgba(98, 172, 232, 0.4), transparent 60%),
+    linear-gradient(180deg, #0a2c36 0px, #082630 300px, #061e26 62%, #02151e 100%);
 }
 
-/* 正文压在夜空上：这一页的文字、发丝线、玻璃都换成浅色那一套
-   （只改正文栏，左边的课程目录栏保持原样） */
-.aurora-team .VPContent {
+/* 这一页整幅都是夜空，浅色模式也按深色底配：正文、左侧课程目录栏、
+   顶栏、移动端那条目录条一起压暗，整页只剩一种底色 */
+.aurora-team {
+  /* 天空是 ::before 画的（z-index: -1）。这一页给 html 铺了底色之后，
+     body 的白底不再当画布、而是实画一遍，正好盖住天空；这里起一个
+     层叠上下文，把天空圈回页面内部，两件事就不打架了 */
+  isolation: isolate;
+  /* 顶上左边那团光晕在宽屏下要避开左侧目录栏（窄屏没有目录栏，贴左边） */
+  --aurora-sky-left: var(--vp-sidebar-width, 272px);
+  --vp-c-bg: #051318;
+  --vp-c-bg-alt: #071c24;
+  --vp-c-bg-soft: #0a222b;
+  --vp-c-bg-elv: #0c2833;
+  --vp-c-border: rgba(255, 255, 255, 0.12);
+  --vp-c-divider: rgba(255, 255, 255, 0.12);
+  --vp-c-gutter: rgba(255, 255, 255, 0.1);
   --vp-c-text-1: rgba(238, 250, 246, 0.94);
   --vp-c-text-2: rgba(222, 240, 234, 0.72);
   --vp-c-text-3: rgba(222, 240, 234, 0.5);
   --vp-c-brand-1: #8fe0b8;
   --vp-c-brand-2: #a9e8c8;
   --vp-c-brand-soft: rgba(143, 224, 184, 0.14);
+  /* 毛玻璃：顶栏、左侧目录栏、移动端目录条都吃这几个变量 */
+  --vp-nav-bg-color: rgba(10, 24, 30, 0.86);
+  --vp-nav-screen-bg-color: rgba(8, 20, 26, 0.94);
+  --vp-sidebar-bg-color: rgba(10, 24, 30, 0.86);
+  --vp-local-nav-bg-color: rgba(10, 24, 30, 0.86);
+  --glass-bg: rgba(10, 24, 30, 0.86);
+  --glass-bg-strong: rgba(8, 20, 26, 0.94);
+  --glass-bg-soft: rgba(12, 28, 34, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.12);
   --glass-edge: rgba(255, 255, 255, 0.14);
   --glass-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
 }
@@ -1036,37 +1062,63 @@ html:has(.aurora-team) {
   background-color: #02151e;
 }
 
+/* 窄屏没有左侧目录栏，天空那团光晕贴回左边缘 */
+@media (max-width: 959px) {
+  .aurora-team {
+    --aurora-sky-left: 0px;
+  }
+}
+
+/* 目录栏的条目文字平时是从 body 继承的深色，不吃上面那些变量，
+   这一页要单独转浅；移动端那条「目录 / 返回顶部」、正文里的
+   成员卡姓名与简介也同理，所以正文栏也定一个浅色打底 */
+.aurora-team .VPContent,
+.aurora-team .VPSidebar,
+.aurora-team .VPLocalNav {
+  color: rgba(238, 250, 246, 0.9);
+}
+
 /* 顶部时导航条也让给天空，不留白条；滚下去之后自动恢复成普通玻璃 */
 .aurora-team .VPNavBar.top,
 .aurora-team .VPNavBar.top .content-body {
   background-color: transparent !important;
 }
 
-/* 站名在左侧栏上方（浅色玻璃），保持深色；只有右侧菜单压在天空上，用浅色 */
-.aurora-team .VPNavBar.top .VPNavBarMenuLink {
+/* 顶栏整条都压在夜空上（左侧目录栏也压暗了），所以菜单、站名、
+   汉堡按钮一律用浅色，滚下去也一样 */
+.aurora-team .VPNavBarMenuLink {
   color: rgba(236, 252, 246, 0.92);
 }
 
-.aurora-team .VPNavBar.top .VPNavBarMenuLink:hover,
-.aurora-team .VPNavBar.top .VPNavBarMenuLink.active {
+.aurora-team .VPNavBarMenuLink:hover,
+.aurora-team .VPNavBarMenuLink.active {
   color: #ffffff;
 }
 
 @media (min-width: 768px) {
-  .aurora-team .VPNavBar.top .DocSearch-Button {
+  .aurora-team .DocSearch-Button {
     background-color: rgba(255, 255, 255, 0.14);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
-.aurora-team .VPNavBar.top .DocSearch-Button .DocSearch-Button-Placeholder,
-.aurora-team .VPNavBar.top .DocSearch-Button .DocSearch-Search-Icon,
-.aurora-team .VPNavBar.top .DocSearch-Button .DocSearch-Button-Key {
+.aurora-team .DocSearch-Button .DocSearch-Button-Placeholder,
+.aurora-team .DocSearch-Button .DocSearch-Search-Icon,
+.aurora-team .DocSearch-Button .DocSearch-Button-Key {
   color: rgba(236, 252, 246, 0.82);
 }
 
-.aurora-team .VPNavBar.top .DocSearch-Button .DocSearch-Button-Key {
+.aurora-team .DocSearch-Button .DocSearch-Button-Key {
   border-color: rgba(255, 255, 255, 0.24);
+}
+
+/* 站名：左侧目录栏也压暗了，浅色模式下同样用浅字 */
+.aurora-team .VPNavBarTitle .title {
+  color: rgba(236, 252, 246, 0.92);
+}
+
+.aurora-team .VPNavBarTitle .title:hover {
+  color: #ffffff;
 }
 
 /* 标题区（在天空里） */
@@ -1480,24 +1532,13 @@ html:has(.aurora-team) {
 }
 
 /* 手机端天空铺满整幅，导航条整条压在深色上。浅色模式下站名和菜单按钮
-   默认是深色的，会糊进天空里看不见，这里跟着转浅（只在导航条透明、
-   也就是停在页面顶部时生效，往下滚恢复成普通玻璃条 + 深色字）。 */
+   默认是深色的，会糊进天空里看不见，这里跟着转浅。
+   首页只在导航条透明（停在页面顶部）时生效，往下滚恢复玻璃条 + 深色字；
+   团队页整页都是夜空，一直用浅色。 */
 .aurora-home .VPNavBar.top .VPNavBarHamburger,
-.aurora-team .VPNavBar.top .VPNavBarHamburger {
+.aurora-team .VPNavBarHamburger {
   --vp-c-text-1: rgba(236, 252, 246, 0.92);
   --vp-c-text-2: rgba(236, 252, 246, 0.72);
-}
-
-/* 团队页在窄屏下天空也从最左边铺起（宽屏时左边让给目录栏，
-   站名压在浅色上，保持深色不动） */
-@media (max-width: 959px) {
-  .aurora-team .VPNavBar.top .VPNavBarTitle .title {
-    color: rgba(236, 252, 246, 0.92);
-  }
-
-  .aurora-team .VPNavBar.top .VPNavBarTitle .title:hover {
-    color: #ffffff;
-  }
 }
 
 /* hero：站名走薄荷→天青渐变，正文与副标题转浅色 */
