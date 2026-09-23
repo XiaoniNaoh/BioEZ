@@ -259,32 +259,39 @@
   letter-spacing: 0.04em;
 }
 
-/* 目录条目被截断时，悬浮立刻弹出的全名气泡（脚本见 theme/index.ts） */
-.sidebar-tip {
+/* 目录条目被截断时，悬浮把这一行就地展开（脚本见 theme/index.ts）：
+   浮层从条目文字左缘开始、行高与这一行一致，字体由脚本照抄该行，
+   背景取侧栏同色玻璃，看起来就是省略号被展开、突破了目录宽度 */
+.sidebar-expand {
   position: fixed;
   z-index: 60;
-  max-width: min(420px, 60vw);
-  padding: 7px 11px;
-  border: 1px solid var(--glass-edge);
-  border-radius: 9px;
-  background-color: var(--vp-c-bg-elv);
-  box-shadow: 0 10px 30px rgba(15, 35, 50, 0.16);
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--vp-c-text-1);
-  word-break: break-word;
+  padding: 0 8px;
+  border-radius: 8px;
+  background-color: var(--vp-sidebar-bg-color);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  white-space: nowrap;
   /* 不挡鼠标，免得和 hover 打架 */
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.06s ease;
 }
 
-.sidebar-tip.is-open {
+.sidebar-expand.is-open {
   opacity: 1;
 }
 
-.dark .sidebar-tip {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+/* 文件那一档的小圆点，展开时保持一致 */
+.sidebar-expand.has-dot::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+  vertical-align: 0.3em;
+  opacity: 0.5;
 }
 
 /* 团队页：组件默认留白偏大（外层 margin 128px + 标题 padding 80px），
