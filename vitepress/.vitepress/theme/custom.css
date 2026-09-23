@@ -601,9 +601,10 @@ body::after {
 }
 
 /* ── 关于页 ──────────────────────────────────────────────────────────────
-   开场沿用首页 / 团队页那套：一条深色天空，标题区放一句定位话，一串数字
-   压在天空下缘。再往下全部走发丝线——课程一行一门、读法三列、做法键值
-   行——不铺卡片，靠留白和分割线撑住版面。 */
+   开场是一条天空：深色模式下走极光夜（和团队页同源），浅色模式下走
+   北极圈的白天——很淡的冷蓝，两团几乎看不见的冷光，一层薄云。标题压
+   在天空里，一串数字骑在天空下缘；再往下全部走发丝线（课程一行一门、
+   读法三列、做法键值行），不铺卡片，靠留白和分割线撑住版面。 */
 
 /* 天空的范围跟着正文栏走：左右各让出一列，右边正好停在「页面导航」前面，
    不会在目录后面留下一片泛白的光。宽屏时整个版心居中，留白要从两边补回来。 */
@@ -620,11 +621,16 @@ body::after {
   right: calc(var(--aurora-gutter) + 272px);
   height: 416px;
   pointer-events: none;
-  background-color: #051318;
+  /* 浅色：北极圈白天，淡蓝天空 */
+  background-color: #e8f1f9;
   background-image:
-    radial-gradient(46% 62% at 2% -6%, rgba(94, 214, 165, 0.5), transparent 58%),
-    radial-gradient(44% 58% at 100% -12%, rgba(98, 172, 232, 0.56), transparent 60%),
-    linear-gradient(180deg, #051318 0%, #071a21 58%, #08202a 100%);
+    /* 一条很薄的云 */
+    radial-gradient(620px 120px at 36% 46%, rgba(255, 255, 255, 0.62), transparent 72%),
+    radial-gradient(520px 96px at 78% 62%, rgba(255, 255, 255, 0.42), transparent 74%),
+    /* 两团冷光：一薄荷、一淡蓝，是夜里那两团极光的白天版 */
+    radial-gradient(700px 380px at calc(var(--aurora-gutter) + 22%) -150px, rgba(154, 216, 199, 0.5), transparent 72%),
+    radial-gradient(640px 360px at 100% -130px, rgba(140, 186, 230, 0.55), transparent 74%),
+    linear-gradient(180deg, #d6e6f6 0%, #e2eef9 46%, #f0f6fc 80%, #ffffff 100%);
   /* 右缘化开：从正文栏右边界开始收（96px），中间垫几档，
      渐隐是慢慢淡出的，不会看到一条边，也照不到右边那一列目录 */
   -webkit-mask-image: linear-gradient(
@@ -675,18 +681,23 @@ body::after {
     linear-gradient(180deg, #0a2c36 0%, #082630 58%, #061c24 100%);
 }
 
-/* 顶部导航压在天空上：天空左右两端都在导航条底下收了边，
-   半透明玻璃会把下面深浅不一的背景透出来（左边白、中间深、右边白），
-   看着像断成三截，所以这一页的导航条直接铺成不透明的页面底色。
-   滚下去自动恢复成普通玻璃。 */
+/* 顶部导航：浅色下天空与两侧都是浅色，导航条透明就好，天空从顶上铺过去；
+   深色下天空是深的，半透明玻璃会透出深浅不一的背景（看着断成三截），
+   所以铺成不透明的页面底色。滚下去都恢复成普通玻璃。 */
 .aurora-about .VPNavBar.top,
 .aurora-about .VPNavBar.top .content-body {
+  background-color: transparent !important;
+}
+
+.dark .aurora-about .VPNavBar.top,
+.dark .aurora-about .VPNavBar.top .content-body {
   background-color: var(--vp-c-bg) !important;
 }
 
 /* 标题区（在天空里）：和团队页一样居中；h1 不用荧光笔痕，引子压暗一档 */
 .aurora-about .aurora-kicker {
   text-align: center;
+  color: var(--vp-c-brand-1);
 }
 
 .aurora-about .vp-doc h1 {
@@ -694,7 +705,7 @@ body::after {
   margin-inline: auto;
   text-align: center;
   letter-spacing: -0.02em;
-  color: #f3fbf8;
+  color: var(--vp-c-brand-1);
 }
 
 .aurora-about .vp-doc h1::before {
@@ -707,6 +718,19 @@ body::after {
   text-align: center;
   font-size: 15px;
   line-height: 1.9;
+  color: var(--vp-c-text-2);
+}
+
+/* 深色模式：天空换回极光夜，字跟着转浅（和团队页同一套） */
+.dark .aurora-about .aurora-kicker {
+  color: rgba(150, 220, 195, 0.9);
+}
+
+.dark .aurora-about .vp-doc h1 {
+  color: #f3fbf8;
+}
+
+.dark .aurora-about .vp-doc h1 + p {
   color: rgba(214, 240, 232, 0.64);
 }
 
@@ -724,8 +748,8 @@ body::after {
      压在深色上仍旧是磨砂玻璃的观感 */
   background-color: rgba(255, 255, 255, 0.94);
   box-shadow:
-    0 24px 60px rgba(4, 24, 20, 0.2),
-    0 2px 8px rgba(4, 24, 20, 0.08);
+    0 24px 60px rgba(24, 62, 92, 0.14),
+    0 2px 8px rgba(24, 62, 92, 0.08);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
 }
@@ -1380,6 +1404,10 @@ html:has(.aurora-team) {
   /* 正文之后可以一直往下拉：星空拉得长一点，最底下才接上那张图 */
   min-height: 180vh;
   margin-top: 96px;
+  /* 图片下面垫一段草地色（由内边距撑出来）；
+     星星与极光铺得比正文栏宽，这里兜住，避免整页能左右划 */
+  padding-bottom: 140px;
+  overflow: hidden;
   pointer-events: none;
 }
 
@@ -1439,7 +1467,7 @@ html:has(.aurora-team) {
   position: absolute;
   left: 0;
   right: 0;
-  top: 100%;
+  bottom: 0;
   height: 140px;
   background-color: #02151e;
 }
