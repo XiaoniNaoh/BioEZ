@@ -1088,3 +1088,125 @@ body::after {
   width: 21px;
   height: 21px;
 }
+
+/* ── 搜索弹窗美化 ──────────────────────────────────────────────────────
+   玻璃面板 + 顶部一层极光；结果行去掉方框改为高亮；命中词用标题同款的
+   淡蓝荧光笔；键盘提示做成细边小胶囊。 */
+
+:root {
+  /* 命中词比标题荧光笔略重一点，扫结果的时候更容易看到 */
+  --vp-local-search-highlight-bg: rgba(206, 227, 242, 0.8);
+  --vp-local-search-highlight-text: var(--vp-c-text-1);
+  --vp-local-search-result-border: transparent;
+  --vp-local-search-result-selected-bg: var(--vp-c-brand-soft);
+  --vp-local-search-result-selected-border: transparent;
+}
+
+.dark {
+  --vp-local-search-highlight-bg: rgba(142, 188, 214, 0.24);
+}
+
+.VPLocalSearchBox .shell {
+  border: 1px solid var(--glass-edge);
+  border-radius: 18px;
+  padding: 14px;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.96);
+  background-image:
+    radial-gradient(120% 70% at 0% -25%, rgba(94, 214, 165, 0.18), transparent 60%),
+    radial-gradient(110% 70% at 100% -25%, rgba(98, 172, 232, 0.2), transparent 62%);
+  box-shadow: 0 30px 90px rgba(4, 24, 20, 0.32);
+}
+
+.dark .VPLocalSearchBox .shell {
+  background-color: rgba(20, 23, 26, 0.97);
+  background-image:
+    radial-gradient(120% 70% at 0% -25%, rgba(94, 214, 165, 0.16), transparent 60%),
+    radial-gradient(110% 70% at 100% -25%, rgba(98, 172, 232, 0.18), transparent 62%);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+}
+
+/* 遮罩：一层淡淡的暗幕；模糊只在桌面端加，手机上全屏模糊很费 */
+.VPLocalSearchBox .backdrop {
+  background-color: rgba(6, 20, 24, 0.42);
+}
+
+@media (min-width: 768px) {
+  .VPLocalSearchBox .backdrop {
+    backdrop-filter: blur(7px) saturate(1.2);
+    -webkit-backdrop-filter: blur(7px) saturate(1.2);
+  }
+}
+
+/* 输入区：一条细边的凹槽，聚焦时描边转主题色 */
+.VPLocalSearchBox .search-bar {
+  border-color: var(--glass-edge);
+  border-radius: 12px;
+  background-color: var(--vp-c-bg-alt);
+  padding: 0 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.VPLocalSearchBox .search-bar:focus-within {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 0 0 3px var(--vp-c-brand-soft);
+}
+
+.VPLocalSearchBox .search-icon {
+  color: var(--vp-c-brand-1);
+  font-size: 19px;
+}
+
+.VPLocalSearchBox .search-input {
+  padding: 10px 12px;
+  font-size: 16px;
+}
+
+/* 结果列表：去掉每行的方框，选中/悬停给一块圆角底 */
+.VPLocalSearchBox .results {
+  gap: 2px;
+  padding: 2px 2px 0;
+}
+
+.VPLocalSearchBox .result {
+  border: none;
+  border-radius: 10px;
+  padding: 0 4px;
+}
+
+.VPLocalSearchBox .result > div {
+  margin: 10px 8px;
+}
+
+/* VitePress 的 result-bg 变量没有被当作背景用，这里直接给选中/悬停上色 */
+.VPLocalSearchBox .result.selected,
+.VPLocalSearchBox .result:hover {
+  background-color: var(--vp-c-brand-soft);
+}
+
+.VPLocalSearchBox .result.selected .title {
+  color: var(--vp-c-brand-1);
+}
+
+.VPLocalSearchBox .result .title-icon {
+  color: var(--vp-c-text-3);
+}
+
+/* 键盘提示：细边小胶囊，不再用投影 */
+.VPLocalSearchBox .search-keyboard-shortcuts {
+  color: var(--vp-c-text-3);
+  opacity: 1;
+}
+
+.VPLocalSearchBox .search-keyboard-shortcuts kbd {
+  background-color: var(--vp-c-bg-alt);
+  border: 1px solid var(--glass-edge);
+  border-radius: 6px;
+  box-shadow: none;
+  color: var(--vp-c-text-2);
+  font-family: inherit;
+  font-size: 11px;
+  padding: 3px 7px;
+}
