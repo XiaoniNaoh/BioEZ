@@ -178,6 +178,15 @@
   padding-left: 16px;
 }
 
+/* 展开的文件夹：里面那组文件垫一层很淡的底，一眼能认出它们同属一个文件夹 */
+.VPSidebarItem.level-1 > .items,
+.VPSidebarItem.level-2 > .items {
+  margin: 4px 0 8px;
+  padding: 6px 10px 6px 12px;
+  border-radius: 10px;
+  background-color: var(--vp-c-bg-soft);
+}
+
 /* 团队页：组件默认留白偏大（外层 margin 128px + 标题 padding 80px），
    这是给「没有导航栏的独立页面」设计的；本站有导航和侧栏，收紧一些。 */
 .VPTeamPage {
@@ -622,21 +631,22 @@ body::after {
   right: calc(var(--aurora-gutter) + 272px);
   height: 416px;
   pointer-events: none;
-  /* 浅色：北极圈白天，淡蓝偏紫、整体压淡 */
-  background-color: #eef2fc;
+  /* 浅色：北极圈白天，主浅蓝、辅浅绿，整体压淡 */
+  background-color: #eef5fb;
   background-image:
     /* 一条很薄的云 */
     radial-gradient(620px 120px at 36% 46%, rgba(255, 255, 255, 0.62), transparent 72%),
     radial-gradient(520px 96px at 78% 62%, rgba(255, 255, 255, 0.42), transparent 74%),
-    /* 两团冷光：一蓝紫、一淡蓝，是夜里那两团极光的白天版；绿色只留一点点 */
+    /* 两团冷光：一淡蓝、一浅蓝，是夜里那两团极光的白天版 */
     radial-gradient(
       860px 470px at calc(var(--aurora-gutter) + 18%) -150px,
-      rgba(150, 166, 230, 0.48),
+      rgba(126, 178, 236, 0.52),
       transparent 72%
     ),
-    radial-gradient(760px 430px at 100% -150px, rgba(128, 174, 232, 0.46), transparent 74%),
-    radial-gradient(500px 280px at 46% -120px, rgba(158, 212, 196, 0.2), transparent 72%),
-    linear-gradient(180deg, #dae4f8 0%, #e6edfb 44%, #f3f7fd 78%, #ffffff 100%);
+    radial-gradient(720px 400px at 100% -150px, rgba(118, 172, 238, 0.44), transparent 74%),
+    /* 辅调：一团浅绿（呼应主题松绿） */
+    radial-gradient(560px 320px at 44% -130px, rgba(146, 214, 184, 0.34), transparent 72%),
+    linear-gradient(180deg, #dbe8fa 0%, #e5eefb 44%, #f3f7fd 78%, #ffffff 100%);
   /* 右缘化开：从正文栏右边界开始收（96px），中间垫几档，
      渐隐是慢慢淡出的，不会看到一条边，也照不到右边那一列目录 */
   -webkit-mask-image: linear-gradient(
@@ -686,9 +696,9 @@ body::after {
        之后的实际色值（约 #1e1f23），不然天空压到底会与下面差一档、看出接缝 */
     linear-gradient(
       180deg,
-      rgba(30, 31, 35, 0) 26%,
-      rgba(30, 31, 35, 0.4) 58%,
-      rgba(30, 31, 35, 0.82) 84%,
+      rgba(30, 31, 35, 0) 55%,
+      rgba(30, 31, 35, 0.36) 78%,
+      rgba(30, 31, 35, 0.78) 93%,
       #1e1f23 100%
     ),
     radial-gradient(46% 62% at 2% -6%, rgba(94, 214, 165, 0.34), transparent 58%),
@@ -1512,10 +1522,10 @@ html:has(.aurora-team) {
   }
 }
 
-/* ── 首页：和「关于」页同一套天空 ──────────────────────────────────────
-   浅色下是北极圈的白天（淡蓝 + 一点淡绿光晕），深色下是极光夜；
+/* ── 首页：极光夜 ──────────────────────────────────────────────────────
+   深浅两种模式都是这条极光夜空（浅色模式也保留，是首页的招牌）；
    两种模式都往下渐变到正文底色，天空没有硬边。顶部导航让给天空，
-   hero 文字跟着底色转浅/转深，课程卡片骑在天空的下缘。 */
+   hero 文字转浅色、站名走薄荷→天青；课程卡片骑在天空的下缘。 */
 
 .aurora-home::before {
   content: '';
@@ -1526,17 +1536,12 @@ html:has(.aurora-team) {
   right: 0;
   height: 500px;
   pointer-events: none;
-  /* 浅色：北极圈白天 */
-  background-color: #eef2fc;
+  background-color: #051318;
   background-image:
-    /* 薄云 */
-    radial-gradient(660px 120px at 38% 42%, rgba(255, 255, 255, 0.6), transparent 72%),
-    radial-gradient(540px 96px at 76% 58%, rgba(255, 255, 255, 0.42), transparent 74%),
-    /* 主调是蓝紫 + 淡蓝（北极圈的冷），绿色只留一点点；整体压淡 */
-    radial-gradient(880px 500px at 16% -150px, rgba(152, 168, 230, 0.5), transparent 70%),
-    radial-gradient(760px 440px at 96% -170px, rgba(128, 174, 232, 0.46), transparent 72%),
-    radial-gradient(520px 300px at 54% -120px, rgba(158, 212, 196, 0.2), transparent 72%),
-    linear-gradient(180deg, #dae4f8 0%, #e6edfb 44%, #f3f7fd 78%, #ffffff 100%);
+    /* 浅色模式下这里保持硬边（课程卡片骑在下缘），不做渐变 */
+    radial-gradient(46% 58% at 2% -8%, rgba(94, 214, 165, 0.5), transparent 58%),
+    radial-gradient(44% 56% at 100% -14%, rgba(98, 172, 232, 0.56), transparent 60%),
+    linear-gradient(180deg, #051318 0%, #071a21 58%, #08202a 100%);
 }
 
 .dark .aurora-home::before {
@@ -1545,9 +1550,9 @@ html:has(.aurora-team) {
     /* 同上：收尾色对齐正文那一带叠加全站极光后的实际色值 */
     linear-gradient(
       180deg,
-      rgba(30, 31, 35, 0) 26%,
-      rgba(30, 31, 35, 0.42) 58%,
-      rgba(30, 31, 35, 0.84) 84%,
+      rgba(30, 31, 35, 0) 62%,
+      rgba(30, 31, 35, 0.4) 82%,
+      rgba(30, 31, 35, 0.8) 94%,
       #1e1f23 100%
     ),
     radial-gradient(46% 58% at 2% -8%, rgba(94, 214, 165, 0.34), transparent 58%),
@@ -1561,119 +1566,78 @@ html:has(.aurora-team) {
   background-color: transparent !important;
 }
 
-/* 浅色下天空是浅的，导航条保持默认的深色字；深色下转浅 */
-.dark .aurora-home .VPNavBar.top .VPNavBarTitle .title,
-.dark .aurora-home .VPNavBar.top .VPNavBarMenuLink {
+/* 深浅两种模式下导航条都压在深色天空上，一律浅色 */
+.aurora-home .VPNavBar.top .VPNavBarTitle .title,
+.aurora-home .VPNavBar.top .VPNavBarMenuLink {
   color: rgba(236, 252, 246, 0.92);
 }
 
-.dark .aurora-home .VPNavBar.top .VPNavBarTitle .title:hover,
-.dark .aurora-home .VPNavBar.top .VPNavBarMenuLink:hover,
-.dark .aurora-home .VPNavBar.top .VPNavBarMenuLink.active {
+.aurora-home .VPNavBar.top .VPNavBarTitle .title:hover,
+.aurora-home .VPNavBar.top .VPNavBarMenuLink:hover,
+.aurora-home .VPNavBar.top .VPNavBarMenuLink.active {
   color: #ffffff;
 }
 
 @media (min-width: 768px) {
-  .dark .aurora-home .VPNavBar.top .DocSearch-Button {
+  .aurora-home .VPNavBar.top .DocSearch-Button {
     background-color: rgba(255, 255, 255, 0.14);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
-.dark .aurora-home .VPNavBar.top .DocSearch-Button .DocSearch-Button-Placeholder,
-.dark .aurora-home .VPNavBar.top .DocSearch-Button .DocSearch-Search-Icon,
-.dark .aurora-home .VPNavBar.top .DocSearch-Button .DocSearch-Button-Key {
+.aurora-home .VPNavBar.top .DocSearch-Button .DocSearch-Button-Placeholder,
+.aurora-home .VPNavBar.top .DocSearch-Button .DocSearch-Search-Icon,
+.aurora-home .VPNavBar.top .DocSearch-Button .DocSearch-Button-Key {
   color: rgba(236, 252, 246, 0.82);
 }
 
-.dark .aurora-home .VPNavBar.top .DocSearch-Button .DocSearch-Button-Key {
+.aurora-home .VPNavBar.top .DocSearch-Button .DocSearch-Button-Key {
   border-color: rgba(255, 255, 255, 0.24);
 }
 
-/* 手机端天空铺满整幅，导航条整条压在深色上。浅色模式下站名和菜单按钮
-   默认是深色的，会糊进天空里看不见，这里跟着转浅。
+/* 手机端天空铺满整幅，导航条整条压在深色上，站名和菜单按钮转浅。
    首页只在导航条透明（停在页面顶部）时生效，往下滚恢复玻璃条 + 深色字；
    团队页整页都是夜空，一直用浅色。 */
-.dark .aurora-home .VPNavBar.top .VPNavBarHamburger,
+.aurora-home .VPNavBar.top .VPNavBarHamburger,
 .aurora-team .VPNavBarHamburger {
   --vp-c-text-1: rgba(236, 252, 246, 0.92);
   --vp-c-text-2: rgba(236, 252, 246, 0.72);
 }
 
-/* hero：站名在浅色下走松绿→天青（压在浅天空上够深），深色下走薄荷→天青 */
+/* hero：站名走薄荷→天青的渐变，正文与副标题转浅色 */
 .aurora-home {
-  --vp-home-hero-name-background: linear-gradient(
-    104deg,
-    #46a598 0%,
-    #4fa2cf 42%,
-    #7aa4e4 76%,
-    #a29ce6 100%
-  );
+  --vp-home-hero-name-background: linear-gradient(118deg, #6fe0b4 18%, #86c8ee 78%);
   --vp-home-hero-name-color: transparent;
 }
 
-.dark .aurora-home {
-  --vp-home-hero-name-background: linear-gradient(118deg, #6fe0b4 18%, #86c8ee 78%);
-}
-
 .aurora-home .VPHero .text {
-  color: var(--vp-c-text-1);
-}
-
-.dark .aurora-home .VPHero .text {
   color: #f3fbf8;
 }
 
 .aurora-home .VPHero .tagline {
   /* 默认 tagline 限宽 392px，这句会折成「知识维 / 基。」，放宽到一行装得下 */
   max-width: 660px;
-  color: var(--vp-c-text-2);
-}
-
-.dark .aurora-home .VPHero .tagline {
   color: rgba(228, 246, 240, 0.74);
 }
 
 .aurora-home .VPHero .VPButton.brand {
-  border-color: #1d764a;
-  background-color: #1d764a;
-  color: #ffffff;
-}
-
-.aurora-home .VPHero .VPButton.brand:hover {
-  border-color: #175f3c;
-  background-color: #175f3c;
-}
-
-.dark .aurora-home .VPHero .VPButton.brand {
   border-color: #6fe0b4;
   background-color: #6fe0b4;
   color: #05201a;
 }
 
-.dark .aurora-home .VPHero .VPButton.brand:hover {
+.aurora-home .VPHero .VPButton.brand:hover {
   border-color: #8cecc4;
   background-color: #8cecc4;
 }
 
 .aurora-home .VPHero .VPButton.alt {
-  border-color: rgba(29, 118, 74, 0.28);
-  background-color: rgba(255, 255, 255, 0.72);
-  color: var(--vp-c-text-1);
-}
-
-.aurora-home .VPHero .VPButton.alt:hover {
-  border-color: rgba(29, 118, 74, 0.5);
-  background-color: #ffffff;
-}
-
-.dark .aurora-home .VPHero .VPButton.alt {
   border-color: rgba(255, 255, 255, 0.26);
   background-color: rgba(255, 255, 255, 0.12);
   color: #eaf6f1;
 }
 
-.dark .aurora-home .VPHero .VPButton.alt:hover {
+.aurora-home .VPHero .VPButton.alt:hover {
   border-color: rgba(255, 255, 255, 0.42);
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -1683,8 +1647,8 @@ html:has(.aurora-team) {
   background-color: rgba(255, 255, 255, 0.92);
   border-color: rgba(255, 255, 255, 0.55);
   box-shadow:
-    0 24px 60px rgba(24, 62, 92, 0.14),
-    0 2px 8px rgba(24, 62, 92, 0.08);
+    0 24px 60px rgba(4, 24, 20, 0.24),
+    0 2px 8px rgba(4, 24, 20, 0.1);
 }
 
 .dark .aurora-home .VPFeatures .VPFeature {
