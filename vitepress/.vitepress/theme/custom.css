@@ -323,7 +323,6 @@ body::after {
 .VPLocalSearchBox .shell,
 .VPFeatures .VPFeature,
 .VPTeamMembersItem .profile,
-.VPNavBarSearch .DocSearch-Button,
 .vp-doc div[class*='language-'],
 .vp-doc .custom-block {
   backdrop-filter: var(--glass-blur);
@@ -349,8 +348,18 @@ body::after {
   background-color: var(--glass-bg) !important;
 }
 
+/* 搜索按钮：它本来就在磨砂导航条里，再叠一层 backdrop-filter 手机上会反复重绘闪烁；
+   手机端按 VitePress 原样保持透明，桌面端才给一层淡底。 */
 .VPNavBarSearch .DocSearch-Button {
-  background-color: var(--glass-bg);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .VPNavBarSearch .DocSearch-Button {
+    background-color: var(--glass-bg);
+  }
 }
 
 .VPMenu,
@@ -454,8 +463,12 @@ body::after {
 
 
 
-/* 关于页：从页面上缘落下的极光带（团队页改用下面的 .aurora-band） */
-.aurora-about::before {
+/* 所有正文页：从页面上缘落下的极光带（首页与团队页另有整幅天空，排除在外） */
+.Layout {
+  position: relative;
+}
+
+.Layout:not(.aurora-home):not(.aurora-team)::before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -470,7 +483,7 @@ body::after {
     linear-gradient(180deg, rgba(150, 196, 216, 0.12), rgba(150, 196, 216, 0) 76%);
 }
 
-.dark .aurora-about::before {
+.dark .Layout:not(.aurora-home):not(.aurora-team)::before {
   background-image:
     radial-gradient(46% 86% at 16% 0%, rgba(108, 191, 149, 0.28), transparent 72%),
     radial-gradient(46% 86% at 84% 0%, rgba(120, 170, 210, 0.28), transparent 74%),
@@ -678,9 +691,11 @@ body::after {
   color: #ffffff;
 }
 
-.aurora-team .VPNavBar.top .DocSearch-Button {
-  background-color: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+@media (min-width: 768px) {
+  .aurora-team .VPNavBar.top .DocSearch-Button {
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 
 .aurora-team .VPNavBar.top .DocSearch-Button .DocSearch-Button-Placeholder,
@@ -966,9 +981,11 @@ body::after {
   color: #ffffff;
 }
 
-.aurora-home .VPNavBar.top .DocSearch-Button {
-  background-color: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+@media (min-width: 768px) {
+  .aurora-home .VPNavBar.top .DocSearch-Button {
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 
 .aurora-home .VPNavBar.top .DocSearch-Button .DocSearch-Button-Placeholder,
