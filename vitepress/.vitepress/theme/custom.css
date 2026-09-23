@@ -219,10 +219,11 @@ html {
    各种状态下（首页顶部、移动端抽屉、滚动后）都由这一处决定。 */
 
 :root {
-  --glass-blur: saturate(180%) blur(14px);
-  --glass-bg: rgba(255, 255, 255, 0.68);
-  --glass-bg-strong: rgba(255, 255, 255, 0.86);
-  --glass-bg-soft: rgba(255, 255, 255, 0.6);
+  /* 毛玻璃再透一点、模糊再强一点：底下的颜色能透上来，但正文对比度不受影响 */
+  --glass-blur: saturate(185%) blur(22px);
+  --glass-bg: rgba(255, 255, 255, 0.54);
+  --glass-bg-strong: rgba(255, 255, 255, 0.76);
+  --glass-bg-soft: rgba(255, 255, 255, 0.46);
   --glass-border: rgba(255, 255, 255, 0.6);
   --glass-edge: rgba(226, 232, 240, 0.9);
   --glass-shadow: 0 8px 32px rgba(31, 38, 63, 0.06);
@@ -235,9 +236,9 @@ html {
 }
 
 .dark {
-  --glass-bg: rgba(27, 27, 31, 0.62);
-  --glass-bg-strong: rgba(27, 27, 31, 0.86);
-  --glass-bg-soft: rgba(27, 27, 31, 0.55);
+  --glass-bg: rgba(27, 27, 31, 0.5);
+  --glass-bg-strong: rgba(27, 27, 31, 0.76);
+  --glass-bg-soft: rgba(27, 27, 31, 0.42);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-edge: rgba(46, 46, 50, 0.9);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
@@ -621,16 +622,21 @@ body::after {
   right: calc(var(--aurora-gutter) + 272px);
   height: 416px;
   pointer-events: none;
-  /* 浅色：北极圈白天，淡蓝天空 */
-  background-color: #e8f1f9;
+  /* 浅色：北极圈白天，淡蓝偏紫、整体压淡 */
+  background-color: #eef2fc;
   background-image:
     /* 一条很薄的云 */
     radial-gradient(620px 120px at 36% 46%, rgba(255, 255, 255, 0.62), transparent 72%),
     radial-gradient(520px 96px at 78% 62%, rgba(255, 255, 255, 0.42), transparent 74%),
-    /* 两团冷光：一薄荷、一淡蓝，是夜里那两团极光的白天版 */
-    radial-gradient(700px 380px at calc(var(--aurora-gutter) + 22%) -150px, rgba(154, 216, 199, 0.5), transparent 72%),
-    radial-gradient(640px 360px at 100% -130px, rgba(140, 186, 230, 0.55), transparent 74%),
-    linear-gradient(180deg, #d6e6f6 0%, #e2eef9 46%, #f0f6fc 80%, #ffffff 100%);
+    /* 两团冷光：一蓝紫、一淡蓝，是夜里那两团极光的白天版；绿色只留一点点 */
+    radial-gradient(
+      860px 470px at calc(var(--aurora-gutter) + 18%) -150px,
+      rgba(150, 166, 230, 0.48),
+      transparent 72%
+    ),
+    radial-gradient(760px 430px at 100% -150px, rgba(128, 174, 232, 0.46), transparent 74%),
+    radial-gradient(500px 280px at 46% -120px, rgba(158, 212, 196, 0.2), transparent 72%),
+    linear-gradient(180deg, #dae4f8 0%, #e6edfb 44%, #f3f7fd 78%, #ffffff 100%);
   /* 右缘化开：从正文栏右边界开始收（96px），中间垫几档，
      渐隐是慢慢淡出的，不会看到一条边，也照不到右边那一列目录 */
   -webkit-mask-image: linear-gradient(
@@ -676,11 +682,18 @@ body::after {
 .dark .aurora-about::before {
   background-color: #082730;
   background-image:
-    /* 越往下越化进正文底色，天空没有一条硬边 */
-    linear-gradient(180deg, rgba(27, 27, 31, 0) 38%, rgba(27, 27, 31, 0.5) 72%, #1b1b1f 100%),
+    /* 越往下越化进正文底色。收尾色取的是深色模式正文在那一带叠加全站极光
+       之后的实际色值（约 #1e1f23），不然天空压到底会与下面差一档、看出接缝 */
+    linear-gradient(
+      180deg,
+      rgba(30, 31, 35, 0) 26%,
+      rgba(30, 31, 35, 0.4) 58%,
+      rgba(30, 31, 35, 0.82) 84%,
+      #1e1f23 100%
+    ),
     radial-gradient(46% 62% at 2% -6%, rgba(94, 214, 165, 0.34), transparent 58%),
     radial-gradient(44% 58% at 100% -12%, rgba(98, 172, 232, 0.4), transparent 60%),
-    linear-gradient(180deg, #0a2c36 0%, #082630 58%, #061c24 100%);
+    linear-gradient(180deg, #0a2c36 0%, #08242c 60%, #131a20 100%);
 }
 
 /* 顶部导航：浅色下天空与两侧都是浅色，导航条透明就好，天空从顶上铺过去；
@@ -1070,13 +1083,13 @@ body::after {
   --vp-c-brand-2: #a9e8c8;
   --vp-c-brand-soft: rgba(143, 224, 184, 0.14);
   /* 毛玻璃：顶栏、左侧目录栏、移动端目录条都吃这几个变量 */
-  --vp-nav-bg-color: rgba(10, 24, 30, 0.86);
-  --vp-nav-screen-bg-color: rgba(8, 20, 26, 0.94);
-  --vp-sidebar-bg-color: rgba(10, 24, 30, 0.86);
-  --vp-local-nav-bg-color: rgba(10, 24, 30, 0.86);
-  --glass-bg: rgba(10, 24, 30, 0.86);
-  --glass-bg-strong: rgba(8, 20, 26, 0.94);
-  --glass-bg-soft: rgba(12, 28, 34, 0.6);
+  --vp-nav-bg-color: rgba(10, 24, 30, 0.7);
+  --vp-nav-screen-bg-color: rgba(8, 20, 26, 0.88);
+  --vp-sidebar-bg-color: rgba(10, 24, 30, 0.7);
+  --vp-local-nav-bg-color: rgba(10, 24, 30, 0.7);
+  --glass-bg: rgba(10, 24, 30, 0.7);
+  --glass-bg-strong: rgba(8, 20, 26, 0.88);
+  --glass-bg-soft: rgba(12, 28, 34, 0.5);
   --glass-border: rgba(255, 255, 255, 0.12);
   --glass-edge: rgba(255, 255, 255, 0.14);
   --glass-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
@@ -1514,25 +1527,32 @@ html:has(.aurora-team) {
   height: 500px;
   pointer-events: none;
   /* 浅色：北极圈白天 */
-  background-color: #e8f1f9;
+  background-color: #eef2fc;
   background-image:
     /* 薄云 */
     radial-gradient(660px 120px at 38% 42%, rgba(255, 255, 255, 0.6), transparent 72%),
     radial-gradient(540px 96px at 76% 58%, rgba(255, 255, 255, 0.42), transparent 74%),
-    /* 一团淡绿光晕（呼应主题松绿）+ 一团淡蓝冷光 */
-    radial-gradient(680px 360px at 14% -130px, rgba(136, 204, 172, 0.52), transparent 70%),
-    radial-gradient(620px 340px at 92% -150px, rgba(140, 186, 230, 0.5), transparent 72%),
-    linear-gradient(180deg, #d6e6f6 0%, #e3eef9 46%, #f1f7fc 78%, #ffffff 100%);
+    /* 主调是蓝紫 + 淡蓝（北极圈的冷），绿色只留一点点；整体压淡 */
+    radial-gradient(880px 500px at 16% -150px, rgba(152, 168, 230, 0.5), transparent 70%),
+    radial-gradient(760px 440px at 96% -170px, rgba(128, 174, 232, 0.46), transparent 72%),
+    radial-gradient(520px 300px at 54% -120px, rgba(158, 212, 196, 0.2), transparent 72%),
+    linear-gradient(180deg, #dae4f8 0%, #e6edfb 44%, #f3f7fd 78%, #ffffff 100%);
 }
 
 .dark .aurora-home::before {
   background-color: #082730;
   background-image:
-    /* 越往下越化进正文底色 */
-    linear-gradient(180deg, rgba(27, 27, 31, 0) 38%, rgba(27, 27, 31, 0.52) 72%, #1b1b1f 100%),
+    /* 同上：收尾色对齐正文那一带叠加全站极光后的实际色值 */
+    linear-gradient(
+      180deg,
+      rgba(30, 31, 35, 0) 26%,
+      rgba(30, 31, 35, 0.42) 58%,
+      rgba(30, 31, 35, 0.84) 84%,
+      #1e1f23 100%
+    ),
     radial-gradient(46% 58% at 2% -8%, rgba(94, 214, 165, 0.34), transparent 58%),
     radial-gradient(44% 56% at 100% -14%, rgba(98, 172, 232, 0.4), transparent 60%),
-    linear-gradient(180deg, #0a2c36 0%, #082630 58%, #061c24 100%);
+    linear-gradient(180deg, #0a2c36 0%, #08242c 60%, #131a20 100%);
 }
 
 /* 顶部时导航条让给天空 */
@@ -1582,7 +1602,13 @@ html:has(.aurora-team) {
 
 /* hero：站名在浅色下走松绿→天青（压在浅天空上够深），深色下走薄荷→天青 */
 .aurora-home {
-  --vp-home-hero-name-background: linear-gradient(118deg, #17694a 4%, #1d764a 46%, #3b7ea6 98%);
+  --vp-home-hero-name-background: linear-gradient(
+    104deg,
+    #46a598 0%,
+    #4fa2cf 42%,
+    #7aa4e4 76%,
+    #a29ce6 100%
+  );
   --vp-home-hero-name-color: transparent;
 }
 
