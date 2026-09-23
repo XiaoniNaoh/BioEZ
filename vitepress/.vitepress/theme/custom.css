@@ -3,12 +3,6 @@
    字体、字间距、行间距等排版仍然完全沿用 VitePress 默认。 */
 
 :root {
-  /* 侧栏宽度跟着视口走：宽屏多给一点，长篇目也能一行放下；
-     同时给正文栏留够宽度（窄屏下不会把正文挤扁） */
-  --vp-sidebar-width: clamp(272px, min(28vw, 100vw - 1008px), 430px);
-  /* 版心跟着放宽一点，侧栏变宽后正文仍然守得住原来的宽度 */
-  --vp-layout-max-width: 1520px;
-
   /* 主题色：松绿 */
   --vp-c-brand-1: #1d764a;
   --vp-c-brand-2: #175f3c;
@@ -181,29 +175,29 @@
    与有二级目录的课程观感一致。 */
 .VPSidebarItem.level-0 > .items {
   border-left: 1px solid var(--vp-c-divider);
-  padding-left: 12px;
+  padding-left: 16px;
 }
 
 /* 展开的文件夹：里面那组文件垫一层很淡的底，一眼能认出它们同属一个文件夹 */
 .VPSidebarItem.level-1 > .items,
 .VPSidebarItem.level-2 > .items {
   margin: 4px 0 8px;
-  padding: 6px 8px 6px 10px;
+  padding: 6px 10px 6px 12px;
   border-radius: 10px;
   background-color: var(--vp-c-bg-soft);
 }
 
-/* 越深一级字号收一点，长标题也尽量一行放下（三行以上的情况很少） */
-.VPSidebarItem.level-1 > .item > .text,
-.VPSidebarItem.level-1 > .item > .link > .text {
-  font-size: 13.5px;
+/* 目录条目一律单行：标题太长就截断成「…」，全名靠 title 提示（见 theme/index.ts） */
+.VPSidebar .VPSidebarItem .item,
+.VPSidebar .VPSidebarItem .link {
+  /* flex 子项默认不肯收缩，长标题会把条目撑宽、外溢；这里放开 */
+  min-width: 0;
 }
 
-.VPSidebarItem.level-2 > .item > .text,
-.VPSidebarItem.level-2 > .item > .link > .text,
-.VPSidebarItem.level-3 > .item > .text,
-.VPSidebarItem.level-3 > .item > .link > .text {
-  font-size: 13px;
+.VPSidebar .VPSidebarItem .text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* 团队页：组件默认留白偏大（外层 margin 128px + 标题 padding 80px），
