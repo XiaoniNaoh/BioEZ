@@ -576,6 +576,71 @@ body::after {
   background-color: var(--vp-custom-block-example-code-bg);
 }
 
+/* ── 表格 ────────────────────────────────────────────────────────────────
+   去掉满格边框和斑马纹，改成横向发丝线 + 居中摆放：表格按内容宽度收缩、
+   整体居中，单元格内容也居中；表头是一块很淡的蓝色块。
+   这支淡蓝和标题荧光笔、翻页按钮同一支，深色模式自动换成冷蓝。 */
+
+:root {
+  --tbl-blue-block: rgba(226, 239, 249, 0.6);
+  --tbl-blue-soft: rgba(226, 239, 249, 0.32);
+  --tbl-blue-border: rgba(190, 216, 234, 0.55);
+}
+
+.dark {
+  --tbl-blue-block: rgba(142, 188, 214, 0.11);
+  --tbl-blue-soft: rgba(142, 188, 214, 0.055);
+  --tbl-blue-border: rgba(142, 188, 214, 0.2);
+}
+
+.vp-doc table {
+  width: fit-content;
+  max-width: 100%;
+  margin: 22px auto 30px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-top: 1px solid var(--tbl-blue-border);
+  border-bottom: 1px solid var(--tbl-blue-border);
+  font-size: 14px;
+}
+
+/* 原来的隔行淡底撤掉 */
+.vp-doc tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: none;
+  border-bottom: 1px solid var(--tbl-blue-border);
+  padding: 10px 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* 表头：一块很淡的蓝 + 略深的字 */
+.vp-doc th {
+  background-color: var(--tbl-blue-soft);
+  color: var(--vp-c-text-1);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* 最后一行不画线，免得和表格下框线叠成双线 */
+.vp-doc tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* 行悬停：同样一支淡蓝，替代斑马纹 */
+.vp-doc tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.vp-doc tbody tr:hover {
+  background-color: var(--tbl-blue-soft);
+}
+
 /* 首页卡片：悬停轻微上浮 + 品牌色描边 */
 .VPFeatures .item {
   transition:
