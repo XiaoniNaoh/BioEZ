@@ -228,9 +228,9 @@
         "undergraduate"
       ],
       "index_path": "02 微生物学/COURSE_INDEX.md",
-      "page_count": 11,
-      "lesson_count": 11,
-      "estimated_minutes": 90,
+      "page_count": 12,
+      "lesson_count": 12,
+      "estimated_minutes": 95,
       "lessons": [
         {
           "id": "mb-01",
@@ -531,7 +531,9 @@
           "importance": 3,
           "estimated_minutes": 5,
           "prerequisites": [],
-          "next": [],
+          "next": [
+            "mb-12"
+          ],
           "tags": [
             "微生物学",
             "食品",
@@ -544,6 +546,33 @@
           "reviewers": [],
           "last_scientific_review": null,
           "summary": "介绍《微生物学 宝宝教程》中的“微生物与食品腐败变质”主题。"
+        },
+        {
+          "id": "mb-12",
+          "title": "代谢工程",
+          "path": "02 微生物学/MB 12 代谢工程.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "12",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "微生物学",
+            "食品",
+            "代谢",
+            "代谢工程",
+            "工业"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《微生物学》中的“代谢工程”主题。"
         }
       ]
     },
