@@ -481,6 +481,16 @@ body::after {
   background-color: var(--glass-bg-strong);
 }
 
+/* 银杏叶 logo：原图是浅黄绿到深绿的渐变，压在深色导航条上（深色模式、以及首页／
+   团队页／关于页顶部那片深色天空）时暗部会糊进背景。深底场景统一提亮并加一点柔光，
+   浅底场景保持原样。 */
+.dark .VPNavBarTitle .logo,
+.aurora-home .VPNavBarTitle .logo,
+.aurora-team .VPNavBarTitle .logo,
+.aurora-about .VPNavBarTitle .logo {
+  filter: brightness(1.22) saturate(1.06) drop-shadow(0 0 6px rgba(126, 232, 184, 0.45));
+}
+
 .VPFooter {
   background-color: var(--glass-bg) !important;
 }
@@ -1782,15 +1792,29 @@ html:has(.aurora-team) {
 .aurora-home {
   --vp-home-hero-name-background: linear-gradient(118deg, #6fe0b4 18%, #86c8ee 78%);
   --vp-home-hero-name-color: transparent;
+  /* VitePress 原生 hero 图的模糊色斑（image-bg）：青绿→天蓝。
+     蓝绿底上叶子靠一圈白描边分界（见下面的 .image-src），光斑本身偏蓝的一端多一点，
+     免得整片都落在叶子的绿里。 */
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #3fc9c0 45%, #4fb7ec 55%);
+  --vp-home-hero-image-filter: blur(52px);
 }
 
 .aurora-home .VPHero .text {
   color: #f3fbf8;
 }
 
+/* hero 配图：给叶子描一圈白边，和光斑之间多一道分界，比暗描边轻。 */
+.aurora-home .VPHero .image-src {
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.95));
+}
+
 .aurora-home .VPHero .tagline {
-  /* 默认 tagline 限宽 392px，这句会折成「知识维 / 基。」，放宽到一行装得下 */
+  /* 默认 tagline 限宽 392px，这句会折成「知识维 / 基。」，放宽到一行装得下；
+     加了 hero 配图之后文字列被 VitePress 收窄到 592px，24px 又折成两行，
+     所以这里降到 20px 保持单行。 */
   max-width: 660px;
+  font-size: 20px;
+  line-height: 30px;
   color: rgba(228, 246, 240, 0.74);
 }
 

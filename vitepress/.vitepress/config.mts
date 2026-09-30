@@ -75,7 +75,8 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', href: '/logo.png' }],
   ],
   themeConfig: {
-    logo: '/logo.png',
+    // 银杏叶图标：导航栏按高 24px 等比显示（原图 512×440，宽高比约 1.164）
+    logo: { src: '/logo.png', width: 28, height: 24 },
     siteTitle: 'BioEZ Wiki',
     nav: [
       { text: '主页', link: '/' },
