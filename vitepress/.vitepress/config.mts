@@ -71,12 +71,14 @@ export default defineConfig({
     },
   },
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/logo.png' }],
+    // 图标文件名带版本：服务器对静态资源发 max-age=604800, immutable，
+    // 沿用旧文件名换了内容的话，手机和浏览器会一直用缓存里的旧图。
+    ['link', { rel: 'icon', href: '/logo-ginkgo.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/logo-ginkgo.png' }],
   ],
   themeConfig: {
     // 银杏叶图标：导航栏按高 24px 等比显示（原图 512×440，宽高比约 1.164）
-    logo: { src: '/logo.png', width: 28, height: 24 },
+    logo: { src: '/logo-ginkgo.png', width: 28, height: 24 },
     siteTitle: 'BioEZ Wiki',
     nav: [
       { text: '主页', link: '/' },
