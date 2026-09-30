@@ -45,8 +45,7 @@ content_type: "lesson"
 
 ### 7.4.1 siRNA （*small interfering RNA*，小干扰 RNA）
 
-> [!IMPORTANT]
-> 2006 年诺贝尔生理学或医学奖：
+> [!IMPORTANT] 2006 年诺贝尔生理学或医学奖
 > **发现 RNAi —— dsRNA 引发的沉默现象**
 
 - RNAi 的重要特性是以**双链** RNA（dsRNA）行使功能
@@ -64,7 +63,7 @@ content_type: "lesson"
 2. R2D2 装配
 3. RISC 的装配与成熟
 
-> [!TIP]
+> [!NOTE]
 > - **Dicer**：是一类 RNase III 蛋白，可用来切出长为 21-23 nt 的 siRNA
 > - **R2D2**：双链 RNA 结合蛋白，常在引导链 3' 端一侧。Dicer/R2D2/siRNA 三者形成 RISC 装配复合物，然后 R2D2 招募 Argonaute 蛋白，开始组装 RISC
 > - **RISC**：*RNA-induced silencing complex*，RNA 诱导沉默复合体，RISC 是由蛋白质和 RNA 组成的复合体，负责介导基因沉默
@@ -83,16 +82,14 @@ content_type: "lesson"
 2. 维持基因组的稳定
 3. 保护基因组免受外源核酸侵入
 
-> [!NOTE]
-> **病毒与宿主的 RNAi 军备竞赛**
+> [!EXAMPLE] 病毒与宿主的 RNAi 军备竞赛
 > - 宿主可以病毒 RNA 为模版，通过 RDRP 合成病毒的双链 RNA，经过 Dicer 切割组装成 RISC，降解病毒 RNA，从而抑制病毒对宿主细胞的破坏。这样的 siRNA 可通过胞间连丝、韧皮组织传播，增强其他组织抗病毒能力
 > - 病毒也进化出与宿主抗病基因序列相似的 RNA，借助相似的机制生成 RISC，降解宿主细胞抗病基因的 mRNA，这样的 siRNA 也会在宿主体内传播，增加了其他组织的易感性
 
 ---
 ### 7.4.2 miRNA 
 
-> [!IMPORTANT]
-> 2024 年诺贝尔生理学或医学奖：
+> [!IMPORTANT] 2024 年诺贝尔生理学或医学奖
 > **发现 miRNA 及其在转录后基因调控中的作用**
 
 > **miRNA**：是一类重要的，行使基因功能但不编码蛋白质的基因
@@ -138,8 +135,7 @@ content_type: "lesson"
 > **lncRNA**：长度大于 200 bp 的非编码 RNA
 
 
-> [!ATTENTION]
-> **lncRNA 调控基因表达的形式**
+> [!ATTENTION] lncRNA 调控基因表达的形式
 > 1. 信号分子
 > 2. 诱饵分子
 > 3. 引导分子
