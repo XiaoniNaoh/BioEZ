@@ -1711,14 +1711,23 @@ html:has(.aurora-team) {
    两种模式都往下渐变到正文底色，天空没有硬边。顶部导航让给天空，
    hero 文字转浅色、站名走薄荷→天青；课程卡片骑在天空的下缘。 */
 
-.aurora-home::before {
+/* 天空的高度改成跟着 hero 走：
+   以前写死 500px，hero 一旦变高（例如首页加了配图，窄屏下能到 670px），
+   按钮和副标题就会掉出天空、压在浅色背景上。
+   现在挂在 hero 上、向下多留 50px，课程卡片依旧骑在天空下缘（和原来观感一致）。 */
+.aurora-home .VPHero {
+  position: relative;
+  z-index: 0;
+}
+
+.aurora-home .VPHero::before {
   content: '';
   position: absolute;
   z-index: -1;
   top: 0;
+  bottom: -50px;
   left: 0;
   right: 0;
-  height: 500px;
   pointer-events: none;
   background-color: #051318;
   background-image:
@@ -1728,7 +1737,7 @@ html:has(.aurora-team) {
     linear-gradient(180deg, #051318 0%, #071a21 58%, #08202a 100%);
 }
 
-.dark .aurora-home::before {
+.dark .aurora-home .VPHero::before {
   background-color: #082730;
   background-image:
     /* 同上：收尾色对齐正文那一带叠加全站极光后的实际色值 */
