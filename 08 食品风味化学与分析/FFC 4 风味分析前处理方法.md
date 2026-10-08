@@ -11,7 +11,8 @@ difficulty: 3
 importance: 3
 estimated_minutes: 7
 prerequisites: []
-next: []
+next:
+  - "ffc-05"
 tags:
   - "食品风味化学"
   - "食品"
@@ -29,7 +30,7 @@ content_type: "lesson"
 
 <!-- BEGIN AUTO-GENERATED NAVIGATION -->
 > [!NOTE] 课程导航
-> [← 上一篇：风味物质的制备与创制](<FFC 3 风味物质的制备与创制.md>) · [课程目录](<COURSE_INDEX.md>)
+> [← 上一篇：风味物质的制备与创制](<FFC 3 风味物质的制备与创制.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：风味化学仪器分析法 →](<FFC 5 风味化学仪器分析法.md>)
 <!-- END AUTO-GENERATED NAVIGATION -->
 
 # FFC 4 风味分析方法
