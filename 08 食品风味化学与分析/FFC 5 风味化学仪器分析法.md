@@ -11,11 +11,15 @@ difficulty: 3
 importance: 3
 estimated_minutes: 5
 prerequisites: []
-next: []
+next:
+  - "ffc-06"
 tags:
   - "食品风味化学"
   - "食品"
   - "分析"
+  - "气相色谱"
+  - "质谱"
+  - "嗅闻仪"
 authors:
   - "小倪"
 reviewers: []
@@ -27,11 +31,11 @@ content_type: "lesson"
 
 <!-- BEGIN AUTO-GENERATED NAVIGATION -->
 > [!NOTE] 课程导航
-> [← 上一篇：风味分析方法](<FFC 4 风味分析前处理方法.md>) · [课程目录](<COURSE_INDEX.md>)
+> [← 上一篇：风味分析方法](<FFC 4 风味分析前处理方法.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：滋味物质分析 →](<FFC 6 滋味物质分析.md>)
 <!-- END AUTO-GENERATED NAVIGATION -->
 
 # FFC 5 风味化学仪器分析法
-#食品风味化学 #食品 #分析 
+#食品风味化学 #食品 #分析 #气相色谱 #质谱 #嗅闻仪
 
 ## 1. 食品气味成分研究一般思考方法
 

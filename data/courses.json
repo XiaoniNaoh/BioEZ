@@ -2891,9 +2891,9 @@
         "undergraduate"
       ],
       "index_path": "08 食品风味化学与分析/COURSE_INDEX.md",
-      "page_count": 5,
-      "lesson_count": 5,
-      "estimated_minutes": 24,
+      "page_count": 6,
+      "lesson_count": 6,
+      "estimated_minutes": 29,
       "lessons": [
         {
           "id": "ffc-01",
@@ -3017,11 +3017,16 @@
           "importance": 3,
           "estimated_minutes": 5,
           "prerequisites": [],
-          "next": [],
+          "next": [
+            "ffc-06"
+          ],
           "tags": [
             "食品风味化学",
             "食品",
-            "分析"
+            "分析",
+            "气相色谱",
+            "质谱",
+            "嗅闻仪"
           ],
           "authors": [
             "小倪"
@@ -3029,6 +3034,33 @@
           "reviewers": [],
           "last_scientific_review": null,
           "summary": "介绍《食品风味化学与分析》中的“风味化学仪器分析法”主题。"
+        },
+        {
+          "id": "ffc-06",
+          "title": "滋味物质分析",
+          "path": "08 食品风味化学与分析/FFC 6 滋味物质分析.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "06",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "食品风味化学",
+            "食品",
+            "分析",
+            "TD",
+            "TAV"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《食品风味化学与分析》中的“滋味物质分析”主题。"
         }
       ]
     }
