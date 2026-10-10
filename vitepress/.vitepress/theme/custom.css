@@ -1711,8 +1711,8 @@ html:has(.aurora-team) {
    两种模式都往下渐变到正文底色，天空没有硬边。顶部导航让给天空，
    hero 文字转浅色、站名走薄荷→天青；课程卡片骑在天空的下缘。 */
 
-/* 天空的高度改成跟着 hero 走：
-   以前写死 500px，hero 一旦变高（例如首页加了配图，窄屏下能到 670px），
+/* 天空的高度跟着 hero 走：
+   以前写死 500px，hero 一旦变高（标题折行、窄屏下按钮换行都会长高），
    按钮和副标题就会掉出天空、压在浅色背景上。
    现在挂在 hero 上、向下多留 50px，课程卡片依旧骑在天空下缘（和原来观感一致）。 */
 .aurora-home .VPHero {
@@ -1801,26 +1801,15 @@ html:has(.aurora-team) {
 .aurora-home {
   --vp-home-hero-name-background: linear-gradient(118deg, #6fe0b4 18%, #86c8ee 78%);
   --vp-home-hero-name-color: transparent;
-  /* VitePress 原生 hero 图的模糊色斑（image-bg）：青绿→天蓝。
-     蓝绿底上叶子靠一圈白描边分界（见下面的 .image-src），光斑本身偏蓝的一端多一点，
-     免得整片都落在叶子的绿里。 */
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #3fc9c0 45%, #4fb7ec 55%);
-  --vp-home-hero-image-filter: blur(52px);
 }
 
 .aurora-home .VPHero .text {
   color: #f3fbf8;
 }
 
-/* hero 配图：给叶子描一圈白边，和光斑之间多一道分界，比暗描边轻。 */
-.aurora-home .VPHero .image-src {
-  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.95));
-}
-
 .aurora-home .VPHero .tagline {
   /* 默认 tagline 限宽 392px，这句会折成「知识维 / 基。」，放宽到一行装得下；
-     加了 hero 配图之后文字列被 VitePress 收窄到 592px，24px 又折成两行，
-     所以这里降到 20px 保持单行。 */
+     首页去掉 hero 配图后文字列不再被收窄，20px 依然单行。 */
   max-width: 660px;
   font-size: 20px;
   line-height: 30px;

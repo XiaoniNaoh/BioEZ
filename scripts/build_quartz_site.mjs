@@ -50,13 +50,26 @@ function ensureQuartz() {
 function applyOverlay() {
   copyFileSync(join(ROOT, "site", "quartz.config.ts"), join(CACHE, "quartz.config.ts"))
   copyFileSync(join(ROOT, "site", "quartz.layout.ts"), join(CACHE, "quartz.layout.ts"))
+  // 皮肤：整份覆盖上游空白的 custom.scss（componentResources 把它排在所有组件样式之后）
+  copyFileSync(
+    join(ROOT, "site", "styles", "bioez-theme.scss"),
+    join(CACHE, "quartz", "styles", "custom.scss"),
+  )
   copyFileSync(
     join(ROOT, "site", "components", "BioEZDataViews.tsx"),
     join(CACHE, "quartz", "components", "BioEZDataViews.tsx"),
   )
   copyFileSync(
+    join(ROOT, "site", "components", "BioEZNavLinks.tsx"),
+    join(CACHE, "quartz", "components", "BioEZNavLinks.tsx"),
+  )
+  copyFileSync(
     join(ROOT, "site", "styles", "bioez-data-views.scss"),
     join(CACHE, "quartz", "components", "styles", "bioez-data-views.scss"),
+  )
+  copyFileSync(
+    join(ROOT, "site", "styles", "bioez-nav.scss"),
+    join(CACHE, "quartz", "components", "styles", "bioez-nav.scss"),
   )
 }
 

@@ -11,10 +11,10 @@
 }
 
 .bioez-eyebrow {
-  margin: 0 0 0.2rem;
-  color: var(--secondary);
-  font-size: 0.78rem;
-  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -22,20 +22,25 @@
 .bioez-course-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
+  gap: 0.9rem;
 }
 
 .bioez-course-card {
-  border: 1px solid var(--lightgray);
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--light) 94%, var(--secondary));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
   overflow: clip;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: var(--line-strong);
+  }
 
   summary {
     display: flex;
     justify-content: space-between;
     gap: 0.8rem;
-    padding: 1rem;
+    padding: 1.05rem 1.2rem;
     cursor: pointer;
     list-style: none;
   }
@@ -46,11 +51,15 @@
   summary strong {
     display: block;
     color: var(--dark);
+    font-size: 15px;
+    font-weight: 600;
   }
   summary small {
     display: block;
-    margin-top: 0.25rem;
+    margin-top: 0.35rem;
     color: var(--darkgray);
+    font-size: 13px;
+    line-height: 1.7;
   }
 }
 
@@ -61,49 +70,60 @@
 .bioez-progress {
   flex: none;
   align-self: start;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--line-strong);
   border-radius: 999px;
-  padding: 0.15rem 0.45rem;
-  font-size: 0.72rem;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background-color: transparent;
+  color: var(--muted);
 }
 
 .bioez-progress-completed {
-  color: var(--secondary);
-  border-color: var(--secondary);
+  border-color: transparent;
+  background-color: var(--mint);
+  color: var(--mint-ink);
 }
 .bioez-progress-serializing {
-  color: var(--tertiary);
-  border-color: var(--tertiary);
+  border-color: var(--line);
+  background-color: transparent;
+  color: var(--muted);
 }
 
 .bioez-course-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
-  padding: 0.7rem 1rem;
+  padding: 0.7rem 1.2rem;
   border-top: 1px solid var(--lightgray);
   border-bottom: 1px solid var(--lightgray);
-  font-size: 0.84rem;
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
 .bioez-chapter {
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.2rem;
 
   h3 {
-    margin: 0.6rem 0 0.25rem;
-    font-size: 0.95rem;
+    margin: 0.7rem 0 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dark);
   }
   ol {
     margin: 0;
     padding-left: 1.35rem;
   }
   li {
-    padding: 0.18rem 0;
+    padding: 0.2rem 0;
+    font-size: 13.5px;
+    line-height: 1.7;
   }
 }
 
 .bioez-lesson-meta {
-  color: var(--gray);
+  color: var(--muted);
   font-size: 0.72rem;
 }
 
@@ -131,17 +151,19 @@
 
 .bioez-metric {
   border: 1px solid var(--lightgray);
-  border-radius: 10px;
-  padding: 0.75rem;
+  border-radius: 8px;
+  padding: 0.85rem 0.95rem;
+  background-color: transparent;
 
   strong {
     display: block;
-    font-size: 1.55rem;
-    color: var(--secondary);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--dark);
   }
   span {
-    font-size: 0.78rem;
-    color: var(--darkgray);
+    font-size: 0.75rem;
+    color: var(--muted);
   }
 }
 

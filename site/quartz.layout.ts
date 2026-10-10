@@ -1,10 +1,23 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 import BioEZDataViews from "./quartz/components/BioEZDataViews"
+import BioEZNavLinks from "./quartz/components/BioEZNavLinks"
 
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  // 顶栏（站名 / 搜索 / 导航 / 主题开关）固定在页首，样式见 styles/bioez-theme.scss
+  header: [
+    Component.Flex({
+      components: [
+        { Component: Component.PageTitle() },
+        { Component: BioEZNavLinks(), align: "stretch" },
+        { Component: Component.Spacer(), grow: true },
+        { Component: Component.Search() },
+        { Component: Component.Darkmode() },
+        { Component: Component.ReaderMode() },
+      ],
+    }),
+  ],
   afterBody: [BioEZDataViews()],
   footer: Component.Footer({
     links: {
@@ -15,18 +28,8 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
-const navigation = [
-  Component.PageTitle(),
-  Component.MobileOnly(Component.Spacer()),
-  Component.Flex({
-    components: [
-      { Component: Component.Search(), grow: true },
-      { Component: Component.Darkmode() },
-      { Component: Component.ReaderMode() },
-    ],
-  }),
-  Component.Explorer({ folderDefaultState: "collapsed", useSavedState: true }),
-]
+// 课程树仍留在左栏；站名、搜索与开关已经搬到顶栏，这里不再重复
+const navigation = [Component.Explorer({ folderDefaultState: "collapsed", useSavedState: true })]
 
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -36,7 +39,6 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
-    Component.TagList(),
   ],
   left: navigation,
   right: [

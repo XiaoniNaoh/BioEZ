@@ -12,6 +12,19 @@
 
 这种方式让上游实现与课程内容解耦；升级 Quartz 时必须同时修改脚本中的版本和提交、重新运行类型检查与完整构建，不能跟随可变分支。
 
+## 皮肤
+
+视觉参考 `deno.com` / `docs.deno.com`：一支强调色（荧光绿 `#70ffaf`，只作 2px 选中条、
+小徽章和极淡的选中底；白底上的链接用同色系深绿 `#116329`）、其余全走灰阶与 1px 发丝线，
+不用渐变、毛玻璃和阴影。配色在 `site/quartz.config.ts`，结构在下面三个文件：
+
+- `site/styles/bioez-theme.scss` —— 整站皮肤，构建时覆盖上游空白的 `quartz/styles/custom.scss`；
+  `componentResources` 会把它排在所有组件样式之后，因此同特异性下总是它生效。
+- `site/components/BioEZNavLinks.tsx` + `site/styles/bioez-nav.scss` —— 顶栏导航。
+- `site/styles/bioez-data-views.scss` —— 首页课程卡片与维护看板。
+
+顶栏（站名 / 导航 / 搜索 / 主题开关）由 `quartz.layout.ts` 的 `header` 组装，左栏只留课程树。
+
 ## 本地构建
 
 需要 Node.js 22+、npm 10.9.2+、Git 和网络（仅首次获取 Quartz 与安装依赖）。

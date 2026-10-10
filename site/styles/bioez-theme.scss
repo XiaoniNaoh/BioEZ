@@ -1,0 +1,834 @@
+@use "./base.scss";
+
+/* =============================================================================
+   BioEZ Quartz 皮肤
+   -----------------------------------------------------------------------------
+   设计参考 deno.com / docs.deno.com 的克制路线，不做装饰：
+
+     · 只有一支强调色（松绿）。除了链接、选中态和小标签，其余全是灰阶。
+     · 没有渐变、没有毛玻璃、没有阴影、没有荧光笔：分层靠 1px 发丝线、
+       留白和字重。页面底色是纯白（深色是近黑），对比度拉满。
+     · 字阶照 Deno 走：H1 34 / H2 24 / H3 19，字重 700、字距收紧；
+       正文 16px、行高 1.7。
+     · 三栏之间用竖发丝线分界（左课程树、右页面导航），顶栏一条横发丝线。
+
+   上游文件（Quartz v4.5.2）里这个文件是空白的 custom.scss；本仓库构建时用
+   site/styles/bioez-theme.scss 覆盖它。componentResources 把它排在所有组件
+   样式之后，所以同特异性下这里的规则总是生效。
+   ========================================================================== */
+
+/* ── 1. 变量 ────────────────────────────────────────────────────────────── */
+
+:root {
+  /* 灰阶（Deno 的取值：正文 #383a3e、发丝线 #d4d6d8 / #e5eaea、次级 #868787） */
+  --line: #e4e7e9;
+  --line-strong: #d4d6d8;
+  --surface: #f6f8fb;
+  --muted: #85898e;
+
+  /* 荧光绿（与 deno.com 同一支 #70ffaf）：只作「块」用——选中态、高亮、
+     徽章，块里配近黑的字。白底上的文字链接换同色系的深绿，保证可读。 */
+  --mint: #70ffaf;
+  --mint-ink: #0b1a12;
+  --mint-soft: rgba(112, 255, 175, 0.35);
+
+  --accent: #116329;
+  --accent-ink: #0b4a1e;
+  --accent-soft: var(--mint-soft);
+
+  /* 语义色：只有「注意」和「错误」两档，其余提示块一律走灰阶 */
+  --warn: #9a6b16;
+  --warn-bg: #fdf6e7;
+  --warn-line: #f0ddb8;
+  --danger: #a8403a;
+  --danger-bg: #fdf1f0;
+  --danger-line: #f2d3d0;
+
+  /* 结构尺寸 */
+  --page-w: 1440px;
+  --doc-w: 768px;
+  --nav-h: 64px;
+}
+
+:root[saved-theme="dark"] {
+  --line: #2b2f33;
+  --line-strong: #3a3f44;
+  --surface: #1e2124;
+  --muted: #8b9198;
+
+  /* 深色模式下荧光绿本身就能当字色用 */
+  --mint: #70ffaf;
+  --mint-ink: #0b1a12;
+  --mint-soft: rgba(112, 255, 175, 0.2);
+
+  --accent: #70ffaf;
+  --accent-ink: #a5ffcb;
+  --accent-soft: var(--mint-soft);
+
+  --warn: #e0b155;
+  --warn-bg: rgba(224, 177, 85, 0.1);
+  --warn-line: rgba(224, 177, 85, 0.24);
+  --danger: #f08a84;
+  --danger-bg: rgba(240, 138, 132, 0.1);
+  --danger-line: rgba(240, 138, 132, 0.24);
+}
+
+/* ── 2. 底色与基础 ──────────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── 3. 顶栏 ────────────────────────────────────────────────────────────── */
+
+/* 一条 64px 的白条 + 1px 下边线，不做毛玻璃、不加阴影 */
+.page-header > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  height: var(--nav-h);
+  margin: 0;
+  padding: 0 24px;
+  box-sizing: border-box;
+  background-color: var(--light);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.page-header > header > .flex-component {
+  width: 100%;
+  max-width: var(--page-w);
+  height: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.page-title {
+  margin: 0;
+  font-family: var(--bodyFont);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.page-title a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.page-title a:hover {
+  color: var(--accent);
+}
+
+/* 顶栏里的搜索：一枚细边输入框（Deno 的搜索框同款），放在右侧 */
+.page-header > header .search {
+  width: 240px;
+  max-width: 240px;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.page-header > header .search > .search-button {
+  height: 36px;
+  padding: 0 12px 0 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background-color: transparent;
+  transition: border-color 0.15s ease;
+}
+
+.page-header > header .search > .search-button:hover {
+  border-color: var(--accent);
+}
+
+.page-header > header .search > .search-button > p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.page-header > header .search > .search-button svg {
+  width: 15px;
+  min-width: 15px;
+  margin: 0 0.45rem;
+}
+
+.page-header > header .search > .search-button svg .search-path {
+  stroke: var(--muted);
+}
+
+/* 主题开关 / 阅读模式：两个方角线框按钮，和搜索框同一支描边 */
+.page-header > header .darkmode,
+.page-header > header .readermode {
+  position: relative;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--darkgray);
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.page-header > header .darkmode:hover,
+.page-header > header .readermode:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.page-header > header .darkmode svg,
+.page-header > header .readermode svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* ── 4. 版心与分栏 ──────────────────────────────────────────────────────── */
+
+.page > #quartz-body .page-header {
+  margin: calc(var(--nav-h) + 32px) 0 0 0;
+}
+
+@media all and (min-width: 801px) {
+  /* 左课程树 / 右页面导航各一条竖发丝线；正文按 768px 居中 */
+  .page > #quartz-body .sidebar {
+    padding: calc(var(--nav-h) + 32px) 0 2rem;
+  }
+
+  .page > #quartz-body .sidebar.left {
+    padding-left: 24px;
+    padding-right: 2rem;
+    border-right: 1px solid var(--line-strong);
+  }
+
+  .page > #quartz-body .sidebar.right {
+    padding-left: 2rem;
+    padding-right: 24px;
+    border-left: 1px solid var(--line-strong);
+  }
+
+  /* 正文不居中，跟着左栏往后排（Deno 文档站的排法），留 48px 起排 */
+  .page > #quartz-body .center {
+    box-sizing: border-box;
+    padding-left: 3rem;
+    padding-right: 2rem;
+  }
+}
+
+.page > #quartz-body .center > article {
+  max-width: var(--doc-w);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* 首页是课程卡片网格，不受正文栏宽度限制 */
+body[data-slug="index"] .page > #quartz-body .center > article {
+  max-width: 100%;
+}
+
+/* ── 5. 正文排版 ────────────────────────────────────────────────────────── */
+
+.page article {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--darkgray);
+}
+
+.page article p,
+.page article li,
+.page article td,
+.page article th,
+.page article dd,
+.page article dt {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.page article p {
+  margin: 16px 0;
+}
+
+.page article ul,
+.page article ol {
+  margin: 12px 0 16px;
+  padding-left: 1.35rem;
+}
+
+.page article li + li {
+  margin-top: 6px;
+}
+
+.page article li > ul,
+.page article li > ol {
+  margin: 6px 0 0;
+}
+
+/* 标题：一律深灰、加粗、收紧字距，不加色块、不加下划线 */
+.page article h1,
+.page article h2,
+.page article h3,
+.page article h4,
+.page article h5,
+.page article h6 {
+  color: var(--dark);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.page article h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.page article h2 {
+  font-size: 24px;
+  line-height: 1.3;
+  margin-top: 3rem;
+  margin-bottom: 0.9rem;
+  padding-top: 0;
+  border-top: none;
+}
+
+.page article h3 {
+  font-size: 19px;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.page article h4,
+.page article h5,
+.page article h6 {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+/* 页首标题（ArticleTitle / 首页大标题） */
+.page-header > .popover-hint h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--dark);
+}
+
+/* 笔记正文里的第一个 H1 就是这篇的标题，页首已经渲染过一次，这里收起来 */
+.page article > h1:first-of-type {
+  display: none;
+}
+
+/* ── 6. 链接 ────────────────────────────────────────────────────────────── */
+
+.page article a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s ease;
+}
+
+.page article a:hover {
+  color: var(--accent-ink);
+}
+
+/* 站内双链、标签：不再垫底色，和普通链接一样 */
+.page article a.internal,
+.page article a.tag-link,
+.page article a.internal.tag-link {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* 外链小图标压到灰色 */
+.page article a.external .external-icon {
+  height: 0.8ex;
+  margin: 0 0.18em;
+}
+
+.page article a.external .external-icon > path {
+  fill: var(--muted);
+}
+
+/* ── 7. 表格 / 代码 / 引用 / 提示块 ─────────────────────────────────────── */
+
+/* 表格：横线制、左对齐、无外框 */
+.page article table {
+  width: 100%;
+  margin: 20px 0 28px;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+
+.page article th,
+.page article td {
+  padding: 9px 14px;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.page article th {
+  background-color: var(--surface);
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.page article tbody tr:last-child td {
+  border-bottom: 1px solid var(--line);
+}
+
+/* 行内代码：一块淡灰底 */
+.page article code {
+  padding: 0.1rem 0.32rem;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--muted) 18%, transparent);
+  color: var(--dark);
+  font-size: 0.875em;
+}
+
+/* 代码块：淡底 + 1px 描边 + 6px 圆角 */
+.page article pre {
+  padding: 0 0.75rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background-color: var(--surface);
+}
+
+.page article pre > code {
+  background: none;
+  padding: 0.6rem 0;
+  font-size: 0.85rem;
+}
+
+.page article figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+/* 引用：一条 2px 灰竖线，正文压暗一档 */
+.page article blockquote {
+  margin: 16px 0;
+  padding: 0 0 0 16px;
+  border-left: 2px solid var(--line-strong);
+  color: var(--muted);
+}
+
+/* 提示块：细边 + 同色系淡底的方框，各类型保留自己的色系 */
+.page article .callout {
+  margin: 16px 0;
+  padding: 0.7rem 1rem 0.8rem;
+  border-radius: 6px;
+}
+
+/* 提示块配色收敛成三档：中性灰（笔记 / 摘要 / 信息 / 引用）、
+   主题绿（技巧 / 成功 / 示例）、以及「注意」的琥珀与「错误」的红。 */
+.page article .callout[data-callout] {
+  --color: var(--darkgray);
+  --border: var(--line-strong);
+  --bg: var(--surface);
+}
+
+.page article .callout[data-callout="tip"],
+.page article .callout[data-callout="success"] {
+  --color: var(--accent);
+  --border: color-mix(in srgb, var(--accent) 35%, transparent);
+  --bg: var(--accent-soft);
+}
+
+.page article .callout[data-callout="question"],
+.page article .callout[data-callout="warning"] {
+  --color: var(--warn);
+  --border: var(--warn-line);
+  --bg: var(--warn-bg);
+}
+
+.page article .callout[data-callout="failure"],
+.page article .callout[data-callout="danger"],
+.page article .callout[data-callout="bug"] {
+  --color: var(--danger);
+  --border: var(--danger-line);
+  --bg: var(--danger-bg);
+}
+
+.page article .callout .callout-title {
+  padding: 0.3rem 0;
+  font-weight: 600;
+  gap: 0.4rem;
+}
+
+.page article .callout .callout-title-inner > p,
+.page article .callout .callout-content > p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.page article hr {
+  margin: 2.5rem auto;
+  background-color: var(--line);
+}
+
+.page article img {
+  border-radius: 6px;
+}
+
+/* ── 8. 左侧：课程树 ────────────────────────────────────────────────────── */
+
+.explorer button.mobile-explorer,
+.explorer button.desktop-explorer {
+  color: var(--dark);
+}
+
+/* 分组标题（「探索」）：一格小号灰标签 */
+.explorer button.desktop-explorer h2 {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.explorer .folder-icon {
+  color: var(--muted);
+}
+
+.explorer .folder-icon:hover {
+  color: var(--accent);
+}
+
+/* 文件夹（课程 / 章节）与叶子条目：同一支深灰，只靠字重和缩进分层 */
+.explorer .folder-container div > a,
+.explorer .folder-container div > button span {
+  font-family: var(--bodyFont);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.9;
+  color: var(--dark);
+}
+
+.explorer .folder-container div > a:hover,
+.explorer .folder-container div > button:hover span {
+  color: var(--accent);
+}
+
+.explorer .explorer-content ul li > a {
+  display: block;
+  margin-inline: -24px;
+  padding: 2px 24px;
+  border-radius: 0;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.9;
+  color: var(--darkgray);
+  opacity: 1;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.explorer .explorer-content > .explorer-ul > li > a {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.explorer .explorer-content ul li > a:hover {
+  color: var(--accent);
+  background-color: var(--surface);
+}
+
+/* 选中项：一层很淡的绿 + 左边一道 2px 荧光绿，不用实心块 */
+.explorer .explorer-content ul li > a.active {
+  color: var(--dark);
+  font-weight: 600;
+  background-color: var(--mint-soft);
+  box-shadow: inset 2px 0 0 0 var(--mint);
+  margin-right: -2rem;
+  padding-right: 2rem;
+}
+
+.explorer .explorer-content .folder-outer > ul {
+  margin-left: 4px;
+  padding-left: 0.7rem;
+  border-left: 1px solid var(--line);
+}
+
+/* ── 9. 右侧：页面导航 / 反向链接 / 图谱 ───────────────────────────────── */
+
+.toc button.toc-header h3,
+.backlinks > h3,
+.graph > h3 {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+ul.toc-content.overflow > li > a {
+  display: block;
+  margin-inline: -8px;
+  padding: 3px 8px;
+  border-radius: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--darkgray);
+  opacity: 1;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+/* 「页面导航」从 H2 起：H1 是页面标题，页首已经写着了 */
+ul.toc-content.overflow > li.depth-0 {
+  display: none;
+}
+
+ul.toc-content.overflow > li > a:hover {
+  color: var(--accent);
+  background-color: var(--surface);
+}
+
+/* 同在视野里的小节常有好几条：目录里只给一道 2px 荧光绿 + 加重字重 */
+ul.toc-content.overflow > li > a.in-view {
+  color: var(--dark);
+  font-weight: 600;
+  background-color: transparent;
+  box-shadow: inset 2px 0 0 0 var(--mint);
+}
+
+.backlinks ul.overflow > li {
+  padding: 2px 0;
+}
+
+.backlinks ul.overflow > li > a {
+  font-size: 13px;
+}
+
+/* 局部图谱：一格细线方框，不加底 */
+.graph > .graph-outer {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+.graph > .graph-outer > .global-graph-icon {
+  color: var(--muted);
+}
+
+.graph > .graph-outer > .global-graph-icon:hover {
+  background-color: var(--surface);
+  color: var(--accent);
+}
+
+.graph > .global-graph-outer > .global-graph-container {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+/* ── 10. 页首元信息 ─────────────────────────────────────────────────────── */
+
+.page-header .breadcrumb-container {
+  margin: 0 0 0.7rem;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.page-header .breadcrumb-element p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.page-header .breadcrumb-element a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.page-header .breadcrumb-element a:hover {
+  color: var(--accent);
+}
+
+/* 日期 / 阅读时间：等宽小字，压在标题下面 */
+.page-header .content-meta {
+  margin-top: 0.7rem;
+  color: var(--muted);
+  font-family: var(--codeFont);
+  font-size: 12.5px;
+  letter-spacing: 0.01em;
+}
+
+.page-header .content-meta > * {
+  font-size: 12.5px;
+}
+
+/* ── 11. 页脚 ───────────────────────────────────────────────────────────── */
+
+.page > #quartz-body footer {
+  margin: 3.5rem 0 0;
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--line);
+  opacity: 1;
+  text-align: left;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.page > #quartz-body footer p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.page > #quartz-body footer ul {
+  margin-top: 0.7rem;
+  gap: 1.2rem;
+}
+
+.page > #quartz-body footer ul li a {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--darkgray);
+  text-decoration: none;
+}
+
+.page > #quartz-body footer ul li a:hover {
+  color: var(--accent);
+}
+
+/* ── 12. 搜索弹窗与悬浮预览 ────────────────────────────────────────────── */
+
+.search > .search-container {
+  backdrop-filter: none;
+  background-color: color-mix(in srgb, var(--dark) 24%, transparent);
+}
+
+.search > .search-container > .search-space > * {
+  border-radius: 6px;
+  box-shadow: none;
+  border: 1px solid var(--line-strong);
+}
+
+.search > .search-container > .search-space > input {
+  background-color: var(--light);
+  color: var(--dark);
+  font-size: 1rem;
+}
+
+.search > .search-container > .search-space > .search-layout {
+  border-radius: 6px;
+}
+
+.search
+  > .search-container
+  > .search-space
+  > .search-layout
+  > .results-container
+  .result-card:hover,
+.search
+  > .search-container
+  > .search-space
+  > .search-layout
+  > .results-container
+  .result-card:focus,
+.search
+  > .search-container
+  > .search-space
+  > .search-layout
+  > .results-container
+  .result-card.focus {
+  background: var(--surface);
+}
+
+.popover > .popover-inner {
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background-color: var(--light);
+  box-shadow: none;
+}
+
+/* ── 13. 窄屏 ───────────────────────────────────────────────────────────── */
+
+@media all and (max-width: 800px) {
+  .page > #quartz-body .page-header {
+    margin: calc(var(--nav-h) + 20px) 0 0 0;
+    padding: 0;
+  }
+
+  /* 搜索与两个开关留在顶栏，汉堡按钮挪到顶栏最左侧 */
+  .page-header > header {
+    padding: 0 14px 0 52px;
+  }
+
+  .page > #quartz-body .sidebar.left:has(.explorer) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 51;
+    height: var(--nav-h);
+    margin: 0;
+    padding: 0 0 0 10px;
+    background: none;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+  }
+
+  .page-header > header .search {
+    flex: 1 1 auto;
+    width: auto;
+    max-width: 11rem;
+  }
+
+  .page-title {
+    font-size: 17px;
+  }
+
+  .explorer:not(.collapsed) > .explorer-content {
+    padding: calc(var(--nav-h) + 16px) 20px 2rem;
+  }
+
+  .page article h1,
+  .page-header > .popover-hint h1 {
+    font-size: 27px;
+  }
+
+  .page article h2 {
+    font-size: 21px;
+    margin-top: 2.2rem;
+  }
+
+  .page article h3 {
+    font-size: 18px;
+  }
+}

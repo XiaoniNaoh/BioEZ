@@ -150,11 +150,6 @@ hero:
   name: BioEZ
   text: 生物学宝宝教程
   tagline: 适合全年龄段、入口即化的生物、食品背景的知识维基。
-  image:
-    src: /logo-ginkgo.png
-    alt: BioEZ 银杏叶标志
-    width: 280
-    height: 241
   actions:
     - theme: brand
       text: 开始学习
