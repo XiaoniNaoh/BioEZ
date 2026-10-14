@@ -1,5 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
+import Layout from './Layout.vue'
 import './custom.css'
+import './backrooms.css'
 
 // 目录条目一律单行，超长的会被截成「…」。
 // 悬浮时把这一行「就地展开」：在条目位置画一层同样行高、同样字体的浮层，
@@ -108,6 +110,8 @@ function isTruncated(el: HTMLElement) {
 
 export default {
   extends: DefaultTheme,
+  // 只换掉 404 那一格（#not-found 插槽），其余版式仍走默认主题
+  Layout,
   setup() {
     if (typeof window === 'undefined') return
     // 用事件委托，侧栏重绘（路由切换、展开收起）也不用重新绑定

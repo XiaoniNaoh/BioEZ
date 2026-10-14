@@ -1,0 +1,685 @@
+/* 404「你来到了后室」——走廊全部由 CSS 画成，站点里没有新增任何图片或字体。
+   配色只用站点已有的三种：松绿(--vp-c-brand-1)、奶油淡蓝(226,239,249)、正文墨色
+   (--vp-c-text-*)；唯一的外来色是尽头门洞那束暖黄的光，也只当「光」用。
+   结构是一个单向透视的盒子：天花板 / 左墙 / 右墙 / 地毯 + 尽头门洞，
+   外面再叠顶灯、光池、噪点、暗角。 */
+
+.backrooms {
+  /* —— 单向透视的几何：灭点、尽头开口的一半宽高 —— */
+  --brk-vpx: 62%;
+  --brk-vpy: 46%;
+  --brk-fw: 6%;
+  --brk-fh: 7%;
+
+  /* 视差位移（由 BackroomsNotFound.vue 写入，静止时是 0） */
+  --brk-shift-x: 0px;
+  --brk-shift-y: 0px;
+
+  /* —— 浅色：刷过一遍、有点受潮的白墙 —— */
+  --brk-wall: #ccd4c7;
+  --brk-wall-lit: #e7ece1;
+  --brk-ceiling: #d9e0d4;
+  --brk-floor: #e8eef5;
+  --brk-floor-deep: #c2ccc5;
+  --brk-stripe: rgba(29, 118, 74, 0.11);
+  --brk-seam: rgba(29, 118, 74, 0.15);
+  --brk-damp: rgba(29, 118, 74, 0.11);
+  --brk-lamp: #fff6df;
+  --brk-lamp-glow: rgba(255, 219, 143, 0.6);
+  --brk-far: #fffdf6;
+  --brk-far-warm: #ffe3a6;
+  --brk-far-glow: rgba(255, 226, 162, 0.8);
+  --brk-spill: rgba(255, 224, 158, 0.5);
+  --brk-wet: rgba(255, 233, 180, 0.42);
+  --brk-pool: rgba(255, 253, 246, 0.6);
+  --brk-shade: rgba(20, 29, 23, 0.4);
+  --brk-grain-blend: multiply;
+  --brk-grain-alpha: 0.055;
+  --brk-plate-bg: rgba(29, 118, 74, 0.07);
+  --brk-plate-bg-hover: rgba(29, 118, 74, 0.12);
+  --brk-plate-line: rgba(29, 118, 74, 0.35);
+  --brk-plate-glow-hover: rgba(29, 118, 74, 0.42);
+  --brk-plate-inner: rgba(255, 255, 255, 0.35);
+  --brk-plate-inner-hover: rgba(255, 255, 255, 0.5);
+  --brk-mark: rgba(186, 214, 234, 0.55);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: calc(100vh - var(--vp-nav-height));
+  min-height: calc(100dvh - var(--vp-nav-height));
+  background-color: #ffffff;
+}
+
+.dark .backrooms {
+  /* —— 深色：同一间屋子，只剩一盏灯 —— */
+  --brk-wall: #171c1d;
+  --brk-wall-lit: #222a2a;
+  --brk-ceiling: #121617;
+  --brk-floor: #191f22;
+  --brk-floor-deep: #080b0c;
+  --brk-stripe: rgba(108, 191, 149, 0.08);
+  --brk-seam: rgba(108, 191, 149, 0.16);
+  --brk-damp: rgba(108, 191, 149, 0.09);
+  --brk-lamp: #ffeec2;
+  --brk-lamp-glow: rgba(255, 214, 138, 0.38);
+  --brk-far: #ffeec4;
+  --brk-far-warm: #ffcf82;
+  --brk-far-glow: rgba(255, 214, 138, 0.55);
+  --brk-spill: rgba(255, 214, 138, 0.3);
+  --brk-pool: rgba(19, 23, 24, 0.9);
+  --brk-shade: rgba(0, 0, 0, 0.58);
+  --brk-grain-blend: screen;
+  --brk-grain-alpha: 0.045;
+  --brk-plate-bg: rgba(108, 191, 149, 0.1);
+  --brk-plate-bg-hover: rgba(108, 191, 149, 0.16);
+  --brk-plate-line: rgba(108, 191, 149, 0.4);
+  --brk-plate-glow-hover: rgba(108, 191, 149, 0.34);
+  --brk-plate-inner: rgba(255, 255, 255, 0.08);
+  --brk-plate-inner-hover: rgba(255, 255, 255, 0.14);
+  --brk-mark: rgba(142, 188, 214, 0.16);
+
+  background-color: #0c0f10;
+}
+
+/* ---------------------------------------------------------------- 走廊场景 */
+
+.brk-scene {
+  position: absolute;
+  /* 走廊锁在「一屏」高度上：正文再长也不会把透视拉变形 */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: calc(100vh - var(--vp-nav-height));
+  height: calc(100dvh - var(--vp-nav-height));
+  overflow: hidden;
+  transform: translate3d(var(--brk-shift-x), var(--brk-shift-y), 0);
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.brk-room {
+  position: absolute;
+  inset: 0;
+}
+
+.brk-plane {
+  position: absolute;
+  inset: 0;
+}
+
+/* 左墙：墙纸竖条 + 从近到远的明暗（近处亮，越远越沉） */
+.brk-wall-left {
+  background-image:
+    repeating-linear-gradient(90deg, transparent 0 34px, var(--brk-stripe) 34px 35px),
+    linear-gradient(90deg, var(--brk-wall-lit), var(--brk-wall) 58%, var(--brk-wall));
+  clip-path: polygon(
+    0 0,
+    0 100%,
+    calc(var(--brk-vpx) - var(--brk-fw)) calc(var(--brk-vpy) + var(--brk-fh)),
+    calc(var(--brk-vpx) - var(--brk-fw)) calc(var(--brk-vpy) - var(--brk-fh))
+  );
+}
+
+.brk-wall-right {
+  background-image:
+    repeating-linear-gradient(90deg, transparent 0 34px, var(--brk-stripe) 34px 35px),
+    linear-gradient(90deg, var(--brk-wall) 42%, var(--brk-wall));
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    calc(var(--brk-vpx) + var(--brk-fw)) calc(var(--brk-vpy) + var(--brk-fh)),
+    calc(var(--brk-vpx) + var(--brk-fw)) calc(var(--brk-vpy) - var(--brk-fh))
+  );
+}
+
+/* 天花板：近处那盏灯把正上方照亮，越往尽头越暗 */
+.brk-ceiling {
+  background-image:
+    radial-gradient(58% 150% at var(--brk-vpx) 0%, var(--brk-wall-lit), transparent 70%),
+    linear-gradient(180deg, var(--brk-ceiling), var(--brk-wall) 100%);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    calc(var(--brk-vpx) + var(--brk-fw)) calc(var(--brk-vpy) - var(--brk-fh)),
+    calc(var(--brk-vpx) - var(--brk-fw)) calc(var(--brk-vpy) - var(--brk-fh))
+  );
+}
+
+/* 地毯：拼缝是从灭点长出来的放射线（省掉一整套 3D 变换），
+   再叠一层「越近越沉」的暗，把下半屏按进阴影里 */
+.brk-floor {
+  background-image:
+    linear-gradient(0deg, var(--brk-floor-deep) 0%, transparent 62%),
+    radial-gradient(
+      10% 36% at var(--brk-vpx) calc(var(--brk-vpy) + var(--brk-fh)),
+      var(--brk-wet) 0%,
+      transparent 100%
+    ),
+    repeating-conic-gradient(
+      at var(--brk-vpx) var(--brk-vpy),
+      var(--brk-seam) 0deg 0.28deg,
+      transparent 0.28deg 11deg
+    ),
+    linear-gradient(0deg, var(--brk-floor), #ffffff 100%);
+  clip-path: polygon(
+    0 100%,
+    100% 100%,
+    calc(var(--brk-vpx) + var(--brk-fw)) calc(var(--brk-vpy) + var(--brk-fh)),
+    calc(var(--brk-vpx) - var(--brk-fw)) calc(var(--brk-vpy) + var(--brk-fh))
+  );
+}
+
+/* 墙脚与地毯交界那几块潮湿的印子 */
+.brk-damp {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(22% 12% at 12% 84%, var(--brk-damp), transparent 100%),
+    radial-gradient(16% 9% at 40% 92%, var(--brk-damp), transparent 100%),
+    radial-gradient(20% 10% at 88% 78%, var(--brk-damp), transparent 100%);
+}
+
+/* 尽头的门洞：一块亮着的长方形，外面一圈光晕 */
+.brk-far {
+  position: absolute;
+  left: calc(var(--brk-vpx) - var(--brk-fw));
+  top: calc(var(--brk-vpy) - var(--brk-fh));
+  width: calc(var(--brk-fw) * 2);
+  height: calc(var(--brk-fh) * 2);
+  border-radius: 3px;
+  background-image: linear-gradient(
+    170deg,
+    var(--brk-far),
+    var(--brk-far-warm) 65%,
+    var(--brk-far-warm) 100%
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(90, 62, 16, 0.14),
+    0 0 34px 6px var(--brk-far-glow);
+}
+
+/* 门洞的光洒回走廊：一层暖色，压在四个面之上、正文之下 */
+.brk-spill {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    34% 38% at var(--brk-vpx) var(--brk-vpy),
+    var(--brk-spill) 0%,
+    transparent 100%
+  );
+}
+
+/* 顶灯：近处一根、中景两根，靠粗细和亮度拉开纵深 */
+.brk-tube {
+  position: absolute;
+  left: calc(var(--brk-vpx) - var(--brk-fw));
+  width: calc(var(--brk-fw) * 2);
+  border-radius: 999px;
+  background-image: linear-gradient(180deg, #ffffff, var(--brk-lamp));
+  box-shadow:
+    0 0 16px 3px var(--brk-lamp-glow),
+    0 0 64px 22px var(--brk-lamp-glow);
+}
+
+.brk-tube-near {
+  top: 7%;
+  height: 9px;
+}
+
+.brk-tube-mid {
+  top: 22%;
+  left: calc(var(--brk-vpx) - var(--brk-fw) * 0.7);
+  width: calc(var(--brk-fw) * 1.4);
+  height: 5px;
+  opacity: 0.55;
+}
+
+.brk-tube-far {
+  top: 29.5%;
+  left: calc(var(--brk-vpx) - var(--brk-fw) * 0.46);
+  width: calc(var(--brk-fw) * 0.92);
+  height: 3px;
+  opacity: 0.38;
+}
+
+/* 近处那盏灯洒在画面左下的光池：正文压在这一层上，保证可读 */
+.brk-pool {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    34% 42% at 28% 47%,
+    var(--brk-pool) 0%,
+    color-mix(in srgb, var(--brk-pool) 72%, transparent) 44%,
+    transparent 88%
+  );
+}
+
+.brk-grain {
+  position: absolute;
+  inset: 0;
+  opacity: var(--brk-grain-alpha);
+  mix-blend-mode: var(--brk-grain-blend);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+  pointer-events: none;
+}
+
+.brk-vignette {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    112% 96% at 36% 44%,
+    transparent 26%,
+    var(--brk-shade) 100%
+  );
+}
+
+/* 走廊之外的那一截（手机上正文比一屏长时才会出现）：
+   先用近处地毯的暗接上，再渐隐回页面底色 */
+.brk-tail {
+  position: absolute;
+  top: calc(100vh - var(--vp-nav-height));
+  top: calc(100dvh - var(--vp-nav-height));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    180deg,
+    var(--brk-floor-deep),
+    var(--vp-c-bg) 72%
+  );
+}
+
+/* ------------------------------------------------------------------ 正文 */
+
+.brk-body {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 1280px;
+  /* 桌面：正文正好落在一屏内，走廊不会被挤出一条尾巴 */
+  padding: 108px 24px 32px;
+}
+
+.brk-body > * {
+  max-width: 620px;
+  animation: brk-rise 0.72s cubic-bezier(0.22, 0.7, 0.3, 1) both;
+}
+
+.brk-body > :nth-child(2) {
+  animation-delay: 0.14s;
+}
+
+.brk-body > :nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.brk-body > :nth-child(4) {
+  animation-delay: 0.26s;
+}
+
+.brk-body > :nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.brk-body > :nth-child(6) {
+  animation-delay: 0.38s;
+}
+
+.brk-body > :nth-child(7) {
+  animation-delay: 0.44s;
+}
+
+.brk-body > :nth-child(8) {
+  animation-delay: 0.5s;
+}
+
+/* 刊头式的一行：大号 404 + 一条细线 + 小小的「尚未收录」。
+   404 是这一页的主角，先让它在版面上站稳。 */
+.brk-folio {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin: 0;
+}
+
+.brk-folio-num {
+  font-family: var(--vp-font-family-mono);
+  font-size: clamp(48px, 5.8vw, 68px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--vp-c-text-1);
+}
+
+.brk-folio-rule {
+  flex: 1;
+  height: 1px;
+  min-width: 24px;
+  background-color: var(--brk-plate-line);
+}
+
+.brk-folio-label {
+  font-family: var(--vp-font-family-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--vp-c-brand-1);
+}
+
+.brk-title {
+  margin: 26px 0 0;
+  font-size: clamp(40px, 6.2vw, 68px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--vp-c-text-1);
+  text-wrap: balance;
+}
+
+/* 「后室」两个字吃一道站点招牌式的奶油淡蓝荧光笔痕 */
+.brk-mark {
+  position: relative;
+  z-index: 0;
+  padding-inline: 0.1em;
+  margin-inline: -0.1em;
+}
+
+.brk-mark::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0.06em;
+  right: 0.06em;
+  bottom: 0.1em;
+  height: 0.42em;
+  border-radius: 999px;
+  background-color: var(--brk-mark);
+}
+
+.brk-text {
+  margin: 22px 0 0;
+  max-width: 30em;
+  font-size: 16.5px;
+  line-height: 1.9;
+  color: var(--vp-c-text-2);
+}
+
+/* 「你会卡在这里」的三种常见情况：给 404 一个能对上号的解释 */
+.brk-why-label {
+  margin: 28px 0 0;
+  max-width: 32em;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--vp-c-text-2);
+}
+
+.brk-why {
+  display: grid;
+  gap: 7px;
+  margin: 9px 0 0;
+  padding: 0;
+  max-width: 34em;
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--vp-c-text-2);
+}
+
+.brk-why li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.brk-why li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--vp-c-brand-1);
+}
+
+/* ---------------------------------------------------------- 安全出口牌 */
+
+.brk-exit {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 36px;
+  padding: 12px 20px 12px 17px;
+  border: 1px solid var(--brk-plate-line);
+  border-radius: 10px;
+  background-color: var(--brk-plate-bg);
+  box-shadow: inset 0 0 0 1px var(--brk-plate-inner);
+  text-decoration: none;
+  color: var(--vp-c-brand-1);
+  transition:
+    background-color 0.28s,
+    border-color 0.28s,
+    box-shadow 0.28s,
+    transform 0.28s;
+}
+
+.brk-exit-icon {
+  width: 21px;
+  height: 21px;
+  flex: none;
+}
+
+.brk-exit-arrow {
+  transition: transform 0.28s cubic-bezier(0.22, 0.7, 0.3, 1);
+}
+
+.brk-exit-label {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.brk-exit:hover,
+.brk-exit:focus-visible {
+  background-color: var(--brk-plate-bg-hover);
+  border-color: var(--vp-c-brand-1);
+  box-shadow:
+    0 0 26px 2px var(--brk-plate-glow-hover),
+    inset 0 0 0 1px var(--brk-plate-inner-hover);
+  transform: translateY(-1px);
+}
+
+.brk-exit:hover .brk-exit-arrow,
+.brk-exit:focus-visible .brk-exit-arrow {
+  transform: translateX(2.5px);
+}
+
+.brk-exit:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
+
+.brk-exit:active {
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------ 次级出口（正文下方） */
+
+.brk-hint {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  /* 中文句子里的链接不额外留字距：间隔全部交给标点 */
+  gap: 0;
+  margin: 22px 0 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--vp-c-text-2);
+}
+
+.brk-hint-action {
+  /* <button> 与 <a> 长得一样：这一行只当文字链接用 */
+  appearance: none;
+  padding: 0 1px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: var(--vp-c-brand-1);
+  border-bottom: 1px solid var(--brk-plate-line);
+  transition:
+    border-color 0.25s,
+    color 0.25s;
+}
+
+.brk-hint-action:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+.brk-hint-action:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------ 条目元数据 */
+
+.brk-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 14px;
+  margin: 36px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--vp-c-divider);
+  list-style: none;
+  font-family: var(--vp-font-family-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--vp-c-text-2);
+}
+
+.brk-meta li + li {
+  padding-left: 14px;
+  border-left: 1px solid var(--vp-c-divider);
+}
+
+/* ---------------------------------------------------------------- 动效 */
+
+@keyframes brk-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ----------------------------------------------------------------- 窄屏 */
+
+@media (max-width: 767px) {
+  .backrooms {
+    /* 手机上：灭点收回正中、门洞抬到正文上方，正文改坐到近处的地毯上 */
+    --brk-vpx: 50%;
+    --brk-vpy: 27%;
+    --brk-fw: 14%;
+    --brk-fh: 10.5%;
+  }
+
+  .brk-tube-near {
+    top: 4%;
+    height: 7px;
+  }
+
+  .brk-tube-mid {
+    top: 10%;
+  }
+
+  .brk-tube-far {
+    top: 14%;
+  }
+
+  .brk-pool {
+    background-image: radial-gradient(
+      104% 40% at 50% 62%,
+      var(--brk-pool) 0%,
+      color-mix(in srgb, var(--brk-pool) 70%, transparent) 46%,
+      transparent 82%
+    );
+  }
+
+  .brk-body {
+    /* 一屏内要让「回首页」也看得见：走廊占上面四成，正文从下面接上 */
+    padding: 310px 24px 96px;
+  }
+
+  .brk-folio {
+    gap: 12px;
+  }
+
+  .brk-folio-num {
+    font-size: 40px;
+  }
+
+  .brk-title {
+    margin-top: 18px;
+  }
+
+  .brk-why-label {
+    margin-top: 22px;
+  }
+
+  .brk-why {
+    gap: 5px;
+    font-size: 14.5px;
+  }
+
+  .brk-exit {
+    margin-top: 28px;
+  }
+
+  .brk-hint {
+    margin-top: 18px;
+  }
+
+  .brk-meta {
+    margin-top: 32px;
+    gap: 0 10px;
+  }
+
+  .brk-meta li + li {
+    padding-left: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brk-body > * {
+    animation: none;
+  }
+
+  .brk-scene {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------ 收掉这一页多出来的版式 */
+
+/* 404 没有正文，也就不需要侧栏与「本地导航」那两条；留着只会把走廊挤窄 */
+html.is-backrooms .VPSidebar,
+html.is-backrooms .VPLocalNav {
+  display: none;
+}
+
+html.is-backrooms .VPContent.has-sidebar {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+/* 页脚会把走廊挤出一截滚动条；这一页不需要它 */
+html.is-backrooms .VPFooter {
+  display: none;
+}
