@@ -1928,9 +1928,9 @@
         "postgraduate-entrance-exam"
       ],
       "index_path": "06 生物化学与食品化学/COURSE_INDEX.md",
-      "page_count": 23,
-      "lesson_count": 23,
-      "estimated_minutes": 103,
+      "page_count": 24,
+      "lesson_count": 24,
+      "estimated_minutes": 115,
       "lessons": [
         {
           "id": "bc-01-01",
@@ -2094,7 +2094,7 @@
           "estimated_minutes": 5,
           "prerequisites": [],
           "next": [
-            "bc-02-01"
+            "bc-01-07"
           ],
           "tags": [
             "生物化学",
@@ -2107,6 +2107,40 @@
           "reviewers": [],
           "last_scientific_review": null,
           "summary": "介绍《生物化学与食品化学 考研帮帮忙》中的“蛋白质的生物学功能”主题。"
+        },
+        {
+          "id": "bc-01-07",
+          "title": "研究蛋白质的技术",
+          "path": "06 生物化学与食品化学/BC 1 蛋白质专题/BC 1-7 研究蛋白质的技术.md",
+          "content_type": "lesson",
+          "chapter": "蛋白质",
+          "order": "01-07",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 12,
+          "prerequisites": [],
+          "next": [
+            "bc-02-01"
+          ],
+          "tags": [
+            "生物化学",
+            "蛋白质",
+            "氨基酸",
+            "实验技术",
+            "超滤",
+            "电泳",
+            "分析",
+            "结构",
+            "多肽"
+          ],
+          "authors": [
+            "脆弱的百里橘",
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《生物化学与食品化学》中的“研究蛋白质的技术”主题。"
         },
         {
           "id": "bc-02-01",
