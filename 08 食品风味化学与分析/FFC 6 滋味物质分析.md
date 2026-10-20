@@ -11,7 +11,8 @@ difficulty: 3
 importance: 3
 estimated_minutes: 5
 prerequisites: []
-next: []
+next:
+  - "ffc-07"
 tags:
   - "食品风味化学"
   - "食品"
@@ -29,7 +30,7 @@ content_type: "lesson"
 
 <!-- BEGIN AUTO-GENERATED NAVIGATION -->
 > [!NOTE] 课程导航
-> [← 上一篇：风味化学仪器分析法](<FFC 5 风味化学仪器分析法.md>) · [课程目录](<COURSE_INDEX.md>)
+> [← 上一篇：风味化学仪器分析法](<FFC 5 风味化学仪器分析法.md>) · [课程目录](<COURSE_INDEX.md>) · [下一篇：分子感官科学 →](<FFC 7 分子感官科学.md>)
 <!-- END AUTO-GENERATED NAVIGATION -->
 
 # FFC 6 滋味物质分析
@@ -176,7 +177,6 @@ content_type: "lesson"
  1. 伏安型电子舌
  2. 电势型电子舌
 
-
 **PROS**
 - 通过自动、客观、可重复的测量，使感官评估更稳定
 - 可控制产品感官特征
@@ -186,3 +186,4 @@ content_type: "lesson"
 - 不能揭示呈味成分的化学本质
 - 仅对具有特定官能团的化合物产生响应值
 - 对环境变化特别敏感
+

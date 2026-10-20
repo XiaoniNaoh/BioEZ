@@ -2925,9 +2925,9 @@
         "undergraduate"
       ],
       "index_path": "08 食品风味化学与分析/COURSE_INDEX.md",
-      "page_count": 6,
-      "lesson_count": 6,
-      "estimated_minutes": 29,
+      "page_count": 7,
+      "lesson_count": 7,
+      "estimated_minutes": 34,
       "lessons": [
         {
           "id": "ffc-01",
@@ -3081,7 +3081,9 @@
           "importance": 3,
           "estimated_minutes": 5,
           "prerequisites": [],
-          "next": [],
+          "next": [
+            "ffc-07"
+          ],
           "tags": [
             "食品风味化学",
             "食品",
@@ -3095,6 +3097,29 @@
           "reviewers": [],
           "last_scientific_review": null,
           "summary": "介绍《食品风味化学与分析》中的“滋味物质分析”主题。"
+        },
+        {
+          "id": "ffc-07",
+          "title": "分子感官科学",
+          "path": "08 食品风味化学与分析/FFC 7 分子感官科学.md",
+          "content_type": "lesson",
+          "chapter": "课程正文",
+          "order": "07",
+          "status": "scientific-review",
+          "difficulty": 3,
+          "importance": 3,
+          "estimated_minutes": 5,
+          "prerequisites": [],
+          "next": [],
+          "tags": [
+            "食品风味化学与分析"
+          ],
+          "authors": [
+            "小倪"
+          ],
+          "reviewers": [],
+          "last_scientific_review": null,
+          "summary": "介绍《食品风味化学与分析》中的“分子感官科学”主题。"
         }
       ]
     }
