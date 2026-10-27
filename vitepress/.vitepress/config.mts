@@ -65,7 +65,7 @@ export default defineConfig({
     lineNumbers: true,
     math: true,
     image: { lazyLoading: true },
-    // 补上 Obsidian 的 ATTENTION / EXAMPLE（以及 [!Notes] 这种写法）
+    // 补上 Obsidian 的 ATTENTION / EXAMPLE / QUESTION（以及 [!Notes] 这种写法）
     config: (md) => {
       md.use(obsidianCallouts)
     },

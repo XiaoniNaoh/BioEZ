@@ -6,6 +6,7 @@
  *   [!ATTENTION]  7 处 —— Obsidian 里它就是 WARNING 的别名，同一个橙色三角
  *   [!EXAMPLE]    5 处 —— Obsidian 单独一类，标题多半写「举例」「记忆口诀」
  *   [!Notes]      6 处 —— 复数写法，VitePress 只认 NOTE，这里一并兜住
+ *   [!QUESTION]   —— Obsidian 的问答提示
  * 不兜的话它们会退化成普通引用块，只剩一根竖线，看不出是提示。
  *
  * 渲染出来的结构和 VitePress 自己的 github-alert 完全一致
@@ -18,6 +19,7 @@ const EXTRA_TYPES = {
   attention: { className: 'attention', label: '注意' },
   example: { className: 'example', label: '示例' },
   notes: { className: 'note', label: '笔记' },
+  question: { className: 'question', label: '问题' },
 }
 
 export function obsidianCallouts(md, options = {}) {

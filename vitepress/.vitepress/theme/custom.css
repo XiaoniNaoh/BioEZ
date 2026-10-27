@@ -538,9 +538,9 @@ body::after {
   background-color: var(--glass-bg);
 }
 
-/* ── Obsidian 的 ATTENTION / EXAMPLE 提示块 ──────────────────────────────
+/* ── Obsidian 的 ATTENTION / EXAMPLE / QUESTION 提示块 ───────────────────
    VitePress 自带 TIP / NOTE / INFO / IMPORTANT / WARNING / CAUTION /
-   DANGER，笔记里另外用到的两类由 plugins/obsidian-callouts.mjs 认下来，
+   DANGER，笔记里另外用到的几类由 plugins/obsidian-callouts.mjs 认下来，
    渲染结构和 github-alert 一致，所以只在这里补配色。 */
 
 /* ATTENTION 在 Obsidian 里就是 WARNING 的别名（同一个橙色三角），
@@ -565,24 +565,30 @@ body::after {
   background-color: var(--vp-custom-block-warning-code-bg);
 }
 
-/* EXAMPLE 单独一类：奶油淡蓝的底，偏冷、不抢戏 */
-.custom-block.example {
+/* EXAMPLE / QUESTION：奶油淡蓝的底，偏冷、不抢戏 */
+.custom-block.example,
+.custom-block.question {
   border-color: var(--vp-custom-block-example-border);
   color: var(--vp-custom-block-example-text);
   background-color: var(--vp-custom-block-example-bg);
 }
 
 .custom-block.example a,
-.custom-block.example code {
+.custom-block.example code,
+.custom-block.question a,
+.custom-block.question code {
   color: var(--vp-c-example-1);
 }
 
 .custom-block.example a:hover,
-.custom-block.example a:hover > code {
+.custom-block.example a:hover > code,
+.custom-block.question a:hover,
+.custom-block.question a:hover > code {
   color: var(--vp-c-example-2);
 }
 
-.custom-block.example code {
+.custom-block.example code,
+.custom-block.question code {
   background-color: var(--vp-custom-block-example-code-bg);
 }
 
