@@ -67,7 +67,7 @@ content_type: "lesson"
 	- 如：假结*pseudoknot*
 4. 存在环状 RNA（circRNA）
 	- 没有 5'、3'端，无法被 RNA 外切酶酶切，比线性 RNA 稳定
-	- 真核细胞 circRNA 来自于 RNA 前体（pre-RNA）的反向剪 切
+	- 真核细胞 circRNA 来自于 RNA 前体（pre-RNA）的反向剪切
 	- 虽然 circRNA 通常表达水平较低，但它们的表达存在细胞和组织特异性。circRNA 可以通过不同途径影响基因表达，**有效扩展真核细胞转录组的多样性和复杂性**，在细胞中扮演着重要角色
 ### 3.1.2 RNA 的种类
 
